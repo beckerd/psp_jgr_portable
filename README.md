@@ -1,4 +1,4 @@
-# JGR Portable
+# JGR Portable (Beta)
 <img width="144" height="80" alt="ICON0" src="https://github.com/user-attachments/assets/2efe5097-aa16-48ea-8c9a-91e8b9d81ac2" />
 
 JGR Portable is an unofficial native PSP port of Jet Grind Radio.
