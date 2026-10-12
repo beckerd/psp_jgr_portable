@@ -14,8 +14,10 @@ This project is not affiliated with or endorsed by SEGA.
 ## Download
 
 Download a compiled package from this repository's **GitHub Releases** page.
-Extract it to get `EBOOT.PBP`, `Prepare 1.0.html` and the matching source archive,
-then prepare assets using one of the methods below.
+The game ZIP contains only `README.md`, `Prepare 1.0.html`, `LICENSES.txt` and
+`EBOOT.PBP`. Extract it, then prepare assets using one of the methods below.
+The exact matching source archive is a separate download on the same release
+page; it is not needed to prepare assets or play.
 
 Compiled packages are published only as release attachments. The Git repository
 and GitHub's automatic **Source code** downloads require compilation; follow
@@ -92,12 +94,37 @@ directly into the game. To check a damaged installation, remove only
 | Select (tap) | Same as Start in release builds |
 | Hold Select for 3 seconds | Show or hide FPS and runtime information |
 
+## Building from source
+
+Requirements: Git, the [pspdev](https://pspdev.github.io/) toolchain with PSPSDK
+(tested with PSP GCC **15.2.0**), GNU make (`gmake` on macOS), and Python
+**3.10 or newer** on `PATH`. No game image is needed to compile the port.
+
+```sh
+git clone https://github.com/beckerd/psp_jgr_portable.git
+cd psp_jgr_portable
+
+# Set this to your installed PSP toolchain.
+export PSPDEV=/path/to/pspdev
+export PATH="$PSPDEV/bin:$PATH"
+
+# Build the game, bundled helpers and on-device asset preparer.
+gmake -C psp -j4                     # -> psp/EBOOT.PBP
+```
+
+Use `make` instead of `gmake` where GNU make is installed as `make`. Copy the
+built `EBOOT.PBP` to `PSP/GAME/JGR_PORTABLE/` with your supported GDI and all
+its tracks, then follow **Prepare on the PSP** above.
+
+For release packaging with the XMB artwork, install Pillow **11.3.0**.
+Building the optional browser preparer also requires Emscripten **6.0.12**;
+build it from the same checkout as the EBOOT. The
+[build guide](tools/portable/README.md) covers artwork packaging, source and
+binary checks, and building `Prepare 1.0.html`.
+
 ## Development
 
-This is a work in progress; performance varies by level and scene. See the
-[build guide](tools/portable/README.md) to build the PSP executable and browser
-preparer directly from this repository. No game image is required to compile
-either artifact.
+This is a work in progress; performance varies by level and scene.
 
 Original code, tools and documentation are [MIT-licensed](LICENSE).
 Third-party material retains its own terms; see

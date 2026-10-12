@@ -14,7 +14,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "cec28a7ae3b80e684a90ef3c717ebad15dbe11047fc0145ffe4d7556fc7884bf",
+      "sha256": "3212112f32c73acdfb0aaa52d30b9fbf5db67f29445350914333885e67ad6507",
       "review": "Project overview, installation steps, build requirements, and development links."
     },
     {
@@ -1269,7 +1269,7 @@
     },
     {
       "path": "tools/portable/README.md",
-      "sha256": "80fa6d44f17c09b6adbb55e32d06774260a7f553b0221f5c19a3e97c96b50dc3",
+      "sha256": "8b3cb8e69b9d24d35cd1c1b2400f7f0303e4d6930925891866dd9158dab192bf",
       "review": "Asset preparation, source export, build, packaging, and validation instructions."
     },
     {
@@ -1289,7 +1289,7 @@
     },
     {
       "path": "tools/portable/browser/README.md",
-      "sha256": "a3f376a79338b018156be787508c3b9c0678775afeaecbd42b3020d1b17b4c15",
+      "sha256": "a26a536dea240a7f9824963810647675ab1730ed9f9d87a627f81b3072fc8616",
       "review": "Offline browser preparation, supported browsers, build requirements, matching-source packaging, and validation instructions."
     },
     {
@@ -1304,7 +1304,7 @@
     },
     {
       "path": "tools/portable/browser/build.py",
-      "sha256": "d09f1bff9507be00c562a6ab2f0b0f0699ed688c82aa8637c9364adcb4db0a9b",
+      "sha256": "55a2ead21607f663c8de181529b7806520690b9a29595a433ccc09806d4f4457",
       "review": "Compiles the WebAssembly converter and assembles the offline HTML, visible notices, matching-source archive, and build receipt."
     },
     {
@@ -1329,7 +1329,7 @@
     },
     {
       "path": "tools/portable/browser/notices.py",
-      "sha256": "211030cdaa7d74ed115b57bfed9df4b2584587da6759ec2f3807c711c5de048e",
+      "sha256": "325690d502f7ba325031646dc36ea8919caa87008f5189a9bc743d3591406b5c",
       "review": "Aggregates exact license texts and renders escaped, visible HTML with the matching-source archive link."
     },
     {
@@ -1394,7 +1394,7 @@
     },
     {
       "path": "tools/portable/browser/tests/test_notices.py",
-      "sha256": "ab6cd97ed5a3870e2ba63d1f9f8c5dc3444c606132e427ddcda58c4ba8923985",
+      "sha256": "95bac541fdbfb9a7bcf0f81063b09788e9ab16db0b1c3b755eeb91f41f81a6ba",
       "review": "Tests complete notice preservation, input hashes, HTML escaping, and required template markers."
     },
     {

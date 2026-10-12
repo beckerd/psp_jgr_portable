@@ -38,16 +38,19 @@ and full component notices and obtain the matching source archive. The disclosur
 works without JavaScript and remains available in browsers that cannot prepare assets.
 Use Tab to focus its summary, then Enter or Space to open it.
 
-The release includes `jgr-portable-source-<archive-sha256>.zip` beside
-`Prepare 1.0.html`. The page identifies the archive and its SHA-256. The ZIP
+The release offers `jgr-portable-source-<archive-sha256>.zip` as a separate
+download, outside the four-file game ZIP. The page links to that archive and
+identifies its SHA-256. The ZIP
 contains reviewed source, build instructions, the project license and component
 notices. See [THIRD_PARTY_NOTICES.md](../../../THIRD_PARTY_NOTICES.md) for
 provenance and GPL build scope.
-You do not need the source archive on the PSP.
+You do not need the source archive to prepare assets or play. Asset preparation
+still works offline; downloading the source from the release page needs internet access.
 
-When distributing the preparer HTML or `EBOOT.PBP`, include the exact matching ZIP
-alongside the download or in the offline package, even when distributing either
-binary alone. The page uses a local link, so keep it and the ZIP together.
+When distributing the preparer HTML or `EBOOT.PBP`, offer the exact matching ZIP
+alongside the download, even when distributing either binary alone. For an
+offline distribution, build without `--source-base-url` and keep the source ZIP
+beside the HTML so the local source link works.
 Preserve the project license and component notices.
 
 ## Prepared files and saves
@@ -120,15 +123,19 @@ from this repository first. They generate the matching
 ```sh
 python3 tools/portable/browser/build.py \
   --emcc /path/to/emsdk/upstream/emscripten/emcc.py \
+  --source-base-url https://github.com/beckerd/psp_jgr_portable/releases/download/1.0 \
   --psp psp --out build/browser/preparer
 cp build/browser/preparer/prepare.html \
   "build/release/JGR_PORTABLE/Prepare 1.0.html"
-cp build/browser/preparer/jgr-portable-source-*.zip build/release/JGR_PORTABLE/
+cp build/browser/preparer/jgr-portable-source-*.zip build/release/
 ```
 
 The build emits `prepare.html` and its deterministic source ZIP. The commands
-above give the release copy its versioned filename. Distribute both
-beside the matching EBOOT. Use a fresh browser output directory for each release
+above give the release copy its versioned filename and link to the source
+attachment on release `1.0`; change the URL for another release. Package only
+`README.md`, `Prepare 1.0.html`, `LICENSES.txt` and the matching `EBOOT.PBP`
+inside the game ZIP. Upload the matching source ZIP separately to the same
+release page. Use a fresh browser output directory for each release
 so the copy command selects only its matching archive. The source
 `prepare.html` in this directory is a template, not the working preparer.
 Do not include compiler objects, test profiles or generated game assets in

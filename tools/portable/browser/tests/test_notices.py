@@ -62,6 +62,27 @@ class NoticeTests(unittest.TestCase):
         self.assertNotIn('script', [tag for tag, _ in parser.tags])
         self.assertIn(html.escape(text), rendered)
 
+    def test_separate_release_source_link_preserves_notices_and_checksum(self):
+        release = self.release()
+        base = 'https://github.com/beckerd/psp_jgr_portable/releases/download/1.0'
+        for url in (base, base + '/'):
+            rendered = notices.render('Full notices', release, url)
+            parser = NoticeParser(); parser.feed(rendered)
+            link = next(attrs for tag, attrs in parser.tags if tag == 'a')
+            self.assertEqual(link['href'], base + '/' + release['archive_filename'])
+            self.assertEqual(parser.text, 'Full notices')
+            self.assertIn(release['archive_sha256'], rendered)
+        parser = NoticeParser(); parser.feed(notices.render('Full notices', release))
+        link = next(attrs for tag, attrs in parser.tags if tag == 'a')
+        self.assertEqual(link['href'], release['archive_filename'])
+
+    def test_invalid_source_download_locations_rejected(self):
+        for url in ('', 'javascript:alert(1)', 'http://example.com', '/source',
+                    'https://user:secret@example.com', 'https://example.com/?q=1',
+                    'https://example.com/#source', 'https://example.com/with space'):
+            with self.subTest(url=url), self.assertRaises(ValueError):
+                notices.render('notice', self.release(), url)
+
     def test_missing_empty_invalid_and_malicious_inputs_fail(self):
         files = {name: b'License\n' for name in notices.NOTICE_PATHS}
         for bad in (None, b'', b'\xff', b'contains\0nul'):

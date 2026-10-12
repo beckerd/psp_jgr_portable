@@ -38,6 +38,7 @@ def main():
     parser.add_argument('--out', type=Path, default=ROOT/'build/browser/preparer')
     parser.add_argument('--jobs', type=int, default=4)
     parser.add_argument('--debug', action='store_true')
+    parser.add_argument('--source-base-url', help='HTTPS release download directory for the separate matching source ZIP; omit for an offline package')
     args = parser.parse_args()
     emcc = args.emcc.resolve()
     compiler = ([sys.executable, str(emcc)] if emcc.suffix == '.py' else [str(emcc)])
@@ -47,6 +48,7 @@ def main():
     psp = args.psp.resolve()
     release = SourceRelease(ROOT, psp/'src/portable_asset_identity.h', version, args.debug)
     notice_text, notice_files = notices.collect(release.files)
+    notice_html = notices.render(notice_text, release.metadata, args.source_base_url)
     frontend = lambda name: release.files['tools/portable/browser/' + name].decode('utf-8')
     markers = ('<!-- JGR_PREPARE_STYLE -->', '<!-- JGR_PREPARE_WORKER -->',
                '<!-- JGR_PREPARE_SCRIPT -->', notices.MARKER)
@@ -125,14 +127,14 @@ def main():
         '<!-- JGR_PREPARE_STYLE -->': '<style>'+frontend('style.css')+'</style>',
         '<!-- JGR_PREPARE_WORKER -->': '<script>globalThis.JGR_PREPARE_WORKER_SOURCE='+json.dumps(worker).replace('</', '<\\/')+';</script>',
         '<!-- JGR_PREPARE_SCRIPT -->': '<script>'+frontend('page.js').replace('</', '<\\/')+'</script>',
-        notices.MARKER: notices.render(notice_text, release.metadata)}
+        notices.MARKER: notice_html}
     html_bytes = notices.replace_markers(html, replacements).encode('utf-8')
     release.bind_dependencies(compiled, psp)
     release.unchanged()
     report = dict(schema=1, status='built_not_yet_validated', compiler=version,
                   html_sha256=hashlib.sha256(html_bytes).hexdigest(), html_bytes=len(html_bytes),
                   converter_sha256=digest(js), recipe_and_assets_embedded=False,
-                  source_release=release.metadata, notice_files=notice_files,
+                  source_release=release.metadata, source_base_url=args.source_base_url, notice_files=notice_files,
                   matching_source_compiler_dependencies=dependency_count,
                   frontend_files=[dict(path=str(path.relative_to(ROOT)), sha256=digest(path))
                                   for path in sorted(HERE.glob('*')) if path.is_file() and path.suffix in ('.js','.html','.css','.py','.txt','.json')],
