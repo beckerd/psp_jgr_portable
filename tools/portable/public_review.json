@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5646,
-      "sha256": "3212112f32c73acdfb0aaa52d30b9fbf5db67f29445350914333885e67ad6507"
+      "bytes": 5815,
+      "sha256": "dd17257bad3da08dd745abcc6923ae7e22b0bb799fdd86b9be79acdd23afe249"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -6064,8 +6064,8 @@
     },
     {
       "path": "tools/portable/README.md",
-      "bytes": 11745,
-      "sha256": "8b3cb8e69b9d24d35cd1c1b2400f7f0303e4d6930925891866dd9158dab192bf"
+      "bytes": 11006,
+      "sha256": "7b4826fa71325f362d7e644faff060760370130e4fce13af07b5c08b55ef23c4"
     },
     {
       "path": "tools/portable/asset_aliases.json",
@@ -6084,8 +6084,8 @@
     },
     {
       "path": "tools/portable/browser/README.md",
-      "bytes": 12009,
-      "sha256": "a26a536dea240a7f9824963810647675ab1730ed9f9d87a627f81b3072fc8616"
+      "bytes": 11678,
+      "sha256": "b3a30eb26fca2c63ea9d337a95384fdb2c2b785f74b70535d360f1bf9922e04f"
     },
     {
       "path": "tools/portable/browser/THIRD_PARTY_NOTICES.txt",
@@ -6099,8 +6099,8 @@
     },
     {
       "path": "tools/portable/browser/build.py",
-      "bytes": 9641,
-      "sha256": "55a2ead21607f663c8de181529b7806520690b9a29595a433ccc09806d4f4457"
+      "bytes": 9708,
+      "sha256": "7c6a0d8289c1c422d7f5a05b6f05682a8b4d765f657410c5f7385a9a5c74f11d"
     },
     {
       "path": "tools/portable/browser/filesystem.js",
@@ -6124,8 +6124,8 @@
     },
     {
       "path": "tools/portable/browser/notices.py",
-      "bytes": 2756,
-      "sha256": "325690d502f7ba325031646dc36ea8919caa87008f5189a9bc743d3591406b5c"
+      "bytes": 2893,
+      "sha256": "3eb844ee738dd21fcda80c20327f9b70d7070fb3fb1d98c9b1c4004629ff3479"
     },
     {
       "path": "tools/portable/browser/page.js",
@@ -6189,8 +6189,8 @@
     },
     {
       "path": "tools/portable/browser/tests/test_notices.py",
-      "bytes": 4801,
-      "sha256": "95bac541fdbfb9a7bcf0f81063b09788e9ab16db0b1c3b755eeb91f41f81a6ba"
+      "bytes": 4784,
+      "sha256": "a9bab60ec43ab63316c57e32f3fba422ff43e6101f3ecdcfda020bf24320848b"
     },
     {
       "path": "tools/portable/browser/tests/test_provenance.py",

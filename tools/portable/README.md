@@ -14,8 +14,8 @@ inputs. Build a checkout or GitHub's automatic source download using the steps
 below. Compiled packages are distributed through GitHub Releases.
 
 A game release ZIP contains only `README.md`, `Prepare 1.0.html`, `LICENSES.txt`
-and `EBOOT.PBP`. Publish the exact matching source ZIP as a separate attachment
-on the same release page. Users still prepare the game assets from their own supported disc
+and `EBOOT.PBP`. Use GitHub's automatic source downloads for the matching release tag; do not
+upload another source archive. Users still prepare the game assets from their own supported disc
 image before playing. Keep local builds and release packages under ignored
 `build/`; publish packages as release attachments.
 
@@ -112,39 +112,30 @@ the browser converter. Then run:
 ```sh
 python3 tools/portable/browser/build.py \
   --emcc /path/to/emsdk/upstream/emscripten/emcc.py \
-  --source-base-url https://github.com/beckerd/psp_jgr_portable/releases/download/1.0 \
+  --source-url https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.zip \
   --psp psp --out build/browser/preparer
 cp build/browser/preparer/prepare.html \
   "build/release/JGR_PORTABLE/Prepare 1.0.html"
-cp build/browser/preparer/jgr-portable-source-*.zip build/release/
 ```
 
 The game folder now contains `EBOOT.PBP` and `Prepare 1.0.html`. Add the
-installation `README.md` and complete `LICENSES.txt` to that folder, and ZIP
-only those four files. Keep `jgr-portable-source-<archive-sha256>.zip` and any
-checksum file outside the game ZIP as separate release attachments. Set
-`--source-base-url` to that release's download directory. Use a fresh browser
-output directory for each release so the copy command selects only its matching ZIP.
+installation `README.md` and complete `LICENSES.txt`, and ZIP only those four
+files. Keep any checksum file outside the game ZIP.
+
+Set `--source-url` to GitHub's automatic source download for the release tag
+that contains the exact source used to build both converters. Do not upload a
+duplicate source attachment. Use a fresh browser output directory for each
+release. The preparer's **Licenses & source** disclosure links to that tag's
+source and includes the full project and component notices without JavaScript.
+
 Distribute the emitted HTML, not `tools/portable/browser/prepare.html`, which
-is a source template. The HTML includes its worker, WebAssembly converter and
-the project license and full component notices. Its user does not need Python,
-a compiler or a server.
+is a source template. The HTML includes its worker and WebAssembly converter;
+its user does not need Python, a compiler or a server.
 
-The browser build creates a deterministic ZIP from its reviewed source snapshot.
-It contains the source, build instructions and required notices, excluding Git
-history, SDKs, compiled outputs and user game data. The page's **Licenses &
-source** disclosure links to that release's separate source download and displays its SHA-256.
-It also exposes the full notices without JavaScript, including in browsers
-that cannot run asset preparation.
-
-Make the matching source ZIP available when distributing `EBOOT.PBP` or `prepare.html`,
-including packages that contain only one of those executables. Build both from
-the same source snapshot so this archive matches each combined converter.
-For downloads, offer the source ZIP as a separate attachment alongside the game
-ZIP. For an offline distribution, omit `--source-base-url` and supply the source
-ZIP beside the HTML so its local link works. An unrelated latest-source tree is not a substitute.
-The archive is not needed on the PSP. Its checksum identifies the reviewed
-source bytes.
+For an offline distribution, omit `--source-url`. The build then emits a
+local matching source ZIP with a checksum, which must stay beside the HTML.
+The source snapshot excludes Git history, SDKs, compiled outputs and game data.
+Source is not needed on the PSP.
 
 The [project license](../../LICENSE) describes MIT coverage.
 [Third-party notices](../../THIRD_PARTY_NOTICES.md#gpl-build-scope) describe the

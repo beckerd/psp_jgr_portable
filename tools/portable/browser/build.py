@@ -38,7 +38,7 @@ def main():
     parser.add_argument('--out', type=Path, default=ROOT/'build/browser/preparer')
     parser.add_argument('--jobs', type=int, default=4)
     parser.add_argument('--debug', action='store_true')
-    parser.add_argument('--source-base-url', help='HTTPS release download directory for the separate matching source ZIP; omit for an offline package')
+    parser.add_argument('--source-url', help='HTTPS URL of the matching release tag source download; omit for an offline source ZIP')
     args = parser.parse_args()
     emcc = args.emcc.resolve()
     compiler = ([sys.executable, str(emcc)] if emcc.suffix == '.py' else [str(emcc)])
@@ -48,7 +48,7 @@ def main():
     psp = args.psp.resolve()
     release = SourceRelease(ROOT, psp/'src/portable_asset_identity.h', version, args.debug)
     notice_text, notice_files = notices.collect(release.files)
-    notice_html = notices.render(notice_text, release.metadata, args.source_base_url)
+    notice_html = notices.render(notice_text, release.metadata, args.source_url)
     frontend = lambda name: release.files['tools/portable/browser/' + name].decode('utf-8')
     markers = ('<!-- JGR_PREPARE_STYLE -->', '<!-- JGR_PREPARE_WORKER -->',
                '<!-- JGR_PREPARE_SCRIPT -->', notices.MARKER)
@@ -134,7 +134,7 @@ def main():
     report = dict(schema=1, status='built_not_yet_validated', compiler=version,
                   html_sha256=hashlib.sha256(html_bytes).hexdigest(), html_bytes=len(html_bytes),
                   converter_sha256=digest(js), recipe_and_assets_embedded=False,
-                  source_release=release.metadata, source_base_url=args.source_base_url, notice_files=notice_files,
+                  source_release=release.metadata, source_url=args.source_url, notice_files=notice_files,
                   matching_source_compiler_dependencies=dependency_count,
                   frontend_files=[dict(path=str(path.relative_to(ROOT)), sha256=digest(path))
                                   for path in sorted(HERE.glob('*')) if path.is_file() and path.suffix in ('.js','.html','.css','.py','.txt','.json')],
@@ -146,13 +146,16 @@ def main():
     # a failed audit/template/license check leaves the previous page intact.
     with tempfile.TemporaryDirectory(prefix='.publish-', dir=output) as temporary:
         staged = Path(temporary)
-        archive_name = release.metadata['archive_filename']
-        (staged/archive_name).write_bytes(release.data)
+        outputs = ['build.json', 'prepare.html']
+        if args.source_url is None:
+            archive_name = release.metadata['archive_filename']
+            (staged/archive_name).write_bytes(release.data)
+            outputs.insert(0, archive_name)
         (staged/'prepare.html').write_bytes(html_bytes)
         (staged/'build.json').write_text(json.dumps(report, indent=2)+'\n')
         release.bind_dependencies(compiled, psp)
         release.unchanged()
-        for name in (archive_name, 'build.json', 'prepare.html'):
+        for name in outputs:
             os.replace(staged/name, output/name)
     print(json.dumps({key:report[key] for key in ('status', 'compiler', 'html_sha256', 'html_bytes')}, indent=2))
 

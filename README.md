@@ -21,8 +21,8 @@ If you do not want code written by AI on your PSP, this is not a project for you
 Download a compiled package from this repository's **GitHub Releases** page.
 The game ZIP contains only `README.md`, `Prepare 1.0.html`, `LICENSES.txt` and
 `EBOOT.PBP`. Extract it, then prepare assets using one of the methods below.
-The exact matching source archive is a separate download on the same release
-page; it is not needed to prepare assets or play.
+For source, use GitHub's **Source code (zip)** or **Source code (tar.gz)**
+download on that release. Source is not needed to prepare assets or play.
 
 Compiled packages are published only as release attachments. The Git repository
 and GitHub's automatic **Source code** downloads require compilation; follow

@@ -62,16 +62,16 @@ class NoticeTests(unittest.TestCase):
         self.assertNotIn('script', [tag for tag, _ in parser.tags])
         self.assertIn(html.escape(text), rendered)
 
-    def test_separate_release_source_link_preserves_notices_and_checksum(self):
+    def test_release_tag_source_link_preserves_notices_without_unrelated_zip_checksum(self):
         release = self.release()
-        base = 'https://github.com/beckerd/psp_jgr_portable/releases/download/1.0'
-        for url in (base, base + '/'):
-            rendered = notices.render('Full notices', release, url)
-            parser = NoticeParser(); parser.feed(rendered)
-            link = next(attrs for tag, attrs in parser.tags if tag == 'a')
-            self.assertEqual(link['href'], base + '/' + release['archive_filename'])
-            self.assertEqual(parser.text, 'Full notices')
-            self.assertIn(release['archive_sha256'], rendered)
+        url = 'https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.zip'
+        rendered = notices.render('Full notices', release, url)
+        parser = NoticeParser(); parser.feed(rendered)
+        link = next(attrs for tag, attrs in parser.tags if tag == 'a')
+        self.assertEqual(link['href'], url)
+        self.assertEqual(parser.text, 'Full notices')
+        self.assertNotIn(release['archive_sha256'], rendered)
+        self.assertNotIn(release['archive_filename'], rendered)
         parser = NoticeParser(); parser.feed(notices.render('Full notices', release))
         link = next(attrs for tag, attrs in parser.tags if tag == 'a')
         self.assertEqual(link['href'], release['archive_filename'])

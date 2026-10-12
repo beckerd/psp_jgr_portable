@@ -31,23 +31,24 @@ def collect(files):
     return '\n\n'.join(sections), rows
 
 
-def render(text, release, source_base_url=None):
-    digest = release['archive_sha256']
-    if not re.fullmatch('[0-9a-f]{64}', digest):
-        raise ValueError('Invalid source archive checksum')
-    filename = 'jgr-portable-source-' + digest + '.zip'
-    if release['archive_filename'] != filename:
-        raise ValueError('Source archive filename must contain its exact checksum')
-    href = filename
-    if source_base_url is not None:
-        url = urlsplit(source_base_url)
+def render(text, release, source_url=None):
+    if source_url is not None:
+        url = urlsplit(source_url)
         if (url.scheme != 'https' or not url.hostname or url.username or url.password or
-                url.query or url.fragment or any(c.isspace() for c in source_base_url)):
-            raise ValueError('Source download base must be an HTTPS URL without credentials, query or fragment')
-        href = source_base_url.rstrip('/') + '/' + filename
-    return ('<p class="source-notice">Matching source: <a href="' + html.escape(href, quote=True) + '" download>' +
-            filename + '</a><br>SHA-256: <span class="source-checksum">' + digest +
-            '</span></p>\n<pre id="third-party-notices" tabindex="0" '
+                url.query or url.fragment or any(c.isspace() for c in source_url)):
+            raise ValueError('Source download must be an HTTPS URL without credentials, query or fragment')
+        source_notice = ('<p class="source-notice">Matching source: <a href="' +
+                         html.escape(source_url, quote=True) + '">Source code (release tag)</a></p>')
+    else:
+        digest = release['archive_sha256']
+        if not re.fullmatch('[0-9a-f]{64}', digest):
+            raise ValueError('Invalid source archive checksum')
+        filename = 'jgr-portable-source-' + digest + '.zip'
+        if release['archive_filename'] != filename:
+            raise ValueError('Source archive filename must contain its exact checksum')
+        source_notice = ('<p class="source-notice">Matching source: <a href="' + filename + '" download>' +
+                         filename + '</a><br>SHA-256: <span class="source-checksum">' + digest + '</span></p>')
+    return (source_notice + '\n<pre id="third-party-notices" tabindex="0" '
             'aria-label="Project and third-party license notices">' + html.escape(text, quote=True) + '</pre>')
 
 

@@ -38,20 +38,18 @@ and full component notices and obtain the matching source archive. The disclosur
 works without JavaScript and remains available in browsers that cannot prepare assets.
 Use Tab to focus its summary, then Enter or Space to open it.
 
-The release offers `jgr-portable-source-<archive-sha256>.zip` as a separate
-download, outside the four-file game ZIP. The page links to that archive and
-identifies its SHA-256. The ZIP
-contains reviewed source, build instructions, the project license and component
-notices. See [THIRD_PARTY_NOTICES.md](../../../THIRD_PARTY_NOTICES.md) for
-provenance and GPL build scope.
-You do not need the source archive to prepare assets or play. Asset preparation
-still works offline; downloading the source from the release page needs internet access.
+The page links to GitHub's automatic **Source code (zip)** download for the
+matching release tag. That tag contains the source, build instructions, project
+license and component notices. Do not upload a duplicate source archive.
+See [THIRD_PARTY_NOTICES.md](../../../THIRD_PARTY_NOTICES.md) for provenance
+and GPL build scope.
 
-When distributing the preparer HTML or `EBOOT.PBP`, offer the exact matching ZIP
-alongside the download, even when distributing either binary alone. For an
-offline distribution, build without `--source-base-url` and keep the source ZIP
-beside the HTML so the local source link works.
-Preserve the project license and component notices.
+Source is not needed to prepare assets or play. Asset preparation still works
+offline; downloading source from GitHub needs internet access. Preserve the
+project license and component notices.
+
+For an offline distribution, build without `--source-url` and keep the emitted
+matching source ZIP beside the HTML so its local source link works.
 
 ## Prepared files and saves
 
@@ -123,21 +121,19 @@ from this repository first. They generate the matching
 ```sh
 python3 tools/portable/browser/build.py \
   --emcc /path/to/emsdk/upstream/emscripten/emcc.py \
-  --source-base-url https://github.com/beckerd/psp_jgr_portable/releases/download/1.0 \
+  --source-url https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.zip \
   --psp psp --out build/browser/preparer
 cp build/browser/preparer/prepare.html \
   "build/release/JGR_PORTABLE/Prepare 1.0.html"
-cp build/browser/preparer/jgr-portable-source-*.zip build/release/
 ```
 
-The build emits `prepare.html` and its deterministic source ZIP. The commands
-above give the release copy its versioned filename and link to the source
-attachment on release `1.0`; change the URL for another release. Package only
-`README.md`, `Prepare 1.0.html`, `LICENSES.txt` and the matching `EBOOT.PBP`
-inside the game ZIP. Upload the matching source ZIP separately to the same
-release page. Use a fresh browser output directory for each release
-so the copy command selects only its matching archive. The source
-`prepare.html` in this directory is a template, not the working preparer.
+The build emits `prepare.html` linked to GitHub's existing source download for
+release tag `1.0`; change the URL for another release and ensure that tag contains
+the exact source used for both converters. With `--source-url`, no additional
+source ZIP is emitted. Package only `README.md`, `Prepare 1.0.html`,
+`LICENSES.txt` and the matching `EBOOT.PBP` inside the game ZIP. Use a fresh
+browser output directory for each release. The source `prepare.html` in this
+directory is a template, not the working preparer.
 Do not include compiler objects, test profiles or generated game assets in
 a release. No disc image or EBOOT is read when compiling the browser converter;
 the user supplies those at preparation time.
@@ -147,14 +143,14 @@ recorded inputs retain the PSP's rounding. Only the controller decoder is
 redirected; the PSP build is unchanged. `math-source.json` records the pinned
 upstream source and hashes. The emitted HTML displays the complete Newlib,
 Emscripten, Musl and shared-converter component notices in its disclosure.
-The matching source ZIP preserves those notices and their source files.
+The release tag preserves those notices and their source files.
 See the [GPL build scope](../../../THIRD_PARTY_NOTICES.md#gpl-build-scope)
 for the licensing requirements of both converters.
 
 ## Validation
 
 The browser build emits `build.json` with compiler, source, identity,
-source-archive and artifact hashes. Its initial status is
+source snapshot and artifact hashes, and the source download URL. Its initial status is
 `built_not_yet_validated`: compilation does not prove complete conversion
 or PSP compatibility.
 
