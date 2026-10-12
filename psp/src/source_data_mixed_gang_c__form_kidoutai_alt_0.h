@@ -1,0 +1,1 @@
+int source_data_mixed_gang_c__form_kidoutai_alt_0_load(void);

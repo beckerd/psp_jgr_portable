@@ -1,0 +1,10 @@
+{
+  "schema": 1,
+  "description": "Capture-only idle-clock synchronization for replaying the migration baseline's entry blend. Zero leaves the native state untouched. No pose, controller, motion, or geometry values are stored here.",
+  "phases": {
+    "2:2": [[102, 0, 0], [102, 0, 0], [102, 0, 0]],
+    "1:2": [[41, 0, 0], [41, 0, 0], [41, 0, 49]],
+    "3:2": [[7, 0, 0], [7, 0, 0], [7, 0, 0]],
+    "3:4": [[29, 0, 35], [29, 0, 71], [29, 52, 0]]
+  }
+}

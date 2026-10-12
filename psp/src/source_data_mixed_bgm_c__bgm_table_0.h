@@ -1,0 +1,1 @@
+int source_data_mixed_bgm_c__bgm_table_0_load(void);

@@ -1,0 +1,300 @@
+{
+  "scope": "Review of retained behavior, extraction locations/formats, resource selectors and port calibration. Game media, decoded lookup payloads and original binary program inputs are generated or supplied locally.",
+  "distinction": "Classifies output labels/counts/hashes, format offsets, reconstructed branch selectors and port calibration separately from decoded asset bindings. All 210 entries of the seven enemy motion maps are generated from original semantic pointer tables and raw-bank ordering, then loaded as external assets.",
+  "entries": [
+    {
+      "path": "psp/src/stage_depth_data.inc",
+      "symbols": [
+        "stage_decal_bits_*",
+        "stage_decal_key_*"
+      ],
+      "category": "port_optimization_calibration",
+      "rationale": "Computed classification of PSP batches requiring decal depth bias, keyed by compatibility fingerprints.",
+      "evidence": "decompile/tools/audit_depth_conflicts.py certified_decals() lines 166\u2013235 computes triangle coverage using clipping/proof logic; street_prop_depth.py preserves or re-certifies PSP batch IDs. Input snapshots are private."
+    },
+    {
+      "path": "psp/src/stage_texture_usage.inc",
+      "symbols": [
+        "stage_texture_weight_*",
+        "stage_texture_usage"
+      ],
+      "category": "port_optimization_calibration",
+      "rationale": "PSP VRAM priorities fitted from port render telemetry and triangle counts. Hashes/counts identify compatible converted files.",
+      "evidence": "decompile/tools/stage_texture_residency.py asset() and main() fit projected-area/draw-count samples and triangle counts to normalized weights. Reproducing the fit requires private telemetry."
+    },
+    {
+      "path": "psp/src/audio_spatial.h",
+      "symbols": [
+        "send",
+        "attenuation"
+      ],
+      "category": "hardware_semantics",
+      "rationale": "AICA send-level attenuation: level 0 is a mute sentinel; other levels use eight times (15 minus level). MANATEE_TL/PAN tables are separately generated assets.",
+      "evidence": "Flycast core/hw/aica/sgc_if.cpp line 55 defines SendLevel[16] as 255 followed by 14<<3 through 0<<3. Hardware/reference attribution is retained."
+    },
+    {
+      "path": "psp/src/citysky.c",
+      "symbols": [
+        "entries"
+      ],
+      "category": "output_compatibility_metadata",
+      "rationale": "Output filenames, local JGC slot order/nulls, expected counts and JGS object IDs used to prevent duplicate rendering.",
+      "evidence": "citysky_bind_stage() validates the expected near-object count and marks converted JGS object IDs; citysky_load() validates JGC counts. Values 1136/1135 identify output layout. Sky geometry/textures are read from user-generated files."
+    },
+    {
+      "path": "psp/src/story.c",
+      "symbols": [
+        "T in story_entry_stage"
+      ],
+      "category": "reconstructed_behavior",
+      "rationale": "Compact representation of original garage menu switch behavior.",
+      "evidence": "Private decompile/NOTES.md STREET screen and ghidra_out/decompiled_resolved.c document FUN_8c022e94 switch assignments selecting stage/chapter and special mode."
+    },
+    {
+      "path": "psp/src/story.c",
+      "symbols": [
+        "main0",
+        "special",
+        "first_mid",
+        "base/count in story_chapter_file"
+      ],
+      "category": "format_and_resource_index_metadata",
+      "rationale": "Save-format offsets and contiguous resource-file grouping describe storage layout and selection behavior.",
+      "evidence": "story_graffiti_progress() uses offsets into the native save mirror. story_chapter_file() implements contiguous chapter-bank indexing; original 1048e8 records read by private test_story_progress.py lines 86\u2013101 match generated file IDs."
+    },
+    {
+      "path": "psp/src/bgm.c",
+      "symbols": [
+        "by_mode in bgm_clear_pick"
+      ],
+      "category": "reconstructed_behavior",
+      "rationale": "Source-mode-to-song choice implements native branch behavior. No song/audio payload or original packed table is stored here.",
+      "evidence": "Private original FUN_8c02e290 switch cases1..29 pass immediate song IDs to02e71c; native by_mode29 is a compact rewrite of those branches."
+    },
+    {
+      "path": "psp/src/police_member.inc",
+      "symbols": [
+        "slots in dog branch"
+      ],
+      "category": "reconstructed_behavior",
+      "rationale": "Semantic animation selectors; selection then indexes already externally loaded DOG_MOTIONS. The selectors express state behavior, while original pointer-derived local clip order is external.",
+      "evidence": "gang_police_motion() selects semantic slots before indexing externally loaded DOG_MOTIONS; local clip bindings are generated separately."
+    },
+    {
+      "path": "decompile/tools/street_prop_types.py",
+      "symbols": [
+        "SHIBUYA_SOUNDS",
+        "*_BOUNCE",
+        "*_FIXED",
+        "types",
+        "counts",
+        "STAGES"
+      ],
+      "category": "reconstructed_behavior_and_extraction_schema",
+      "rationale": "Task/sound reaction rules reconstruct dispatch branches. Table locations/strides/counts locate user data; placement histograms validate conversion coverage. Actual placements, model trees, sound payloads and body coordinates are read from disc.",
+      "evidence": "Private FUN_8c030688 assigns handlers and immediate sound IDs in switches; 03861c/048b64/0f43c8 dispatches cover other stages. street_prop_assets.py line 87 compares counts against independently read placement records before extracting boxes/positions."
+    },
+    {
+      "path": "decompile/tools/kogane_house_assets.py",
+      "symbols": [
+        "SOUNDS",
+        "TYPES",
+        "MOTIONS"
+      ],
+      "category": "reconstructed_behavior_and_extraction_schema",
+      "rationale": "Selected actor types and per-type sound action describe native dispatch semantics; MOTIONS values are locations at which original pointer values must be read, not copied motion key data.",
+      "evidence": "Source.generate() reads motion=s.words(MOTIONS[ty])[0], original frames/trees/body vertices and placements. Sound IDs represent03861c selected action behavior."
+    },
+    {
+      "path": "decompile/tools/player_tuning.py",
+      "symbols": [
+        "FIELDS"
+      ],
+      "category": "extraction_schema",
+      "rationale": "Names, offsets and primitive types identify fields to extract; actual tuning values are absent and loaded from verified user executable.",
+      "evidence": "generate(exe) reads table pointer0x8c182884 then unpack fields by offset, generating numeric private output."
+    },
+    {
+      "path": "decompile/tools/stage_render_assets.py",
+      "symbols": [
+        "TABLES",
+        "SECTORS",
+        "KOGANE_TAG_ROOFS"
+      ],
+      "category": "extraction_schema",
+      "rationale": "Table/record addresses, counts and strides describe where to parse source input; special source object IDs identify cases needing correct TRS. No vertices or placement records are stored.",
+      "evidence": "Source reads executable+stage image; words/records/tree decoders materialize geometry and transformations only from those bytes."
+    },
+    {
+      "path": "decompile/tools/enemy_lod_assets.py",
+      "symbols": [
+        "PAIRS",
+        "EXISTING_FAR",
+        "FAR_TEXLIST"
+      ],
+      "category": "extraction_schema",
+      "rationale": "Output IDs and locations of original near/far/texlist pointer slots. Actual model pointers, texture bindings and geometry are read from user input.",
+      "evidence": "build() dereferences near_slot/far_slot. far_texture_mapping() decodes texture offsets from the executable and texture pack; converter-bindings-validation.json records parity for all six values."
+    },
+    {
+      "path": "decompile/tools/failure_hud_assets.py",
+      "symbols": [
+        "CELLS"
+      ],
+      "category": "extraction_schema",
+      "rationale": "Offsets of pointers in GAME resource header, not visual screen coordinates or original model/motion bytes.",
+      "evidence": "bake(): word(obj) obtains actual root, word(first/second) obtains actual motion addresses. It then copies only supplied bank data into local outputs."
+    },
+    {
+      "path": "decompile/tools/event_audio_assets.py",
+      "symbols": [
+        "PROFILE",
+        "world",
+        "logical address map"
+      ],
+      "category": "extraction_schema_and_native_behavior",
+      "rationale": "Offsets of original audio profile tables and identifiers for archive resources; full audio cue records and media are read from user input.",
+      "evidence": "resolve() calculates the source address, reads ex.read(address+ref*28,28) for backend/class/distances and reads the afs_file payload."
+    },
+    {
+      "path": "tools/portable/source_data_mixed.json",
+      "symbols": [
+        "declarations[].source",
+        "declarations[].syntax",
+        "declarations[].formats"
+      ],
+      "category": "extraction_schema",
+      "rationale": "Source addresses, shape/formatting syntax and formatting rules only; initializer values filled exclusively through @@ placeholders from user source. Hashes bind expected output without embedding it.",
+      "evidence": "source_data_mixed.py generation reads original source records before formatting; all known original initializer payloads represented by @@ fields."
+    },
+    {
+      "path": "decompile/tools/flycast_staff_route_reference.lua",
+      "symbols": [
+        "observation wrapper",
+        "capture hook prologue"
+      ],
+      "category": "authored_capture_code_and_user_input",
+      "rationale": "Hand-assembled capture instrumentation. Displaced camera-prologue words are read from the user executable and fingerprint-checked before local trampoline construction.",
+      "evidence": "install() reads six SH-4 words and validates their FNV fingerprint. converter-bindings-validation.json verifies that two hooks replay the exact supplied bytes and reject corruption."
+    },
+    {
+      "path": "psp/src/portable_hardware_fsca.inc",
+      "symbols": [
+        "fsca hardware constants",
+        "portable_hardware_aica.inc"
+      ],
+      "category": "licensed_generic_hardware_source",
+      "rationale": "Attributed GPL-2.0-or-later hardware tables. Original MANATEE pitch tables are read from the user disc.",
+      "evidence": "THIRD_PARTY_NOTICES.md and Flycast-hardware/GPL notices identify the upstream revision and corresponding source. The public source category is third_party_implementation; the generated runtime input has a separate numeric-input category."
+    },
+    {
+      "path": "psp/src/portable_tables_data.inc",
+      "symbols": [
+        "recipes",
+        "sections",
+        "fields"
+      ],
+      "category": "extraction_schema",
+      "rationale": "137 recipes, 529 ABI sections and 11,081 bounded field descriptors carry source addresses/types/pointer offsets and transformations. They contain no decoded original value payload; four fills are zero.",
+      "evidence": "tables_recipes.py rejects nonzero initializer literals. Native reader loads original values from verified disc files and preserves retained native semantic selection logic."
+    },
+    {
+      "path": "tools/portable/model_jobs.json",
+      "symbols": [
+        "jobs[].specs",
+        "jobs[].options"
+      ],
+      "category": "extraction_schema_and_port_layout",
+      "rationale": "351 model conversion recipes contain source paths/root and motion extents, parser options, original texture binding reader coordinates, and port-authored preview grid or zero-origin placements. No vertex, keyframe, image, audio or executable payload.",
+      "evidence": "model_recipes.py forbids arbitrary texmap arrays. Original texlist contents are read on device; all 268 nonzero placement records belong to the shared-cast preview grid or its skater derivatives."
+    },
+    {
+      "path": "psp/src/portable_replay_session_data.inc",
+      "symbols": [
+        "replay_jobs"
+      ],
+      "category": "authored_capture_inputs",
+      "rationale": "Output names, original callback/mission selection coordinates, port-selected title skater and authored spectator positions/idle clocks. These are inputs to original execution, not captured output poses or control streams.",
+      "evidence": "Generated from capture_jobs.json, replay_recipes.py and gang_idle_phases.json; bootstrap reads the executable, set banks and driver from the user disc."
+    },
+    {
+      "path": "psp/src/portable_world_data.inc",
+      "symbols": [
+        "collision-category and owner-exclusion arrays"
+      ],
+      "category": "retained_native_semantic_dispatch",
+      "rationale": "Native collision category/owner exclusion branches and source extraction coordinates, not polygon or placement payload. These selectors reconstruct original registration behavior with port fallbacks.",
+      "evidence": "world_recipes.py derives schema from kogane_collision.py, city_opening_assets and street_prop_types implementation choices; actual geometry read from disc."
+    },
+    {
+      "path": "tools/portable/replay/test_vm.c",
+      "symbols": [
+        "authored ISA programs",
+        "test_arm.c ISA programs"
+      ],
+      "category": "authored_test_code",
+      "rationale": "Short hand-authored ISA programs test instruction semantics and bounds; not copied original executable streams. Other replay C harnesses read disc or private fixture files externally.",
+      "evidence": "Reviewed explicit test programs, native observer fixtures and separately supplied RAM/output paths. No fixture binary is admitted to source export."
+    },
+    {
+      "path": "psp/src/portable_replay_staff_reuse.inc",
+      "symbols": [
+        "StaffReuse",
+        "staff_preserve",
+        "staff_pose_hook",
+        "staff_event_read/write"
+      ],
+      "category": "native_live_input_cache",
+      "rationale": "Stream serialization, protocol limits, original driver entry addresses and actor-field offsets. Common STAFF inputs are recorded from the first complete disc run in the setup session; subsequent characters execute disc-loaded pose drivers.",
+      "evidence": "All 16 character route and metadata outputs match the verified catalog. Source-bound session validation covers family transitions and repair order. Generated common.swi/event streams and experimental prototype helpers are excluded from export."
+    },
+    {
+      "path": "decompile/garage_spec.txt",
+      "symbols": [
+        "generated texmap lists"
+      ],
+      "category": "excluded_decoded_texture_bindings",
+      "rationale": "Generated model rows containing decoded texture-slot lookup arrays; excluded from public inputs and regenerated in a private conversion tree.",
+      "evidence": "garage_cast.py extract()/texmap() reads executable NJS_TEXLIST pointers and locates their indices in the garage texture bank. The pipeline generates the spec with --write before --bake; model_recipes.additional_recipes emits texbinding reader instructions."
+    },
+    {
+      "path": "decompile/garage_pending_spec.txt",
+      "symbols": [
+        "generated texmap lists"
+      ],
+      "category": "excluded_decoded_texture_bindings",
+      "rationale": "Generated invitation rows containing decoded texture-slot lookup arrays; excluded from public inputs and regenerated in a private conversion tree.",
+      "evidence": "garage_pending_assets.py extract() resolves texture-list pointers to bank indices. The pipeline generates the spec with --write before --bake; model_recipes.additional_recipes emits source-reader instructions."
+    },
+    {
+      "path": "decompile/chars_spec.txt",
+      "symbols": [
+        "source locations",
+        "texbinding readers",
+        "single tex selectors",
+        "port preview placements"
+      ],
+      "category": "extraction_schema_and_resource_selectors",
+      "rationale": "Source-derived filenames, addresses, raw-root/motion selections, port preview placement and single-resource selectors. Multi-slot texture bindings describe pointer extents read from the user executable.",
+      "evidence": "Character texbinding descriptors match the existing model_jobs.json source readers. Legacy jgc_convert.py resolves them from local user input via texture_binding.py; public model recipes already use the same instructions and scalar-selection operations."
+    },
+    {
+      "path": "decompile/record_book_spec.txt",
+      "symbols": [
+        "source object and motion locations"
+      ],
+      "category": "extraction_schema",
+      "rationale": "Source filenames, object/motion addresses and converter options are extraction/source-location metadata; no decoded texmap arrays are present.",
+      "evidence": "record_book_assets.py emits source root/motion locations used by the model converter. Geometry, textures and motion keys are read from user-supplied U_SYSOPTION files."
+    },
+    {
+      "path": "decompile/tools/police_vehicle_assets.py",
+      "symbols": [
+        "parked vehicle texture-binding instructions"
+      ],
+      "category": "extraction_schema_and_resource_selectors",
+      "rationale": "Multi-slot bindings are source-reader instructions; scalar texture selectors remain explicit converter metadata. No decoded multi-slot lookup list is stored.",
+      "evidence": "Vehicle texbinding instructions resolve the user executable pointer extent and texture bank through texture_binding.py; canonical model_jobs.json contains the same source readers."
+    }
+  ]
+}

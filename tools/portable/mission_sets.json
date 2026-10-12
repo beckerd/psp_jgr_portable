@@ -1,0 +1,2451 @@
+{
+  "files": {
+    "set0_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/000_mission_set_00.bin"
+    },
+    "set0_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/000_mission_set_00.bin"
+    },
+    "set0_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/000_mission_set_00.bin"
+    },
+    "set0_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/000_mission_set_00.bin"
+    },
+    "set0_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/000_mission_set_00.bin"
+    },
+    "set0_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/000_mission_set_00.bin"
+    },
+    "set0_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/000_mission_set_00.bin"
+    },
+    "set0_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/000_mission_set_00.bin"
+    },
+    "set10_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set10_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set10_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set10_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set10_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set10_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set10_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set10_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set10_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/010_mission_set_10.bin"
+    },
+    "set11_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set11_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set11_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set11_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set11_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set11_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set11_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set11_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set11_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/011_mission_set_11.bin"
+    },
+    "set12_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set12_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set12_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set12_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set12_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set12_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set12_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set12_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set12_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/012_mission_set_12.bin"
+    },
+    "set13_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set13_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set13_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set13_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set13_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "114"
+      ],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set13_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set13_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set13_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set13_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/013_mission_set_13.bin"
+    },
+    "set14_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set14_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set14_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set14_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set14_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set14_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set14_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set14_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set14_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/014_mission_set_14.bin"
+    },
+    "set15_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set15_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set15_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set15_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set15_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set15_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set15_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set15_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set15_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/015_mission_set_15.bin"
+    },
+    "set16_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set16_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set16_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set16_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set16_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set16_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set16_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set16_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set16_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/016_mission_set_16.bin"
+    },
+    "set17_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set17_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set17_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set17_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set17_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set17_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set17_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set17_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set17_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/017_mission_set_17.bin"
+    },
+    "set18_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set18_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set18_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set18_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set18_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set18_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set18_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set18_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set18_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/018_mission_set_18.bin"
+    },
+    "set19_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set19_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set19_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set19_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set19_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set19_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set19_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set19_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set19_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/019_mission_set_19.bin"
+    },
+    "set1_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set1_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set1_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set1_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set1_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set1_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set1_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set1_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set1_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/001_mission_set_01.bin"
+    },
+    "set20_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set20_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set20_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set20_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set20_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set20_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set20_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set20_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set20_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/020_mission_set_20.bin"
+    },
+    "set21_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set21_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set21_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set21_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set21_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set21_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set21_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set21_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set21_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/021_mission_set_21.bin"
+    },
+    "set22_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set22_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set22_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set22_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set22_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set22_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set22_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set22_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set22_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/022_mission_set_22.bin"
+    },
+    "set23_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set23_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set23_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set23_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set23_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set23_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set23_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set23_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set23_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/023_mission_set_23.bin"
+    },
+    "set24_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set24_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set24_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set24_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set24_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set24_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set24_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set24_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set24_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/024_mission_set_24.bin"
+    },
+    "set25_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set25_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set25_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set25_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set25_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set25_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set25_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set25_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set25_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/025_mission_set_25.bin"
+    },
+    "set26_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set26_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set26_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set26_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set26_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set26_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set26_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set26_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set26_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/026_mission_set_26.bin"
+    },
+    "set27_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set27_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set27_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set27_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set27_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set27_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set27_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set27_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set27_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/027_mission_set_27.bin"
+    },
+    "set28_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set28_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set28_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set28_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set28_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set28_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set28_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set28_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set28_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/028_mission_set_28.bin"
+    },
+    "set29_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set29_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set29_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set29_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set29_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set29_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set29_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set29_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set29_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/029_mission_set_29.bin"
+    },
+    "set2_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set2_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set2_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set2_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set2_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set2_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set2_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set2_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set2_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/002_mission_set_02.bin"
+    },
+    "set30_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set30_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set30_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set30_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set30_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set30_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set30_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set30_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set30_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/030_mission_set_30.bin"
+    },
+    "set31_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set31_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set31_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set31_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set31_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set31_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set31_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set31_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set31_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/031_mission_set_31.bin"
+    },
+    "set32_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set32_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set32_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set32_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set32_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set32_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set32_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set32_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set32_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/032_mission_set_32.bin"
+    },
+    "set33_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set33_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set33_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set33_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set33_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set33_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set33_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set33_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set33_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/033_mission_set_33.bin"
+    },
+    "set34_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set34_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set34_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set34_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set34_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set34_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set34_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set34_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set34_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/034_mission_set_34.bin"
+    },
+    "set35_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set35_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set35_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set35_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set35_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set35_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set35_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set35_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set35_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/035_mission_set_35.bin"
+    },
+    "set36_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set36_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set36_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set36_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set36_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set36_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set36_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set36_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set36_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/036_mission_set_36.bin"
+    },
+    "set37_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set37_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set37_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set37_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set37_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set37_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set37_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set37_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set37_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/037_mission_set_37.bin"
+    },
+    "set38_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set38_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set38_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set38_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set38_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set38_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set38_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set38_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set38_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/038_mission_set_38.bin"
+    },
+    "set39_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set39_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set39_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set39_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set39_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set39_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set39_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set39_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set39_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/039_mission_set_39.bin"
+    },
+    "set3_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set3_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set3_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set3_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set3_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set3_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set3_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set3_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set3_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/003_mission_set_03.bin"
+    },
+    "set40_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set40_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set40_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set40_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set40_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set40_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set40_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set40_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set40_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/040_mission_set_40.bin"
+    },
+    "set41_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set41_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set41_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set41_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set41_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set41_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set41_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set41_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set41_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/041_mission_set_41.bin"
+    },
+    "set42_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set42_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set42_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set42_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set42_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set42_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set42_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set42_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set42_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/042_mission_set_42.bin"
+    },
+    "set43_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set43_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set43_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set43_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set43_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set43_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set43_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set43_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set43_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/043_mission_set_43.bin"
+    },
+    "set44_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set44_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set44_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set44_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set44_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set44_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set44_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set44_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set44_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/044_mission_set_44.bin"
+    },
+    "set45_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set45_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set45_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set45_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set45_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set45_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set45_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set45_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set45_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/045_mission_set_45.bin"
+    },
+    "set46_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set46_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set46_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set46_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set46_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set46_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set46_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set46_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set46_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/046_mission_set_46.bin"
+    },
+    "set47_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set47_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set47_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set47_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set47_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set47_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set47_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set47_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set47_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/047_mission_set_47.bin"
+    },
+    "set48_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set48_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set48_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set48_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set48_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set48_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set48_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set48_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set48_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/048_mission_set_48.bin"
+    },
+    "set49_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set49_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set49_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set49_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set49_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set49_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set49_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set49_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set49_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/049_mission_set_49.bin"
+    },
+    "set4_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set4_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set4_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set4_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set4_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set4_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set4_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set4_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set4_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/004_mission_set_04.bin"
+    },
+    "set50_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/050_mission_set_50.bin"
+    },
+    "set50_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/050_mission_set_50.bin"
+    },
+    "set50_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/E_MISSIONSET/050_mission_set_50.bin"
+    },
+    "set50_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/050_mission_set_50.bin"
+    },
+    "set50_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/050_mission_set_50.bin"
+    },
+    "set50_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/050_mission_set_50.bin"
+    },
+    "set50_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/050_mission_set_50.bin"
+    },
+    "set50_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/050_mission_set_50.bin"
+    },
+    "set50_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/050_mission_set_50.bin"
+    },
+    "set51_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/051_mission_set_51.bin"
+    },
+    "set51_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/051_mission_set_51.bin"
+    },
+    "set51_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/051_mission_set_51.bin"
+    },
+    "set51_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/051_mission_set_51.bin"
+    },
+    "set51_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/E_MISSIONSET/051_mission_set_51.bin"
+    },
+    "set51_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/051_mission_set_51.bin"
+    },
+    "set51_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/051_mission_set_51.bin"
+    },
+    "set51_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/051_mission_set_51.bin"
+    },
+    "set51_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/051_mission_set_51.bin"
+    },
+    "set52_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/052_mission_set_52.bin"
+    },
+    "set52_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/052_mission_set_52.bin"
+    },
+    "set52_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/052_mission_set_52.bin"
+    },
+    "set52_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/052_mission_set_52.bin"
+    },
+    "set52_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/E_MISSIONSET/052_mission_set_52.bin"
+    },
+    "set52_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/052_mission_set_52.bin"
+    },
+    "set52_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/052_mission_set_52.bin"
+    },
+    "set52_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/052_mission_set_52.bin"
+    },
+    "set52_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/052_mission_set_52.bin"
+    },
+    "set53_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/053_mission_set_53.bin"
+    },
+    "set53_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/E_MISSIONSET/053_mission_set_53.bin"
+    },
+    "set53_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/053_mission_set_53.bin"
+    },
+    "set53_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/053_mission_set_53.bin"
+    },
+    "set53_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/E_MISSIONSET/053_mission_set_53.bin"
+    },
+    "set53_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/053_mission_set_53.bin"
+    },
+    "set53_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/053_mission_set_53.bin"
+    },
+    "set53_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/053_mission_set_53.bin"
+    },
+    "set53_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/053_mission_set_53.bin"
+    },
+    "set54_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set54_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set54_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set54_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set54_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set54_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set54_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set54_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set54_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/054_mission_set_54.bin"
+    },
+    "set55_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set55_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set55_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set55_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set55_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set55_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set55_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set55_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set55_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/055_mission_set_55.bin"
+    },
+    "set56_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/056_mission_set_56.bin"
+    },
+    "set56_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/056_mission_set_56.bin"
+    },
+    "set56_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/E_MISSIONSET/056_mission_set_56.bin"
+    },
+    "set56_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/056_mission_set_56.bin"
+    },
+    "set56_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/056_mission_set_56.bin"
+    },
+    "set56_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/056_mission_set_56.bin"
+    },
+    "set56_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/056_mission_set_56.bin"
+    },
+    "set56_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/056_mission_set_56.bin"
+    },
+    "set56_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/056_mission_set_56.bin"
+    },
+    "set57_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/057_mission_set_57.bin"
+    },
+    "set57_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/057_mission_set_57.bin"
+    },
+    "set57_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/057_mission_set_57.bin"
+    },
+    "set57_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/057_mission_set_57.bin"
+    },
+    "set57_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/E_MISSIONSET/057_mission_set_57.bin"
+    },
+    "set57_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/057_mission_set_57.bin"
+    },
+    "set57_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/057_mission_set_57.bin"
+    },
+    "set57_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/057_mission_set_57.bin"
+    },
+    "set57_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/057_mission_set_57.bin"
+    },
+    "set58_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/058_mission_set_58.bin"
+    },
+    "set58_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/058_mission_set_58.bin"
+    },
+    "set58_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/058_mission_set_58.bin"
+    },
+    "set58_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/058_mission_set_58.bin"
+    },
+    "set58_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/E_MISSIONSET/058_mission_set_58.bin"
+    },
+    "set58_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/058_mission_set_58.bin"
+    },
+    "set58_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/058_mission_set_58.bin"
+    },
+    "set58_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/058_mission_set_58.bin"
+    },
+    "set58_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/058_mission_set_58.bin"
+    },
+    "set59_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/059_mission_set_59.bin"
+    },
+    "set59_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/059_mission_set_59.bin"
+    },
+    "set59_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/059_mission_set_59.bin"
+    },
+    "set59_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/059_mission_set_59.bin"
+    },
+    "set59_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/E_MISSIONSET/059_mission_set_59.bin"
+    },
+    "set59_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/059_mission_set_59.bin"
+    },
+    "set59_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/059_mission_set_59.bin"
+    },
+    "set59_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/059_mission_set_59.bin"
+    },
+    "set59_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/059_mission_set_59.bin"
+    },
+    "set5_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set5_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set5_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set5_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set5_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set5_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set5_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set5_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set5_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/005_mission_set_05.bin"
+    },
+    "set60_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set60_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set60_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set60_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set60_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set60_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set60_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set60_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set60_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/060_mission_set_60.bin"
+    },
+    "set61_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set61_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set61_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set61_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set61_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set61_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set61_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set61_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set61_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/061_mission_set_61.bin"
+    },
+    "set62_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set62_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set62_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set62_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set62_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set62_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set62_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set62_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set62_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/062_mission_set_62.bin"
+    },
+    "set63_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set63_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set63_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set63_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set63_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set63_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set63_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set63_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set63_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/063_mission_set_63.bin"
+    },
+    "set6_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set6_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set6_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set6_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set6_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "46"
+      ],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set6_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set6_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set6_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set6_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/006_mission_set_06.bin"
+    },
+    "set7_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set7_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set7_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set7_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set7_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set7_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set7_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set7_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set7_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/007_mission_set_07.bin"
+    },
+    "set8_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set8_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set8_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set8_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set8_obj.bin": {
+      "arguments": [
+        "--sectors",
+        "63"
+      ],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set8_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set8_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set8_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set8_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/008_mission_set_08.bin"
+    },
+    "set9_cans.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    },
+    "set9_ctrl.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    },
+    "set9_graph.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    },
+    "set9_groups.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    },
+    "set9_obj.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    },
+    "set9_peds.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    },
+    "set9_police.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    },
+    "set9_rivals.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    },
+    "set9_waves.bin": {
+      "arguments": [],
+      "source": "decompile/afs/MISSIONSET/009_mission_set_09.bin"
+    }
+  },
+  "schema": 1,
+  "validation": {
+    "can_identity": "CAN3 source addresses are opaque alias keys scoped to a mission subset; semantic.py verifies the complete alias partition while preserving every other byte and null key.",
+    "empty_objects": "JMSb placeholder mission banks contain no legacy SOB placements and generate an empty SOB1 bank.",
+    "exact_outputs": "Every controller, graph, group, object, pedestrian, police, rival, and wave bank is checked against the reviewed output catalog."
+  }
+}

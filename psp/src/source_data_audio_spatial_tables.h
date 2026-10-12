@@ -1,0 +1,1 @@
+int source_data_audio_spatial_tables_load(void);

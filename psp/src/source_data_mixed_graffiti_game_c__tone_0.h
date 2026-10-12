@@ -1,0 +1,1 @@
+int source_data_mixed_graffiti_game_c__tone_0_load(void);

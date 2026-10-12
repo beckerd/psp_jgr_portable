@@ -1,0 +1,22 @@
+/* Port selector/filename metadata. No observed original timeline. */
+static const DemoSelector demo_selectors[]={
+ {"S1M11","challenge_s1m11_0.bin","gum",0u,1u},
+ {"S1M11","challenge_s1m11_1.bin","gum",1u,1u},
+ {"S1M11","challenge_s1m11_2.bin","gum",2u,1u},
+ {"S1M11","challenge_s1m11_3.bin","tab",3u,2u},
+ {"S1M11","challenge_s1m11_4.bin","tab",4u,2u},
+ {"S1M11","challenge_s1m11_5.bin","tab",5u,2u},
+ {"S1M06","challenge_s1m06_0.bin","piranha",0u,5u},
+ {"S1M06","challenge_s1m06_1.bin","piranha",1u,5u},
+ {"S1M06","challenge_s1m06_2.bin","piranha",2u,5u},
+ {"S1M07","challenge_s1m07_0.bin","cube",0u,1u},
+ {"S2M05","garam_demo0.bin","garam",0u,9u},
+ {"S2M05","garam_demo1.bin","garam",1u,9u},
+ {"S2M05","garam_demo2.bin","garam",2u,9u},
+ {"S3M06","mew_demo0.bin","mew",0u,7u},
+ {"S3M06","mew_demo1.bin","mew",1u,7u},
+ {"S3M06","mew_demo2.bin","mew",2u,7u},
+ {"S3M11","challenge_s3m11_0.bin","noisetank",0u,12u},
+ {"S3M11","challenge_s3m11_1.bin","noisetank",1u,12u},
+ {"S3M11","challenge_s3m11_2.bin","noisetank",2u,12u},
+};

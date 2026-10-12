@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>Prepare game assets · JGR Portable 1.0</title>
+  <!-- Build embeds style.css here. No network resources are needed. -->
+  <!-- JGR_PREPARE_STYLE -->
+</head>
+<body>
+  <main class="app" id="page-top">
+    <header class="masthead">
+      <a class="wordmark" href="#page-top" aria-label="JGR Portable">
+        <svg class="mark" viewBox="-12 -10 180 98" aria-hidden="true" focusable="false">
+          <defs>
+            <g id="jgr-lettering" fill-rule="evenodd">
+              <path d="M5 8H49V53L34 67H11L0 51 13 41 21 50H28V25H5Z"/>
+              <path d="M62 8H101L97 25H72L66 48H80L83 40H73L78 29H105L96 60 83 69H60L45 54 54 21Z"/>
+              <path d="M112 8H142L152 21 146 36 135 43 146 65 126 69 115 48 109 69H90ZM123 25 119 36H130L135 25Z"/>
+            </g>
+          </defs>
+          <g transform="rotate(-6 77 36)" stroke-linejoin="miter">
+            <use href="#jgr-lettering" fill="var(--ink)" stroke="var(--green)" stroke-width="13" transform="translate(2 3)"/>
+            <use href="#jgr-lettering" fill="var(--yellow)" stroke="var(--ink)" stroke-width="7" paint-order="stroke fill"/>
+          </g>
+        </svg>
+        <span class="wordmark-name">PORTABLE</span>
+      </a>
+    </header>
+
+    <section id="intro" class="intro" aria-labelledby="main-heading" hidden>
+      <div class="intro-text">
+      <p class="eyebrow">ONE-TIME SETUP</p>
+      <h1 id="main-heading">Prepare <span>Your Game</span></h1>
+      <p class="intro-copy">Choose the release folder, prepare assets, copy release folder to your memorystick.</p>
+      </div>
+      <svg class="street-art" viewBox="0 0 260 260" fill="none" aria-hidden="true" focusable="false">
+        <g transform="rotate(19 130 130)" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round">
+          <path d="M121 62V42h21v20" fill="var(--yellow)"/>
+          <path d="M135 49h7" stroke-width="4"/>
+          <path d="M94 84c0-14 13-24 36-24s36 10 36 24" fill="var(--orange)"/>
+          <path d="M94 82q36 10 72 0v128q-36 12-72 0Z" fill="var(--yellow)"/>
+          <path d="M152 88v119l12-3V86Z" fill="var(--orange)" stroke="none"/>
+          <path d="M102 111q28 6 56 0v64q-28 7-56 0Z" fill="var(--ink)" stroke="none"/>
+          <path d="M95 202q35 11 70 0" stroke-width="3"/>
+        </g>
+      </svg>
+    </section>
+
+    <div id="compatibility" class="notice" role="alert" hidden></div>
+    <noscript><div class="notice">JavaScript must be enabled to prepare game assets. Open this file in desktop Google Chrome with JavaScript enabled.</div></noscript>
+
+    <section id="chrome-required" class="setup-card chrome-required" aria-labelledby="chrome-heading" role="alert" hidden>
+      <p class="eyebrow">BEFORE YOU BEGIN</p>
+      <h2 id="chrome-heading">Google Chrome is required.</h2>
+      <p class="section-copy">Open this page in Google Chrome on your computer to prepare your game assets.</p>
+      <div class="chrome-actions">
+        <a id="launch-chrome" class="button primary" href="google-chrome:about:blank" target="_blank" rel="noopener noreferrer">Copy address &amp; launch Chrome <span aria-hidden="true">↗</span></a>
+        <a class="chrome-download" href="https://www.google.com/chrome/" target="_blank" rel="noopener noreferrer">Download Google Chrome <span aria-hidden="true">↗</span></a>
+      </div>
+      <p id="chrome-instructions" class="chrome-instructions">After Chrome opens, paste the page address into its address bar and press Enter. You can also copy the address below, or drag the preparer HTML file into Chrome. If Chrome doesn’t open, launch it yourself or use <strong>Open with → Google Chrome</strong>.</p>
+      <div id="chrome-address" class="chrome-address">
+        <label for="page-address">Page address</label>
+        <div class="address-row"><input id="page-address" type="text" readonly spellcheck="false" autocomplete="off"><button id="copy-address" class="button quiet" type="button">Copy address</button></div>
+        <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="folder-card" class="setup-card" aria-labelledby="folder-heading">
+      <div class="step-heading"><span class="step-number" aria-hidden="true">01</span><h2 id="folder-heading">Choose your release folder</h2></div>
+      <p class="section-copy">Put your <strong>GDI file and its track files</strong> in the same folder as <strong>EBOOT.PBP</strong>. Choose that folder below and allow access when your browser asks.</p>
+      <div class="folder-row">
+        <div class="folder-info"><span class="folder-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 7V5a1 1 0 0 1 1-1h5l2 3h9a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7Z" stroke="currentColor" stroke-width="1.5"/><path d="M3 8h18" stroke="currentColor" stroke-width="1.5"/></svg></span><div><strong id="folder-name">No folder selected</strong><p id="folder-summary">Your game files stay on this computer.</p></div></div>
+        <button id="choose-folder" class="button secondary" type="button">Choose folder <span aria-hidden="true">↗</span></button>
+      </div>
+      <p id="folder-message" class="field-message" role="status" hidden></p>
+    </section>
+
+    <section id="progress-card" class="setup-card progress-card" aria-labelledby="progress-heading" data-state="idle">
+      <div class="step-heading"><span class="step-number" aria-hidden="true">02</span><h2 id="progress-heading">Prepare game assets</h2></div>
+      <div class="status-row"><div><p id="phase-label" class="phase-label">Ready when you are</p><p id="phase-description" class="phase-description">Choose your folder to begin.</p></div><strong id="progress-value" class="progress-value" aria-hidden="true">—</strong></div>
+      <div id="progress-track" class="progress-track"><div id="progress-bar" class="progress-bar" role="progressbar" aria-label="Asset preparation progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div></div>
+      <div class="progress-meta"><span id="progress-count">One-time preparation</span><span id="elapsed">Elapsed <strong>00:00</strong></span></div>
+      <section id="source-check" class="source-check" aria-labelledby="source-check-heading" hidden>
+        <h3 id="source-check-heading">Required files</h3>
+        <p id="source-check-message"></p>
+        <ul id="source-file-list" class="source-file-list" role="list"></ul>
+      </section>
+      <details id="error-details" class="error-details" hidden><summary>Technical details</summary><pre id="error-text"></pre></details>
+      <div class="actions"><button id="extract" class="button primary" type="button" disabled>Prepare Assets <span aria-hidden="true">→</span></button><button id="cancel" class="button quiet" type="button" hidden>Cancel</button><p id="keep-open" hidden></p></div>
+      <div id="status-announcement" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></div>
+    </section>
+
+    <section id="success-card" class="success-card" aria-labelledby="success-heading" hidden>
+      <span class="success-icon" aria-hidden="true">✓</span><div><p class="eyebrow">READY FOR YOUR PSP</p><h2 id="success-heading">Copy to PSP</h2><p>Copy this prepared game folder into <code>PSP/GAME/</code> on your memory card, safely eject it, and launch the game.</p><p class="success-note">Keep the folder and its contents together.</p></div>
+    </section>
+
+    <footer><p>JGR Portable 1.0 · Asset preparation</p><div class="footer-notice"><p>Use your own supported game image.</p><p>Unofficial fan project. Not affiliated with, endorsed by, or sponsored by SEGA.</p></div></footer>
+    <details id="third-party-details" class="third-party-details">
+      <summary>Licenses &amp; source</summary>
+      <!-- JGR_PREPARE_NOTICES -->
+    </details>
+  </main>
+  <!-- Build embeds a script defining globalThis.JGR_PREPARE_WORKER_SOURCE here. -->
+  <!-- JGR_PREPARE_WORKER -->
+  <!-- Build embeds page.js here, after the worker source is defined. -->
+  <!-- JGR_PREPARE_SCRIPT -->
+</body>
+</html>

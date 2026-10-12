@@ -1,0 +1,32 @@
+Flycast/reicast hardware model inputs
+=====================================
+
+Source: https://github.com/flyinghead/flycast
+Revision: 149e651d24b3e3b3ddeff1d022f47813c40e9fc5
+License: GNU General Public License version 2 or, at your option, any later version.
+The full license is included as Flycast-GPL-2.0.txt and in runtime-notices.txt.
+
+psp/src/portable_hardware_fsca.inc contains the unchanged numerical body of
+core/hw/sh4/fsca-table.h, with an attribution comment added.
+psp/src/portable_hardware_aica.inc contains the AEG_Attack_Time and AEG_DSR_Time
+arrays excerpted from core/hw/aica/sgc_if.cpp, preserving its license notice.
+Input file hashes and lengths are recorded in reference_sources.json.
+
+These describe SH-4/AICA hardware, not Jet Grind Radio assets. They retain
+the upstream license; they are not independently authored game data.
+
+portable_hardware.c links these tables into the PSP installer (EBOOT DATA.PSP)
+and the browser WebAssembly converter. GPL obligations apply to each combined
+program, including the native replay and game routines linked into it, not
+only these tables. Distribution requires GPL-compliant availability of complete
+corresponding source, including headers and build scripts. The project's
+release layout supplies the exact matching source ZIP alongside either binary.
+Keep the full GPL text and the component copyright notices.
+
+The generated source_data_player_fsca.jsd copies the FSCA table; the AICA timing
+data contributes to source_data_smsb_tables.jsd. Generated copies and derived
+data retain the underlying rights; separately read game-disc data is not
+relicensed by this notice.
+
+See the root LICENSE and THIRD_PARTY_NOTICES.md for the original-contribution
+license and GPL build boundaries.

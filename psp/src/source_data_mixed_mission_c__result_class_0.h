@@ -1,0 +1,1 @@
+int source_data_mixed_mission_c__result_class_0_load(void);

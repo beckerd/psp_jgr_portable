@@ -1,0 +1,3 @@
+# Host conversion versions used for the portable preparation checks.
+Pillow==11.3.0
+numpy==2.0.2

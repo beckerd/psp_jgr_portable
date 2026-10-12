@@ -1,0 +1,1 @@
+int source_data_mixed_scene_c__colours_0_load(void);

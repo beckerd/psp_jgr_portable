@@ -1,0 +1,1 @@
+int source_data_mixed_story_c__scenes_0_load(void);

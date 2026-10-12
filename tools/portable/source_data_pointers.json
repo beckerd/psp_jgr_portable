@@ -1,0 +1,508 @@
+{
+  "schema": 1,
+  "review": "Compiler-derived external data. Preambles contain reviewed ABI types only; no initializer payload.",
+  "groups": [
+    {
+      "input": "audio_channel_tables.inc",
+      "name": "audio_channel_tables",
+      "owners": [
+        "audio_manager.inc"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "benten_crane_data.inc",
+      "name": "benten_crane_data",
+      "owners": [
+        "benten_crane.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {unsigned address,sector;float position[3];int32_t angles[3];float scale[3];} CranePlacement;\ntypedef struct CharPose { float pos[3], scl[3]; int ang[3]; unsigned ev, keyed; } CharPose;\ntypedef struct {unsigned indices[3];unsigned short surface,mask,flags;} CraneTriangle;\n",
+      "type_sources": [
+        {
+          "type": "CranePlacement",
+          "source": "psp/src/benten_crane.c"
+        },
+        {
+          "type": "CharPose",
+          "source": "psp/src/charpose.h"
+        },
+        {
+          "type": "CraneTriangle",
+          "source": "psp/src/benten_crane.c"
+        }
+      ]
+    },
+    {
+      "input": "bomb_source.inc",
+      "name": "bomb_source",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "burning_source.inc",
+      "name": "burning_source",
+      "owners": [
+        "gang.c",
+        "burning_combat.inc"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "challenge_demo_data.inc",
+      "name": "challenge_demo_data",
+      "owners": [
+        "recruit_audio.h"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {unsigned short tick;unsigned char kind;signed char program;} RecruitAudioCue;\ntypedef struct {\n    unsigned short tick,ref;\n    unsigned char active,variant;\n    float frame,target[3];\n} RecruitSprayCue;\ntypedef struct {\n    const char *mission,*path,*label;\n    unsigned set,character;\n    const RecruitAudioCue *cues;\n    unsigned cue_count;\n    const RecruitSprayCue *sprays;\n    unsigned spray_count;\n} RecruitDemo;\n",
+      "type_sources": [
+        {
+          "type": "RecruitAudioCue",
+          "source": "psp/src/recruit_audio.h"
+        },
+        {
+          "type": "RecruitSprayCue",
+          "source": "psp/src/recruit_audio.h"
+        },
+        {
+          "type": "RecruitDemo",
+          "source": "psp/src/recruit_audio.h"
+        }
+      ]
+    },
+    {
+      "input": "enemy_hardpoints.inc",
+      "name": "enemy_hardpoints",
+      "owners": [
+        "enemycombat_draw.c",
+        "enemycombat.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "event_audio_tables.inc",
+      "name": "event_audio_tables",
+      "owners": [
+        "event_audio.inc"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {int backend;float range,far_fraction,near_fraction;} SourceAudioProfile;\ntypedef struct {\n    unsigned kind,bank,reference,file,program,backend,channel,logical_bank,patch_file,patch_bank;\n    SourceAudioProfile profile;\n} EventAudioCue;\n",
+      "type_sources": [
+        {
+          "type": "SourceAudioProfile",
+          "source": "psp/src/audio_spatial.h"
+        },
+        {
+          "type": "EventAudioCue",
+          "source": "psp/src/source_data_enemy_audio_tables.c"
+        }
+      ]
+    },
+    {
+      "input": "eventnames.h",
+      "name": "eventnames",
+      "owners": [
+        "mission.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "garage_cast.inc",
+      "name": "garage_cast",
+      "owners": [
+        "garage_cast.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {\n    int primary,secondary;\n    float x,y,z;int yaw;unsigned frames[2];\n} GarageResident;\ntypedef struct {\n    unsigned slot,color;\n    float x,y,w,h,u0,v0,u1,v1;\n} GarageQuad;\n",
+      "type_sources": [
+        {
+          "type": "GarageResident",
+          "source": "psp/src/garage_cast.h"
+        },
+        {
+          "type": "GarageQuad",
+          "source": "psp/src/garage_cast.h"
+        }
+      ]
+    },
+    {
+      "input": "garage_departure.inc",
+      "name": "garage_departure",
+      "owners": [
+        "garage_cast.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {float point[6];int roll,fov;} GarageDepartureKey;\n",
+      "type_sources": [
+        {
+          "type": "GarageDepartureKey",
+          "source": "psp/src/garage_cast.h"
+        }
+      ]
+    },
+    {
+      "input": "garage_pending.inc",
+      "name": "garage_pending",
+      "owners": [
+        "garage_pending.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {\n    unsigned slot,color;\n    float x,y,w,h,u0,v0,u1,v1;\n} GarageQuad;\n",
+      "type_sources": [
+        {
+          "type": "GarageQuad",
+          "source": "psp/src/garage_cast.h"
+        }
+      ]
+    },
+    {
+      "input": "garage_ui.inc",
+      "name": "garage_ui",
+      "owners": [
+        "garage_ui.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {\n    unsigned slot,color;\n    float x,y,w,h,u0,v0,u1,v1;\n} GarageQuad;\n",
+      "type_sources": [
+        {
+          "type": "GarageQuad",
+          "source": "psp/src/garage_cast.h"
+        }
+      ]
+    },
+    {
+      "input": "grind_props_data.inc",
+      "name": "grind_props_data",
+      "owners": [
+        "grind_props.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {float pos[3];int32_t ang[3];float scale[3];} GrindPlacement;\ntypedef struct CharPose { float pos[3], scl[3]; int ang[3]; unsigned ev, keyed; } CharPose;\ntypedef struct {float vertices[9];unsigned bone,surface,mask,flags;} GrindTriangle;\ntypedef struct {unsigned first,count,texture,period,times[8];float position[3];unsigned source_flags;} GrindLight;\n",
+      "type_sources": [
+        {
+          "type": "GrindPlacement",
+          "source": "psp/src/grind_props.c"
+        },
+        {
+          "type": "CharPose",
+          "source": "psp/src/charpose.h"
+        },
+        {
+          "type": "GrindTriangle",
+          "source": "psp/src/grind_props.c"
+        },
+        {
+          "type": "GrindLight",
+          "source": "psp/src/grind_props.c"
+        }
+      ]
+    },
+    {
+      "input": "hud_text.inc",
+      "name": "hud_text",
+      "owners": [
+        "hud_text.h"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "killer_source.inc",
+      "name": "killer_source",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "kogane_house_data.inc",
+      "name": "kogane_house_data",
+      "owners": [
+        "kogane_house.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {unsigned type,frames,first_box,boxes,sound;} HouseType;\ntypedef struct {float vertices[24],center[3];} HouseBox;\ntypedef struct {unsigned address,type,sector;float position[3];int32_t angles[3];} HousePlacement;\n",
+      "type_sources": [
+        {
+          "type": "HouseType",
+          "source": "psp/src/kogane_house.c"
+        },
+        {
+          "type": "HouseBox",
+          "source": "psp/src/kogane_house.c"
+        },
+        {
+          "type": "HousePlacement",
+          "source": "psp/src/kogane_house.c"
+        }
+      ]
+    },
+    {
+      "input": "kogane_tunnel_materials.inc",
+      "name": "kogane_tunnel_materials",
+      "owners": [
+        "stage_render.inc"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "mission_cast.inc",
+      "name": "mission_cast",
+      "owners": [
+        "main.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "movie_tables.inc",
+      "name": "movie_tables",
+      "owners": [
+        "movie.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "para_source.inc",
+      "name": "para_source",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "pause_map_entries.inc",
+      "name": "pause_map_entries",
+      "owners": [
+        "pause_map.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {float x,y,z,scale;int models[6];} PauseMapEntry;\n",
+      "type_sources": [
+        {
+          "type": "PauseMapEntry",
+          "source": "psp/src/pause_map.h"
+        }
+      ]
+    },
+    {
+      "input": "player_body.inc",
+      "name": "player_body",
+      "owners": [
+        "player.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {int parent,attribute;float sphere[4],pos[3];int32_t ang[3];float scale[3];} PlayerBodyNode;\n",
+      "type_sources": [
+        {
+          "type": "PlayerBodyNode",
+          "source": "psp/src/player_body.h"
+        }
+      ]
+    },
+    {
+      "input": "player_motion.inc",
+      "name": "player_motion",
+      "owners": [
+        "player.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {\n    int type, clip, oneshot, low_clip, clip_flags;\n    int end_clip, end_oneshot, end_low_clip, end_flags, blend_kind, flags;\n    float rate, blend_step, entry_blend;\n} MotionSpec;\n",
+      "type_sources": [
+        {
+          "type": "MotionSpec",
+          "source": "psp/src/player.c"
+        }
+      ]
+    },
+    {
+      "input": "player_tuning.inc",
+      "name": "player_tuning",
+      "owners": [
+        "player.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {\n    int grab_damage;float grab_stun_ticks,grab_recover,grab_mash;\n    int health_max,can_capacity,health_low; /* original +00 / +0c / +1c */\n    float vmax, vmax_dash, vmax_stumble, vmax_stumble_dash, vmax_contact, vmax_contact_dash;\n    float stop_speed, max_speed, dash_coast;\n    int uphill_limit; float uphill_speed; int uphill_dead; float ramp_uphill_speed;\n    int downhill_limit; float downhill_speed; int downhill_dead; float ramp_downhill_speed;\n    float ramp_align_speed; int ramp_align_slow,ramp_align_fast;\n    int back_angle;\n    float turn_dash_a, turn_dash_b, turn_a, turn_b;\n    float ramp_turn_dash_a, ramp_turn_dash_b, ramp_turn_a, ramp_turn_b;\n    float jump_h; int jump_ticks; float jump_boost, land_k, jump_max_speed, stumble_bounce;\n    float fall_release, rise_fraction; int jump_min;\n    float fall_max, air_min_speed, air_brake;\n    int air_dead, air_turn, air_back_angle;\n    float ground_up, ground_down, shallow_down, air_up;\n    float trick_speed;\n    float body_radius, body_ground[3], body_air[3];\n    int recovery_ticks, wall_damage, fall_damage, water_damage, vehicle_damage,bullet_damage,fire_damage;\n    int explosion_damage,taban_damage;float damage_jump_h;\n    float wall_radius,wall_distance,wall_up,wall_down,body_wall[3];\n    float ramp_min_vy, ramp_launch_speed; int ramp_launch_pitch;\n    float rail_up,rail_down,body_rail[3];\n} CharTuning;\n",
+      "type_sources": [
+        {
+          "type": "CharTuning",
+          "source": "psp/src/player.h"
+        }
+      ]
+    },
+    {
+      "input": "record_book.inc",
+      "name": "record_book",
+      "owners": [
+        "record_book.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {int model,frames;} BookModel;\n",
+      "type_sources": [
+        {
+          "type": "BookModel",
+          "source": "psp/src/record_book.c"
+        }
+      ]
+    },
+    {
+      "input": "result_hud_text.inc",
+      "name": "result_hud_text",
+      "owners": [
+        "recruit_result.h"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "riot_source.inc",
+      "name": "riot_source",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "scene_models.inc",
+      "name": "scene_models",
+      "owners": [
+        "scene_models.h"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {\n    int type;uint32_t root,texlist,flags;const char *file;\n} SceneModelBinding;\n",
+      "type_sources": [
+        {
+          "type": "SceneModelBinding",
+          "source": "psp/src/sceneplay.h"
+        }
+      ]
+    },
+    {
+      "input": "shibuya_door_data.inc",
+      "name": "shibuya_door_data",
+      "owners": [
+        "city_openings.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {unsigned type,kind,frames,first_box,boxes,sound,bank;} OpeningType;\ntypedef struct {float vertices[24],center[3];} OpeningBox;\ntypedef struct {unsigned address,type,sector;float position[3];int32_t angles[3];float scale[3];} OpeningPlacement;\ntypedef struct { float cx, cy, cz, r; unsigned first_batch, n_batch, flags, pad; } JgsObj;\ntypedef struct {unsigned object;JgsObj original;} OpeningBaked;\nenum {OPENING_AUTO,OPENING_GATE,OPENING_WINDOW,OPENING_DOOR,OPENING_HINGED,OPENING_BARRIER};\n",
+      "type_sources": [
+        {
+          "type": "OpeningType",
+          "source": "psp/src/source_data_bantam_opening_data.c"
+        },
+        {
+          "type": "OpeningBox",
+          "source": "psp/src/source_data_bantam_opening_data.c"
+        },
+        {
+          "type": "OpeningPlacement",
+          "source": "psp/src/source_data_bantam_opening_data.c"
+        },
+        {
+          "type": "JgsObj",
+          "source": "psp/src/source_data_shibuya_gate_data.c"
+        },
+        {
+          "type": "OpeningBaked",
+          "source": "psp/src/city_openings.c"
+        }
+      ]
+    },
+    {
+      "input": "stage_camera.inc",
+      "name": "stage_camera",
+      "owners": [
+        "stage_camera.h"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {\n    int32_t type;\n    float point[6][3],normal[6][3],eye[3],target[3];\n    int32_t fov,roll,variable_fov;\n    float near_point[3];int32_t near_fov;\n    float far_point[3];int32_t far_fov;\n} StageCameraRegion;\n",
+      "type_sources": [
+        {
+          "type": "StageCameraRegion",
+          "source": "psp/src/stage_camera.h"
+        }
+      ]
+    },
+    {
+      "input": "story_intro_tables.inc",
+      "name": "story_intro_tables",
+      "owners": [
+        "sceneplay.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "street_prop_audio.inc",
+      "name": "street_prop_audio",
+      "owners": [
+        "world_audio.inc"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "street_props_data.inc",
+      "name": "street_props_data",
+      "owners": [
+        "street_props.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\ntypedef struct {\n    unsigned frames;const int16_t *angle;\n    float position[3];int32_t angles[3];float scale[3];unsigned axis;\n} StreetPropAnimation;\ntypedef struct {\n    float vertices[24],center[3];unsigned attribute;\n    float sphere[4],position[3];int32_t angles[3];float scale[3];int parent;unsigned kind;\n} StreetPropBox;\ntypedef struct {\n    unsigned address,type,sector,first_box,boxes,reaction;int sound;\n    float position[3];int32_t angles[3];float scale[3];unsigned animation;\n} StreetPropPlacement;\ntypedef struct {\n    unsigned stage,sectors,count,box_count;\n    const StreetPropPlacement *placements;const StreetPropBox *boxes;\n} StreetPropStage;\nenum {STREET_REACTION_BOUNCE,STREET_REACTION_FIXED,STREET_REACTION_SINGLE_BOUNCE,STREET_REACTION_ANIMATED,STREET_REACTION_VIEW_FIXED,STREET_REACTION_FULL_SINGLE_BOUNCE,STREET_REACTION_LOW_FIXED,STREET_REACTION_ANIMATED_SINGLE_BOUNCE};\n",
+      "type_sources": [
+        {
+          "type": "StreetPropAnimation",
+          "source": "psp/src/street_props.c"
+        },
+        {
+          "type": "StreetPropBox",
+          "source": "psp/src/street_props.c"
+        },
+        {
+          "type": "StreetPropPlacement",
+          "source": "psp/src/street_props.c"
+        },
+        {
+          "type": "StreetPropStage",
+          "source": "psp/src/street_props.c"
+        }
+      ]
+    },
+    {
+      "input": "taban_attack_source.inc",
+      "name": "taban_attack_source",
+      "owners": [
+        "enemycombat.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "taban_source.inc",
+      "name": "taban_source",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "trick_hud_tables.inc",
+      "name": "trick_hud_tables",
+      "owners": [
+        "trick_hud.h"
+      ],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "generated/source_data/bgm_c__BGM_NAME_0.inc",
+      "name": "mixed_bgm_c__bgm_name_0",
+      "owners": [],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "generated/source_data/record_book_c__place_0.inc",
+      "name": "mixed_record_book_c__place_0",
+      "owners": [],
+      "preamble": "#include <stdint.h>\n#include <stddef.h>\n\n",
+      "type_sources": []
+    }
+  ]
+}

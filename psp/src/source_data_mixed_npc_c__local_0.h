@@ -1,0 +1,1 @@
+int source_data_mixed_npc_c__local_0_load(void);

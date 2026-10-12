@@ -1,0 +1,1 @@
+int source_data_mixed_recruit_result_h__classes_0_load(void);

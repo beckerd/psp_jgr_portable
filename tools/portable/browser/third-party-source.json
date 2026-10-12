@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "toolchain": "Emscripten 6.0.12",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+      "url": "https://github.com/emscripten-core/emscripten/blob/6.0.12/LICENSE"
+    },
+    {
+      "path": "system/lib/libc/musl/COPYRIGHT",
+      "sha256": "b870108ec5e7790e9f9919064f1b9421d62d5f9b0e6c230c6adf7ea2da62e97b",
+      "url": "https://github.com/emscripten-core/emscripten/blob/6.0.12/system/lib/libc/musl/COPYRIGHT"
+    }
+  ],
+  "math_source": "math-source.json",
+  "notice": "THIRD_PARTY_NOTICES.txt"
+}

@@ -1,0 +1,35 @@
+{
+  "schema": 1,
+  "upstream": "https://github.com/pspdev/newlib",
+  "revision": "7b8edba6259fd8439fada6a2aaf1ecdef7b509d8",
+  "license": "Sun Microsystems 1993 permissive notice; preserved in math.c and THIRD_PARTY_NOTICES.txt",
+  "files": [
+    {
+      "path": "newlib/libm/math/sf_sin.c",
+      "sha256": "59b40b18dd446914004bd7b409df543b3da32a12299e29cd7ca2967626b7a041",
+      "url": "https://github.com/pspdev/newlib/blob/7b8edba6259fd8439fada6a2aaf1ecdef7b509d8/newlib/libm/math/sf_sin.c"
+    },
+    {
+      "path": "newlib/libm/math/sf_cos.c",
+      "sha256": "e507d31c294c99d38a0f91e0ed04e4fb9aef3511777d16ce7465fd8e4ab209f8",
+      "url": "https://github.com/pspdev/newlib/blob/7b8edba6259fd8439fada6a2aaf1ecdef7b509d8/newlib/libm/math/sf_cos.c"
+    },
+    {
+      "path": "newlib/libm/math/kf_sin.c",
+      "sha256": "95c33e554946eaa08255355e5241db4299c816a84d57a5f87fae59eb58445f95",
+      "url": "https://github.com/pspdev/newlib/blob/7b8edba6259fd8439fada6a2aaf1ecdef7b509d8/newlib/libm/math/kf_sin.c"
+    },
+    {
+      "path": "newlib/libm/math/kf_cos.c",
+      "sha256": "0be4b097e803ee5594c69d027719b7a01aeb2d047fd8414ff570739637d7a1fe",
+      "url": "https://github.com/pspdev/newlib/blob/7b8edba6259fd8439fada6a2aaf1ecdef7b509d8/newlib/libm/math/kf_cos.c"
+    },
+    {
+      "path": "newlib/libm/math/ef_rem_pio2.c",
+      "sha256": "64349d09eacaf87beb002f9b12d86153737c020a13762794b639ae3faca2f6dc",
+      "url": "https://github.com/pspdev/newlib/blob/7b8edba6259fd8439fada6a2aaf1ecdef7b509d8/newlib/libm/math/ef_rem_pio2.c"
+    }
+  ],
+  "adapted_file": "math.c",
+  "scope": "Controller direction decoder; no game data or reference output is embedded."
+}

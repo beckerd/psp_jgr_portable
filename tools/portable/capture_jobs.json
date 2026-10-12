@@ -1,0 +1,422 @@
+{
+  "schema": 1,
+  "description": "Original performance selectors and port output names; raw observations and converted routes are never distributed.",
+  "jobs": [
+    {
+      "key": "title",
+      "kind": "title",
+      "character": 7
+    },
+    {
+      "key": "staff00",
+      "kind": "staff",
+      "character": 0
+    },
+    {
+      "key": "staff01",
+      "kind": "staff",
+      "character": 1
+    },
+    {
+      "key": "staff02",
+      "kind": "staff",
+      "character": 2
+    },
+    {
+      "key": "staff03",
+      "kind": "staff",
+      "character": 3
+    },
+    {
+      "key": "staff04",
+      "kind": "staff",
+      "character": 4
+    },
+    {
+      "key": "staff05",
+      "kind": "staff",
+      "character": 5
+    },
+    {
+      "key": "staff06",
+      "kind": "staff",
+      "character": 6
+    },
+    {
+      "key": "staff07",
+      "kind": "staff",
+      "character": 7
+    },
+    {
+      "key": "staff08",
+      "kind": "staff",
+      "character": 8
+    },
+    {
+      "key": "staff09",
+      "kind": "staff",
+      "character": 9
+    },
+    {
+      "key": "staff10",
+      "kind": "staff",
+      "character": 10
+    },
+    {
+      "key": "staff11",
+      "kind": "staff",
+      "character": 11
+    },
+    {
+      "key": "staff12",
+      "kind": "staff",
+      "character": 12
+    },
+    {
+      "key": "staff13",
+      "kind": "staff",
+      "character": 13
+    },
+    {
+      "key": "staff14",
+      "kind": "staff",
+      "character": 14
+    },
+    {
+      "key": "staff15",
+      "kind": "staff",
+      "character": 15
+    },
+    {
+      "mission": "S1M11",
+      "stage": 1,
+      "chapter": 10,
+      "record": 0,
+      "character": 1,
+      "subset": 0,
+      "key": "demo_s1m11_0",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m11_0.bin",
+      "label": "gum"
+    },
+    {
+      "mission": "S1M11",
+      "stage": 1,
+      "chapter": 10,
+      "record": 2,
+      "character": 1,
+      "subset": 1,
+      "key": "demo_s1m11_1",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m11_1.bin",
+      "label": "gum"
+    },
+    {
+      "mission": "S1M11",
+      "stage": 1,
+      "chapter": 10,
+      "record": 4,
+      "character": 1,
+      "subset": 2,
+      "key": "demo_s1m11_2",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m11_2.bin",
+      "label": "gum"
+    },
+    {
+      "mission": "S1M11",
+      "stage": 1,
+      "chapter": 10,
+      "record": 6,
+      "character": 2,
+      "subset": 3,
+      "key": "demo_s1m11_3",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m11_3.bin",
+      "label": "tab"
+    },
+    {
+      "mission": "S1M11",
+      "stage": 1,
+      "chapter": 10,
+      "record": 8,
+      "character": 2,
+      "subset": 4,
+      "key": "demo_s1m11_4",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m11_4.bin",
+      "label": "tab"
+    },
+    {
+      "mission": "S1M11",
+      "stage": 1,
+      "chapter": 10,
+      "record": 20,
+      "character": 2,
+      "subset": 5,
+      "key": "demo_s1m11_5",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m11_5.bin",
+      "label": "tab"
+    },
+    {
+      "mission": "S1M06",
+      "stage": 1,
+      "chapter": 5,
+      "record": 0,
+      "character": 5,
+      "subset": 0,
+      "key": "demo_s1m06_0",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m06_0.bin",
+      "label": "piranha"
+    },
+    {
+      "mission": "S1M06",
+      "stage": 1,
+      "chapter": 5,
+      "record": 2,
+      "character": 5,
+      "subset": 1,
+      "key": "demo_s1m06_1",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m06_1.bin",
+      "label": "piranha"
+    },
+    {
+      "mission": "S1M06",
+      "stage": 1,
+      "chapter": 5,
+      "record": 4,
+      "character": 5,
+      "subset": 2,
+      "key": "demo_s1m06_2",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m06_2.bin",
+      "label": "piranha"
+    },
+    {
+      "mission": "S1M07",
+      "stage": 1,
+      "chapter": 6,
+      "record": 0,
+      "character": 1,
+      "subset": 0,
+      "key": "demo_s1m07_0",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s1m07_0.bin",
+      "label": "cube"
+    },
+    {
+      "mission": "S2M05",
+      "stage": 2,
+      "chapter": 4,
+      "record": 0,
+      "character": 9,
+      "subset": 0,
+      "key": "demo_s2m05_0",
+      "kind": "demo",
+      "player": 0,
+      "path": "garam_demo0.bin",
+      "label": "garam"
+    },
+    {
+      "mission": "S2M05",
+      "stage": 2,
+      "chapter": 4,
+      "record": 2,
+      "character": 9,
+      "subset": 1,
+      "key": "demo_s2m05_1",
+      "kind": "demo",
+      "player": 0,
+      "path": "garam_demo1.bin",
+      "label": "garam"
+    },
+    {
+      "mission": "S2M05",
+      "stage": 2,
+      "chapter": 4,
+      "record": 4,
+      "character": 9,
+      "subset": 2,
+      "key": "demo_s2m05_2",
+      "kind": "demo",
+      "player": 0,
+      "path": "garam_demo2.bin",
+      "label": "garam"
+    },
+    {
+      "mission": "S3M06",
+      "stage": 3,
+      "chapter": 5,
+      "record": 0,
+      "character": 7,
+      "subset": 0,
+      "key": "demo_s3m06_0",
+      "kind": "demo",
+      "player": 0,
+      "path": "mew_demo0.bin",
+      "label": "mew"
+    },
+    {
+      "mission": "S3M06",
+      "stage": 3,
+      "chapter": 5,
+      "record": 2,
+      "character": 7,
+      "subset": 1,
+      "key": "demo_s3m06_1",
+      "kind": "demo",
+      "player": 0,
+      "path": "mew_demo1.bin",
+      "label": "mew"
+    },
+    {
+      "mission": "S3M06",
+      "stage": 3,
+      "chapter": 5,
+      "record": 4,
+      "character": 7,
+      "subset": 2,
+      "key": "demo_s3m06_2",
+      "kind": "demo",
+      "player": 0,
+      "path": "mew_demo2.bin",
+      "label": "mew"
+    },
+    {
+      "mission": "S3M11",
+      "stage": 3,
+      "chapter": 10,
+      "record": 0,
+      "character": 12,
+      "subset": 0,
+      "key": "demo_s3m11_0",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s3m11_0.bin",
+      "label": "noisetank"
+    },
+    {
+      "mission": "S3M11",
+      "stage": 3,
+      "chapter": 10,
+      "record": 2,
+      "character": 12,
+      "subset": 1,
+      "key": "demo_s3m11_1",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s3m11_1.bin",
+      "label": "noisetank"
+    },
+    {
+      "mission": "S3M11",
+      "stage": 3,
+      "chapter": 10,
+      "record": 4,
+      "character": 12,
+      "subset": 2,
+      "key": "demo_s3m11_2",
+      "kind": "demo",
+      "player": 0,
+      "path": "challenge_s3m11_2.bin",
+      "label": "noisetank"
+    },
+    {
+      "mission": "S1M07",
+      "stage": 1,
+      "chapter": 6,
+      "record": 2,
+      "character": 0,
+      "player": 3,
+      "bank": 7,
+      "subset": 1,
+      "key": "rival_s1m07",
+      "kind": "rival"
+    },
+    {
+      "mission": "S2M07",
+      "stage": 2,
+      "chapter": 6,
+      "record": 0,
+      "character": 4,
+      "player": 0,
+      "bank": 16,
+      "subset": 0,
+      "key": "rival_s2m07",
+      "kind": "rival"
+    },
+    {
+      "mission": "S3M07",
+      "stage": 3,
+      "chapter": 6,
+      "record": 0,
+      "character": 8,
+      "player": 0,
+      "bank": 26,
+      "subset": 0,
+      "key": "rival_s3m07",
+      "kind": "rival"
+    },
+    {
+      "key": "gang_poison",
+      "kind": "gang",
+      "stage": 2,
+      "chapter": 2,
+      "character": 10,
+      "bank": 12,
+      "subset": 0,
+      "record": 0,
+      "player": 0,
+      "prefix": "poison"
+    },
+    {
+      "key": "gang_noise",
+      "kind": "gang",
+      "stage": 3,
+      "chapter": 2,
+      "character": 12,
+      "bank": 22,
+      "subset": 0,
+      "record": 0,
+      "player": 0,
+      "prefix": "noise"
+    },
+    {
+      "key": "gang_love",
+      "kind": "gang",
+      "stage": 1,
+      "chapter": 2,
+      "character": 11,
+      "bank": 3,
+      "subset": 0,
+      "record": 0,
+      "player": 0,
+      "prefix": "love"
+    },
+    {
+      "key": "gang_mask",
+      "kind": "gang",
+      "stage": 3,
+      "chapter": 4,
+      "character": 15,
+      "bank": 24,
+      "subset": 1,
+      "record": 0,
+      "player": 0,
+      "prefix": "mask"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+diff --git a/core/lua/lua.cpp b/core/lua/lua.cpp
+--- a/core/lua/lua.cpp
++++ b/core/lua/lua.cpp
+@@ -457,6 +457,7 @@
+ 						gui_open_settings();
+ 				}))
+ 				.addFunction("exit", dc_exit)
++				.addFunction("setFastForward", std::function<void(bool)>([](bool enabled) { settings.input.fastForwardMode = enabled; }))
+ 				.addFunction("displayNotification", os_notify)
+ 			.endNamespace()
+ 

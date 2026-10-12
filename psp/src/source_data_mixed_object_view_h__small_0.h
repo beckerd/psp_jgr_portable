@@ -1,0 +1,1 @@
+int source_data_mixed_object_view_h__small_0_load(void);

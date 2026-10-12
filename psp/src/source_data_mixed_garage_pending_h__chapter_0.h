@@ -1,0 +1,1 @@
+int source_data_mixed_garage_pending_h__chapter_0_load(void);

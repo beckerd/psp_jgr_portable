@@ -1,0 +1,1 @@
+int source_data_mixed_garage_pending_h__voice_0_load(void);

@@ -1,0 +1,90 @@
+{
+  "schema": 1,
+  "description": "Verified original source identities and declaration hashes only; no initializer payloads. Runtime values must be recovered from supplied executable and enemy banks.",
+  "banks": {
+    "keikan": {
+      "path": "001_keikandat.bin",
+      "sha256": "962ac377a4988ab1a91c0e1ef6ecb690d1e990403c72d6ea9e40a49c708147e9"
+    },
+    "kidoutai": {
+      "path": "003_kidoutaidat.bin",
+      "sha256": "073ac2efd72f759e71125112dece8b9035ab317dfd8f71ff7b6bf4f84649011e"
+    },
+    "inu": {
+      "path": "005_inudat.bin",
+      "sha256": "e9d4e7f0d220d2e1089ef3105252929a031849ba744d7403cbaf4ce27f1542eb"
+    },
+    "killer": {
+      "path": "007_killerdat.bin",
+      "sha256": "8123f588f8c200ce7ce3448cc68c3e0a206c8dc8ef2129dc20ac8f539f237fef"
+    },
+    "bomb": {
+      "path": "009_bombdat.bin",
+      "sha256": "935342c98a550759da42915ff6c1b3a29f83fe409317db228988884d1fa9149d"
+    },
+    "kairiki": {
+      "path": "011_kairikidat.bin",
+      "sha256": "c13e56cb23e03bfa35dcb0fa4cdd0dea4a7174d7a5037a764c0771f319025d4a"
+    },
+    "fire": {
+      "path": "017_firedat.bin",
+      "sha256": "7289d859c22db73b8b765a50272d73ce0840a23075cc309340b9a1004722278b"
+    },
+    "para": {
+      "path": "013_paradat.bin",
+      "sha256": "7a1b96e157245421b6e1f5b207ecbd923813e3da82213750df02a2ba2fe0696b"
+    },
+    "sniper": {
+      "path": "031_sniperdat.bin",
+      "sha256": "ac0fbba3f7c402f0f275f405e8553b14addc77fad51e0b79c98e8a3770a00060"
+    },
+    "onisima": {
+      "path": "033_onisimadat.bin",
+      "sha256": "ff1f333552e1a661ed1730b92c29eb681243fb5898928d70d3e08400c080ec55"
+    },
+    "patcar": {
+      "path": "021_patcardat.bin",
+      "sha256": "901c85c0051120fb66d02482cd21067e69cf6bc0bbe9a115d6b28a4dfd48792c"
+    },
+    "benz": {
+      "path": "027_benzdat.bin",
+      "sha256": "0ef28c927c0bb89d96fad30152b295e619b16cf4f7911096be8078ec161d62eb"
+    },
+    "heri": {
+      "path": "025_heridat.bin",
+      "sha256": "57fefed3f4eec1eef5ec01fa9addaff27d454fb42b5ee0341d1ab72fa8a2577b"
+    },
+    "bheri": {
+      "path": "029_bheridat.bin",
+      "sha256": "c1d094076cd0bcbb391a5a38086bccf1fd2da0ebe8b0eae6759e6ebf942c3c69"
+    },
+    "rival1": {
+      "path": "039_rival1dat.bin",
+      "sha256": "464b4583a77d126337384062a2debdad1c6e0ebc8a15c5eec32490410cd19a2b"
+    },
+    "rival2": {
+      "path": "041_rival2dat.bin",
+      "sha256": "149e1e492b7aa286b310d13a32290be2316b22d7ffb733fe4ac3c5461006d22e"
+    },
+    "rival3": {
+      "path": "043_rival3dat.bin",
+      "sha256": "af668322a5c252411dec69085ceea9bfd5487ebc84743b212290f3b7c2d58cbc"
+    }
+  },
+  "outputs": {
+    "main_enemy_maps.inc": "598167017ffbe774074bf823fa08cbffa4ee14c9630b92984d3f65047cdf06f9",
+    "npc_squad_anim.inc": "faf3a42aaef4382fb5e17a13e53767f06a5f23a4b0b6e6c9ca026419d82bd3e0",
+    "main_mark_model.inc": "b5aec7b4e7ba609a0b9a15f5c82167c04207ef7bb5db990f79a58806d4644888",
+    "sniper_motion.inc": "5c650ffd772c23b4fa44c3e66a400c40888717d233874b42c1500c3f1f1a5acb",
+    "police_clips.inc": "53cc08a2ec955d0105f3275df4f72345cd7cae213db5c47061faf5ee68b52186",
+    "onishima_primary.inc": "f5bdb8259ab7e49e79b847addc1f7aa2ec20f88973aa5841d6773455cf35dbed",
+    "onishima_overlay.inc": "e5a7fb3f80465be759bbcd3472af6a010c146049223d6a0de382e9cdd67974fa",
+    "main_remaining_enemy_maps.inc": "fa81a2082483080ef6ce8cd8a4a09639c455ee08b3ec2b3729b8cf5b4da2e198",
+    "scene_command_program.inc": "58bbb2cd3736cfaf923f85a69c6a30fbaafb0260d9268b8c99fac15e10a5cfa2",
+    "final_emitter_texmap.inc": "bb6605fcc2bf7b3d567e20deb6fdca5fd8a1d5e1d949ab0f42099d52c0909ccb"
+  },
+  "sources": {
+    "decompile/afs/STAGELAST/000_lasttxr.bin": "39c4fdf7588deaef3892bea5570380e537a1426df5e691ec07b8963ac4bdb8d9",
+    "decompile/afs/STAGELAST/001_lastdat.bin": "244472155e055b083a55b5d2c6fbcae0b5361c995e8ef777f88a612708d4f0c0"
+  }
+}

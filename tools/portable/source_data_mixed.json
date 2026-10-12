@@ -1,0 +1,5313 @@
+{
+  "schema": 1,
+  "review": "Source addresses and formatting only; @@ placeholders are populated exclusively from the verified user executable. No original initializer values are stored here.",
+  "declarations": [
+    {
+      "output": "collision_source_h__table_0.inc",
+      "source": {
+        "format": "I",
+        "address": "0x8c1cddd8"
+      },
+      "syntax": "static const unsigned table[9]={@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 1
+        },
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 8
+        }
+      ],
+      "sha256": "1f64aaa3e21e389f3ec9f1c42b6226f829049d0c34998d098c049e1671253259",
+      "provenance": "psp/src/collision_source.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "enemycombat_c__keikan_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1b6f28"
+      },
+      "syntax": "const float keikan[2][3]={{@@,@@,@@},{@@,@@,@@}};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": true
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 4,
+          "omit_zero": true
+        }
+      ],
+      "sha256": "fe0bb23c72bfd95f6c5d118200353095bb72d093e6354572f1cc89560c50865d",
+      "provenance": "psp/src/enemycombat.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "finalarena_c__position_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1d0f1c"
+      },
+      "syntax": "static const float position[3]={@@,@@,@@};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 14,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "caab702077ece8c6c45c9f5dce38a539713fa5571c10d61508d2bbaf4703000c",
+      "provenance": "psp/src/finalarena.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "finalarena_c__position_1.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1d0f10"
+      },
+      "syntax": "static const float position[3]={@@,@@,@@};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "0c69c9431ad72a9fe4da306d072e73575ffbbd5c500777ad91a86ebb9f64caa2",
+      "provenance": "psp/src/finalarena.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "finalhazard_c__positions_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1dc118"
+      },
+      "syntax": "static const float positions[6][3]={\n    {@@,@@,@@},{@@,@@,@@},\n    {@@,@@,@@},\n    {@@,@@,@@},\n    {@@,@@,@@},\n    {@@,@@,@@}};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 12,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "6664920fa9753f8e7afdc1c6da56c59c19da6fb9e9505c2509576094863d3443",
+      "provenance": "psp/src/finalhazard.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "finalhazard_c__angles_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c1dc160"
+      },
+      "syntax": "static const int angles[6]={@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "183faf64689a696b1cb6131277f7e4109ef2a6a725a3410642fd8e0304a2e912",
+      "provenance": "psp/src/finalhazard.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "finalhazard_c__points_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1dc178"
+      },
+      "syntax": "static const float points[2][3]={{@@,@@,@@},\n                                      {@@,@@,@@}};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 14,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 14,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "839a38fbc1f4e2264901e903ca78066d97b085aa3393884f2c55c71ea91b6dce",
+      "provenance": "psp/src/finalhazard.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "finalprogress_c__rate_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1df2f0"
+      },
+      "syntax": "static const float rate[9]={@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": true
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "7e09cae4d65991af76687bdc65054f304b9672a4c705a78deb0d13a8633aab54",
+      "provenance": "psp/src/finalprogress.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "gang_c__PAR_T0_0.inc",
+      "source": {
+        "format": "f",
+        "mode": "mixed_record",
+        "address": "0x8c1b7264",
+        "storage": [
+          "i",
+          "i",
+          "i",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "i",
+          "i",
+          "i",
+          "i"
+        ]
+      },
+      "syntax": "static const float PAR_T0[24] = {@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": true
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "90436032bd8adf528f2bd430200945883824f507cdd227aacc9c0cadf0c79e9b",
+      "provenance": "psp/src/gang.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "gang_c__PAR_T1_0.inc",
+      "source": {
+        "format": "f",
+        "mode": "mixed_record",
+        "address": "0x8c1b752c",
+        "storage": [
+          "i",
+          "i",
+          "i",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "f",
+          "i",
+          "i",
+          "i",
+          "i"
+        ]
+      },
+      "syntax": "static const float PAR_T1[24] = { @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@ };",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 3,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 3,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 3,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 3,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 3,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 3,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 3,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "1dbfdd60bffc65f9b7591ca8b92754644bd94f1880a05a320f3ff5df45472792",
+      "provenance": "psp/src/gang.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "gang_c__PARA_GROUND_0.inc",
+      "source": {
+        "format": "f",
+        "mode": "formation_rows",
+        "table": "0x8c1b8160",
+        "rows": 5
+      },
+      "syntax": "static const float PARA_GROUND[5][5][3] = {\n    { {  @@, @@,  @@} },\n    { {@@, @@,  @@}, { @@, @@,  @@} },\n    { {  @@, @@,  @@}, {@@, @@, @@}, { @@, @@, @@} },\n    { { @@, @@,  @@}, { @@, @@,  @@}, {@@, @@, @@}, { @@, @@, @@} },\n    { {  @@, @@,  @@}, {@@, @@,  @@}, { @@, @@,  @@}, {@@, @@, @@}, {@@, @@, @@} }\n};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "73f6736917a028937b80e5f741500b99b9217fd46139a95acf1bb33f24ee1837",
+      "provenance": "psp/src/gang.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "gang_c__PARA_AIR_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1b8174"
+      },
+      "syntax": "static const float PARA_AIR[5][5][3] = {\n    { {  @@,  @@,  @@} },\n    { {@@,  @@,  @@}, { @@,  @@, @@} },\n    { { @@,  @@,  @@}, {@@, @@, @@}, { @@,  @@, @@} },\n    { {@@, @@,  @@}, { @@,  @@,@@}, {@@, @@,@@}, {@@,@@,@@} },\n    { {  @@,  @@,  @@}, {@@, @@, @@}, { @@,  @@, @@}, {@@, @@,@@}, {@@,@@,@@} }\n};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "f3996d1f027aa53b02978738b969f87bb1df888ee9afee55ac398afed060415e",
+      "provenance": "psp/src/gang.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "gang_c__FORM_COMMON_0.inc",
+      "source": {
+        "format": "f",
+        "mode": "formation_rows",
+        "table": "0x8c1b7518",
+        "rows": 5
+      },
+      "syntax": "static const float FORM_COMMON[5][5][3] = {\n    { {  @@, @@,  @@} },\n    { {  @@, @@,  @@}, { @@, @@,  @@} },\n    { {  @@, @@,  @@}, {  @@, @@,  @@}, { @@, @@,  @@} },\n    { { @@, @@,  @@}, { @@, @@,  @@}, {@@, @@, @@}, {  @@, @@, @@} },\n    { {  @@, @@,  @@}, {@@, @@,  @@}, { @@, @@,  @@}, {@@, @@, @@}, {@@, @@, @@} }\n};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "0323b0afc757c04b80cfd57b0f644b3874a56152d7d901b7b983ae38fffe3c75",
+      "provenance": "psp/src/gang.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "gang_c__FORM_KEIKAN_0.inc",
+      "source": {
+        "format": "f",
+        "mode": "formation_rows",
+        "table": "0x8c1b7250",
+        "rows": 5
+      },
+      "syntax": "static const float FORM_KEIKAN[5][5][3] = {\n    { {  @@, @@,@@} },\n    { {@@, @@,@@}, { @@, @@,@@} },\n    { {  @@, @@,@@}, { @@, @@,  @@}, {@@, @@,  @@} },\n    { {  @@, @@,@@}, {@@, @@, @@}, { @@, @@,  @@}, { @@, @@,  @@} },\n    { {  @@, @@,@@}, { @@, @@, @@}, {@@, @@, @@}, { @@, @@,  @@}, {@@, @@,  @@} }\n};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "87c84489a1f0f2e11a1338f2781d6febe92f1de9afdb49ac4ca7c7d4a3dd69a8",
+      "provenance": "psp/src/gang.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "gang_c__FORM_KIDOUTAI_ALT_0.inc",
+      "source": {
+        "format": "f",
+        "mode": "formation_rows",
+        "table": "0x8c1b76e0",
+        "rows": 5
+      },
+      "syntax": "static const float FORM_KIDOUTAI_ALT[5][5][3] = {\n    { {  @@, @@,  @@} },\n    { {@@, @@,  @@}, { @@, @@,  @@} },\n    { {  @@, @@,  @@}, {@@, @@, @@}, { @@, @@, @@} },\n    { { @@, @@,  @@}, { @@, @@,  @@}, {@@, @@, @@}, {  @@, @@, @@} },\n    { {  @@, @@,  @@}, {@@, @@,  @@}, { @@, @@,  @@}, {@@, @@, @@}, {@@, @@, @@} }\n};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "b08ad018af003157325f3a2da738498fc0bbe839f7b5b7bcbcb0600b53112745",
+      "provenance": "psp/src/gang.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "gang_c__ROUTE_FORM_0.inc",
+      "source": {
+        "format": "f",
+        "mode": "formation_rows",
+        "table": "0x8c1c7700",
+        "rows": 5
+      },
+      "syntax": "static const float ROUTE_FORM[5][5][3] = {\n    { {  @@, @@,  @@} },\n    { {  @@, @@,  @@}, { @@, @@,  @@} },\n    { {  @@, @@,  @@}, {  @@, @@,  @@}, { @@, @@,  @@} },\n    { { @@, @@,  @@}, { @@, @@,  @@}, {@@, @@, @@}, {  @@, @@, @@} },\n    { {  @@, @@,  @@}, {@@, @@,  @@}, { @@, @@,  @@}, {@@, @@, @@}, {@@, @@, @@} }\n};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "31aa3506491cfe60a2c775325ea48e47e688d3e62045a3399d98c0e4796c4943",
+      "provenance": "psp/src/gang.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "garage_pending_h__order_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c17fcc0"
+      },
+      "syntax": "static const unsigned char order[]={@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "26f061233cad44d90c3ce1d833f46bee444bc05d19db5c40b854bf7da0d9d39e",
+      "provenance": "psp/src/garage_pending.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "garage_pending_h__stage_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c17fd14"
+      },
+      "syntax": "static const unsigned char stage[]={@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "983c54590764f118e20d096f384984d6198ed424f230eea07cd4b65ed1711f8a",
+      "provenance": "psp/src/garage_pending.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "garage_pending_h__chapter_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c17fd3c"
+      },
+      "syntax": "static const unsigned char chapter[]={@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "3491900831c1362de3cf39b77d79f57a24ce0640e3e2a9d38627d5b0bc1a5a89",
+      "provenance": "psp/src/garage_pending.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "garage_pending_h__voice_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c17fce0"
+      },
+      "syntax": "static const unsigned char voice[]={@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "5703a02f3fd28d09921e29052cccec96964edfcc60321648dbe75cfdfc73d1ca",
+      "provenance": "psp/src/garage_pending.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "graffiti_game_c__tone_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c1948d0"
+      },
+      "syntax": "static const unsigned tone[8]={@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "6a5ac4c625ab67bee9dfbcbcf90f8325b526057a55fa146a6eee0e8c94d45647",
+      "provenance": "psp/src/graffiti_game.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "main_c__x_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c17ea28",
+        "stride": 12
+      },
+      "syntax": "static const float x[3][3]={{@@,@@,@@},{@@,@@,@@},{@@,@@,@@}};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "3df7dbb3e26fe2c74b2f4edcf7e83d3b12aff5798828ffffdc36c2ccd766e816",
+      "provenance": "psp/src/main.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "main_c__CHAR_HEALTH_0.inc",
+      "source": {
+        "format": "i",
+        "mode": "pointer_field",
+        "table": "0x8c182884",
+        "offset": 0
+      },
+      "syntax": "static const int CHAR_HEALTH[16] = { @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@ };",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "b381c1d111dce3b7d42cc40b5144361dfdef048a77f9877d5d3178b6df11abdf",
+      "provenance": "psp/src/main.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "mission_c__RESULT_CLASS_0.inc",
+      "source": {
+        "format": "B",
+        "address": "0x8c17942e"
+      },
+      "syntax": "static const unsigned char RESULT_CLASS[10]={@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "84acccdcf37d2f7c3d7435b735cd14bca2e3f1cbb75b098ed3c1a8332b5ba9fb",
+      "provenance": "psp/src/mission.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "mission_c__KIND_FLAGS_0.inc",
+      "source": {
+        "format": "B",
+        "address": "0x8c1793f8"
+      },
+      "syntax": "static const unsigned char KIND_FLAGS[6][9] = { {@@,@@,@@,@@,@@,@@,@@,@@,@@}, {@@,@@,@@,@@,@@,@@,@@,@@,@@}, {@@,@@,@@,@@,@@,@@,@@,@@,@@}, {@@,@@,@@,@@,@@,@@,@@,@@,@@}, {@@,@@,@@,@@,@@,@@,@@,@@,@@}, {@@,@@,@@,@@,@@,@@,@@,@@,@@} };",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "39e48a66ba97d2aefeab4647479401e365a86332f4db62a4a222c0ff80e11d4a",
+      "provenance": "psp/src/mission.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "npc_c__local_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1c9a98"
+      },
+      "syntax": "const float local[3]={@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 8,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "442809af57c290e211cbcf82ec39bbd6c49e0888578ea9e031e3cab5c87c54a4",
+      "provenance": "psp/src/npc.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "player_c__shallow_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c10d618"
+      },
+      "syntax": "static const unsigned char shallow[] = {@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "eb994fd4236f4beae079b8138065488abe6e6c7380d4fffc5a81cc6e196354f9",
+      "provenance": "psp/src/player.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "player_c__GRIND_MOTIONS_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c10d440"
+      },
+      "syntax": "static const int GRIND_MOTIONS[6] = { @@, @@, @@, @@, @@, @@ };",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "5b6159c9e759b3d33af15461768cf6630553a19d2e51204e43b3f70afecd36a9",
+      "provenance": "psp/src/player.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "police_member_inc__off_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1b7120"
+      },
+      "syntax": "static const float off[2][3]={{@@,@@,@@},{@@,@@,@@}};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "18afa7af2c2d5f10b1fed0589a7a85d68a64482e8294d79b4a297af4f61e69df",
+      "provenance": "psp/src/police_member.inc; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "recruit_result_h__RESULT_FLAGS_0.inc",
+      "source": {
+        "format": "B",
+        "address": "0x8c1793f8"
+      },
+      "syntax": "static const unsigned char RESULT_FLAGS[6][9]={\n    {@@,@@,@@,@@,@@,@@,@@,@@,@@},{@@,@@,@@,@@,@@,@@,@@,@@,@@},\n    {@@,@@,@@,@@,@@,@@,@@,@@,@@},{@@,@@,@@,@@,@@,@@,@@,@@,@@},\n    {@@,@@,@@,@@,@@,@@,@@,@@,@@},{@@,@@,@@,@@,@@,@@,@@,@@,@@}};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "1724f592d8f588a0f2de40ebaa1621fb4b47f543a4084986d66e048480e28a53",
+      "provenance": "psp/src/recruit_result.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "recruit_result_h__classes_0.inc",
+      "source": {
+        "format": "B",
+        "address": "0x8c17942e"
+      },
+      "syntax": "static const unsigned char classes[10]={@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "d194a4a5dd4f5ab35ab9253290bf1c8a88843a0427aa1dac288f53c467d0169c",
+      "provenance": "psp/src/recruit_result.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "rival_spray_h__RIVAL_CAN_POINTS_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c1cf6e4"
+      },
+      "syntax": "static const float RIVAL_CAN_POINTS[3][2][3]={\n    {{@@,@@,@@},{@@,@@,@@}},\n    {{@@,@@,@@},{@@,@@,@@}},\n    {{@@,@@,@@},{@@,@@,@@}}\n};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 2,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "dcc11873b2d177f6b5bacfa4f058ca05abb34844451f791206e3f470b603a532",
+      "provenance": "psp/src/rival_spray.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "spray_c__skills_0.inc",
+      "source": {
+        "format": "i",
+        "mode": "pointer_field",
+        "table": "0x8c182884",
+        "offset": 8
+      },
+      "syntax": "static const unsigned char skills[16] = {@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "85b4e2a7248b9a569502c90a5618601d646efca9fe3abf950a508f8b7f8b7088",
+      "provenance": "psp/src/spray.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "spray_score_h__cue_x_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c17ea28",
+        "stride": 12
+      },
+      "syntax": "static const float cue_x[3][3]={{@@,@@,@@},{@@,@@,@@},\n        {@@,@@,@@}};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 0,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 14,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "6167f05540ad6d4845964e37730310fb1e79e606d9a29937af3875e7a9f70195",
+      "provenance": "psp/src/spray_score.h; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "stage_render_inc__volume_0.inc",
+      "source": {
+        "format": "f",
+        "address": "0x8c175a44"
+      },
+      "syntax": "static const float volume[36]={\n        @@,@@,@@,\n        @@,@@,@@,\n        @@,@@,@@,\n        @@,@@,@@,\n        @@,@@,@@,\n        @@,@@,@@,\n        @@,@@,@@,@@,@@,@@,\n        @@,@@,@@,@@,@@,@@,\n        @@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 14,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 14,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 13,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 9,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 15,
+          "omit_zero": true
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": true
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": true
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": true
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": true
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 16,
+          "omit_zero": true
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "8a523c4eff62ac76338521306d9b4d05a2081effa2effb2f684a14463c82fd54",
+      "provenance": "psp/src/stage_render.inc; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "stage_render_inc__seeds_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c175cb0"
+      },
+      "syntax": "const unsigned seeds[3]={@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "3dd27948f27020f40d1b4807479799c9cc780d8fb3f64a963311a062a389f1e2",
+      "provenance": "psp/src/stage_render.inc; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "story_c__z_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c037328"
+      },
+      "syntax": "static const int z[] = { @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@ };",
+      "formats": [
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        },
+        {
+          "style": "hex",
+          "width": 3
+        }
+      ],
+      "sha256": "6e603852eec7102efbda6c134f8e7f20d4481620718b459df8e22f38f4e3800a",
+      "provenance": "psp/src/story.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "story_c__tbl_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c10dd10"
+      },
+      "syntax": "static const int tbl[12] = { @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@, @@ };",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "226949775f296d8ceee816ff50c12b35cf2c40a265029a49a67844310aecca59",
+      "provenance": "psp/src/story.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "story_c__scenes_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c17951c"
+      },
+      "syntax": "static const signed char scenes[15]={@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "a3b79848d36938efbbfed8e91caff03044ee12febc3f88255b8d7d4b0bacccca",
+      "provenance": "psp/src/story.c; reviewed original executable table/record, exact declaration hash enforced"
+    },
+    {
+      "output": "bgm_c__BGM_NAME_0.inc",
+      "source": {
+        "mode": "bgm_names",
+        "address": "0x8c1d5bcc",
+        "count": 211,
+        "stride": 24,
+        "width": 16
+      },
+      "prefix": "const char *const BGM_NAME[211] = {",
+      "suffix": "};",
+      "sha256": "712a258122c6d3818b82b3a52bd8beb9ed40aa8ae7cacf413ff6985c20cf9bfb",
+      "provenance": "Original executable filename records and bounded linked BGM playlist chains; no stored converted names or playlist payload."
+    },
+    {
+      "output": "bgm_c__BGM_TABLE_0.inc",
+      "source": {
+        "mode": "bgm_entries",
+        "address": "0x8c1dab74",
+        "count": 190,
+        "names": 211
+      },
+      "prefix": "const BgmEntry BGM_TABLE[190] = {\n",
+      "suffix": "\n};",
+      "sha256": "dd1eadf5fa6c63ed66ab45703560e3fd132eb346a7addf2da3571a33b72ccbd7",
+      "provenance": "Original executable filename records and bounded linked BGM playlist chains; no stored converted names or playlist payload."
+    },
+    {
+      "output": "police_member_inc__POLICE_CLIP_FRAMES_0.inc",
+      "source": {
+        "mode": "addresses",
+        "format": "H",
+        "base": "0x8ca00000",
+        "file": "ENEMY/001_keikandat.bin",
+        "sha256": "962ac377a4988ab1a91c0e1ef6ecb690d1e990403c72d6ea9e40a49c708147e9",
+        "addresses": [
+          "0x8ca09fb6",
+          "0x8ca0a10e",
+          "0x8ca0a266",
+          "0x8ca0a372",
+          "0x8ca0ae4a",
+          "0x8ca0b96e",
+          "0x8ca0cdb6",
+          "0x8ca0d5ce",
+          "0x8ca0d9f6",
+          "0x8ca0e1c2",
+          "0x8ca0e7ba",
+          "0x8ca0edb2",
+          "0x8ca0f3aa",
+          "0x8ca0fb76",
+          "0x8ca10342",
+          "0x8ca109d6",
+          "0x8ca1106a",
+          "0x8ca11662",
+          "0x8ca11e2e",
+          "0x8ca125fa",
+          "0x8ca12c8e",
+          "0x8ca13322",
+          "0x8ca13432",
+          "0x8ca13542",
+          "0x8ca13ee2",
+          "0x8ca141ea",
+          "0x8ca148ca",
+          "0x8ca14faa",
+          "0x8ca1594a",
+          "0x8ca15dba",
+          "0x8ca1627a",
+          "0x8ca16bca",
+          "0x8ca170d6",
+          "0x8ca17ac2",
+          "0x8ca187ba",
+          "0x8ca19022",
+          "0x8ca19b96",
+          "0x8ca1a0f2",
+          "0x8ca1a64e",
+          "0x8ca1afee",
+          "0x8ca1b5e6"
+        ]
+      },
+      "syntax": "static const unsigned char POLICE_CLIP_FRAMES[41]={@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "193155204d3c20aaa1d1636c0b4756ed50c5dc7acc20ef1a8c6e336545003c0b",
+      "provenance": "Original NJS_MOTION ushort +2 frame counts, selected by validated character-root bone count and ascending header order (enemy_motion_map.py)."
+    },
+    {
+      "output": "gang_c__lengths_0.inc",
+      "source": {
+        "mode": "addresses",
+        "format": "H",
+        "base": "0x8ca00000",
+        "file": "ENEMY/037_denkidat.bin",
+        "sha256": "2964d968316b711655538790f882a31ef1e07feded54915e746f4cb897571278",
+        "addresses": [
+          "0x8ca0825e",
+          "0x8ca084ae",
+          "0x8ca0896e",
+          "0x8ca08bbe",
+          "0x8ca09252"
+        ]
+      },
+      "syntax": "static const unsigned lengths[5]={@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "9a755b59979bbd311161affcd9eca95f9b10fc7b22ee46ae754c78b04653f84e",
+      "provenance": "Original NJS_MOTION ushort +2 frame counts, selected by validated character-root bone count and ascending header order (enemy_motion_map.py)."
+    },
+    {
+      "output": "record_book_c__place_0.inc",
+      "syntax": "static const char *const place[]={\"@@@@@@@@@@@@\",\"@@@@@@@@@@@@\",\n        \"@@@@@@@@@@@@\",\"@@@@@@@@@@@@\",\"@@@@@@@@@@@@\"};",
+      "formats": [
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        },
+        {
+          "style": "hex_escape"
+        }
+      ],
+      "source": {
+        "mode": "addresses",
+        "format": "B",
+        "addresses": [
+          "0x8c1b9f60",
+          "0x8c1b9f61",
+          "0x8c1b9f62",
+          "0x8c1b9f63",
+          "0x8c1b9f64",
+          "0x8c1b9f65",
+          "0x8c1b9f67",
+          "0x8c1b9f68",
+          "0x8c1b9f69",
+          "0x8c1b9f6a",
+          "0x8c1b9f6b",
+          "0x8c1b9f6c",
+          "0x8c1b9f6e",
+          "0x8c1b9f6f",
+          "0x8c1b9f70",
+          "0x8c1b9f71",
+          "0x8c1b9f72",
+          "0x8c1b9f73",
+          "0x8c1b9f75",
+          "0x8c1b9f76",
+          "0x8c1b9f77",
+          "0x8c1b9f78",
+          "0x8c1b9f79",
+          "0x8c1b9f7a",
+          "0x8c1b9f7c",
+          "0x8c1b9f7d",
+          "0x8c1b9f7e",
+          "0x8c1b9f7f",
+          "0x8c1b9f80",
+          "0x8c1b9f81"
+        ]
+      },
+      "sha256": "c1b21a1d22bd56d7dde0e05bb01cd1f9c208f1a4582306b002347a06844a761b",
+      "provenance": "Five source ranking-label strings, six Shift-JIS bytes plus NUL each, starting at executable1b9f60."
+    },
+    {
+      "output": "finalhazard_c__targets_0.inc",
+      "source": {
+        "mode": "addresses",
+        "format": "f",
+        "addresses": [
+          "0x8c1d0f34",
+          "0x8c1d0f3c",
+          "0x8c1d0f40",
+          "0x8c1d0f48",
+          "0x8c1d0f4c",
+          "0x8c1d0f54",
+          "0x8c1d0f58",
+          "0x8c1d0f60"
+        ]
+      },
+      "syntax": "static const float targets[4][2]={{@@,@@},{@@,@@},{@@,@@},{@@,@@}};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "eefed5d211878ffc97d934de5d2e32054413bc10433903ba3fffa1ea02c673a2",
+      "provenance": "Original target vectors at1d0f34,1d0f40,1d0f4c,1d0f58; select x/z and omit unused y."
+    },
+    {
+      "output": "garage_ui_c__colors_0.inc",
+      "source": {
+        "mode": "addresses",
+        "format": "I",
+        "addresses": [
+          "0x8c0269a8",
+          "0x8c0269b4",
+          "0x8c0269bc"
+        ],
+        "swap_red_blue": true
+      },
+      "syntax": "static const unsigned colors[]={@@,@@,@@};",
+      "formats": [
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "style": "hex",
+          "width": 8
+        }
+      ],
+      "sha256": "73f797ecfe510c50b8ffcc8be4175bc42a71be4ed1da1cf9114deb8078394463",
+      "provenance": "Original026844 garage stat label colors at0269a8/0269b4/0269bc, converted from source ARGB to PSP ABGR."
+    },
+    {
+      "output": "scene_c__colours_0.inc",
+      "source": {
+        "mode": "fields",
+        "format": "I",
+        "fields": [
+          {
+            "address": "0x8c0c1b0a",
+            "format": "b",
+            "unsigned32": true
+          },
+          {
+            "address": "0x8c0c1b0c"
+          },
+          {
+            "address": "0x8c0c1b10"
+          },
+          {
+            "address": "0x8c0c1b14"
+          },
+          {
+            "address": "0x8c0c1b18"
+          },
+          {
+            "address": "0x8c0c1b1c"
+          },
+          {
+            "address": "0x8c0c1b20"
+          }
+        ]
+      },
+      "syntax": "static const uint32_t colours[7]={@@,@@,@@,\n        @@,@@,@@,@@};",
+      "formats": [
+        {
+          "suffix": "u",
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "suffix": "u",
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "suffix": "u",
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "suffix": "u",
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "suffix": "u",
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "suffix": "u",
+          "style": "hex",
+          "width": 8
+        },
+        {
+          "suffix": "u",
+          "style": "hex",
+          "width": 8
+        }
+      ],
+      "sha256": "ac414292a2c07d8b23c3429da463a92a5d5fe92a60e50a06a069ffcd4438e4f3",
+      "provenance": "Original0c1aac caption color selector: white is sign-extended mov#-1 at0c1b0a, remaining six ARGB constants at0c1b0c..0c1b20."
+    },
+    {
+      "output": "street_props_c__spin_0.inc",
+      "source": {
+        "mode": "addresses",
+        "format": "f",
+        "addresses": [
+          "0x8c057620",
+          "0x8c057628",
+          "0x8c057630"
+        ]
+      },
+      "syntax": "static const float spin[3]={@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "fd25d19b985ec0d8cd091f350243c50d3088b7512ccf05d34842535ee350314c",
+      "provenance": "Original0574c4 positive rand15 spin multipliers from literal pools057620,057628,057630; no random samples embedded."
+    },
+    {
+      "output": "object_view_h__small_0.inc",
+      "source": {
+        "mode": "fields",
+        "format": "f",
+        "fields": [
+          {
+            "address": "0x8c02f8cc"
+          },
+          {
+            "address": "0x8c02f8d4"
+          },
+          {
+            "address": "0x8c02f8b4"
+          },
+          {
+            "address": "0x8c02f8bc"
+          },
+          {
+            "address": "0x8c039d98"
+          },
+          {
+            "address": "0x8c039da0"
+          },
+          {
+            "address": "0x8c039d84"
+          },
+          {
+            "address": "0x8c039d84"
+          },
+          {
+            "address": "0x8c031e24"
+          },
+          {
+            "address": "0x8c031e2c"
+          },
+          {
+            "address": "0x8c031e0c"
+          },
+          {
+            "address": "0x8c031e14"
+          },
+          {
+            "unused_slot_zero": true
+          },
+          {
+            "unused_slot_zero": true
+          },
+          {
+            "unused_slot_zero": true
+          },
+          {
+            "unused_slot_zero": true
+          },
+          {
+            "address": "0x8c0f3668"
+          },
+          {
+            "address": "0x8c0f3670"
+          },
+          {
+            "address": "0x8c0f3650"
+          },
+          {
+            "address": "0x8c0f3658"
+          },
+          {
+            "address": "0x8c0f3c9c"
+          },
+          {
+            "address": "0x8c0f3ca4"
+          },
+          {
+            "address": "0x8c0f3c84"
+          },
+          {
+            "address": "0x8c0f3c8c"
+          }
+        ]
+      },
+      "syntax": "static const float small[6][4]={\n        {@@,@@,@@,@@}, {@@,@@,@@,@@}, {@@,@@,@@,@@},\n        {@@,@@,@@,@@}, {@@,@@,@@,@@}, {@@,@@,@@,@@}};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "2657b61798afd3b77fd401d80117af770fb77d7ae73c180d5afeb65ea18cfc7f",
+      "provenance": "City initializer calls to 0c3290/0c32a4 and0c3434: Shibuya02f5a4, Kogane039af0, Benten031aa8, Bantam0f346c, Grind0f3aac. Center/radius and pickup/tag back-offset floats come from their literal pools. Final stage slot is unused C zero padding: object_view_setup rejects city4 before reading the table."
+    },
+    {
+      "output": "player_c__GROUND_TYPES_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c10d974",
+        "sort": true
+      },
+      "syntax": "static const unsigned char GROUND_TYPES[] = { @@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@ };",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "a2af037ede5ab54224f20f613b84953fe86fd6fbe1bb98783ed5e73e6f0c7a57",
+      "provenance": "Original surface-membership list10d974, sorted to reproduce the existing port membership declaration; membership is unchanged."
+    },
+    {
+      "output": "traffic_contact_h__groups_0.inc",
+      "source": {
+        "format": "i",
+        "address": "0x8c182c14"
+      },
+      "syntax": "static const unsigned char groups[20]={@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        }
+      ],
+      "sha256": "426a500ec7776db6e5098407a31c623d3b8e7a7a3593218a0d0233dd67f88f10",
+      "provenance": "Original055bc8 limb hierarchy attribute groups, integer table182c14."
+    },
+    {
+      "output": "main_c__MARK_0.inc",
+      "source": {
+        "mode": "addresses",
+        "format": "f",
+        "base": "0x8c800000",
+        "file": "U_GARAGE/001_garagedat.bin",
+        "sha256": "c8be8c182ba03902667ca70cb4f7f720e1c156a66fe8f1927a4f1086a9119557",
+        "addresses": [
+          "0x8c804588",
+          "0x8c80458c",
+          "0x8c8045bc",
+          "0x8c8045c0",
+          "0x8c8045f0",
+          "0x8c8045f4",
+          "0x8c804624",
+          "0x8c804628",
+          "0x8c804484",
+          "0x8c804488",
+          "0x8c8044b8",
+          "0x8c8044bc",
+          "0x8c8044ec",
+          "0x8c8044f0",
+          "0x8c804520",
+          "0x8c804524",
+          "0x8c80434c",
+          "0x8c804350",
+          "0x8c804380",
+          "0x8c804384",
+          "0x8c8043b4",
+          "0x8c8043b8",
+          "0x8c8043e8",
+          "0x8c8043ec",
+          "0x8c8043e8",
+          "0x8c8043ec",
+          "0x8c80427c",
+          "0x8c804280",
+          "0x8c804658",
+          "0x8c80465c",
+          "0x8c80468c",
+          "0x8c804690",
+          "0x8c8046c0",
+          "0x8c8046c4",
+          "0x8c80441c",
+          "0x8c804420",
+          "0x8c804450",
+          "0x8c804454",
+          "0x8c804554",
+          "0x8c804558",
+          "0x8c8042b0",
+          "0x8c8042b4",
+          "0x8c8042e4",
+          "0x8c8042e8",
+          "0x8c804318",
+          "0x8c80431c",
+          "0x8c804074",
+          "0x8c804078"
+        ],
+        "negate_indices": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          11,
+          13,
+          15,
+          17,
+          19,
+          21,
+          23,
+          25,
+          27,
+          29,
+          31,
+          33,
+          35,
+          37,
+          39,
+          41,
+          43,
+          45,
+          47
+        ]
+      },
+      "syntax": "static const float MARK[24][2] = { {@@,@@},{@@,@@},{@@,@@},{@@,@@}, {@@,@@},{@@,@@},{@@,@@},{@@,@@}, {@@,@@},{@@,@@},{@@,@@},{@@,@@},\n        {@@,@@},{@@,@@}, {@@,@@},{@@,@@},{@@,@@}, {@@,@@},{@@,@@},{@@,@@}, {@@,@@},{@@,@@},{@@,@@}, {@@,@@} };",
+      "formats": [
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        },
+        {
+          "suffix": "f",
+          "style": "decimal",
+          "precision": 1,
+          "omit_zero": false
+        }
+      ],
+      "sha256": "1686789eed5870f61c59253d419aa22b58136521f8b6593c4bc4989426c58436",
+      "provenance": "Original garage map NJS_OBJECT positions: executable10dcb0 pointer table -> GARAGE cell -> object+8/+12; negate y for screen coordinates as garage_ui_assets.py does."
+    },
+    {
+      "output": "hud_state_c__start_0.inc",
+      "source": {
+        "format": "I",
+        "mode": "fields",
+        "fields": [
+          {
+            "address": "0x8c0500f2",
+            "format": "B"
+          },
+          {
+            "address": "0x8c050112",
+            "format": "B"
+          },
+          {
+            "address": "0x8c050132",
+            "format": "B"
+          },
+          {
+            "address": "0x8c050152",
+            "format": "B"
+          },
+          {
+            "address": "0x8c050200"
+          },
+          {
+            "address": "0x8c050208"
+          },
+          {
+            "address": "0x8c05020c"
+          },
+          {
+            "address": "0x8c050210"
+          }
+        ]
+      },
+      "syntax": "static const int start[4]={@@,@@,@@,@@},cue[4]={@@,@@,@@,@@};",
+      "formats": [
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "integer"
+        },
+        {
+          "style": "hex",
+          "width": 2
+        },
+        {
+          "style": "hex",
+          "width": 2
+        },
+        {
+          "style": "hex",
+          "width": 2
+        },
+        {
+          "style": "hex",
+          "width": 2
+        }
+      ],
+      "sha256": "8dc0ca62c10a371817a8302a78d68b19ee977661844d881eb5e6e13df0e1f132",
+      "provenance": "Original timer draw0500cc: cmp/eq immediate start ticks0500f2/050112/050132/050152 and voice literal pool050200/050208/05020c/050210; exact source declaration enforced"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+int source_data_mixed_garage_ui_c__colors_0_load(void);

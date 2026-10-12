@@ -1,0 +1,2386 @@
+{
+  "schema": 1,
+  "review_note": "File roles and validation scope for the reviewed source inventory. Adjacent size and hash fields identify the reviewed bytes. See THIRD_PARTY_NOTICES.md for provenance and license information.",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "a0032b2c51aeb0b63d04172dc00d5247c23555a022510f998af1cc96cbb02876",
+      "review": "Ignore rules for local game inputs, generated assets, build outputs, and development files."
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "4fc44a8a08e259e552233c569656349743a0bee2e76f23243855ce787e8712da",
+      "review": "Scoped MIT grant for independently authored software and documentation; no third-party trademark rights granted; third-party terms and GPL build scope retained."
+    },
+    {
+      "path": "README.md",
+      "sha256": "cec28a7ae3b80e684a90ef3c717ebad15dbe11047fc0145ffe4d7556fc7884bf",
+      "review": "Project overview, installation steps, build requirements, and development links."
+    },
+    {
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "eab113a3bae78e35b3262f31b3bef1daa9e38417a0e8b273c806e1f0f1d27847",
+      "review": "Central provenance, attribution, and license information for the project."
+    },
+    {
+      "path": "decompile/chars_spec.txt",
+      "sha256": "9e57d2fe064a8be87fdb6cdd0ba7ad5dbe665610747745087405c2e9272ac781",
+      "review": "Character conversion selectors: source filenames, object and motion locations, texture-binding readers, and preview placement."
+    },
+    {
+      "path": "decompile/record_book_spec.txt",
+      "sha256": "3cf809a743d88587057a76595d6c94d978c12b8c35d9b83d1ca6dd3cc886c3f9",
+      "review": "Record-book model conversion selectors: source filenames, object and motion locations, and converter options."
+    },
+    {
+      "path": "decompile/tools/analyze_poison_routes.py",
+      "sha256": "fbe0eab1b547997dbf08599c4f85f736ecefedcd242c7e113e0bd6d29d0b8007",
+      "review": "Compares completed Poison Jam actor trajectories as well as controller streams."
+    },
+    {
+      "path": "decompile/tools/audio_mix_assets.py",
+      "sha256": "87c15721c2994c68fbf4d6a4c7374d93704941ec4fe5048db4113f83b80ef41d",
+      "review": "Extracts mixer parameters and BGM class mappings."
+    },
+    {
+      "path": "decompile/tools/audio_spatial_assets.py",
+      "sha256": "21815bde33ba3831d61998bcb629037397d4666ee42fb4ddfe2a3e7f3cbd0c57",
+      "review": "Extracts MANATEE attenuation and stereo-pan tables."
+    },
+    {
+      "path": "decompile/tools/audit_setobjs.py",
+      "sha256": "bf16620b127b799ae807de152ef627d80f0484ff0cdbd2a2ef4f6652ca0f90dd",
+      "review": "Compares mission-set prop and vehicle banks with their source tables."
+    },
+    {
+      "path": "decompile/tools/baked_asset_colors.py",
+      "sha256": "1f2e6ec4a578648b629746ffc143ba1587a82a5f70d53302c50506fbbe3d9bfd",
+      "review": "Copies precomputed color fields into a model bank while preserving its other fields."
+    },
+    {
+      "path": "decompile/tools/baked_light.py",
+      "sha256": "3e4b3f48dc6efe1c79eb3c112981211a31b119e84a7d952fc3a6b87c89c13bff",
+      "review": "Computes offline Shibuya lighting for asset conversion."
+    },
+    {
+      "path": "decompile/tools/baked_light_assets.py",
+      "sha256": "80064c38fbd49d521f4910fa2aa87c25372ae73521d23a65ae83211678e6447b",
+      "review": "Rebuilds Shibuya placements and precomputes the shared city and character palette lighting."
+    },
+    {
+      "path": "decompile/tools/bantam_train_assets.py",
+      "sha256": "3cef1a39f3c6814fb0614c3bfb5cfcdc31af8920b7fc66bb44326c4393758747",
+      "review": "Extracts Bantam train models, routes, and colliders."
+    },
+    {
+      "path": "decompile/tools/benten_crane_assets.py",
+      "sha256": "36df5f925ff7bb6fae5e90c3682cfc335fa8424b1969b00fbd624ceac325e9f8",
+      "review": "Extracts the Benten crane model and motion."
+    },
+    {
+      "path": "decompile/tools/benten_portals.py",
+      "sha256": "9a97b0c1263249dae8bc8992f289cd3ee7fe8c786058babf8a39089b26206780",
+      "review": "Extracts Benten passage records."
+    },
+    {
+      "path": "decompile/tools/benten_train_assets.py",
+      "sha256": "efcffcd434442c72ccea1110df3c644cf14b4171418abaaa18ba139bd3a0bad4",
+      "review": "Extracts Benten train models, sparse routes, and colliders."
+    },
+    {
+      "path": "decompile/tools/bomb_source.py",
+      "sha256": "0da348f7cc58b7be27472f8979894da63d6d340a1c459ab3b935e7b3b51bd9d1",
+      "review": "Extracts Bomb/SWAT tuning, motion bindings, and attack parameters."
+    },
+    {
+      "path": "decompile/tools/burning_assets.py",
+      "sha256": "80fd23f4ace3f40292183cb05422ff8bed0588dd2f3b3c955268b3b21b6b428e",
+      "review": "Extracts Benten Burning Fire sprites and Kairiki attack geometry."
+    },
+    {
+      "path": "decompile/tools/burning_source.py",
+      "sha256": "ca0832a9d102a4d99ea2a377dc06289f5b232b6d8da23538ad680d873fd65f33",
+      "review": "Extracts Fire and Kairiki model and motion bindings."
+    },
+    {
+      "path": "decompile/tools/can_hud_assets.py",
+      "sha256": "d2c6102f0a002de4ee9a6e5657ec99794bdc7277a5f5e40898f3b2510480c95b",
+      "review": "Extracts the paint-can pickup HUD model."
+    },
+    {
+      "path": "decompile/tools/car_pull_assets.py",
+      "sha256": "7d3a77b2515376a5226b6eaf2d04653cf9d6a0a7c2c2e8f9c94a6a58e8177e4d",
+      "review": "Extracts traffic rear-grip planes and anchor points."
+    },
+    {
+      "path": "decompile/tools/challenge_demo_assets.py",
+      "sha256": "b2d4b936ad3fec6f7bd0cb1fc26dd23f95bd9291387bbac390502c0906d76878",
+      "review": "Serializes recorded player challenge demonstrations by mission and set."
+    },
+    {
+      "path": "decompile/tools/challenge_rival_assets.py",
+      "sha256": "eaf6173c6c6a111ca6f14a4e032a04824d26fc139ab1336af659440977e53f01",
+      "review": "Serializes completed rival performances for the tag races."
+    },
+    {
+      "path": "decompile/tools/character_roster.py",
+      "sha256": "25da7505717162a328a3dde1aebb7f0cca23bceccea5a163260d2a614ff8d518",
+      "review": "Builds indexed mission-cast archives from JGC models and player-lighting vertex spans."
+    },
+    {
+      "path": "decompile/tools/city_graffiti.py",
+      "sha256": "f6f82ebc8cbd2ef53489e43561ce887338c0516f54d37ea3cfa85607c126c930",
+      "review": "Extracts static-city graffiti wall geometry and reveal graphs in descriptor order."
+    },
+    {
+      "path": "decompile/tools/city_opening_assets.py",
+      "sha256": "8060709506da88d1513ca1ab6240617399ce3bbc4eb6378126c0e77e9351f444",
+      "review": "Extracts Benten passage gates and Bantam doors and breakable windows."
+    },
+    {
+      "path": "decompile/tools/city_opening_collision.py",
+      "sha256": "321e0d413e6d146e551a1f3432c576406e51b3197d0f65a30a80a6d154c0aeca",
+      "review": "Filters collision contacts for city openings and knockable objects omitted from a scene."
+    },
+    {
+      "path": "decompile/tools/city_sky_assets.py",
+      "sha256": "6ef7a900f77d9dddc72d439c69ee03db6a200ddd7270d1d21c46a755f470c03e",
+      "review": "Extracts city sky banks and their texture bindings."
+    },
+    {
+      "path": "decompile/tools/countdown_hud_assets.py",
+      "sha256": "17482a35ff91daa6c80e42cf6040b95a1bd5a97c7eed10e10eae1a8a8800a03a",
+      "review": "Extracts countdown HUD models and their resource selections."
+    },
+    {
+      "path": "decompile/tools/crash_build_id.py",
+      "sha256": "0fc4887c77032b9231368b26ca5824b83b6cf58532ef4e6cae8cc2215abb4ee1",
+      "review": "Generates a source fingerprint for crash reports."
+    },
+    {
+      "path": "decompile/tools/cutscene_sources.py",
+      "sha256": "bee6b0afb3a952de09743f10a5a4854a8fa5c431a3ec5bc65b3fd13f1523b083",
+      "review": "Bounded readers for EVENT and DEMO dependency tables."
+    },
+    {
+      "path": "decompile/tools/denki_body_assets.py",
+      "sha256": "105cc331b9706cfee9afb5a26975dd84896d443e5a8036683cbc3dfd0029743a",
+      "review": "Extracts the Denki body texture binding."
+    },
+    {
+      "path": "decompile/tools/dialogue_assets.py",
+      "sha256": "e76d6a933536ebaee1a1f1ff7f65e071065316ccd51b00566bca93ee6d950eb1",
+      "review": "Extracts mission-introduction dialogue metadata and playable dialogue routes."
+    },
+    {
+      "path": "decompile/tools/dog_source.py",
+      "sha256": "f743eb27b4296c51c23b7dde5c8ede69bbf10b1316d80bb1287df637e349f01c",
+      "review": "Extracts dog controller parameters and motion mappings."
+    },
+    {
+      "path": "decompile/tools/ending_assets.py",
+      "sha256": "d19b589199ad52510a49126261450844eb3016d2f8dd0081c9e1c30342e7020d",
+      "review": "Extracts ending movie descriptors and the staff-roll playlist."
+    },
+    {
+      "path": "decompile/tools/enemy_audio_assets.py",
+      "sha256": "78a3da7bed3eb928db2ab8a22ac642a2ff5d0b5719bbf600b57adb5acf2f4b78",
+      "review": "Extracts enemy sound selectors and sample and sequence banks."
+    },
+    {
+      "path": "decompile/tools/enemy_gas_assets.py",
+      "sha256": "bba5b5b88860307d20101e745d45834b6fb21ce14db8bd38340beccc496ff12f",
+      "review": "Extracts riot gas meshes, motions, collision trees, and material variants."
+    },
+    {
+      "path": "decompile/tools/enemy_lod_assets.py",
+      "sha256": "b2a374c0ee92716321132adce6036ac9e95f824b9daef373c361943384fb26da",
+      "review": "Builds enemy near and far meshes while sharing their motion data."
+    },
+    {
+      "path": "decompile/tools/enemy_motion_map.py",
+      "sha256": "c465bed62e736321bd2daa585fc8fb43d5a29ecdfb0df5e4c5a04709b0cdf259",
+      "review": "Maps semantic enemy animations to source-bank motions."
+    },
+    {
+      "path": "decompile/tools/enemy_projectile_assets.py",
+      "sha256": "c2500e3372c76764d3624d748aca8fe715dadd09d4b021806bdf2ad9bd10d3c5",
+      "review": "Extracts enemy impact and helicopter projectile geometry."
+    },
+    {
+      "path": "decompile/tools/enemy_warning_assets.py",
+      "sha256": "3483c15c88db4ffaaeb04bc03058afb2bd50be2a6392a8bb7a65a11c6255be7b",
+      "review": "Extracts danger and report HUD indicators."
+    },
+    {
+      "path": "decompile/tools/event_assets.py",
+      "sha256": "665d5efec1354638f0bd3af6276ead4f1bec17ba346e23ecc717a97fc66212e3",
+      "review": "Extracts EVENT actor geometry, motion bindings, and shared audio."
+    },
+    {
+      "path": "decompile/tools/event_audio_assets.py",
+      "sha256": "f8f582a67e09e7d287238cf8599252c0abcb4b1cf7169f92955c6363300c0f2c",
+      "review": "Resolves EVENT sound commands through source loader tables."
+    },
+    {
+      "path": "decompile/tools/event_effect_assets.py",
+      "sha256": "e54f08db45c89ec14cab63d1d2e64e4623917347faf54c48239b99fa31948820",
+      "review": "Extracts EVENT flame and riot-squad effect geometry."
+    },
+    {
+      "path": "decompile/tools/event_runtime_assets.py",
+      "sha256": "655d85a21f1d37a16887d38883cf0fa51453cc0c4d8aa74df5b13109ac1dcec9",
+      "review": "Builds runtime mesh bindings for EVENT actors."
+    },
+    {
+      "path": "decompile/tools/extract_layout_static.py",
+      "sha256": "8c77a8411522581540791e669b3fc16fe9c6ed612985f5c121315129538d7c9d",
+      "review": "Extracts stage placements from executable tables and stage images."
+    },
+    {
+      "path": "decompile/tools/failure_hud_assets.py",
+      "sha256": "6a0ad7854ac9f8bd417b8ae8346c4ec9274f467fa4025939a76761c6b59feea6",
+      "review": "Extracts failure and result HUD models and sparse animation clips."
+    },
+    {
+      "path": "decompile/tools/final_actor_assets.py",
+      "sha256": "5371137641e5e1a1ebc1e1e9cc976ec682428835c4c531c3d9df5f16828873fd",
+      "review": "Extracts Final Groove boss and satellite models; this tool does not execute boss behavior."
+    },
+    {
+      "path": "decompile/tools/final_collision.py",
+      "sha256": "a956df917d9a2160b75137215ec83a07330fa597701e768bcfbb7c108d4ee360",
+      "review": "Extracts animated Final Groove collision geometry."
+    },
+    {
+      "path": "decompile/tools/final_emitter_assets.py",
+      "sha256": "307b24dbbe01e100d4eaeaf5c7a13057b7ac1d76797194789aa40e0fcb181e9d",
+      "review": "Extracts Final Groove emitter meshes and animated texture bindings."
+    },
+    {
+      "path": "decompile/tools/final_graffiti.py",
+      "sha256": "a1ea2a0c0dc0f760febb94967cbf950e3e10cea00db7e578e2d52e08897d8b08",
+      "review": "Extracts Final Groove graffiti descriptors and reveal meshes."
+    },
+    {
+      "path": "decompile/tools/final_hazard_assets.py",
+      "sha256": "35a71165f25d955d40fc4bd8026d8094a01e9c4be5cef79c7636b1736ebd06d0",
+      "review": "Extracts Final Groove launcher models, materials, and animation clips."
+    },
+    {
+      "path": "decompile/tools/final_intro_assets.py",
+      "sha256": "f18fc15473eb61d74b288f727e1a4e20c028ba4a06b13c95fc5fccd689f5f4ce",
+      "review": "Extracts the Final Groove introduction actor and its motions."
+    },
+    {
+      "path": "decompile/tools/final_scene_assets.py",
+      "sha256": "15838d1f789e7745c604b4aac2f0092452fd4a1927ba779d47d00d1bb115a43f",
+      "review": "Extracts actors for the Final Groove ending scene."
+    },
+    {
+      "path": "decompile/tools/final_stage_assets.py",
+      "sha256": "c85a42a8454fbcc5f98fb80a9c04a33bc5a3e92c738aabd26ed2e032daa1d7bf",
+      "review": "Extracts animated Final Groove scene pieces."
+    },
+    {
+      "path": "decompile/tools/fire_body_assets.py",
+      "sha256": "544f4867fdc9874a91b092d8524247dfced6bed34221bc2b43c49f8d22ded95e",
+      "review": "Extracts the Fire body texture list."
+    },
+    {
+      "path": "decompile/tools/flycast_challenge_demo.lua",
+      "sha256": "becff8391231b2532d4fdb9c9198bfc9960fc4c33c2ad796542e322978174c49",
+      "review": "Selects mission and set inputs for observing player challenge demonstrations."
+    },
+    {
+      "path": "decompile/tools/flycast_challenge_rival.lua",
+      "sha256": "4c79a2ad5f460173c6af7ddffb2294b185dacf3d211078dfdb87fefe6ec40173",
+      "review": "Observes rival recruitment and return-to-start segments while supplying mission entry and player approach positions."
+    },
+    {
+      "path": "decompile/tools/flycast_ending_reference.lua",
+      "sha256": "9c8d4cfadf3753f140e94ee04dffeddecea7ae185c7ced20f8f750b91aaadff0",
+      "review": "Enters an ending context to observe the ending sequence; it does not test earning campaign completion."
+    },
+    {
+      "path": "decompile/tools/flycast_poison_routes.lua",
+      "sha256": "4cb48afb57a4e1e46d42e05a8f844e9e4db6c761363d4964496fdea34af63d24",
+      "review": "Observes completed rival camera callbacks across Poison Jam route sections."
+    },
+    {
+      "path": "decompile/tools/flycast_recruit_demo_audio.lua",
+      "sha256": "c60916b47017fba0252d2a77f0f4cdad77e4d799f78ffc32a31858b536072b2d",
+      "review": "Observes sound initializers during recruitment demonstrations."
+    },
+    {
+      "path": "decompile/tools/flycast_recruit_demo_reference.lua",
+      "sha256": "cecfca0ae9a6f35aeeeb149b5bbd5964df10e75ca6b95596e8f88c800eec00e7",
+      "review": "Observes completed actor, camera, and controller callbacks during a selected recruitment demonstration."
+    },
+    {
+      "path": "decompile/tools/flycast_staff_route_reference.lua",
+      "sha256": "b191bae5d5f17699122ee09b163434c9f46d8c75d78941e147c2bb169c507ef6",
+      "review": "Observes a selected character's completed STAFF performance from an ending entry context."
+    },
+    {
+      "path": "decompile/tools/flycast_stage_reference.lua",
+      "sha256": "2991d6d21b33ffb30f319f3f2463a02b66a7f0e42a0a50f63552b5178101d72d",
+      "review": "Starts a selected stage through its loaders for isolated reference observations."
+    },
+    {
+      "path": "decompile/tools/flycast_title_reference.lua",
+      "sha256": "cba316d943164dbc46b9170caa0a5655c5460a1ac01f0320c7ec9ba9bb61be61",
+      "review": "Observes completed actor, camera, and controller callbacks during the title sequence."
+    },
+    {
+      "path": "decompile/tools/flycast_world_audio_banks.lua",
+      "sha256": "7b21a9acddfcef6ee4ed6884581fdd91e6859be827a242a000ffdbe849de056d",
+      "review": "Reads resident stage sound banks after stage loading."
+    },
+    {
+      "path": "decompile/tools/game_hud_assets.py",
+      "sha256": "378d95c0ba1cd5aae17d16965bb1373fe52c30ceea795a3fe93baae80c93a31e",
+      "review": "Extracts GAME HUD resources from their model and texture tables."
+    },
+    {
+      "path": "decompile/tools/garage_cast.py",
+      "sha256": "d4937353b67fa5b9c5826effda76d8a879182d84a75843686a78b8087f9f3930",
+      "review": "Extracts garage residents, placements, texture lists, and dance motions."
+    },
+    {
+      "path": "decompile/tools/garage_departure_assets.py",
+      "sha256": "2c12077bfa1787c1bb99637749308eac5a485cfe7ad6fad03ed6fdec5bcb3afe",
+      "review": "Extracts garage departure confirmation cameras and motion lengths."
+    },
+    {
+      "path": "decompile/tools/garage_pending_assets.py",
+      "sha256": "52edea364a02d5add5ae29572d186cea2100fa48e84e46139ba87d22dfebd194",
+      "review": "Extracts invitation-scene actors, cameras, text, and image lists."
+    },
+    {
+      "path": "decompile/tools/garage_rival_assets.py",
+      "sha256": "bb20a895bb20e1cb8c13156b749a6ba9918b5498ac19e22f01a4b9670dff4c17",
+      "review": "Extracts the garage rival-announcement model."
+    },
+    {
+      "path": "decompile/tools/garage_shadow_assets.py",
+      "sha256": "9dff7ba4b46f052b74516f91693899dde7058498882559e9983d21061ed5a760",
+      "review": "Extracts garage shadow modifier geometry and its hierarchy."
+    },
+    {
+      "path": "decompile/tools/garage_ui_assets.py",
+      "sha256": "2168cfaa6aa735078995677b867d4f974c80de4ea33ca2920a7c12ba6be10b86",
+      "review": "Extracts garage statistics, character plaques, speech balloons, and cards."
+    },
+    {
+      "path": "decompile/tools/garam_audio_assets.py",
+      "sha256": "230086532171489d48a3fac47432f75b0373cf846bf6aec067ea4b685708fd20",
+      "review": "Serializes observed Garam sound initializers and persistent-owner stop events."
+    },
+    {
+      "path": "decompile/tools/garam_demo_assets.py",
+      "sha256": "3c4ad91b1f460f5d5d122b78eeb5fbefb427473fbd95d76a574d8ce10f316e81",
+      "review": "Packages completed Garam demonstration recordings."
+    },
+    {
+      "path": "decompile/tools/graffiti_arrow_assets.py",
+      "sha256": "b4b23f1f851ee42158df2aef49a9f0f0a7b669f2fe7a339652a5742d4efdf5e5",
+      "review": "Extracts graffiti direction-arrow models."
+    },
+    {
+      "path": "decompile/tools/grind_props_assets.py",
+      "sha256": "cbb1624faa34c5581ce5dee877dceac6373c9db54f2de9f3a40dd0426c3bec36",
+      "review": "Extracts Grind Square light strips and elevators."
+    },
+    {
+      "path": "decompile/tools/health_pickup_assets.py",
+      "sha256": "a1368b8700976584a93266ba920d4f5798500ecf644d6d5be5abb813685b1c31",
+      "review": "Extracts health-pickup meshes and motions."
+    },
+    {
+      "path": "decompile/tools/heli_body_assets.py",
+      "sha256": "70ff8efa26b6266f72b9163d3e527f604ff8fdebb9a3b1adc4aceed1a9c3cb28",
+      "review": "Extracts helicopter flight-body texture lists."
+    },
+    {
+      "path": "decompile/tools/heli_wreck_assets.py",
+      "sha256": "456a192116f9c0d6c2ef3ed2237fc8ac184250052ff64fd7e1780ebb60bcafa7",
+      "review": "Extracts helicopter wreck and attached-effect geometry."
+    },
+    {
+      "path": "decompile/tools/hud_polish_assets.py",
+      "sha256": "47d83d24477c07a33308aabf6c0b6f6a9dec5faa1f978658068a9be1c42c7341",
+      "review": "Extracts finish and vehicle-impact HUD models and motions."
+    },
+    {
+      "path": "decompile/tools/jgc_compact.py",
+      "sha256": "6c8fdb39415747b47198783a7743510e4ee6acbecea50ba40f13e00a686342ae",
+      "review": "Deduplicates identical JGC animation-channel tables."
+    },
+    {
+      "path": "decompile/tools/jgc_convert.py",
+      "sha256": "0c2a3c2bd3bf28b1c645587b7f8284628160d30f74bcf5e7d2d63c64ae39598c",
+      "review": "Converts character source banks to JGC2 meshes, skeletons, motion keys, and textures."
+    },
+    {
+      "path": "decompile/tools/jgc_lod.py",
+      "sha256": "317d1a0a65753c3ef8c0af84e6bd7801087f67d5d588279a976a0d6f7c5b2c91",
+      "review": "Builds the optional JCL1 level-of-detail directory within JGC banks."
+    },
+    {
+      "path": "decompile/tools/jgs_2dlist.py",
+      "sha256": "a871899fc8e8dd310c258f27af360c8a68a3f81dcfd67d671eb261e133baa250",
+      "review": "Converts source 2D image lists to the L2D1 format."
+    },
+    {
+      "path": "decompile/tools/jgs_cans.py",
+      "sha256": "998ddc366d5f0c53351561d9996cd0a17c5b23882d89e85e11f94558535b2111",
+      "review": "Converts mission-set paint and health pickup lists to CAN3 banks."
+    },
+    {
+      "path": "decompile/tools/jgs_collision.py",
+      "sha256": "54d9de592c325044f9f86b863a02c1fbfdf9241133f28246fc49dc8d5fb9e51e",
+      "review": "Extracts collision geometry and spatial-grid records to the COL1 format."
+    },
+    {
+      "path": "decompile/tools/jgs_convert.py",
+      "sha256": "fa646a2e6456ef2bdb90bcf7bbd0c1adfb185832cc93360afa1f630a9a29c2dd",
+      "review": "Converts stage geometry, placements, materials, and textures to JGS1 banks."
+    },
+    {
+      "path": "decompile/tools/jgs_ctrl.py",
+      "sha256": "b0b2ab9abd6ff120afc50264fd3264783bf6518a8c5c692413e23a7943387974",
+      "review": "Extracts recorded controller streams, spawn records, and trial checkpoint scripts to CTL2 banks."
+    },
+    {
+      "path": "decompile/tools/jgs_events.py",
+      "sha256": "be617cb79a5378e36727235346f4fe818009a85c1d7a0d2ed94bf24395ff4fea",
+      "review": "Extracts cutscene dialogue and message-to-event mappings."
+    },
+    {
+      "path": "decompile/tools/jgs_font.py",
+      "sha256": "d70048bbe20c50a8be113b7d9d5f6b587a881c1703bd432f1bac06515f85dfda",
+      "review": "Converts font textures while preserving transparent, white, and black texels."
+    },
+    {
+      "path": "decompile/tools/jgs_graph.py",
+      "sha256": "40cec47bfa06d2e54dcaa0987004589ae2ee6ad465817db2ca917492863a21e7",
+      "review": "Extracts rival-gang route graphs, nodes, and links."
+    },
+    {
+      "path": "decompile/tools/jgs_groups.py",
+      "sha256": "9d12714ee4092db8a0c758c246c73cefcd31f220623e1f993ae226bd00abad63",
+      "review": "Extracts typed mission group records and their route-entry layouts."
+    },
+    {
+      "path": "decompile/tools/jgs_instances.py",
+      "sha256": "a3b0ef925bc9eb4c5a4d5e1ba30567d0f4920070d63071ad93636a165db009da",
+      "review": "Builds optional local prop geometry while retaining world object bounds."
+    },
+    {
+      "path": "decompile/tools/jgs_missions.py",
+      "sha256": "1305bd9847ee0fe21120dca1284711496a855bdeb40b076e40a65de31cd453c6",
+      "review": "Converts linked mission records to the MIS3 format."
+    },
+    {
+      "path": "decompile/tools/jgs_peds.py",
+      "sha256": "8b4a10c6c522454d1217cd234caf867fe16a53e1a67569928ac9ee0615951854",
+      "review": "Extracts pedestrian spawn lists and waypoint routes."
+    },
+    {
+      "path": "decompile/tools/jgs_police.py",
+      "sha256": "f28a8d2971150f532f4ab28680d9481603baced3756c4f282b104dd2f6a68b1a",
+      "review": "Extracts police pursuit points, areas, segments, and adjacency records."
+    },
+    {
+      "path": "decompile/tools/jgs_rivals.py",
+      "sha256": "5c87468942349a75f8b21e4d1e92e9e6ba2a0bfcb1d6bbf5e224c331858f8ed2",
+      "review": "Extracts rival and police squad records from mission sets."
+    },
+    {
+      "path": "decompile/tools/jgs_setobj.py",
+      "sha256": "6b63c94e4dc7de5ef8fee17f6ff63f0457aadb5f61a90d92e04c156bb2a6e038",
+      "review": "Extracts zone-based object placements to SOB1 banks."
+    },
+    {
+      "path": "decompile/tools/jgs_spots.py",
+      "sha256": "54882a017fb791c96ea37760188807b7429140c2db26865c799986c6f9cced53",
+      "review": "Extracts stage graffiti templates in mission area and index order."
+    },
+    {
+      "path": "decompile/tools/jgs_tex2d.py",
+      "sha256": "20f16f8e22dfb7e1821967b8d9ffc6747a452652d81850e040cec36c3946f688",
+      "review": "Converts PVR texture packs to the TEX1 format."
+    },
+    {
+      "path": "decompile/tools/jgs_waves.py",
+      "sha256": "eda8f9c5af39aec634fbbe7cfd829ce1d28ba6f4dc866e4f9b8ffeb0aaf9a0b2",
+      "review": "Extracts police wave positions, orientations, and durations."
+    },
+    {
+      "path": "decompile/tools/jgs_zones.py",
+      "sha256": "47512efb7411e8fcee5c15e1ffc1b84c0931f97f114263b3bf1cf5746b92ff1d",
+      "review": "Extracts stage-zone volumes and neighbor lists."
+    },
+    {
+      "path": "decompile/tools/killer_source.py",
+      "sha256": "bb5f2ec7cdacee14727c6175a7b0f9db6040f10b72fc3b2d79e7c23ffda9aab3",
+      "review": "Extracts agent movement, attack, and motion parameters."
+    },
+    {
+      "path": "decompile/tools/kogane_collision.py",
+      "sha256": "00b2f180590648069e6923b06e9178c33f1e4226a84faa091ade16ef8bd2e0ac",
+      "review": "Builds Kogane interactive collision contacts from registration tables."
+    },
+    {
+      "path": "decompile/tools/kogane_cover_assets.py",
+      "sha256": "9ace8039e1a83dbb2f9a4547f288c82c72a710200c9a89c2231b592da5589379",
+      "review": "Extracts the Kogane mission-controlled manhole cover model."
+    },
+    {
+      "path": "decompile/tools/kogane_house_assets.py",
+      "sha256": "79ca75ad89f12af8d39c237cf4bdd437a382236cf488e4228b75c5629ad939f3",
+      "review": "Extracts Kogane doors, gates, breakable surfaces, and hanging panels."
+    },
+    {
+      "path": "decompile/tools/kogane_portals.py",
+      "sha256": "1bd70276001cc299e0b9beca493dbe3778b5a0f0659fd741c35a092f238892b7",
+      "review": "Extracts Kogane passage records."
+    },
+    {
+      "path": "decompile/tools/kogane_roof_assets.py",
+      "sha256": "7e00c6a74cbbe4267bef5dd992e7a0806d4078d0c5bf52486ec4e548e5febe09",
+      "review": "Extracts Kogane roof and house models and placements."
+    },
+    {
+      "path": "decompile/tools/kogane_surface_assets.py",
+      "sha256": "08365289a8c7b3f70fcd25e9b20529e156fd9b18939d35132293100ca21ecac7",
+      "review": "Extracts the animated texture bindings for Kogane water surfaces."
+    },
+    {
+      "path": "decompile/tools/kogane_tunnel_materials.py",
+      "sha256": "a7d1fa02c15e521d2eef7fd34fa571040e00622709a6bd521dca342e2fac6d65",
+      "review": "Applies the source alpha-material setting to Kogane tunnel-floor geometry."
+    },
+    {
+      "path": "decompile/tools/kogane_water_assets.py",
+      "sha256": "c06ca9d31fa020524bd354ee56aab9f712841dd111c13b834ac50cc4168909a2",
+      "review": "Extracts Kogane water volumes, return positions, and splash models and motions."
+    },
+    {
+      "path": "decompile/tools/loading_assets.py",
+      "sha256": "479e6ec57ef1cc50612a7599d7704c8279ad43b0665a66eade18724521da0591",
+      "review": "Extracts loading-screen models and Smilebit animation."
+    },
+    {
+      "path": "decompile/tools/love_route_assets.py",
+      "sha256": "9afdb4b175bc181383a125e57e394fa64364c138cabc9b3bf278b44a0315da25",
+      "review": "Packages completed Love Attack chase performances."
+    },
+    {
+      "path": "decompile/tools/make_people_specs.py",
+      "sha256": "ffcc69eb90479b7626cac3cf9b0a23252da5ed21b854a500bb57394509d231bb",
+      "review": "Generates conversion specifications for street-person model banks."
+    },
+    {
+      "path": "decompile/tools/mask_route_assets.py",
+      "sha256": "47645a81b41634ed17a58faef16aea952dee7b3a87a2893cd7dd17b4a27a9073",
+      "review": "Packages completed Behind the Mask pursuit performances."
+    },
+    {
+      "path": "decompile/tools/menu_audio_assets.py",
+      "sha256": "ef75b188c7147ef67854a94156dbd4d36a6393a5bc246eb076ef14f96c9b0b3a",
+      "review": "Packages menu samples and English garage voice banks."
+    },
+    {
+      "path": "decompile/tools/message_hud_assets.py",
+      "sha256": "da90a9c148d213d9440f3ba8944334abd0a63698ae3d893d531feeb88610a989",
+      "review": "Extracts message lists, notification text, and numeric glyphs."
+    },
+    {
+      "path": "decompile/tools/mew_demo_assets.py",
+      "sha256": "e4d451ad2bd90c7b0d3e2601dbc2fc940f112c4b3b90e4b4c013f68b5e55dfe6",
+      "review": "Packages completed Mew demonstration movement, poses, cameras, effects, and audio."
+    },
+    {
+      "path": "decompile/tools/mission_chain.py",
+      "sha256": "e1881ad0d8d4f05b017b67d3b3db194d4de2b079f30ec6ada2491ef0a120f1a1",
+      "review": "Traverses linked mission records in loaded source images."
+    },
+    {
+      "path": "decompile/tools/movie_assets.py",
+      "sha256": "8a274d44d4f39eae60c05d91d4f3c1de7280beaebd617f29d4d3f892d23895c3",
+      "review": "Packages DEMO movies and their narration banks."
+    },
+    {
+      "path": "decompile/tools/ninjalib.py",
+      "sha256": "8b7c4e1302040716341c40d8e85030aa263285fdeb7ecf55afceac42c2cce90b",
+      "review": "Ninja chunk-model parser and JGS1 serializer with float32-based subdivision edge ranking."
+    },
+    {
+      "path": "decompile/tools/noise_route_assets.py",
+      "sha256": "15826f93b10b24db248c366073f489d8a3a2a8d10bb9c3b1a23b35bd20663f8c",
+      "review": "Packages completed Noise Reduction chase performances."
+    },
+    {
+      "path": "decompile/tools/object_graffiti.py",
+      "sha256": "caeef0d04ffc8a5fb4e504c32f3c0a5dcac6885587741709aa4a312c275ada75",
+      "review": "Extracts mission-set graffiti attached to moving objects."
+    },
+    {
+      "path": "decompile/tools/onishima_source.py",
+      "sha256": "bf4819f142e5bd6cdd3e2de514d7ad9e98bc132acb75b90fbecd9423191e304c",
+      "review": "Extracts Onishima tuning and motion bindings."
+    },
+    {
+      "path": "decompile/tools/package_psp.py",
+      "sha256": "d1f4c68940df72fbbc81cc4ca2b9582bf5b33089597b167ffff3a416c1997566",
+      "review": "Stages and verifies a PSP development installation while excluding saves and diagnostic fixtures."
+    },
+    {
+      "path": "decompile/tools/para_source.py",
+      "sha256": "2f16e17810a15e03973495ac3ac23f95c18e3e9054651b1bbcb8364e7b81f514",
+      "review": "Extracts parachute-unit parameters, state bindings, and motion lengths."
+    },
+    {
+      "path": "decompile/tools/path_assets.py",
+      "sha256": "b19337910a6ee02cedc385634bf57d1d210e8f0c52e54db04b6c66f1e14a6f77",
+      "review": "Extracts scripted stage objects and sparse motion channels."
+    },
+    {
+      "path": "decompile/tools/patrol_car_materials.py",
+      "sha256": "6c8f7988925001e04fec247537d3c75b3e34ea59d5d83f8eda854aa9d6d0ee38",
+      "review": "Applies patrol-car and beacon texture-list bindings to shared geometry."
+    },
+    {
+      "path": "decompile/tools/pause_hud_assets.py",
+      "sha256": "8a2cf9f1dbf2036287f1eac3ed28d67a60ad288fd62f9a2950a8679462e384f6",
+      "review": "Extracts stage pause-menu models and animation lists."
+    },
+    {
+      "path": "decompile/tools/pause_map_assets.py",
+      "sha256": "31789768d9516eb04a6f413dea1fb89293e5f314c5a723538c08d3b327a4f6ae",
+      "review": "Extracts pause maps, markers, and objective strings."
+    },
+    {
+      "path": "decompile/tools/ped_native_assets.py",
+      "sha256": "33c43dea5d1126f8441ab2693a1fc286c2e14771ce2d89b5c3c9ef9ffe1989af",
+      "review": "Builds native pedestrian triangle strips from resident JGC attributes."
+    },
+    {
+      "path": "decompile/tools/ped_proxy_assets.py",
+      "sha256": "bb1f70adace2acdd3fd5850bf887815f34db90b340bbd2f6b0c2161401cf578f",
+      "review": "Builds pedestrian occlusion proxy geometry for Shibuya's bus area."
+    },
+    {
+      "path": "decompile/tools/player_body_assets.py",
+      "sha256": "6fd5df3129067d730511c4c63835dc164ed19ba0bd9b147c8ac6d23e1ca12aee",
+      "review": "Extracts articulated player collision spheres."
+    },
+    {
+      "path": "decompile/tools/player_effects.py",
+      "sha256": "d665b1808994064062ac06a457c84331f83a190ad1dec5b10c4346b95d79bd63",
+      "review": "Extracts player attachment points and grind-foot masks and builds effect models."
+    },
+    {
+      "path": "decompile/tools/player_fsca.py",
+      "sha256": "8fc73bbe97d1ecf781885bc895293b6ba9ed35e950cbc627ed100fe19545f276",
+      "review": "Converts reference SH-4 sine-table data to a PSP lookup table."
+    },
+    {
+      "path": "decompile/tools/player_lighting_assets.py",
+      "sha256": "cbcb263211dfa4513edeff38b31148034760eb146ab14b2435009a92261de5fb",
+      "review": "Extracts player-local normals and material data for runtime lighting."
+    },
+    {
+      "path": "decompile/tools/player_motion.py",
+      "sha256": "425e9d3bf9e1854ae32fc5d5388c3ae1c4a607821fc8f56c321c9afd1ef75527",
+      "review": "Extracts logical motion descriptors and their source animation clips."
+    },
+    {
+      "path": "decompile/tools/player_sound_assets.py",
+      "sha256": "b9ed3035fc138691cb629b4fcc540331607410cd2b6b80e3ea2bd3fa0f9f99f8",
+      "review": "Extracts foot-contact and surface-sound mappings."
+    },
+    {
+      "path": "decompile/tools/player_tuning.py",
+      "sha256": "54e6ad63487ad0019aa7012c6303ab435fbdefd6b3b797d3dbc07c29987198d5",
+      "review": "Extracts binary32 player movement parameters."
+    },
+    {
+      "path": "decompile/tools/poison_route_assets.py",
+      "sha256": "cc8470e1569958fc8f88c366eb7c1bdd8b7b8797cef975acf53f1f1ea9156d9e",
+      "review": "Packages completed Poison Jam escape paths, poses, and skate-effect inputs."
+    },
+    {
+      "path": "decompile/tools/police_hud_assets.py",
+      "sha256": "a2ef4ba2d5365642c715ecf08939731abebfbf6eb72b83beba3c1621daa1e1ad",
+      "review": "Extracts police signs and direction-arrow models and motions."
+    },
+    {
+      "path": "decompile/tools/police_vehicle_assets.py",
+      "sha256": "b3a86b9a76eea5aa58ca65229a3001221cafd1fac49df0f3f61c9700e1df6cfb",
+      "review": "Extracts stationary police vehicle models, clips, and texture mappings."
+    },
+    {
+      "path": "decompile/tools/ppsspp_gpu_capture.mjs",
+      "sha256": "594ec9d3c607c3e5463b3607ce2b52c5bac98d904218d35d47112e1504365ddf",
+      "review": "Captures emulator GPU buffers and rendering state for development inspection."
+    },
+    {
+      "path": "decompile/tools/practice_hud_assets.py",
+      "sha256": "ff5d40b5b3bd5247b8a031a236246f8daaba00e1ccba79d95e343f6d8c136189",
+      "review": "Extracts practice-pause objects, clips, and help imagery."
+    },
+    {
+      "path": "decompile/tools/pvr_decode.py",
+      "sha256": "f43900098546985bd3bfff2d89eceb5461edfef2d6a0ef69bc47c15f23e78b5c",
+      "review": "Decodes PVR textures across supported color, twiddled, mipmapped, and vector-quantized layouts."
+    },
+    {
+      "path": "decompile/tools/record_book_assets.py",
+      "sha256": "388ce4ec7e40c336c8cbbaf09844f2c28de2948586b0d2b3c51e11338742b4a8",
+      "review": "Extracts record-book models and garage record strings."
+    },
+    {
+      "path": "decompile/tools/recruit_assets.py",
+      "sha256": "76ebe5e93d0e3503291abcc01e68ad989db3ef76145f5502a312d947982a6203",
+      "review": "Extracts recruitment mouth hierarchies, chunk motions, and texture bindings."
+    },
+    {
+      "path": "decompile/tools/result_camera_assets.py",
+      "sha256": "a7f98afb393823d298c7d79635b35215c99bd94e42f7295171d416ed6fad0017",
+      "review": "Extracts stage-clear camera records for each skater."
+    },
+    {
+      "path": "decompile/tools/reverb_assets.py",
+      "sha256": "e8b6c32ab13451550b08596d5ec879cc5e341115cce0d1ba95519f973cfef649",
+      "review": "Translates supplied reverb DSP instructions into the native implementation."
+    },
+    {
+      "path": "decompile/tools/riot_source.py",
+      "sha256": "b16624b8db8a045e548677c8957c64cfdd5d980a1f063fe4c0950414484f626a",
+      "review": "Extracts riot-squad tuning and animation bindings."
+    },
+    {
+      "path": "decompile/tools/rival_graffiti.py",
+      "sha256": "d077539de12de1c884b6361c4f2ad1596f99f779da4d5c730c447d313797aecf",
+      "review": "Extracts enemy underpaint selections from mission records."
+    },
+    {
+      "path": "decompile/tools/scene_assets.py",
+      "sha256": "3c56627d3d04781672eb861e460c1e6fb82811bbdb4cf02558fa00b7bb7e65ad",
+      "review": "Packages EVENT imagery and custom scene actor bindings."
+    },
+    {
+      "path": "decompile/tools/scene_effect_assets.py",
+      "sha256": "12244ded071de95eb719e81560d143fe4eefec56a66e70533330d3ca586d0f87",
+      "review": "Extracts scene explosion models and effect pair selections."
+    },
+    {
+      "path": "decompile/tools/scene_voice_assets.py",
+      "sha256": "16c78b746869d069e65c6147476753b6851c3b4af282ab935070fd17613e765c",
+      "review": "Packages English voice banks for scene sound commands."
+    },
+    {
+      "path": "decompile/tools/shibuya_collision_assets.py",
+      "sha256": "1a9ca5760f2f9637f6f3347bfaeb9c539ef09d6d5095e1305ea5cd65594f3d91",
+      "review": "Builds Shibuya world, placed-object, and dynamic-prop collision geometry."
+    },
+    {
+      "path": "decompile/tools/shibuya_door_assets.py",
+      "sha256": "25baa3ae5111658d0af0778b26d5cbb3fb118b1d91ee4205f663a4f5cb1468ea",
+      "review": "Extracts Shibuya hinged-panel geometry and motions."
+    },
+    {
+      "path": "decompile/tools/shibuya_gate_assets.py",
+      "sha256": "210d9b751296ed5885e69440f7c187e92d6e9e62347b45dc45e474a324a482bd",
+      "review": "Extracts Shibuya barrier geometry, placements, motion, and static owners."
+    },
+    {
+      "path": "decompile/tools/shibuya_portals.py",
+      "sha256": "850996834d1c090df88e52bb797520ed6721c43fbe98814df39e4a353ed3cf58",
+      "review": "Extracts Shibuya passage records."
+    },
+    {
+      "path": "decompile/tools/shibuya_prop_types.py",
+      "sha256": "aabc87d0d3569209992e6fdcc6640311582453c1766965a6059b5f33bcc6e9b1",
+      "review": "Identifies Shibuya object types handled by the generic knockable-prop task."
+    },
+    {
+      "path": "decompile/tools/smsb_assets.py",
+      "sha256": "ff9ec3bdb142093717edc6c8f9feea02d2e0f5f0fdc013ecdab171d8ce844a42",
+      "review": "Packages sound sample banks and extracts MANATEE pitch lookup tables."
+    },
+    {
+      "path": "decompile/tools/spray_bubble_assets.py",
+      "sha256": "6782e6b3bb5130e953ff929d4f420bf89f362bcdb328ace63ecd51933cb5af7f",
+      "review": "Extracts the spray speech bubble, effect slots, and selected graffiti imagery."
+    },
+    {
+      "path": "decompile/tools/spray_camera_assets.py",
+      "sha256": "eb855ef84de846515c4ec5e4fe9186aa6135cdc0f0edebaaaf8c6e19d1e0d835",
+      "review": "Extracts player spray-camera records and their source references."
+    },
+    {
+      "path": "decompile/tools/spray_character_assets.py",
+      "sha256": "98046e260beee6ac17b21ce294a08c502057035b3112e45a6545b6c404e81f79",
+      "review": "Extracts player spray variants, grip and can meshes, and texture lists."
+    },
+    {
+      "path": "decompile/tools/spray_hud_assets.py",
+      "sha256": "52ae6573188236d142debed5f54b6318592ed951bd1949f364b6089f84862828",
+      "review": "Extracts animated spray-input cues and their texture bindings."
+    },
+    {
+      "path": "decompile/tools/staff_route_assets.py",
+      "sha256": "1b69c18072a7025ae04502db00f81d21b21d5bfede76feda61519b1754acbf8e",
+      "review": "Serializes a selected skater's completed STAFF performance."
+    },
+    {
+      "path": "decompile/tools/staff_sky_assets.py",
+      "sha256": "9a4a164a557f2727fef0467a6c2afb1997b763284034019109b5479516e8d113",
+      "review": "Extracts the Shibuya sky pair used during STAFF playback."
+    },
+    {
+      "path": "decompile/tools/stage_camera_assets.py",
+      "sha256": "76facbdd27874ee47493c2a5710e56ea810dea1d7593b92b6888cee0026c34c1",
+      "review": "Extracts the fixed Shibuya passage camera."
+    },
+    {
+      "path": "decompile/tools/stage_exits.py",
+      "sha256": "f9c8a3882ea12495d532a4d4b15244020b03c0755e43a9bdddca606e6773b843",
+      "review": "Extracts Benten stage-exit quads."
+    },
+    {
+      "path": "decompile/tools/stage_mips.py",
+      "sha256": "8ac6440317f5ccbfa28ba9028f4c60e9722ae9a612b905e51cc126e2b3673f51",
+      "review": "Builds stage mipmaps from the source mip levels."
+    },
+    {
+      "path": "decompile/tools/stage_render_assets.py",
+      "sha256": "2e09fb6ee68bb6d9480ea2b1e211d2ec2b9be12610401ebeb89a715e817b7c8c",
+      "review": "Extracts sector ownership and distant geometry for stage rendering."
+    },
+    {
+      "path": "decompile/tools/stage_texture_residency.py",
+      "sha256": "411778f80411282496afc9d3f48ebfca6161029c9cb3c31411fdce74ef8431e4",
+      "review": "Generates VRAM texture-residency weights from recorded PSP views."
+    },
+    {
+      "path": "decompile/tools/stage_visibility_assets.py",
+      "sha256": "f9be8e2ae46682ce43e7a84a55e1c0a0ee20cc157ec919b6fa4ef52961a58648",
+      "review": "Builds opaque occluders and object bounds for stage visibility tests."
+    },
+    {
+      "path": "decompile/tools/static_texmap.py",
+      "sha256": "7a31cfad20b67feb526ab83b18b2771ae73d7c1cb92007ceab2240b6a35cf974",
+      "review": "Extracts per-object texture-slot mappings from executable loader tables."
+    },
+    {
+      "path": "decompile/tools/story_intro_assets.py",
+      "sha256": "15ab57c288eea7235ba9ebdc2203c2310a0250b6e818afdf4543118a47b22a6f",
+      "review": "Extracts traffic actors and bindings for the story introduction."
+    },
+    {
+      "path": "decompile/tools/street_prop_assets.py",
+      "sha256": "9868df4542655e329a362ceb821740cb7825262b1b717b9902d2344779bc7d64",
+      "review": "Extracts rigid street-prop records and analytic collision bodies."
+    },
+    {
+      "path": "decompile/tools/street_prop_render_assets.py",
+      "sha256": "355c30d7a066e25ef97972c3b103851ac7e45a8ac0116243a4d9d9fb33f5b307",
+      "review": "Adds source-selected knockable meshes to city rendering banks."
+    },
+    {
+      "path": "decompile/tools/street_prop_types.py",
+      "sha256": "f1254ce1589a32b012f366df31fea5d722cdac02a435ccad73ad61e17a385dc2",
+      "review": "Maps rigid street-prop task types by stage."
+    },
+    {
+      "path": "decompile/tools/taban_source.py",
+      "sha256": "f79db40230312e0a7965db8187110dd7f635004099455a52ff53f444c918cc4b",
+      "review": "Extracts Taban tuning and animation-bank bindings."
+    },
+    {
+      "path": "decompile/tools/texture_binding.py",
+      "sha256": "42d55beed2030c251abcdf60b96a90a3bb2998a010bd0c7e3295da9e14d02d51",
+      "review": "Resolves converter texture bindings through source-file readers."
+    },
+    {
+      "path": "decompile/tools/title_route_assets.py",
+      "sha256": "d5b2db42643fb7f13104f1d7b281bea7a1cb4fd87742579b221e2207235e7919",
+      "review": "Serializes observed title choreography and actor/camera state."
+    },
+    {
+      "path": "decompile/tools/trick_hud_assets.py",
+      "sha256": "5b1368f8509da70cb304946c816fed1de56e779aac941055940f99504d738210",
+      "review": "Extracts trick names, identifiers, and multiplier artwork."
+    },
+    {
+      "path": "decompile/tools/world_audio_assets.py",
+      "sha256": "15bc6e7d7c02e7b41445b6d5dc476b2560d4732deea51301b76df000985164f2",
+      "review": "Packages world sound banks and pedestrian audio-profile tables."
+    },
+    {
+      "path": "icon/ICON0.png",
+      "sha256": "6958841a6c9ee93bb36d84332456c1bd774d858a5148bd1a324a9846dfb5ac31",
+      "review": "XMB artwork created by the maintainer for this project."
+    },
+    {
+      "path": "icon/PIC1.png",
+      "sha256": "a0989ceaf1a38e702870583e4a4642289707e806041efdffc6ce78d1190caec3",
+      "review": "XMB artwork created by the maintainer for this project."
+    },
+    {
+      "path": "psp/Makefile",
+      "sha256": "9edde2340c65dc328493dbd88275c16ecb15c981d00d24145e4c53f6f11fa506",
+      "review": "PSP game, setup, and helper-module build rules; game-only weak save-hashing imports compiled without the C asset-router header."
+    },
+    {
+      "path": "psp/crash_handler_license.txt",
+      "sha256": "1c3a6bf716a529fa4f2ae8cf7c19294c284f7e3731b3478ae52aeb4c3329a1b0",
+      "review": "License and attribution for the PSP exception-handler implementation."
+    },
+    {
+      "path": "psp/src/audio.c",
+      "sha256": "fbc9eeb01223305202abca589aeb316cc03a250d2cc22d9bd76d9cce5cc9be99",
+      "review": "Runtime audio implementation restored byte-for-byte to its pre-investigation version after removing temporary callback timing."
+    },
+    {
+      "path": "psp/src/audio.h",
+      "sha256": "6c06a68af350a58f988957296bd2dcf2e76962fec3abcee5115f336e264c63f4",
+      "review": "Runtime audio API with serialized loading-thread ownership; temporary loading-profile declarations removed."
+    },
+    {
+      "path": "psp/src/gameplay_audio_preload.c",
+      "sha256": "665329e6528be1828f6a346e5ca91fdc9a5b34c0449c9c5d86b9336df5cbb9d2",
+      "review": "Original background audio loader with playback-safe thread priority, bounded memory reserve, join lifecycle and synchronous fallback; no investigation timers."
+    },
+    {
+      "path": "psp/src/gameplay_audio_preload.h",
+      "sha256": "d419f1133f18a5e3f2104ca7381baddcb70c6403f72e4daafadfb951ea8fec30",
+      "review": "Background audio loading request/result API with no timing diagnostics."
+    },
+    {
+      "path": "psp/src/grind_map.c",
+      "sha256": "cb58da888cccdb82e3280d46313e79fdd59860b61113e47cee18656b47e25e2e",
+      "review": "Loads and validates separately prepared Grind City metadata/font; no map coordinates, text, palette or texels embedded."
+    },
+    {
+      "path": "psp/src/grind_map.h",
+      "sha256": "e14ad12555734dbc1a455c2f4cf18ec16abac37e4317c231c14394a4589f8403",
+      "review": "Runtime structure and external file schema for separately prepared Grind City map data."
+    },
+    {
+      "path": "psp/src/main.c",
+      "sha256": "9b3844189bb361a22b06d4993c2eae6818fd6e653074af68a0f0d4c1de5955a4",
+      "review": "Gameplay lifecycle and successful story load/save hooks for XMB presentation; game-data boundaries preserved."
+    },
+    {
+      "path": "psp/src/radio_ui.h",
+      "sha256": "57b4ef413bd85ac32fe787467583de5cd4a85ee73e9de9b75cd0d3ec09dd8aed",
+      "review": "Radio menu control flow, stream indices and timing; motion length, textures and song text are read from prepared assets."
+    },
+    {
+      "path": "psp/src/savedata.c",
+      "sha256": "974c39e03ca65104f0072e8b49ffe57f815ba0c429288be5af510165d5022c70",
+      "review": "XMB metadata writer with explicit firmware hash-service loading, validated integrity-hash outputs, bounded packaged-icon copying and no embedded game data."
+    },
+    {
+      "path": "psp/src/savedata.h",
+      "sha256": "5642a475f6cbf00e018b4ce1f9bf2427f51b6e171b54b3e886743023b412f006",
+      "review": "Interface for refreshing save-folder XMB metadata without altering story or backup data."
+    },
+    {
+      "path": "psp/src/savedata_imports.S",
+      "sha256": "cf24e88dd2dd56cd0e5ecf387072cdf6b3874c197f6bd61c62c48544947f94b9",
+      "review": "Three PSP save-hashing API imports with explicit weak binding; contains only SDK interface identifiers and assembler macro calls."
+    },
+    {
+      "path": "psp/tests/enemy_audio_preload_sanitize.c",
+      "sha256": "a1f0a8256848da5aa8653d4752356f971660756276e47722c851e27c1bd95a92",
+      "review": "Sanitizer harness for enemy mixer and cache lifetimes using a separately supplied sound bank."
+    },
+    {
+      "path": "psp/tests/enemy_prewarm_sanitize.c",
+      "sha256": "13df93109ce5f47b3610826043a3f7b4f0e703ee3ccda195115fcb4eabce269d",
+      "review": "Synthetic host checks for enemy graphics residency, failures, player burn lifetime, torso attachment, and teardown."
+    },
+    {
+      "path": "psp/tests/gameplay_audio_preload_sanitize.c",
+      "sha256": "609781851f7aa0355903f71b65c4eeb7ef490fa0a0ccb9f7686066c50843ba5a",
+      "review": "Synthetic PSP/host worker priority, lifetime and failure tests; temporary timing mock removed; no game data."
+    },
+    {
+      "path": "psp/tests/gang_navigation.c",
+      "sha256": "100e71e3816e7d3c617118603dcabad5e2a1b81a4595d1c52c58c56629c4054e",
+      "review": "Synthetic navigation regressions against production helpers; no game data. Covers pursuit stopping, graph exits and re-entry, authored portals and removal of artificial wall steering."
+    },
+    {
+      "path": "psp/tests/message_async_psp.h",
+      "sha256": "d45496dbb3cc34dbbdeed764c7eed11559524ae5b611bb7f7bd5277f62484f7f",
+      "review": "PSP threading and I/O shims for the host asynchronous-message tests."
+    },
+    {
+      "path": "psp/tests/message_async_sanitize.c",
+      "sha256": "b0a89e5e576ecb5439d5df5eaccbe2100f6cb99b146ee5e5d167d42f8ebadd04",
+      "review": "Threaded sanitizer harness for message-audio loading, cancellation, and resource lifetimes."
+    },
+    {
+      "path": "psp/tests/mission_enemy_preload_sanitize.c",
+      "sha256": "f375ef9d559974e63b15259b91bc0faafc8e754343d5254aaf32ed9712d20434",
+      "review": "Synthetic sanitizer harness for mission enemy preload-mask selection."
+    },
+    {
+      "path": "psp/tests/opening_reactive.c",
+      "sha256": "4f51b4e3bc9b7e1751cc1b85d37df967f46e917ba84c7ee329c04ad1b69da16c",
+      "review": "Synthetic contact-scenery clock regression test; no original placements, geometry or keyframes."
+    },
+    {
+      "path": "psp/tests/pause_map_progress.c",
+      "sha256": "63ac7993d2f0321f5d9501571623981080339970a0e280d52f54f321050bbc2f",
+      "review": "Synthetic source-only pause-map progression harness with inert rendering storage; exercises production selection and objective visibility."
+    },
+    {
+      "path": "psp/tests/player_burn_render.c",
+      "sha256": "ab70fdbf6fb4fda7d231be68ce49153a09e505b1c977f1d1f44ad534c87af058",
+      "review": "Synthetic headers and recording renderer verify player fire frames, billboard placement, clipping API, absent streams, and stable paused draws."
+    },
+    {
+      "path": "psp/tests/police_arrow_math.c",
+      "sha256": "095f3248f03c2272e6938c2d695442be2ff34ffa262f4011139bb7476159b393",
+      "review": "Synthetic police-arrow endpoint rounding and finite-matrix regression; no original game coordinates or asset payload."
+    },
+    {
+      "path": "psp/tests/portable_assets_bridge.c",
+      "sha256": "47719dfe0d62db02ebbe95260fda59efcb03122e4b59b1e4310090956a3f5693",
+      "review": "Host bridge exposing portable asset validation and path handling to tests."
+    },
+    {
+      "path": "psp/tests/portable_assets_psp_bridge.c",
+      "sha256": "df10471e29669006cb8135304e09f436b96fd45c2834cc718f04db3a0038c756",
+      "review": "PSP-path and system-call bridge for portable asset loader tests."
+    },
+    {
+      "path": "psp/tests/portable_assets_stubs/pspchnnlsv.h",
+      "sha256": "52e50e08053bd8cc3615afe1060671c02f647db96371e7b184c54317c4506fdc",
+      "review": "Host declarations for the PSP savedata hashing API test seam."
+    },
+    {
+      "path": "psp/tests/portable_assets_stubs/pspdebug.h",
+      "sha256": "cf54d01b3b67bbf3440ef2e8a85fd23943ad8cc9b8b09318b28d06bbdd4d8b43",
+      "review": "Host declarations for PSP debug-screen calls used by asset-loader tests."
+    },
+    {
+      "path": "psp/tests/portable_assets_stubs/pspiofilemgr.h",
+      "sha256": "4f76c8349876a2923b5dcaa1e0178e031c71b4a87c57dfb3ee271522ba6351f8",
+      "review": "Host declarations for PSP filesystem calls used by asset-loader tests."
+    },
+    {
+      "path": "psp/tests/portable_assets_stubs/pspkernel.h",
+      "sha256": "6a3d074fb5d75f59cce3b5945ec1e53472e788ec87ad6640588ebb15c5c487ce",
+      "review": "Host declarations for PSP kernel calls used by asset-loader tests."
+    },
+    {
+      "path": "psp/tests/portable_assets_stubs/pspkerror.h",
+      "sha256": "d731b7c8e3750c86cb14bb9251584bbed46b46acbbed65dec3669135664cca33",
+      "review": "Single documented firmware error constant used to test an already-loaded save-hashing service."
+    },
+    {
+      "path": "psp/tests/portable_assets_stubs/pspmodulemgr.h",
+      "sha256": "a6e014c3d44b2a3c63f9d53913203aa65a4a271c3436e290940484c7ba70f8dd",
+      "review": "Minimal host-test declarations for the PSP firmware-module loader API."
+    },
+    {
+      "path": "psp/tests/portable_assets_stubs/psppower.h",
+      "sha256": "cd025c0a678f2c45cb12bdafdaef338d4a35475dd9d89c6954ba5ff9d9974c42",
+      "review": "Host declarations for PSP power callbacks used by asset-loader tests."
+    },
+    {
+      "path": "psp/tests/portable_assets_stubs/pspthreadman.h",
+      "sha256": "6d815dffadbfe1926a2d5080c9417aa081382c99cf98bcac0ecaaa670d1cad7b",
+      "review": "Host declarations for PSP threading calls used by asset-loader tests."
+    },
+    {
+      "path": "psp/tests/render_stubs/pspgu.h",
+      "sha256": "6d4c587f65ebe5a0bbb7241b0aebaa7fb22dc16cac898ff4ac71e4022e88e3b1",
+      "review": "Host-compatible PSP GU declarations for renderer and converter builds."
+    },
+    {
+      "path": "psp/tests/render_stubs/pspgum.h",
+      "sha256": "954bfaca4c237008dcbf235e16931912e658076dae56c00d014e7901128e15f0",
+      "review": "Host-compatible PSP GUM matrix declarations for renderer and converter builds."
+    },
+    {
+      "path": "psp/tests/replay_pack_sanitize.c",
+      "sha256": "a31377bd81413e07f88aee717cfd31902279cab9a0f8ee0bef02ddc847c8139b",
+      "review": "Synthetic sanitizer harness for replay serialization bounds and buffer handling."
+    },
+    {
+      "path": "psp/tests/savedata_hash_bridge.c",
+      "sha256": "62a5809d64c9ffac6cf74f6a897c78f01ff77901b4fca48cd2ca66d5f0f67fc8",
+      "review": "Synthetic firmware API mock exercising service loading, hashing calls, failures and successful calls with missing outputs; no cryptography or game payloads."
+    },
+    {
+      "path": "psp/tests/stubs/malloc.h",
+      "sha256": "ecd651736f5f7dba2441044cf285e942a0e9210e8482f3ed906945bdfa0c37e7",
+      "review": "Host compatibility declarations for PSP allocator interfaces."
+    },
+    {
+      "path": "psp/tests/stubs/pspctrl.h",
+      "sha256": "c7c8c690ee6cdd0299feb7f5744feb590bce881b331afb24df41779b47cbbdc0",
+      "review": "Host compatibility declarations for PSP controller interfaces."
+    },
+    {
+      "path": "psp/tests/stubs/pspkernel.h",
+      "sha256": "76ad68009196f9ce551134cd4b757f2f812b1cf1633220c5dd07935899761713",
+      "review": "Host compatibility declarations for PSP kernel interfaces."
+    },
+    {
+      "path": "psp/tests/test_asset_formats.py",
+      "sha256": "6b104d3896a8e8c948c598c272bf69430ae78a52e61638485e75cd4656db27d7",
+      "review": "Host tests compile production asset loaders with synthetic current-format data and optionally user-prepared assets; unsupported versions must fail."
+    },
+    {
+      "path": "psp/tests/test_benten_overhangs.py",
+      "sha256": "a31a33491f2354c48e44e5715c29efcf0d74702464396c92ea81f1d666725f49",
+      "review": "Synthetic contact-scenery clock regression test; no original placements, geometry or keyframes."
+    },
+    {
+      "path": "psp/tests/test_enemy_audio_preload.py",
+      "sha256": "6023903af36b9db58fcad86dace064d03f49a596688478edfc71b16d7c3460bc",
+      "review": "Builds and runs CPU and Media Engine enemy-audio cache lifetime tests."
+    },
+    {
+      "path": "psp/tests/test_enemy_prewarm.py",
+      "sha256": "7e09d60bda01bd42612adc7d2327a9a968e89ac3a7c1eb4be837d43f27243a7f",
+      "review": "Builds and runs enemy projectile resource-preparation tests."
+    },
+    {
+      "path": "psp/tests/test_gameplay_audio_preload.py",
+      "sha256": "5d78f0ed5c3fbf729a7b4e48e9d82f3e7cf3e59fac06bdd0fcf7437b9ccb8378",
+      "review": "Host sanitizer runner for both worker branches and PSP priority/lifecycle checks."
+    },
+    {
+      "path": "psp/tests/test_gang_navigation.py",
+      "sha256": "c41a198d459e94d4fb9a7acdb3b06e5ad40be4850aa2bc181fbf372463711df4",
+      "review": "Sanitizer-backed runner for the synthetic production navigation regressions."
+    },
+    {
+      "path": "psp/tests/test_me_stub.py",
+      "sha256": "96fff7cf8da87bdc4cd68c5ad606e0f9d7de45240c0be9f237c2a1f919590ed4",
+      "review": "Synthetic execution checks of assembled ME bootstrap control flow, bounded register/cache operations, relocation freedom and entry/argument handoff; does not emulate hardware timing."
+    },
+    {
+      "path": "psp/tests/test_message_async.py",
+      "sha256": "4f27f9e5bed97782e1ac83a15517073ecdadc577c749d8b579f3a84294a6a4b2",
+      "review": "Builds and runs threaded message-audio loading and lifecycle tests."
+    },
+    {
+      "path": "psp/tests/test_mission_enemy_preload.py",
+      "sha256": "54554a95b5fe025ae2f537aec4a5f6a83eb4314b5d73d4026cea331cc292c0d6",
+      "review": "Builds and runs bounded mission event and group-selection tests."
+    },
+    {
+      "path": "psp/tests/test_pause_map.py",
+      "sha256": "90ca600506b3c395ecbec9df2dd82daf0928696c43606652f5cb83f4e730085f",
+      "review": "Sanitizer-backed host tests for cleared sections, local-map re-entry, retry, and objective filtering in multi-section missions."
+    },
+    {
+      "path": "psp/tests/test_player_burn.py",
+      "sha256": "627e94e10bb7686314129002813be6fe998f153f527f077e3bafa24d470a7e07",
+      "review": "Builds and runs the player fire renderer checks with address and undefined-behavior sanitizers."
+    },
+    {
+      "path": "psp/tests/test_police_arrow.py",
+      "sha256": "2df162350f09ebee3808fdce73d1ea0016643b51711abdd1d49d409893d28dee",
+      "review": "Synthetic police-arrow endpoint rounding and finite-matrix regression; no original game coordinates or asset payload."
+    },
+    {
+      "path": "psp/tests/test_portable_assets.py",
+      "sha256": "bd4e43cc95a6934ff47f063afa15a4926950a621972a09cddd515847f5bda797",
+      "review": "Tests portable asset validation, startup, path routing, external saves, metadata preservation, and firmware-service failures or missing hash outputs."
+    },
+    {
+      "path": "psp/tests/test_radio_ui.py",
+      "sha256": "6cc9fb0a3939bef2c5df04fd8368c4f5fb08047eaab8d03904273e01fc30b72a",
+      "review": "Synthetic Radio navigation and timing regressions with an invented motion length; no original asset payload."
+    },
+    {
+      "path": "psp/tests/test_street_map.py",
+      "sha256": "03de396846ee69fd406c10ba548b0a5a01907a2835438d612e62a21ee635ade7",
+      "review": "Synthetic save-state, mission routing and malformed map-format regressions; no original asset payload."
+    },
+    {
+      "path": "psp/tests/test_title_route_prefetch.py",
+      "sha256": "7581bae040e5d6d217870cde2e1127a64661fd9bf6e4ed999727b7191b4b1fa6",
+      "review": "Tests threaded route prefetch, exact samples, concurrent readers, and fallback and lifecycle behavior."
+    },
+    {
+      "path": "psp/tests/test_traffic_preload.py",
+      "sha256": "8bab04efd6b4fcf83ab03c3461219d33833839f0747740494f7a7bff67e00d11",
+      "review": "Tests traffic resource preparation with synthetic failures and retries while checking level callbacks."
+    },
+    {
+      "path": "psp/tests/title_route_prefetch_sanitize.c",
+      "sha256": "0e5965d10f556ce7e9e92c12f573dac62b487e871e320f3e63ee663a938b72dc",
+      "review": "Threaded sanitizer harness for route-buffer handoff, exact samples, failures, and reader lifetimes."
+    },
+    {
+      "path": "psp/tools/crashprx/Makefile",
+      "sha256": "26ea5d1151bd26890039833509a929bbd45c5f05cde64dafc36676f7d09109c2",
+      "review": "Build rules for the PSP crash-handler kernel module."
+    },
+    {
+      "path": "psp/tools/crashprx/exception.S",
+      "sha256": "43c101affb11301ee81aea042bb1b5ce962bc63f181e73d5339704ea6ce6d5cb",
+      "review": "PSP exception-entry assembly and register capture."
+    },
+    {
+      "path": "psp/tools/crashprx/main.c",
+      "sha256": "49fdb8f8fdf8029ec73116c0ea6fb0fcee31abbcffc175602d374283aa29ab05",
+      "review": "PSP kernel exception handler and crash-report output."
+    },
+    {
+      "path": "psp/tools/meprx/Makefile",
+      "sha256": "69940636b392d2032dd375a25274246f76460bf91d3ce4233ca8e00b7271ee10",
+      "review": "Build rules for the Media Engine helper module."
+    },
+    {
+      "path": "psp/tools/meprx/main.c",
+      "sha256": "d9e84171fa5e8c1b343ffd263b6b66e70ef152462c928a1004524d25150e3eb1",
+      "review": "Media Engine initialization, work dispatch, cache synchronization, and power-event handling."
+    },
+    {
+      "path": "psp/tools/meprx/me_stub.S",
+      "sha256": "88665126221ee66ea3ffcfaeeb6844312431fbcceff7730179efa5af849a16f5",
+      "review": "Standalone Media Engine bootstrap adapted from the MIT libmecore v2.0.1 boot setup, with documented PSP cache initialization and the port entry/argument handoff."
+    },
+    {
+      "path": "psp/tools/meprx/power.inc",
+      "sha256": "f88f04ffffbfb110d933eb959b2a55adf57638ec07272baf3b2c9dc45e76f6d3",
+      "review": "PSP power-function import declarations used by the Media Engine module."
+    },
+    {
+      "path": "requirements-portable.txt",
+      "sha256": "c0bfccd9ac8fcea1c259204db316f3577b325d6fba8983c37ec27c0adff5f932",
+      "review": "Pinned Python dependencies for desktop asset conversion and packaging."
+    },
+    {
+      "path": "tools/portable/README.md",
+      "sha256": "80fa6d44f17c09b6adbb55e32d06774260a7f553b0221f5c19a3e97c96b50dc3",
+      "review": "Asset preparation, source export, build, packaging, and validation instructions."
+    },
+    {
+      "path": "tools/portable/asset_aliases.json",
+      "sha256": "ab917cdb32f3616ae9301be4700220105c20ef15e6c9d181376dc82c42b555eb",
+      "review": "Mappings between equivalent asset paths and their canonical outputs."
+    },
+    {
+      "path": "tools/portable/asset_catalog.json",
+      "sha256": "2fa8c8eb42208cf3870517053b68eec6ad414b0d6fe5f8ae990ed95274d170af",
+      "review": "Expected asset filenames, sizes, SHA-256 and CRC32 identities, and geometry precision policy."
+    },
+    {
+      "path": "tools/portable/audit_build.py",
+      "sha256": "76526efcf7cfb88450482ecbde8968c9b11e6c585619843e761608b53f865c1b",
+      "review": "Checks source bindings, compiled data storage, dependencies, bundled roles, and PSP module identities."
+    },
+    {
+      "path": "tools/portable/browser/README.md",
+      "sha256": "a3f376a79338b018156be787508c3b9c0678775afeaecbd42b3020d1b17b4c15",
+      "review": "Offline browser preparation, supported browsers, build requirements, matching-source packaging, and validation instructions."
+    },
+    {
+      "path": "tools/portable/browser/THIRD_PARTY_NOTICES.txt",
+      "sha256": "19ebe8327fb484b7b29026cd7825a1f2e061a9555e3922a04cd9547b4ac976a1",
+      "review": "Copyright and license notices for the browser toolchain and compatibility math."
+    },
+    {
+      "path": "tools/portable/browser/background.js",
+      "sha256": "85857f14fd2fb542c6bf3ede492bf3aed528f71a9b38f09c20372f92cfaecf54",
+      "review": "Extracts EBOOT artwork and encodes the optional PSP setup background."
+    },
+    {
+      "path": "tools/portable/browser/build.py",
+      "sha256": "d09f1bff9507be00c562a6ab2f0b0f0699ed688c82aa8637c9364adcb4db0a9b",
+      "review": "Compiles the WebAssembly converter and assembles the offline HTML, visible notices, matching-source archive, and build receipt."
+    },
+    {
+      "path": "tools/portable/browser/filesystem.js",
+      "sha256": "f2406f4ba3d89260b1e3a8a1b794c99f21327ddf4ae5e1208d3a94c8dc8148a3",
+      "review": "Browser filesystem adapter for the selected release directory, with scoped reads, writes, and handle management."
+    },
+    {
+      "path": "tools/portable/browser/io.c",
+      "sha256": "eb22188524bfa2fd2512f89b4ae4061941fafea17530a21ab75e7096fb8b1ec8",
+      "review": "C stdio and POSIX descriptor adapters for asynchronous browser filesystem operations."
+    },
+    {
+      "path": "tools/portable/browser/math-source.json",
+      "sha256": "f92af32af646f5997e740be208e71fecaf9ee609c21e65a69d95aff4f56eb229",
+      "review": "Source revisions and file identities for the browser's PSP-compatible trigonometric functions."
+    },
+    {
+      "path": "tools/portable/browser/math.c",
+      "sha256": "b1cb9db4215bd079e449ffa5f3257a4670a11e1f1738ee16f2d1705908a7975b",
+      "review": "PSP-compatible sine and cosine functions used to expand recorded controller inputs."
+    },
+    {
+      "path": "tools/portable/browser/notices.py",
+      "sha256": "211030cdaa7d74ed115b57bfed9df4b2584587da6759ec2f3807c711c5de048e",
+      "review": "Aggregates exact license texts and renders escaped, visible HTML with the matching-source archive link."
+    },
+    {
+      "path": "tools/portable/browser/page.js",
+      "sha256": "5a4049d17df806fd343f9052dd495a07c1b5aa59af75a65e58dfc29b25fef6b3",
+      "review": "Browser eligibility, folder selection, source-file validation, progress, cancellation, and result UI."
+    },
+    {
+      "path": "tools/portable/browser/prepare.c",
+      "sha256": "e045e5824524005d2d2f39c3733723d2118c9d7d992e5bd799eaf6a4b5ef6590",
+      "review": "Browser conversion entry points with recipe validation, completion ordering, optional warning generation, and error cleanup."
+    },
+    {
+      "path": "tools/portable/browser/prepare.html",
+      "sha256": "421e706497812fd0e5e2d3b1c0ea7ad3580fd07d3186ca421d2747b4ff64d2b4",
+      "review": "Offline preparer page structure, controls, decorative artwork, and static license disclosure."
+    },
+    {
+      "path": "tools/portable/browser/provenance.py",
+      "sha256": "64b7fc9b5137a317759d7e36dd142a7aca6e65a5a6d3bbbb055831d5482cf4c4",
+      "review": "Checks browser compiler dependencies and external-asset symbols against the reviewed source snapshot."
+    },
+    {
+      "path": "tools/portable/browser/source_bundle.py",
+      "sha256": "11557c9e0fb0b4de99e2ddeb0de7a9791706b1416919437e4fbd49ddeaf7abcc",
+      "review": "Creates a deterministic reviewed-source ZIP and binds compiler inputs and cache fingerprints to its source bytes."
+    },
+    {
+      "path": "tools/portable/browser/style.css",
+      "sha256": "79d58d5183aee468fca3685d540070ec77d205f9a32155003109dcea49053027",
+      "review": "Layout, colors, typography, focus states, and responsive styling for the offline preparer."
+    },
+    {
+      "path": "tools/portable/browser/test_browser.mjs",
+      "sha256": "701e35f5e921d42a646bdd64db786a753e4c328c913e69422bb8db41667a09b0",
+      "review": "Isolated Chrome conversion harness comparing expected outputs and optional synthetic save sentinels."
+    },
+    {
+      "path": "tools/portable/browser/test_filesystem.mjs",
+      "sha256": "0d7b8d08f2fb8a911d972c8447c1e8cf9c2d07205c297b78b831354f87f9f531",
+      "review": "Browser tests for filesystem operations, errors, handle lifetimes, and cancellation."
+    },
+    {
+      "path": "tools/portable/browser/tests/io_probe.c",
+      "sha256": "abb16feea5fe1b71c9adac6ca704cf5cefb6bdc02520b53174a97c4459918223",
+      "review": "C probe for browser stdio and descriptor bridge behavior."
+    },
+    {
+      "path": "tools/portable/browser/tests/io_probe.mjs",
+      "sha256": "8105224a58eabb5bf9380b2ea7f48ec967e4f3cb0e542f8c55bac95e2c45f359",
+      "review": "JavaScript harness for the compiled browser I/O probe."
+    },
+    {
+      "path": "tools/portable/browser/tests/run_io_probe.py",
+      "sha256": "d31fdbdf52440c88583e264318a616abe620eee2a2b6c047eb15f3ba640b493a",
+      "review": "Builds and runs the WebAssembly filesystem bridge probe."
+    },
+    {
+      "path": "tools/portable/browser/tests/run_pointer_probe.py",
+      "sha256": "5b64ff642e13fc27f09922fcfecb81756096faf97e39c05a178019f47eabbb8a",
+      "review": "Builds and runs WebAssembly source-address arithmetic checks."
+    },
+    {
+      "path": "tools/portable/browser/tests/test_notices.py",
+      "sha256": "ab6cd97ed5a3870e2ba63d1f9f8c5dc3444c606132e427ddcda58c4ba8923985",
+      "review": "Tests complete notice preservation, input hashes, HTML escaping, and required template markers."
+    },
+    {
+      "path": "tools/portable/browser/tests/test_provenance.py",
+      "sha256": "82e43c01082d7e881d65a843d03d7f5db3b5bf029b4cd2f4baad3bd5697f14b7",
+      "review": "Tests WebAssembly data-section parsing, zero-initialized asset storage, and dependency-path validation."
+    },
+    {
+      "path": "tools/portable/browser/tests/test_source_bundle.py",
+      "sha256": "b9be8838f13624a26418360355a5cca6976c12517cbcdef9c40b4798332adbec",
+      "review": "Tests deterministic source archives, inventory boundaries, compiler-input bindings, and cache invalidation despite unchanged timestamps."
+    },
+    {
+      "path": "tools/portable/browser/third-party-source.json",
+      "sha256": "e8339fd3cb8bd461545f21571ff18fe10dcd6beed14ba7670de7dc1f040e9bef",
+      "review": "Pinned toolchain and upstream source identities for the embedded browser notices."
+    },
+    {
+      "path": "tools/portable/browser/worker.js",
+      "sha256": "f974c50518370436ca9d12ec700b3482504e353d73f96b3cd427386048daf12a",
+      "review": "Runs conversion in a browser worker and handles filesystem setup, progress, cancellation, and completion."
+    },
+    {
+      "path": "tools/portable/build_device_setup.py",
+      "sha256": "de81bb96ac4ab31d1fde2bdcd3267f8d479b44378648da51c8ce53df3f53ed01",
+      "review": "Builds the PSP setup executable and helper modules from the selected source closure and writes build receipts."
+    },
+    {
+      "path": "tools/portable/build_install_probe.py",
+      "sha256": "41ff849f89d6cfc89c9b6dc438b6ab35e4709b111d4d0b59ebff3c5ae300b54f",
+      "review": "Builds the native installer probe, including optional warning-image conversion."
+    },
+    {
+      "path": "tools/portable/build_loadexec_probe.py",
+      "sha256": "96a362192bd7f928ba3c0437ea0bf74a122f943fe6455883aceb4ea8c2164ea6",
+      "review": "Builds a PSP executable-transition probe with synthetic allocation workloads."
+    },
+    {
+      "path": "tools/portable/bundle.py",
+      "sha256": "5822bffcb6686aca96f275aa933c5348be549bcf82997fca7b392363dbcb3ad7",
+      "review": "Packages and validates the game, helper modules, recipe, and notices in the setup bundle."
+    },
+    {
+      "path": "tools/portable/capture.py",
+      "sha256": "13a908e5a03b32e10ec08186d65b6010811e609342d1905d5130369a3a9b8a4a",
+      "review": "Stages and runs isolated fresh-disc emulator observations for asset generation."
+    },
+    {
+      "path": "tools/portable/capture_jobs.json",
+      "sha256": "a74b6b0b7a861dcf8cc77f8f6b9296156ae38f463690b0d2071bb66e7b1062f6",
+      "review": "Replay job selections, character choices, and output filenames."
+    },
+    {
+      "path": "tools/portable/character_compat.py",
+      "sha256": "6e7e8c427362176c07de480f0c6b4766bc301eec0ed2b86cd8297b4aad4a0479",
+      "review": "Applies shared character-bank compatibility rules for unused helicopter scale keys and patrol-car materials and texture ordering."
+    },
+    {
+      "path": "tools/portable/collision_context.py",
+      "sha256": "aada3c37ba63c7efdfc96953ddf8d48577925bff81c1be387a973e4e3e05108b",
+      "review": "Provides the collision-contact layout expected by interactive-prop exporters."
+    },
+    {
+      "path": "tools/portable/converter_sources.py",
+      "sha256": "902d203ed5a2c1d0af794d6b75e082f98a679a80fc7b56cfd3ab434bb99c2db1",
+      "review": "Selects the source dependencies needed by the desktop conversion pipeline."
+    },
+    {
+      "path": "tools/portable/disc.py",
+      "sha256": "fff1ffb7f2b6dcc7e816d704d2b2ca3125dd82fa8e8a3d2e112bbab0b66f5c13",
+      "review": "Reads GDI track layouts, ISO9660 filesystems, and CRI AFS archives."
+    },
+    {
+      "path": "tools/portable/excluded_unused.json",
+      "sha256": "198d8ab7c38cc369e20b2bf7fcf31acba82a961bec7aed0f1b8aadabad52e0d4",
+      "review": "Inventory of generated files excluded from the runtime asset set."
+    },
+    {
+      "path": "tools/portable/export.py",
+      "sha256": "4ca5df6a567a90bcec71d05ed254dba4a9aa724504a9f47f6804234bc88abf57",
+      "review": "Creates source-only export snapshots and checks their build and content-review receipts."
+    },
+    {
+      "path": "tools/portable/export_inputs.py",
+      "sha256": "1a9820d582fec2a12345cd2f63cdb696d1cd74c1e8490a3f2fca04b7e2ce63e4",
+      "review": "Defines explicit export inputs outside the PSP runtime source directory."
+    },
+    {
+      "path": "tools/portable/gang_idle_phases.json",
+      "sha256": "7bb9d2ef23598a4d9e7a1b11fe81363e9219a250edf7691ccfc7f8efabd81a2b",
+      "review": "Idle-clock synchronization settings for gang route capture."
+    },
+    {
+      "path": "tools/portable/graffiti_recipes.py",
+      "sha256": "95d011323ad0b208c37c7f3a05d5da7dd52dbe54bdf29558c06385887797d6fd",
+      "review": "Source locations and parser selections for native graffiti-reveal geometry conversion."
+    },
+    {
+      "path": "tools/portable/install_plan.py",
+      "sha256": "7885f991b191e97e18cbe91c010e02429c83ebb7a4a091fda66576b9a6356f56",
+      "review": "Generates on-device conversion instructions, output identities, and coverage reports."
+    },
+    {
+      "path": "tools/portable/install_probe.c",
+      "sha256": "503412aeb20f1e2527e4cd0301f4b5993a545ef769a9de3e4705ab51bf5ab6ac",
+      "review": "PSP target-compiler harness for selected native conversion jobs; subset results do not establish complete-install coverage."
+    },
+    {
+      "path": "tools/portable/legacy_geometry.py",
+      "sha256": "b504cb76996b68ec7cc62dd44e1d6591ac606ba247a7c2fa051ca8de018f5480",
+      "review": "Regenerates collision geometry using the compatibility math conventions of the asset format."
+    },
+    {
+      "path": "tools/portable/legacy_jgc_convert.py",
+      "sha256": "1dea6943017dce4be16344129dd3a288a740207c57f76f003fd1d9f4734f3e2b",
+      "review": "Converts character models, bone-local meshes, skeletons, and motion keys to the JGC1 format."
+    },
+    {
+      "path": "tools/portable/legacy_ninjalib.py",
+      "sha256": "b770215b87e29ed6ab53688bd2959f7e21585774f410a4dfcf07ef21625bfbc7",
+      "review": "Ninja chunk-model parser and JGS1 serializer with float32-based subdivision edge ranking."
+    },
+    {
+      "path": "tools/portable/menu_effects.py",
+      "sha256": "637e42379d669213989ab18fb9f960296c244256929b622cfa3646644af36bf6",
+      "review": "Derives menu and effect conversion recipes from source banks."
+    },
+    {
+      "path": "tools/portable/misc_recipes.py",
+      "sha256": "da93346cd0e5f5bac6a403c3656e4b2903ebe8c54d4fab6e6f17d679253ddf35",
+      "review": "Source-format recipes for miscellaneous native asset converters."
+    },
+    {
+      "path": "tools/portable/mission_sets.json",
+      "sha256": "ebd03db820fe0ba15b20f9c0ea1bda1d5199a50a9873db4cb939ea22f6142182",
+      "review": "Mission-set file inventory and its structural validation metadata."
+    },
+    {
+      "path": "tools/portable/model_jobs.json",
+      "sha256": "b723abc6dde63ecc5ee1bf90874e1193784d31b95fe376b018c64c2bba589f10",
+      "review": "Model conversion jobs with source readers, parser options, and preview placement."
+    },
+    {
+      "path": "tools/portable/model_recipes.py",
+      "sha256": "b47698a6fd577024ae7011236670df06f100ec77c0d505bcb8bbcd842bb3aa17",
+      "review": "Builds recipes for the native JGC model converter, including source-backed texture bindings."
+    },
+    {
+      "path": "tools/portable/native_bank_test.py",
+      "sha256": "f68cad06f8d5ddb0ed566b810e46236d1ef41fdf66eb51be2c17d8ea330c3a13",
+      "review": "Tests pose-bank bounds and sparse loading with synthetic inputs."
+    },
+    {
+      "path": "tools/portable/native_cache_test.py",
+      "sha256": "d4dc9cbc49d0fb84d39b9ffead6df1dbad408820b8c4b4ea41b99942833fbcf7",
+      "review": "Tests ownership and reuse of generated replay scratch data."
+    },
+    {
+      "path": "tools/portable/native_replay_identity.json",
+      "sha256": "112b4f124031b3f47fdc3458aa53fe2c6cc80e29b2e90884ca130dd6f7bb911b",
+      "review": "Native replay output identities, generator source fingerprints, and compatibility-review records."
+    },
+    {
+      "path": "tools/portable/notices/Flycast-GPL-2.0.txt",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "review": "GNU General Public License version 2 text for the Flycast-derived components."
+    },
+    {
+      "path": "tools/portable/notices/Flycast-hardware.txt",
+      "sha256": "0290b1bc77ebab874ee1079bf16bc89cab86103e49c48ceefcab5a896d924faa",
+      "review": "Source attribution and license information for Flycast-derived hardware components."
+    },
+    {
+      "path": "tools/portable/notices/FreeBSD-sort.txt",
+      "sha256": "5bf79564b5ec525409e5ddd2b88b03f2a21b21654946846917a39aafacd783cd",
+      "review": "Copyright and license notice for the FreeBSD sorting implementation."
+    },
+    {
+      "path": "tools/portable/notices/Newlib-4.5.0.txt",
+      "sha256": "fcfb5ec69b6ab52676dcc4dab7cf4338c8000ef97812dadd35b8592a640a8419",
+      "review": "Complete Newlib 4.5.0 notices copied verbatim from the PSP build toolchain; applies to linked PSP libc/libm."
+    },
+    {
+      "path": "tools/portable/notices/PSPSDK-savedata.txt",
+      "sha256": "f1d21406ccdeed00424286a08da1d3ce2b8767dece15356fa2b13c9ba0105505",
+      "review": "Jim Paris and psp123 attribution for the adapted PSPSDK SFO integrity-hash sequence, with the SDK BSD-3-Clause license."
+    },
+    {
+      "path": "tools/portable/notices/PSPSDK.txt",
+      "sha256": "2a72b3d563b8e080dd2be9a963f44c8396ca615421833d3cffb6d126101c1c82",
+      "review": "Complete PSPSDK license copied verbatim from the PSP build toolchain; applies to linked PSP SDK libraries."
+    },
+    {
+      "path": "tools/portable/notices/Pillow-11.3.0.txt",
+      "sha256": "a19dc2184087ad15ba958675dad5c7ebc6eb27fe20c925f5d3d0b3e67614602e",
+      "review": "Copyright and license notices for Pillow 11.3.0."
+    },
+    {
+      "path": "tools/portable/notices/libmecore-2.0.1.txt",
+      "sha256": "2aa319d8de51fa2c349dfce9e1b42fde0c8d6f31eb59ed63b24eb405f5939969",
+      "review": "Unmodified MIT license for the adapted libmecore v2.0.1 boot setup; verified against installed package and upstream commit a49526f3821f0c85c089a38a61e81ff3a453174d."
+    },
+    {
+      "path": "tools/portable/numeric_assets.py",
+      "sha256": "c7916088d1aa7f79afe8c0f519b6f84cc3411feb5c04c440dffc3ee115402451",
+      "review": "Builds runtime numeric blobs from generated source declarations."
+    },
+    {
+      "path": "tools/portable/observations.py",
+      "sha256": "a9557d4b023a3f50136dc272ec72c97069ba6cccaf80e06c645e3ac34e9466fd",
+      "review": "Validates completion, disc identity, and fresh-boot receipts for emulator observations."
+    },
+    {
+      "path": "tools/portable/package.py",
+      "sha256": "b22e86b578f00a1f93ba0e8374613c521e1a87dda736048c7e60c95ac2e24de8",
+      "review": "Builds validated asset packs, starter EBOOT packages, and isolated PSP test installations."
+    },
+    {
+      "path": "tools/portable/patches/flycast-fast-forward.patch",
+      "sha256": "4b0aa04e1bd43d560a3713505885d9f0a38277474924a10ef18152dc574aa2d9",
+      "review": "Flycast changes supporting accelerated scripted reference capture."
+    },
+    {
+      "path": "tools/portable/pipeline.py",
+      "sha256": "ec15b3e57d396655583227e4536e1c915519d3b5b33b21adbcfe38980a503163",
+      "review": "Dependency graph and commands for source-input asset conversion."
+    },
+    {
+      "path": "tools/portable/public_review.json",
+      "sha256": "33221ed71db358a886cd84d4617dd6dd734681df3c2fa58f59a1d9e31d802be0",
+      "review": "Hash-bound source inventory and dispositions of content-review findings."
+    },
+    {
+      "path": "tools/portable/public_review.py",
+      "sha256": "863ef0bc85b03f0bc33b3ea63a3055d2ce966c9f436bb8a18a00ac8e1b720a34",
+      "review": "Checks the source inventory, retained-data findings, and review receipts separately from compiled-data audits."
+    },
+    {
+      "path": "tools/portable/raw_assets.json",
+      "sha256": "5032e3262b6d297ced1d1b564d6e6b2414c8c170c2ead0c679234ef3da2f32e5",
+      "review": "Source and destination mappings for assets copied without conversion."
+    },
+    {
+      "path": "tools/portable/reference_sources.json",
+      "sha256": "92c8cad476f380349d10101f8a69b54b5792df6c61e84f9d532ff8c48697d335",
+      "review": "Reference implementation revisions and file identities used by table generation."
+    },
+    {
+      "path": "tools/portable/reference_tables.py",
+      "sha256": "df55d3d523bbd56c46ea52171604706597a01b2deeed28e61eb9f1c4d79145ba",
+      "review": "Generates CPU and AICA numeric tables from a selected reference source checkout."
+    },
+    {
+      "path": "tools/portable/replay/api_probe.c",
+      "sha256": "89bd8cd1d8636800417384514a1a764fca74f1e0b9bc0c3d6d24b76057cf613c",
+      "review": "Bounded PSP installer API probe using source-disc inputs."
+    },
+    {
+      "path": "tools/portable/replay/bootstrap_probe.c",
+      "sha256": "cc30eaa2ba7a22c10b2e2edd9f1ee382004b6a03ab97a65f4d4c47d15d24ddc0",
+      "review": "PSP diagnostic for replay startup from a source disc."
+    },
+    {
+      "path": "tools/portable/replay/build_probe.py",
+      "sha256": "f8694d3b8b6392b0950f03a990c1a05297c082e2b6ff97ef38cb97f730e5ae5c",
+      "review": "Builds isolated PSP replay and pose-validation executables."
+    },
+    {
+      "path": "tools/portable/replay/callback_oracle.lua",
+      "sha256": "71b62d36569d0434066410e12f23282361a9dd5e9b53a41ea629a9e3ba5cf282",
+      "review": "Captures before-and-after state around an original player callback for development comparisons."
+    },
+    {
+      "path": "tools/portable/replay/callback_probe.c",
+      "sha256": "7b9a59a0ac96524d2e299aac430d206167861c1fecfa49b743fdbd106f3f0f8f",
+      "review": "Replays a supplied callback-state fixture for development comparison; it is separate from disc-only installation."
+    },
+    {
+      "path": "tools/portable/replay/capture_callback.py",
+      "sha256": "c0c13226e89ecdac7d71cd32b2e5c580912d9e2f6511d5ac2049259a8beb9ffd",
+      "review": "Creates callback-state comparison fixtures from a fresh disc boot."
+    },
+    {
+      "path": "tools/portable/replay/probe.c",
+      "sha256": "1829e637e932654972e93d15aee26b522767638a1c2af47ea4cb9546e3425a35",
+      "review": "PSP controller-execution probe that writes input traces rather than a complete asset pack."
+    },
+    {
+      "path": "tools/portable/replay/replay_callback.py",
+      "sha256": "db7ae43b0bc33e4efa75361adf4855de20cf3fbe8745beb40d2af1e615d080e0",
+      "review": "Runs a supplied callback fixture through the replay implementation for comparison."
+    },
+    {
+      "path": "tools/portable/replay/run_bootstrap_probe.py",
+      "sha256": "1c04902863a2c204362f1f58eea8cbe7a6ca892e3be6f9436a2bfaad967312cc",
+      "review": "Runs the disc-driven PSP startup probe in an isolated emulator directory."
+    },
+    {
+      "path": "tools/portable/replay/run_callback_probe.py",
+      "sha256": "9a2071fd670c5b714a129a0e750bd9adf0ae86db83fb0a780f941a658c5cbc72",
+      "review": "Runs isolated PSP callback-state comparisons using supplied fixtures."
+    },
+    {
+      "path": "tools/portable/replay/run_probe.py",
+      "sha256": "95f518a7269eb37eff912f097debbc11b337cb870a0dff6e1eb5d5fc1729b481",
+      "review": "Runs the PSP installer probe in an isolated emulator directory."
+    },
+    {
+      "path": "tools/portable/replay/run_session_proof.py",
+      "sha256": "ae6ca0336e078861bae36c79faad6e91aac785a9557494c7907d1f00a9fe41ac",
+      "review": "Runs and checks native multi-selection generation from a disc and verified bind banks; emulator results are distinct from hardware validation."
+    },
+    {
+      "path": "tools/portable/replay/run_staff_pose_probe.py",
+      "sha256": "bb115df3c06e3100dafa386cb4a7ecb4eb60fd07fb66fd8c5f4e20513c5e2357",
+      "review": "Runs the PSP STAFF pose probe with explicit generated fixtures; its scope is pose comparison rather than complete installation."
+    },
+    {
+      "path": "tools/portable/replay/session_probe.c",
+      "sha256": "6dfa65af8ff2abc6f42d0e3a1172e6b30b0aa670c5713b2e3f835db75ee3fa1d",
+      "review": "Session-generation probe using a source disc and generated bind banks, with expected output comparison performed by the host."
+    },
+    {
+      "path": "tools/portable/replay/staff_pose_psp_probe.c",
+      "sha256": "dca9c3f460a06dbae1ae7c140585ff5c28207d2f1124504c0658f0955b82aab0",
+      "review": "PSP pose API harness using generated common-world, bind-bank, and metadata fixtures."
+    },
+    {
+      "path": "tools/portable/replay/staff_probe.c",
+      "sha256": "b0b1140240395ab7e8ccf664aee1e13b937637607c10ac81dbed9010d44dd6b8",
+      "review": "Disc-driven STAFF execution harness for output comparison."
+    },
+    {
+      "path": "tools/portable/replay/staff_reuse_api_probe.c",
+      "sha256": "9eec48a9f5f55142fabb7fabf475977984ce814647806f9e9e62df5420cc5c30",
+      "review": "Compares native STAFF serialization for selected characters using common inputs observed during disc execution."
+    },
+    {
+      "path": "tools/portable/replay/test_arm.c",
+      "sha256": "2c6945e426c17235d94665768bff639aabee4246f0689a30f69ba740e7a37eba",
+      "review": "Synthetic ARM7 instruction-set tests."
+    },
+    {
+      "path": "tools/portable/replay/test_maple.c",
+      "sha256": "9d09e3be2ca0ef422267bcb801720b48b05d0604744fcc259316788bea3188d2",
+      "review": "Synthetic controller-bus packet tests."
+    },
+    {
+      "path": "tools/portable/replay/test_memory_loops.c",
+      "sha256": "655500e823bbcb84276449d911314002d3f9ab11451b81916de787496c244825",
+      "review": "Differential tests of batched memory copy and fill against the generic instruction interpreter."
+    },
+    {
+      "path": "tools/portable/replay/test_scanline.c",
+      "sha256": "eb410d8bf743f13795254e6928fd9f3d693aa658eb1f79912e104e43f96efa02",
+      "review": "Randomized video and audio event schedules comparing scanline batching with a reference implementation."
+    },
+    {
+      "path": "tools/portable/replay/test_staff.c",
+      "sha256": "1c9378ff66168808b75ee993b7dcf16d081b64c4b482e311b29e77af5a58b95d",
+      "review": "Synthetic STAFF observer tests."
+    },
+    {
+      "path": "tools/portable/replay/test_staff_reuse.c",
+      "sha256": "8b1a57ac02a93641c8b0e78b28a960c9e74b0f2cfd05b59a461a059240497c88",
+      "review": "Synthetic STAFF reuse protocol and corruption tests."
+    },
+    {
+      "path": "tools/portable/replay/test_vm.c",
+      "sha256": "2400b309018c512fcc466f775cf8038e75b62c529df85afe3765b4e7fb593760",
+      "review": "Synthetic instruction and memory-access tests for the replay VM."
+    },
+    {
+      "path": "tools/portable/replay/verify_bootstrap.py",
+      "sha256": "9299189ee11b8dc8d7bf820064ebc404a3068c9710e849434a386d959250e0ef",
+      "review": "Compares a disc-generated route with a separately supplied reference observation."
+    },
+    {
+      "path": "tools/portable/replay/verify_controllers.py",
+      "sha256": "0794fe8459185112e623aaf5b7c019f0da395afaad7095fef42de875e36e5c40",
+      "review": "Compares controllers generated from source files with observed callback results."
+    },
+    {
+      "path": "tools/portable/replay/verify_replays.py",
+      "sha256": "d96fe1191da45ce6ad896db4d52ad45b93c0b01d73a754fa75c72e66ab767dc1",
+      "review": "Runs disc-driven replay jobs and compares their generated assets."
+    },
+    {
+      "path": "tools/portable/replay/verify_route_families.py",
+      "sha256": "3c261623592a752de18c730bd803633f349ee5893f7f4092694bd519eaad443d",
+      "review": "Compares final rival and gang route outputs against separately supplied references."
+    },
+    {
+      "path": "tools/portable/replay/verify_staff.py",
+      "sha256": "caf713303526cc590bf3b4d944e4c729d75b138bdc4a27e5fa9fc3eb52d560fb",
+      "review": "Compares disc-driven STAFF output against separately supplied reference assets."
+    },
+    {
+      "path": "tools/portable/replay_demo_table_recipes.py",
+      "sha256": "4f7b2c835ebacfb33927f5fddd0fb7c1288dd14306fb66ba31117c33e1ed9f90",
+      "review": "Demo selectors and output labels for native observation-table conversion."
+    },
+    {
+      "path": "tools/portable/replay_identity.py",
+      "sha256": "14935c412358c0424e7e0a36dfb5331be0044086616df161bc81f86b6fd7d389",
+      "review": "Validates native replay profiles, generator fingerprints, output identities, and PSP fidelity receipts."
+    },
+    {
+      "path": "tools/portable/replay_recipes.py",
+      "sha256": "719df2e37bb03932cbdde80c9451b2c3a530c9fc9d88449a8f16305874c1e5ca",
+      "review": "Replay job selectors and capture parameters for native route generation."
+    },
+    {
+      "path": "tools/portable/resource_recipes.py",
+      "sha256": "bea67feeb8f68647b5b26e1767ea72d5f4d5bc97eba1eb87c9d6180bc4e26368",
+      "review": "Source coordinates and format selections for native resource conversion."
+    },
+    {
+      "path": "tools/portable/retained_data_review.json",
+      "sha256": "d5fe1036ebb04545d78048de2de5247003fc5dff73e0dc1aaba8a4ba3f1a9df0",
+      "review": "Classification of retained source addresses, resource selectors, and extraction descriptors."
+    },
+    {
+      "path": "tools/portable/route_observations.py",
+      "sha256": "91389f6083abfe5c3cf9a0976f3f814b89f096f5c3cb7a497c17c0fae836662d",
+      "review": "Serializes completed observed performances using their controller and character banks."
+    },
+    {
+      "path": "tools/portable/run_install_probe.py",
+      "sha256": "28f020ce7bd699ffce9b002e57027f7c5f300beb553b3e048a5b28275054f191",
+      "review": "Runs selected native conversion jobs and checks a subsequent boot without the disc."
+    },
+    {
+      "path": "tools/portable/runtime_bindings.json",
+      "sha256": "f0dac5eb27ef16bfa2f39e6404bddcae78e07886d3343b30953b327aa59004b2",
+      "review": "Source banks, extraction locations, and generated runtime-binding outputs."
+    },
+    {
+      "path": "tools/portable/runtime_bindings.py",
+      "sha256": "ba3ad73abad82a6bf05e4c3752134791272626a7ee3f171a4f65ead2be12d96e",
+      "review": "Extracts animation and garage bindings from the supported disc."
+    },
+    {
+      "path": "tools/portable/runtime_bindings_test.py",
+      "sha256": "07cd0e039eefc2988f386ad757a608f4eef09d25b75c390253c101613803c90d",
+      "review": "Tests runtime-binding extraction failures and optional disc-backed equivalence."
+    },
+    {
+      "path": "tools/portable/scene_recipes.py",
+      "sha256": "c5508436a1603e1162f0c43ef4369e404c131948904dfa349689e93def932a2c",
+      "review": "Source locations for native scene archives, text, and staff cards."
+    },
+    {
+      "path": "tools/portable/sdk_screen.mjs",
+      "sha256": "af1cb923fdb53322c3f3754b2ad8b293cafba423ab580f3e5bd69c9dac239b21",
+      "review": "Reads the SDK debug screen's CPU framebuffer from an isolated emulator."
+    },
+    {
+      "path": "tools/portable/semantic.py",
+      "sha256": "39fa49ce4410c7aff6b66b376af4ed0e018ec5b57a0005f659452c354b3a4d18",
+      "review": "Computes canonical identities for asset records with address-only differences."
+    },
+    {
+      "path": "tools/portable/setup_assets.py",
+      "sha256": "b312664741f6a7b75b4a251dc06d791d0c1cd53cf344394b1a4ae93f893b9868",
+      "review": "Runs desktop conversion from a supported GDI in an isolated staging tree."
+    },
+    {
+      "path": "tools/portable/setup_background.py",
+      "sha256": "cfd6492101b1adbe9aeaf1a8ddc6f7d448dc1ec8c41d50c99057684ff43b4d57",
+      "review": "Converts a supplied 480x272 PNG to the optional PSP setup-background format."
+    },
+    {
+      "path": "tools/portable/smoke.py",
+      "sha256": "855d34f50ef884f61b27d52764d5312bd37ffc9e2f156e35b43a9d79a7d50aba",
+      "review": "Isolated PPSSPP loading and rendering checks, including setup recovery; coverage is limited to the exercised startup paths."
+    },
+    {
+      "path": "tools/portable/source_check.py",
+      "sha256": "412cfa70004799c5b847d79ebdd1d5cf5686200871a3c2209b83ef4a0ceef3b9",
+      "review": "Creates and validates a source snapshot against the reviewed inventory and generated identity metadata."
+    },
+    {
+      "path": "tools/portable/source_data.py",
+      "sha256": "1529acc54edf7e8b9ddcf0443e3382fb1e1e5a17981da7c4b81db73e19789384",
+      "review": "Separates runtime source declarations from data generated during asset preparation."
+    },
+    {
+      "path": "tools/portable/source_data_blob.py",
+      "sha256": "475af78921c8987675796537ea11599d3404cc529503b650107a90d54016b7ca",
+      "review": "Generates the spray-bubble runtime data format, BSS declarations, and validating loader."
+    },
+    {
+      "path": "tools/portable/source_data_blob_test.py",
+      "sha256": "8278b737b5f8539877ec349d69d68effb992e5252a2ba326325de4b3a3a3c8da",
+      "review": "Tests spray-bubble blob validation, mesh loading, and memory-view failures."
+    },
+    {
+      "path": "tools/portable/source_data_io_test.py",
+      "sha256": "d5e3e43c7644e37a09a8eaf0c406cdb35fe8c7acd37d1ef97e6984b0734c3031",
+      "review": "Tests scoped verified-dependency lookup and rejection of unavailable or unverified inputs."
+    },
+    {
+      "path": "tools/portable/source_data_manifest.json",
+      "sha256": "b401e8f981f28e853dc5051aab2f621f78a0dbf61b19b27ea8bc29931ec19918",
+      "review": "Inventory of generated runtime data, external symbols, source dependencies, and exact output identities."
+    },
+    {
+      "path": "tools/portable/source_data_mixed.json",
+      "sha256": "c7c167869ecc3414129b7ecad6e8c58593f744abb35e042d5e2644cd39b23d09",
+      "review": "Extraction descriptors for mixed scalar and structured declarations."
+    },
+    {
+      "path": "tools/portable/source_data_mixed.py",
+      "sha256": "55643a98c42153a4f7d3e0373c30e9d5e7b9a3fffce1f53b3babebde7f6c1e6a",
+      "review": "Extracts mixed C declarations from the supported executable."
+    },
+    {
+      "path": "tools/portable/source_data_mixed_test.py",
+      "sha256": "c61db48c2e89e391f1f92f54d531461eb0a5a3b844f9a5fdefcad3bb0b543a69",
+      "review": "Tests mixed declaration extraction and runtime source-data bindings."
+    },
+    {
+      "path": "tools/portable/source_data_numeric.json",
+      "sha256": "bc0fbf2c4ce432eae1f4bd123a4712e4d0447844b75cbccbe1133e20274d2100",
+      "review": "Numeric declaration groups and their source extraction descriptors."
+    },
+    {
+      "path": "tools/portable/source_data_numeric.py",
+      "sha256": "0ad5c1535b8fac771838f54c4ab5b253c412ef456d1f89af826aec804e3bc953",
+      "review": "Compiles numeric declaration groups into runtime data with the PSP toolchain."
+    },
+    {
+      "path": "tools/portable/source_data_pointers.json",
+      "sha256": "ffa02c89900bc6024572fc232840429e658e6d6646efb900d7e15866b2dee86c",
+      "review": "Pointer-bearing declaration groups and their relocation descriptors."
+    },
+    {
+      "path": "tools/portable/source_data_pointers.py",
+      "sha256": "6b14e6441cb29da0bdfdf82fbf88380dfe16ed81c07d95ec7d83c188afe58d9d",
+      "review": "Externalizes compiler data while validating internal MIPS32 pointer relocations."
+    },
+    {
+      "path": "tools/portable/source_data_pointers_test.py",
+      "sha256": "080ddb71ed40c7ad5d872c2f804574d12dce533b272cd81e1dccd65c20a7bd4a",
+      "review": "Tests pointer-blob validation, relocation, and memory-view loading failures."
+    },
+    {
+      "path": "tools/portable/source_data_reverb.py",
+      "sha256": "9a6716646cb899d7605f599a177dc03079f310951c44c405fc32420effafa384",
+      "review": "Separates reverb preset data from the native DSP implementation."
+    },
+    {
+      "path": "tools/portable/source_data_sections.py",
+      "sha256": "6a9b81b14349309e76ae5994d33dfde5db18bbbc86d306dd437b8d98f361349d",
+      "review": "Generates runtime numeric blobs and BSS bindings from compiler data sections."
+    },
+    {
+      "path": "tools/portable/source_data_sections_test.py",
+      "sha256": "097a0b5f2ad7474a862c4fbaa02100a0458e62b030c4fc0bac3ebf358ebd124f",
+      "review": "Tests numeric blob ABI, checksum validation, and file and memory-view loading."
+    },
+    {
+      "path": "tools/portable/source_data_startup_test.py",
+      "sha256": "40ddacd44243ef17dddee7359823447d54652c29a939c5a7957b14c4d619d154",
+      "review": "Tests startup-cache transactions, identity and bounds checks, and fallback for installations without the cache."
+    },
+    {
+      "path": "tools/portable/source_data_tables.py",
+      "sha256": "95403f47d0fe8c105021c0dc4b329dd85c9780cbfac2655033d428b61958115e",
+      "review": "Extracts motion mappings and spray tables from the supported executable."
+    },
+    {
+      "path": "tools/portable/source_data_tables_test.py",
+      "sha256": "695bda03906d77b6df607af51de0ed76de48acbb407700814fda7e5acdfb60f1",
+      "review": "Tests table extraction using synthetic executable layouts."
+    },
+    {
+      "path": "tools/portable/source_data_test.py",
+      "sha256": "655bb8b709c4a8456c5e080c17d8ac9bae2f552206317d12cdd9d6ba4a0a1f62",
+      "review": "Tests source/data separation, export boundaries, and C-scope equivalence."
+    },
+    {
+      "path": "tools/portable/stage_compat.py",
+      "sha256": "3d20e3765cb0ccaa5732a0b3483417776a7a2f3892c70d4833a304160fba348d",
+      "review": "Preserves the required Kogane geometry packing order."
+    },
+    {
+      "path": "tools/portable/stage_layout.py",
+      "sha256": "70693f0bca310d5ab91dccfe733a504fe6fae33893091eca1eaa43db5e41727d",
+      "review": "Extracts stage placements from executable tables."
+    },
+    {
+      "path": "tools/portable/stage_texture_order.json",
+      "sha256": "4a651bef2b04dc99ba9ad44ebdfdc8e0212a7b40d4a568a849245cfece9cd3b8",
+      "review": "Texture ordering metadata for stage asset serialization."
+    },
+    {
+      "path": "tools/portable/tables_recipes.py",
+      "sha256": "b31cde1d50db1e673688cf11e62b3da3263c99e2d6d642df6ff1563e81d17de9",
+      "review": "Source-coordinate and ABI recipes for native mixed-table conversion."
+    },
+    {
+      "path": "tools/portable/tables_sources.py",
+      "sha256": "fe69f8b6240fbe4edda7564a412dfded146e91347f329a365c24b5ecf189baad",
+      "review": "Source locations for additional native table-conversion jobs."
+    },
+    {
+      "path": "tools/portable/tables_test.py",
+      "sha256": "762f7b89385dd8d00a5e1421ece2555f2867e1976f30b3e0609ee9b9865d2aea",
+      "review": "Tests table serialization, recipe metadata, and bounded-input handling."
+    },
+    {
+      "path": "tools/portable/test_audit_build.py",
+      "sha256": "2785484fd41680538faba740fc79f4a18e12f49da157644e61e0ce228191e2d7",
+      "review": "Tests compiled-data, source, dependency, bundle, and module-substitution audit failures with synthetic objects."
+    },
+    {
+      "path": "tools/portable/test_baked_light_inputs.py",
+      "sha256": "5e0b8b50477425e2c5e33000f2f5e2ee8830072b80e0dec854e378e48ca09914",
+      "review": "Tests lighting conversion input validation with synthetic records."
+    },
+    {
+      "path": "tools/portable/test_browser_entry.py",
+      "sha256": "0271f9102b3c1c3d12fc6cad26f45c6452cfe50e365261c66ff7f62068b15b08",
+      "review": "Tests browser conversion transactions, completion-marker ordering, optional warning failures and repair, cancellation, and save preservation."
+    },
+    {
+      "path": "tools/portable/test_bubble_convert.py",
+      "sha256": "2a8d45992fe271af7b563de7c49de0fc4bf2febeeaf119963b081174769eb427",
+      "review": "Tests spray-bubble conversion bounds and optional source-disc parity."
+    },
+    {
+      "path": "tools/portable/test_bundle.py",
+      "sha256": "38a8b9c2847e4893f0af534722d6b0bd288b9685d9db668cd5f832913860de53",
+      "review": "Tests bundle corruption, role validation, cache repair, and streamed reading with synthetic modules."
+    },
+    {
+      "path": "tools/portable/test_capture.py",
+      "sha256": "26a352d8123155ab23b057bc74ee4f8f83d4672c0321dcb594c1baffc7375c13",
+      "review": "Tests isolated capture staging, fresh-boot requirements, and completed callback hooks."
+    },
+    {
+      "path": "tools/portable/test_city_pair_errors.py",
+      "sha256": "a60ed02bb0881c7d895e17f0119ff5b5bcbeb59548d4ad3c687f2a4df3cd8cde",
+      "review": "Injects city-conversion failures to check cleanup, first-error preservation, sidecar validation, and publication behavior."
+    },
+    {
+      "path": "tools/portable/test_converter_bindings.py",
+      "sha256": "37218aa50dd2c30d43fb7c71021abec2907383910f98dc0ecd299d6d966e7089",
+      "review": "Tests converter bindings with constructed model and texture inputs."
+    },
+    {
+      "path": "tools/portable/test_converter_sources.py",
+      "sha256": "5207d079de331ebd988cb873f3cb97c40b1dc5dba82a9c4abeca7d8680ca9047",
+      "review": "Tests converter dependency selection and export boundaries."
+    },
+    {
+      "path": "tools/portable/test_dialogue_data.py",
+      "sha256": "6afaa8fcc8881fac23a091e3689d255787aa3229c7f53fb037b92e34d793a1a5",
+      "review": "Tests dialogue metadata conversion with fabricated records."
+    },
+    {
+      "path": "tools/portable/test_export.py",
+      "sha256": "6155cba9610ee82814be47a672583c2b80f2958cd9efc640da3a15af5119f3cc",
+      "review": "Tests exact source and artifact bindings, required compiled-audit evidence, and stale build-receipt rejection."
+    },
+    {
+      "path": "tools/portable/test_export_inputs.py",
+      "sha256": "2bdd144c48d47c917f41bf93ee782103aa00715955824d02c88e6a217c114322",
+      "review": "Tests explicit export selection and exclusion of generated specifications and unselected native harnesses."
+    },
+    {
+      "path": "tools/portable/test_graffiti_convert.py",
+      "sha256": "f72db57e41cb5bd5308e63dbabdbcb25d31e956ac84908ece2e74a51f94653e3",
+      "review": "Tests native graffiti recipe metadata and optional source-disc output parity."
+    },
+    {
+      "path": "tools/portable/test_grind_convert.py",
+      "sha256": "7d94d6b0ea0d842e8c060898388aa9e8f530e3f40909497d63cea4373f7e7fb9",
+      "review": "Tests native Grind Square light-band geometry conversion."
+    },
+    {
+      "path": "tools/portable/test_indexed.py",
+      "sha256": "9e0144e8a5cdc3187a643c4a29ce81cf2af65e05f7a1ce420c1304a3f83bdc7b",
+      "review": "Compares native texture encoding with the pinned desktop encoder using synthetic images."
+    },
+    {
+      "path": "tools/portable/test_misc.py",
+      "sha256": "938986689b9dcbb6588571d08908ff6fe77fecb05ff769f6129e89b9bcb81cf9",
+      "review": "Tests miscellaneous native serializers, invalid requests, and optional source-disc parity."
+    },
+    {
+      "path": "tools/portable/test_mission_cast.py",
+      "sha256": "984f47b3bda6d6225ec6a2ef04331bdb716d3e3f7bd7827a5a029d53f2299100",
+      "review": "Tests model masks derived from verified mission banks."
+    },
+    {
+      "path": "tools/portable/test_mission_convert.py",
+      "sha256": "1a8c765e9ea33ea57ff4f7f85e8e1e1846eee07f882be2cb4af11bbec4038a37",
+      "review": "Tests native mission serialization and optional complete disc-backed catalog parity."
+    },
+    {
+      "path": "tools/portable/test_model_groups.py",
+      "sha256": "c00c75d1152e2fb716b48047c330e01a9962dfd02da1393409133decd458baf5",
+      "review": "Tests material group sizing and emitted geometry under differing allocation contents."
+    },
+    {
+      "path": "tools/portable/test_model_hash.py",
+      "sha256": "a2e640e456d5bc31e818c4efefd13fbb261b3097379b97bfa18e7d26d76fb9af",
+      "review": "Tests subdivision hash growth, collisions, bounds, and allocation failures."
+    },
+    {
+      "path": "tools/portable/test_model_intern.py",
+      "sha256": "eeb868a6bf824900c1e73d4811ba98af5f05f9d93c65ac0bf62c233772b7e4cc",
+      "review": "Tests exact model interning under forced hash collisions, alignment, texture distinctions, source bounds, and transform validation."
+    },
+    {
+      "path": "tools/portable/test_model_recipes.py",
+      "sha256": "d07b188a185dfd9b369788fa8cf2036ea04b2c0d4923e9241bc1bb6d636b0a49",
+      "review": "Tests model recipe metadata and optional complete native-GDI conversion parity."
+    },
+    {
+      "path": "tools/portable/test_model_row_reuse.py",
+      "sha256": "da86a29016980e3cb96c863ad2a95de55f7849c27d66cff7a473e7d2864140cd",
+      "review": "Tests row-cache keys, exact output bytes, section rebasing, eviction, allocation fallback, and malformed-source rejection with synthetic geometry."
+    },
+    {
+      "path": "tools/portable/test_model_source_view.py",
+      "sha256": "4397d67a45a574daa83862adee6e36df5aecb726f35a3ed2ca6d599d28ed2b2a",
+      "review": "Tests source-view bounds, raw and cooked sectors, allocation fallback, nested ownership, and optional disc-backed cleanup."
+    },
+    {
+      "path": "tools/portable/test_model_texture_cache.py",
+      "sha256": "005f763bcd9ef0568656cbe198edfc410d6b4c9671b36e68eab470a12fdf19c9",
+      "review": "Tests texture-cache key separation, output relocation, allocation failure, and low-memory fallback with synthetic textures."
+    },
+    {
+      "path": "tools/portable/test_models.py",
+      "sha256": "3dbfa686ad0e81a93ca9d621f684043109c07f7f00101f6fa359a0ef5ab2b731",
+      "review": "Tests bounded native model and mesh conversion primitives."
+    },
+    {
+      "path": "tools/portable/test_native_bank_cache.py",
+      "sha256": "9430d9650fde088f4a26ef4a3c6f4d592335e925d40cc7ddd1c0bdaac08d979a",
+      "review": "Tests pose-bank ownership, immutable reuse, and failure fallback."
+    },
+    {
+      "path": "tools/portable/test_native_install.py",
+      "sha256": "98a61993b7445560718f25760f2905089ecb3e331016ded688a281f78fe36139",
+      "review": "Tests native installer transactions and cache-only startup, with optional source-disc conversion comparisons."
+    },
+    {
+      "path": "tools/portable/test_native_pose.py",
+      "sha256": "ff920b4abc64f2d67448d55dfab28e1cf06307fb3bb081bd0d35ad321ceb0f6c",
+      "review": "Tests pose cursors and interpolation, with optional supplied JGC inputs."
+    },
+    {
+      "path": "tools/portable/test_native_pose_endpoints.py",
+      "sha256": "07ec07cafc84d96509ae4034147af345d7fd43b2c3c6c69407a9689187075a30",
+      "review": "Compares endpoint-pruned native poses with the gameplay pose-tree evaluation."
+    },
+    {
+      "path": "tools/portable/test_native_title.py",
+      "sha256": "cf18044cea6aa42cd3a77f21d2b3c044ab83738057aaf967abbfcf3c4513d1f4",
+      "review": "Tests source-driven title conversion bounds and timelines."
+    },
+    {
+      "path": "tools/portable/test_native_title_session.py",
+      "sha256": "a1f84be537d82c8463774c65bf150aa0bf711363c8b8d3af76f2e299ba5b704e",
+      "review": "Tests title dispatch, failure isolation, and timing-counter classification."
+    },
+    {
+      "path": "tools/portable/test_package.py",
+      "sha256": "da1114023ae4e421edcd360b4dfb57f81d773f521a4bcf143db725099065a63c",
+      "review": "Tests manifest identity and starter EBOOT packaging boundaries with synthetic modules and recipes."
+    },
+    {
+      "path": "tools/portable/test_people_convert.py",
+      "sha256": "fdd5f26b5f3672d7506d0bcbc428effbbdb8db4b3393390634cbb56d2a39a949",
+      "review": "Compares pedestrian strip conversion with native-generated JGC banks."
+    },
+    {
+      "path": "tools/portable/test_portable_crc32.py",
+      "sha256": "8b49d6ee40b28f01ee31a46392649c298f01c19ea5bbfc33929f9771dfa9c226",
+      "review": "Tests CRC32 parity for alignment, tails, and streaming chunk boundaries."
+    },
+    {
+      "path": "tools/portable/test_public_review.py",
+      "sha256": "5f3de553801da951921cd3c2c06ce2ebaaa9c8ce9d68207a940a3ab427996e18",
+      "review": "Tests source inventories, retained-data classifications, stale receipts, and rejection of decoded texture maps."
+    },
+    {
+      "path": "tools/portable/test_pvr_decode.py",
+      "sha256": "083bbcf2a34f31798003c303ea9ee998446346001230e92b6d14502a9f5f2fc4",
+      "review": "Tests PVR layout and color decoding, dimensions, and malformed inputs with generated texture patterns."
+    },
+    {
+      "path": "tools/portable/test_replay_copy.py",
+      "sha256": "23a6d5611b015eea916347d853e1b8ec457c1ea7f83f6b1b3a94ed1c18537eb4",
+      "review": "Tests replay-output copying across chunk boundaries, optional allocations, and I/O failures."
+    },
+    {
+      "path": "tools/portable/test_replay_demo_table.py",
+      "sha256": "7a970e71093f165c47c7e4d6b2179b5c659a346cb7d948fa3de7c9e8baea92df",
+      "review": "Compares observation-to-table conversion using optionally supplied completed actor captures."
+    },
+    {
+      "path": "tools/portable/test_replay_identity.py",
+      "sha256": "60a846891b22348ff350529078e040f73421c1012df3888cb381c3d2153eaff4",
+      "review": "Tests replay profile selection, source normalization, fingerprints, and checksum boundaries."
+    },
+    {
+      "path": "tools/portable/test_replay_pack.py",
+      "sha256": "8a1ecccf8fdd2c2cf2e8a8fc493635d062da93ef73c0c695d889d523df248346",
+      "review": "Tests streaming route serialization bounds and optional supplied observation comparisons."
+    },
+    {
+      "path": "tools/portable/test_replay_stats.py",
+      "sha256": "bd6c20ba6e6c5b5f9c63013a19d1d15a74dfeffbce957887bfe2a4fbc94d8e55",
+      "review": "Tests replay counters, non-mutating snapshots, disabled instrumentation, and sibling-output copy accounting."
+    },
+    {
+      "path": "tools/portable/test_roster_convert.py",
+      "sha256": "d51a5c4b9846c052cea7a1ec071245a7c4527e036652ccc17cfad2045eb1879f",
+      "review": "Tests cast archive serialization, input bounds, and cache handling."
+    },
+    {
+      "path": "tools/portable/test_scene_convert.py",
+      "sha256": "c939679eb4e7bd908578ad85943b19ebf27dc121bdab48ae9ce6525b73cf234c",
+      "review": "Tests scene archive, text, and staff-card conversion with optional source-disc comparisons."
+    },
+    {
+      "path": "tools/portable/test_scratch.py",
+      "sha256": "496f2458c4073e5a928fb20e124fff8f29fa31f7ccef6d104477f8ec8a8a63ff",
+      "review": "Tests scratch streams in RAM and on disk, descriptor limits, and nested ownership."
+    },
+    {
+      "path": "tools/portable/test_setup_background.py",
+      "sha256": "9d35da3071714c8685ba49a5ef056ce409902fb6622dbed661c310fd26515159",
+      "review": "Tests optional background encoding, dimensions, alpha composition, checksums, and deterministic output."
+    },
+    {
+      "path": "tools/portable/test_setup_launcher.py",
+      "sha256": "25da68e0a3290806fb0234a854e84fc40e832949fc7bc0dee4f115e639cf4b84",
+      "review": "Tests worker shutdown before setup or game executable replacement."
+    },
+    {
+      "path": "tools/portable/test_setup_me.py",
+      "sha256": "94daf0fd593279d8e586dfed47361788562a620972de8768608dc7ad75bad2d6",
+      "review": "Tests setup Media Engine ownership, cache synchronization, and failure handling."
+    },
+    {
+      "path": "tools/portable/test_smoke_background.py",
+      "sha256": "c61f13d4044722e34a39c076f27aadf0e421718b04051368c8b7b4df3e53f653",
+      "review": "Tests optional independent background copies and rejection of incomplete setup recovery."
+    },
+    {
+      "path": "tools/portable/test_source_check.py",
+      "sha256": "1d5f0edc980fbea14db03ed3e8d9f3f95911a57e4de83bca2dda0d7221bfc56c",
+      "review": "Tests reviewed source snapshots, generated identity validation, symlink rejection, and exclusion of history and build outputs."
+    },
+    {
+      "path": "tools/portable/test_stage_convert.py",
+      "sha256": "d20896c15829a3b4383d9a2404dcf6a7622a1764ad47a508b939dd7778353fd7",
+      "review": "Tests native stage geometry, bounds, and palette serialization with optional source-disc and canonical intermediate-hash comparisons."
+    },
+    {
+      "path": "tools/portable/test_stage_derived.py",
+      "sha256": "73f220429222629833fccb4295cec25adcba7bbccddbdca4852ec4651d2e253b",
+      "review": "Tests derived stage sidecars, with optional converted JGS fixtures."
+    },
+    {
+      "path": "tools/portable/test_stage_failure.py",
+      "sha256": "452eaa45feae251efd71e813d2b9f8edd2d38824a9c1940bb115960c621d6649",
+      "review": "Tests preservation of the first city-conversion failure context."
+    },
+    {
+      "path": "tools/portable/test_stage_mips.py",
+      "sha256": "bf5184c9353fac407c59f4f9259429292d339aa69e2e791d4b6eb324d0fcd013",
+      "review": "Tests source mipmap selection and session source fingerprints."
+    },
+    {
+      "path": "tools/portable/test_stage_pack.py",
+      "sha256": "9f5ae8254370f7da19df1696fcd2813ef684402f63dc792b4920297864c56060",
+      "review": "Tests streamed pixel packing, geometry memory limits, ordering keys, and malformed or failed I/O."
+    },
+    {
+      "path": "tools/portable/test_stage_pack_index.py",
+      "sha256": "ea1e0b4ea6faf408aad6b6e77809d2b9d74bdd49a7a1f26dc8f5f4ecc47a5d36",
+      "review": "Tests indexed city-span lookup, alignment, boundaries, collisions, and bounded fallback."
+    },
+    {
+      "path": "tools/portable/test_stage_props.py",
+      "sha256": "f5afacafc68e8ed2c6c37d7585e3313a002a5a0216ad58f9cc85c0e604249349",
+      "review": "Tests native city and prop metadata bounds; full-disc comparisons are exercised by the installer tests."
+    },
+    {
+      "path": "tools/portable/test_stage_props_io.py",
+      "sha256": "5ad1116b63c7fbc7e812a90e9807d0ecf2199daccfeaddd687266da9a9708343",
+      "review": "Tests exact prop UV and index comparisons through bounded bulk reads."
+    },
+    {
+      "path": "tools/portable/test_stage_scan.py",
+      "sha256": "df8e919d423d755eaaf148842399c31870de2a3966357639a0b9411eb176b976",
+      "review": "Tests IEEE-754 word filtering for nonfinite values and numeric-boundary equivalence in city-node discovery."
+    },
+    {
+      "path": "tools/portable/test_stage_stats.py",
+      "sha256": "4e7f8e9fde7b1fa182be1275671b038cc2e0693e4828217a26200b1fcf40d810",
+      "review": "Tests city timing scopes, snapshots, disabled counters, and failure closure."
+    },
+    {
+      "path": "tools/portable/test_stage_visibility_grid.py",
+      "sha256": "749a6efb0f6c9cc756af118c7f22010953d064c887a44266a7dd8958f9ff8c31",
+      "review": "Compares visibility-cache scores with an independent scan and checks cache lifetime and output integrity."
+    },
+    {
+      "path": "tools/portable/test_startup_warning.py",
+      "sha256": "49f255e1698f03c0a1d40c2b5475c39f8a7470bf12968cf6cf11dedd435131c3",
+      "review": "Tests warning decoding, cropping, CRC and bounds, cache reuse, and failure preservation. Checks a 360x270 image centered at (60,1) on a black 480x272 canvas and release forced-include directory handling."
+    },
+    {
+      "path": "tools/portable/test_subdivision.py",
+      "sha256": "8417b84933676e9bc45bc42aab6de6f1b654ee23d19867339d8bdc0aca404fff",
+      "review": "Tests subdivision topology using emitted-float32 edge ranking and subprecision perturbations."
+    },
+    {
+      "path": "tools/portable/test_tables_cached.py",
+      "sha256": "3964b22e180b680d881fabf8adfe0a56114660971d786d9a37424fc5dc8b9470",
+      "review": "Checks table bindings against generated geometry fixtures and their catalog identities."
+    },
+    {
+      "path": "tools/portable/test_texture_binding.py",
+      "sha256": "5f24e788d0bb6b7d072cf2704db700456614d6f5434403132768f7f9be4a1d23",
+      "review": "Tests source-backed converter texture bindings with synthetic fixtures."
+    },
+    {
+      "path": "tools/portable/test_texture_job.py",
+      "sha256": "e9279ab5559dc7420d22bcef869b2a9fb02eb5ebfcd753a8697b0fca17fbc0a5",
+      "review": "Tests whole-texture conversion parity and allocation handling."
+    },
+    {
+      "path": "tools/portable/test_texture_pipeline.py",
+      "sha256": "c5aaee7305f75f3d63b7673dd465153f9670151cfb7b8ff5d833874d3fa5fcef",
+      "review": "Tests asynchronous texture conversion, fallback, ownership, and output ordering."
+    },
+    {
+      "path": "tools/portable/tests/test_copy_worker.py",
+      "sha256": "49f4c4c709791fe920f9d330d0682e09352250ef6038714ea0f4eec991707cdf",
+      "review": "Tests asynchronous copy byte identity, allocation bounds, cancellation, and handoff with synthetic inputs."
+    },
+    {
+      "path": "tools/portable/tests/test_disc.py",
+      "sha256": "4c7b70317683aad503a6d9d8f71ed7618d629725ce674f580783101b13f54170",
+      "review": "Tests disc and archive reading with synthetic media layouts."
+    },
+    {
+      "path": "tools/portable/tests/test_native_disc.py",
+      "sha256": "84203c1c1536288a10e5d028aad8f6e83fcf37dd0de6cd9bf728bb189f111c10",
+      "review": "Tests native disc readers with synthetic sectors and optional source-disc comparisons."
+    },
+    {
+      "path": "tools/portable/tests/test_validation.py",
+      "sha256": "f1ad16fbe8fb87c2196124a6a0c97cb48dbcdc6077f8c7aa4a5b31dd2021d91e",
+      "review": "Tests canonical identity equivalence, observation-receipt validation, and atomic asset publication."
+    },
+    {
+      "path": "tools/portable/title_capture.lua",
+      "sha256": "ec64930a20471cf449ff7931848f794abdae912d45446c50ddd6c291fff81a94",
+      "review": "Observes completed title actor and camera callbacks from a fresh disc boot with a selected baseline character."
+    },
+    {
+      "path": "tools/portable/world_assets.py",
+      "sha256": "f4e2d720f16acb896929dba61d5d3dd0e49cd368e03c5973a57eb5af56ab37d9",
+      "review": "Source-table conversion recipes for live city props and sectors."
+    },
+    {
+      "path": "tools/portable/world_recipes.py",
+      "sha256": "a5b33c4af2f6e4da274ff73116b2f85eae5cbc17bc764bbf3ebaaf626bba85ad",
+      "review": "Native world-conversion recipes with source coordinates and file identities."
+    },
+    {
+      "path": "tools/portable/world_test.py",
+      "sha256": "f0fb47cebef9ae67310232ac66d7ffeaa0255bef0e2c3108a006137314603662",
+      "review": "Tests native world serialization bounds and optional disc-backed parity."
+    }
+  ]
+}

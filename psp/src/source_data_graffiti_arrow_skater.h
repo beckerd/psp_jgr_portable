@@ -1,0 +1,1 @@
+int source_data_graffiti_arrow_skater_load(void);

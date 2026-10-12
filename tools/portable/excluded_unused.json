@@ -1,0 +1,193 @@
+{
+  "schema": 1,
+  "source_commit": "8481db4c423ce970c99f39ccb7be083afa4a16ee",
+  "description": "Explicitly retired packaged outputs, verified against compiled runtime sources. Retained privately in the immutable baseline; not required by portable installations.",
+  "files": [
+    {
+      "path": "cans1.bin",
+      "bytes": 1912,
+      "sha256": "2d28815cd0378a59dcc43dd2c71c76013834db6e1a2b562108349ea8347c161c",
+      "reason": "main.c reads set%u_cans.bin for mission-selected cans; stage-wide legacy can banks are unused."
+    },
+    {
+      "path": "cans2.bin",
+      "bytes": 2152,
+      "sha256": "098ae68d2715602d6d50f0d9e5e6c9abd70694a45d6859eabbe0527e43ad123b",
+      "reason": "main.c reads set%u_cans.bin for mission-selected cans; stage-wide legacy can banks are unused."
+    },
+    {
+      "path": "cans3.bin",
+      "bytes": 2088,
+      "sha256": "6cc3b181cd366ec25755fcd6f80988d4a543ad3bc527d0a6556d53c0e364fbb5",
+      "reason": "main.c reads set%u_cans.bin for mission-selected cans; stage-wide legacy can banks are unused."
+    },
+    {
+      "path": "cans5.bin",
+      "bytes": 1000,
+      "sha256": "90502ec6626d47f6b4ea21aca429b1eed12c27912aa2f817de0cd54334937afc",
+      "reason": "main.c reads set%u_cans.bin for mission-selected cans; stage-wide legacy can banks are unused."
+    },
+    {
+      "path": "cans6.bin",
+      "bytes": 1128,
+      "sha256": "12726844f2a067df1487a52569c71508c4bd8e7014a1f883e621be72a7e1edc4",
+      "reason": "main.c reads set%u_cans.bin for mission-selected cans; stage-wide legacy can banks are unused."
+    },
+    {
+      "path": "char.jgs",
+      "bytes": 57328,
+      "sha256": "dbbb61b1a100b81ab2a2185550e5c43f817030aab2c9584f72efb45ebfc333a5",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    },
+    {
+      "path": "chars_preview.jgs",
+      "bytes": 1027664,
+      "sha256": "851b25687a9005e75200f6abab945446adada972e604b22910022c04a5116fed",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    },
+    {
+      "path": "demo1.bin",
+      "bytes": 9412,
+      "sha256": "f653c485cf94ecad8a5c0331eb3d08584b5a719f46b4a7921477c236961f1c3f",
+      "reason": "No load in compiled runtime sources; current title uses title_route.bin and stage selection uses numbered stage/spots files. Legacy names remain only in uncompiled backups."
+    },
+    {
+      "path": "garage_cam.bin",
+      "bytes": 6496,
+      "sha256": "33264cf3274a15a9dd3dff75364ab1a0729b509a19599e3446c2b675473c137c",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    },
+    {
+      "path": "hud.jgs",
+      "bytes": 443008,
+      "sha256": "168626b8cef3ca61d0c08976e2d8c7071094ad4adbe27abce2ec2cfda7ce7111",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    },
+    {
+      "path": "hud_digits.bin",
+      "bytes": 131264,
+      "sha256": "7027d5f264fd24584332e55ac1d6dcbbba5fd3fd629176556c2bf14e2b85c845",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    },
+    {
+      "path": "hud_police.jgs",
+      "bytes": 5648,
+      "sha256": "3aac75ac0fca42d731f47427ec552c365b53fabcfd77c27cf06bdfd52a54560f",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    },
+    {
+      "path": "rails.bin",
+      "bytes": 1592,
+      "sha256": "6580417bae0bb8beda28d1d4c677f837e78b13657e8d6a040b92928ce78fb2be",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "rails1.bin",
+      "bytes": 1592,
+      "sha256": "6580417bae0bb8beda28d1d4c677f837e78b13657e8d6a040b92928ce78fb2be",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "rails2.bin",
+      "bytes": 248,
+      "sha256": "0044614c62620555c13912e0111d290a1360e941ae2c9084e8ab3ddcbf1f2bf2",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "rails3.bin",
+      "bytes": 608,
+      "sha256": "6fe7c446e21ea22695bf4328d31099fca8b846c880fb1390084fe0447e08752e",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "rails5.bin",
+      "bytes": 416,
+      "sha256": "6a47685d3375f65d8de38d9a26a349c7baa1bac1981d5ad1a2175dce4c4862d0",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "rails6.bin",
+      "bytes": 920,
+      "sha256": "535702faf2feccd834b1255dc32bcaa4181d5479833dc23c6d62e47e1278ad1a",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "segalogo_tex.bin",
+      "bytes": 2621456,
+      "sha256": "990e20e829aa32b7a901cad110b17f6fbf10551da45d8def86c2888805591ea4",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    },
+    {
+      "path": "sfx.bin",
+      "bytes": 383700,
+      "sha256": "e0b75de06ea7652e776ab6494e5cc3e441c81c0a4fe0685d9f650cf0df9707ad",
+      "reason": "main.c startup explicitly retires the old PCM bank; current audio uses OSB/ADX source banks."
+    },
+    {
+      "path": "spots.bin",
+      "bytes": 2312,
+      "sha256": "09fc412a9bb95abbe70f737960753b6596f7be582e1ea83e75b6f1206bbc2365",
+      "reason": "No load in compiled runtime sources; current title uses title_route.bin and stage selection uses numbered stage/spots files. Legacy names remain only in uncompiled backups."
+    },
+    {
+      "path": "stage.hgt",
+      "bytes": 1632016,
+      "sha256": "a5a8a47920e85e95f730ba2bc268c55bff223901be39ed4c1e6e6892c345ca1b",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "stage.jgs",
+      "bytes": 5462992,
+      "sha256": "dba967a773e6908bd52d486f8b9c84610717d28f8688cd6f884112d31bf9775c",
+      "reason": "No load in compiled runtime sources; current title uses title_route.bin and stage selection uses numbered stage/spots files. Legacy names remain only in uncompiled backups."
+    },
+    {
+      "path": "stage1.hgt",
+      "bytes": 1632016,
+      "sha256": "a5a8a47920e85e95f730ba2bc268c55bff223901be39ed4c1e6e6892c345ca1b",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "stage2.hgt",
+      "bytes": 716440,
+      "sha256": "7f4c46c6ab66ae313fc41fcbcb5c35eef6168216a11e115e006cf2f1106ef4e6",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "stage3.hgt",
+      "bytes": 1070698,
+      "sha256": "83a9bd4df1da807486ed77ebd15b4d9e2adc53fc479e90fdc3d5213e5e7fc731",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "stage5.hgt",
+      "bytes": 776608,
+      "sha256": "ab10de57229e5a79094c6aa86e781b76910cbe5681313cc996913244e36bcad9",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "stage6.hgt",
+      "bytes": 556804,
+      "sha256": "03f4b2774e614c3cfd6dc319f87578b6e71f0f09ff469bd544f89bc0f785e87b",
+      "reason": "No height_load/rails_load call in compiled source; current collision and grind behavior uses COL1. main_old.c.bak is excluded."
+    },
+    {
+      "path": "tags.jgs",
+      "bytes": 174320,
+      "sha256": "11bd3cdff01a902d5a7eebfbf41f4a4c18e12c758dac41dd9c474c3beedaafb4",
+      "reason": "graffiti_load explicitly ignores tags_path; CityTags loads current selected artwork and wall meshes."
+    },
+    {
+      "path": "title.jgs",
+      "bytes": 93680,
+      "sha256": "bea6ed7af51e0f76bf5ad3514b512ca721a4cf4c14f98fffb0880a8903d64806",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    },
+    {
+      "path": "title_tex.bin",
+      "bytes": 32780,
+      "sha256": "62eacf909e67237b3f1674d7ad89f85e830919c66193db5b566e0404497b96b8",
+      "reason": "No load in compiled psp/src/*.c; superseded by current title, garage_cast, and HUD asset loaders."
+    }
+  ]
+}

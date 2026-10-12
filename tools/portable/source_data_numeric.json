@@ -1,0 +1,1465 @@
+{
+  "schema": 1,
+  "review": "Numeric original data is externalized; type preambles contain reviewed portable ABI declarations and dimensions only. No original initializer values are stored in this metadata.",
+  "groups": [
+    {
+      "input": "audio_mix_tables.inc",
+      "name": "audio_mix_tables",
+      "owners": [
+        "audio_mix.h"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "audio_spatial_tables.inc",
+      "name": "audio_spatial_tables",
+      "owners": [
+        "audio_spatial.h"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "bantam_opening_data.inc",
+      "name": "bantam_opening_data",
+      "owners": [
+        "city_openings.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct { float v[9]; unsigned short surf, mask, dbl, src; } ColTri;\ntypedef struct {float vertices[24],center[3];} OpeningBox;\ntypedef struct {unsigned address,type,sector;float position[3];int32_t angles[3];float scale[3];} OpeningPlacement;\ntypedef struct {unsigned type,kind,frames,first_box,boxes,sound,bank;} OpeningType;\n",
+      "type_sources": [
+        {
+          "type": "ColTri",
+          "source": "psp/src/collide.h"
+        },
+        {
+          "type": "OpeningBox",
+          "source": "psp/src/city_openings.c"
+        },
+        {
+          "type": "OpeningPlacement",
+          "source": "psp/src/city_openings.c"
+        },
+        {
+          "type": "OpeningType",
+          "source": "psp/src/city_openings.c"
+        }
+      ]
+    },
+    {
+      "input": "bantam_train_data.inc",
+      "name": "bantam_train_data",
+      "owners": [
+        "benten_train.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {int parent;float pos[3];int32_t angles[3];float scale[3],vertices[24],center[3];} TrainBody;\ntypedef struct {unsigned indices[3];unsigned short surface,mask,flags;} TrainTriangle;\ntypedef struct {unsigned bone;float position[3];} TrainVertex;\n",
+      "type_sources": [
+        {
+          "type": "TrainBody",
+          "source": "psp/src/benten_train.c"
+        },
+        {
+          "type": "TrainTriangle",
+          "source": "psp/src/benten_train.c"
+        },
+        {
+          "type": "TrainVertex",
+          "source": "psp/src/benten_train.c"
+        }
+      ]
+    },
+    {
+      "input": "benten_opening_data.inc",
+      "name": "benten_opening_data",
+      "owners": [
+        "city_openings.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {float vertices[24],center[3];} OpeningBox;\ntypedef struct {unsigned address,type,sector;float position[3];int32_t angles[3];float scale[3];} OpeningPlacement;\ntypedef struct {unsigned type,kind,frames,first_box,boxes,sound,bank;} OpeningType;\n",
+      "type_sources": [
+        {
+          "type": "OpeningBox",
+          "source": "psp/src/city_openings.c"
+        },
+        {
+          "type": "OpeningPlacement",
+          "source": "psp/src/city_openings.c"
+        },
+        {
+          "type": "OpeningType",
+          "source": "psp/src/city_openings.c"
+        }
+      ]
+    },
+    {
+      "input": "benten_portals.inc",
+      "name": "benten_portals",
+      "owners": [
+        "stage_portal.h"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {\n    float min[3],max[3],vertex[4][3],normal[3],translation[3];\n} StagePortal;\n",
+      "type_sources": [
+        {
+          "type": "StagePortal",
+          "source": "psp/src/stage_portal.h"
+        }
+      ]
+    },
+    {
+      "input": "benten_train_data.inc",
+      "name": "benten_train_data",
+      "owners": [
+        "benten_train.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {\n    unsigned flags;\n    float vertex[4][3], normal[3], center[3], radius_sq;\n} MissionQuad;\ntypedef struct {int parent;float pos[3];int32_t angles[3];float scale[3],vertices[24],center[3];} TrainBody;\ntypedef struct {unsigned indices[3];unsigned short surface,mask,flags;} TrainTriangle;\ntypedef struct {unsigned bone;float position[3];} TrainVertex;\n",
+      "type_sources": [
+        {
+          "type": "MissionQuad",
+          "source": "psp/src/mission_quad.h"
+        },
+        {
+          "type": "TrainBody",
+          "source": "psp/src/benten_train.c"
+        },
+        {
+          "type": "TrainTriangle",
+          "source": "psp/src/benten_train.c"
+        },
+        {
+          "type": "TrainVertex",
+          "source": "psp/src/benten_train.c"
+        }
+      ]
+    },
+    {
+      "input": "dog_source.inc",
+      "name": "dog_source",
+      "owners": [
+        "gang.c",
+        "enemycombat.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "ending_tables.inc",
+      "name": "ending_tables",
+      "owners": [
+        "ending_flow.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "enemy_audio_tables.inc",
+      "name": "enemy_audio_tables",
+      "owners": [
+        "enemy_audio.inc"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {int backend;float range,far_fraction,near_fraction;} SourceAudioProfile;\ntypedef struct {\n    unsigned kind,bank,reference,file,program,backend,channel,logical_bank,patch_file,patch_bank;\n    SourceAudioProfile profile;\n} EventAudioCue;\n",
+      "type_sources": [
+        {
+          "type": "SourceAudioProfile",
+          "source": "psp/src/audio_spatial.h"
+        },
+        {
+          "type": "EventAudioCue",
+          "source": "psp/src/event_audio.h"
+        }
+      ]
+    },
+    {
+      "input": "enemy_gas_body.inc",
+      "name": "enemy_gas_body",
+      "owners": [
+        "enemycombat.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "game_hud_entries.inc",
+      "name": "game_hud_entries",
+      "owners": [
+        "hud.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {int slot;float x,y,w,h,u0,v0,u1,v1;} HudEntry;\n",
+      "type_sources": [
+        {
+          "type": "HudEntry",
+          "source": "psp/src/hud.c"
+        }
+      ]
+    },
+    {
+      "input": "graffiti_arrow_skater.inc",
+      "name": "graffiti_arrow_skater",
+      "owners": [
+        "graffiti_arrow.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "kogane_cover_data.inc",
+      "name": "kogane_cover_data",
+      "owners": [
+        "kogane_cover.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct { float v[9]; unsigned short surf, mask, dbl, src; } ColTri;\n",
+      "type_sources": [
+        {
+          "type": "ColTri",
+          "source": "psp/src/collide.h"
+        }
+      ]
+    },
+    {
+      "input": "kogane_portals.inc",
+      "name": "kogane_portals",
+      "owners": [
+        "stage_portal.h"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {\n    float min[3],max[3],vertex[4][3],normal[3],translation[3];\n} StagePortal;\n",
+      "type_sources": [
+        {
+          "type": "StagePortal",
+          "source": "psp/src/stage_portal.h"
+        }
+      ]
+    },
+    {
+      "input": "kogane_water_data.inc",
+      "name": "kogane_water_data",
+      "owners": [
+        "kogane_water.h"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {float delta[3],position[3];int32_t angles[3];} WaterReturn;\ntypedef struct {float point[6][3],normal[6][3];} WaterVolume;\n",
+      "type_sources": [
+        {
+          "type": "WaterReturn",
+          "source": "psp/src/kogane_water.h"
+        },
+        {
+          "type": "WaterVolume",
+          "source": "psp/src/kogane_water.h"
+        }
+      ]
+    },
+    {
+      "input": "message_hud_entries.inc",
+      "name": "message_hud_entries",
+      "owners": [
+        "hud.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {unsigned flags,color;float x,y,w,h,u0,v0,u1,v1;} MessageEntry;\n",
+      "type_sources": [
+        {
+          "type": "MessageEntry",
+          "source": "psp/src/hud.c"
+        }
+      ]
+    },
+    {
+      "input": "npc_audio_tables.inc",
+      "name": "npc_audio_tables",
+      "owners": [
+        "npc.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {float speed;int16_t reference;uint16_t period;} NpcAudioRoute;\ntypedef struct {int16_t reference,reaction;uint32_t period;} NpcAudioType;\n",
+      "type_sources": [
+        {
+          "type": "NpcAudioRoute",
+          "source": "psp/src/npc_audio.h"
+        },
+        {
+          "type": "NpcAudioType",
+          "source": "psp/src/npc_audio.h"
+        }
+      ]
+    },
+    {
+      "input": "onishima_source.inc",
+      "name": "onishima_source",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "pause_hud_entries.inc",
+      "name": "pause_hud_entries",
+      "owners": [
+        "pause_hud.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {int model,type,selected,intro;float x,y,z,scale;} PauseEntry;\n",
+      "type_sources": [
+        {
+          "type": "PauseEntry",
+          "source": "psp/src/pause_hud.c"
+        }
+      ]
+    },
+    {
+      "input": "pause_wipe_path.inc",
+      "name": "pause_wipe_path",
+      "owners": [
+        "pause_wipe.h"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "player_effects.inc",
+      "name": "player_effects",
+      "owners": [
+        "skatefx.inc"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct { int bone; float pos[3]; } SkateAnchor;\n",
+      "type_sources": [
+        {
+          "type": "SkateAnchor",
+          "source": "psp/src/skatefx.h"
+        }
+      ]
+    },
+    {
+      "input": "player_sound_tables.inc",
+      "name": "player_sound_tables",
+      "owners": [
+        "player_sound.h"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "practice_hud_entries.inc",
+      "name": "practice_hud_entries",
+      "owners": [
+        "practice_hud.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {int model,selected,intro;float x,y,z,scale;} PracticeEntry;\n",
+      "type_sources": [
+        {
+          "type": "PracticeEntry",
+          "source": "psp/src/practice_hud.c"
+        }
+      ]
+    },
+    {
+      "input": "rival_graffiti.inc",
+      "name": "rival_graffiti",
+      "owners": [
+        "citytags.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "scene_tables.inc",
+      "name": "scene_tables",
+      "owners": [
+        "scene.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "shibuya_gate_data.inc",
+      "name": "shibuya_gate_data",
+      "owners": [
+        "shibuya_gates.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct { float cx, cy, cz, r; unsigned first_batch, n_batch, flags, pad; } JgsObj;\ntypedef struct {unsigned sector,object;float position[3];int32_t angles[3];JgsObj original;} BarrierPlacement;\ntypedef struct { float v[9]; unsigned short surf, mask, dbl, src; } ColTri;\n",
+      "type_sources": [
+        {
+          "type": "JgsObj",
+          "source": "psp/src/stage.h"
+        },
+        {
+          "type": "BarrierPlacement",
+          "source": "psp/src/shibuya_gates.c"
+        },
+        {
+          "type": "ColTri",
+          "source": "psp/src/collide.h"
+        }
+      ]
+    },
+    {
+      "input": "shibuya_portals.inc",
+      "name": "shibuya_portals",
+      "owners": [
+        "stage_portal.h"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {\n    float min[3],max[3],vertex[4][3],normal[3],translation[3];\n} StagePortal;\n",
+      "type_sources": [
+        {
+          "type": "StagePortal",
+          "source": "psp/src/stage_portal.h"
+        }
+      ]
+    },
+    {
+      "input": "smsb_tables.inc",
+      "name": "smsb_tables",
+      "owners": [
+        "smsb.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "spray_digits.inc",
+      "name": "spray_digits",
+      "owners": [
+        "main.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "staff_draw.inc",
+      "name": "staff_draw",
+      "owners": [
+        "endingplay.c"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "stage_exit_data.inc",
+      "name": "stage_exit_data",
+      "owners": [
+        "stage_exit.h"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {\n    unsigned flags;\n    float vertex[4][3], normal[3], center[3], radius_sq;\n} MissionQuad;\ntypedef struct {\n    MissionQuad quad;\n    int mission_id;\n    unsigned direction,index;\n} StageExitBoundary;\n",
+      "type_sources": [
+        {
+          "type": "MissionQuad",
+          "source": "psp/src/mission_quad.h"
+        },
+        {
+          "type": "StageExitBoundary",
+          "source": "psp/src/stage_exit.h"
+        }
+      ]
+    },
+    {
+      "input": "stage_ped_proxy_data.inc",
+      "name": "stage_ped_proxy_data",
+      "owners": [
+        "stage_ped_proxy.inc"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {unsigned key,n_tex,n_obj,n_batch,n_vert,n_idx,kind;} StagePedProxyBank;\ntypedef struct {float low[3],high[3];unsigned model;} StagePedProxyBody;\ntypedef struct {\n    float point[4][3],center[3],radius,inverse_area;\n    unsigned short owner,count,first_batch,last_batch;\n} StagePedProxyRoof;\n",
+      "type_sources": [
+        {
+          "type": "StagePedProxyBank",
+          "source": "psp/src/stage_ped_proxy.inc"
+        },
+        {
+          "type": "StagePedProxyBody",
+          "source": "psp/src/stage_ped_proxy.inc"
+        },
+        {
+          "type": "StagePedProxyRoof",
+          "source": "psp/src/stage_ped_proxy.inc"
+        }
+      ]
+    },
+    {
+      "input": "trick_hud_entries.inc",
+      "name": "trick_hud_entries",
+      "owners": [
+        "hud.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct {int slot;float x,y,w,h,u0,v0,u1,v1;} HudEntry;\n",
+      "type_sources": [
+        {
+          "type": "HudEntry",
+          "source": "psp/src/hud.c"
+        }
+      ]
+    },
+    {
+      "input": "world_audio_tables.inc",
+      "name": "world_audio_tables",
+      "owners": [
+        "world_audio.inc"
+      ],
+      "preamble": "#include <stdint.h>\n\n",
+      "type_sources": []
+    },
+    {
+      "input": "player_fsca.inc",
+      "name": "player_fsca",
+      "owners": [
+        "player.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "provenance": "Third-party SH-4 hardware sine ROM supplied from an explicitly validated Flycast reference checkout; not original game-disc content."
+    },
+    {
+      "input": "generated/source_data/bgm_c__BGM_TABLE_0.inc",
+      "name": "mixed_bgm_c__bgm_table_0",
+      "owners": [
+        "bgm.c"
+      ],
+      "preamble": "#include <stdint.h>\ntypedef struct { int kind, n, loop; unsigned char seq[32]; } BgmEntry;\n",
+      "type_sources": [
+        {
+          "type": "BgmEntry",
+          "source": "psp/src/bgm.h"
+        }
+      ],
+      "source_fragment": {
+        "source": "psp/src/bgm.c",
+        "output": "psp/src/generated/source_data/bgm_c__BGM_TABLE_0.inc",
+        "sha256": "dd1eadf5fa6c63ed66ab45703560e3fd132eb346a7addf2da3571a33b72ccbd7",
+        "symbol": "BGM_TABLE"
+      }
+    },
+    {
+      "input": "generated/source_data/collision_source_h__table_0.inc",
+      "name": "mixed_collision_source_h__table_0",
+      "owners": [
+        "collision_source.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/collision_source.h",
+        "output": "psp/src/generated/source_data/collision_source_h__table_0.inc",
+        "sha256": "1f64aaa3e21e389f3ec9f1c42b6226f829049d0c34998d098c049e1671253259",
+        "symbol": "table"
+      }
+    },
+    {
+      "input": "generated/source_data/enemycombat_c__keikan_0.inc",
+      "name": "mixed_enemycombat_c__keikan_0",
+      "owners": [
+        "enemycombat.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/enemycombat.c",
+        "output": "psp/src/generated/source_data/enemycombat_c__keikan_0.inc",
+        "sha256": "fe0bb23c72bfd95f6c5d118200353095bb72d093e6354572f1cc89560c50865d",
+        "symbol": "keikan"
+      }
+    },
+    {
+      "input": "generated/source_data/finalarena_c__position_0.inc",
+      "name": "mixed_finalarena_c__position_0",
+      "owners": [
+        "finalarena.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/finalarena.c",
+        "output": "psp/src/generated/source_data/finalarena_c__position_0.inc",
+        "sha256": "caab702077ece8c6c45c9f5dce38a539713fa5571c10d61508d2bbaf4703000c",
+        "symbol": "position"
+      }
+    },
+    {
+      "input": "generated/source_data/finalarena_c__position_1.inc",
+      "name": "mixed_finalarena_c__position_1",
+      "owners": [
+        "finalarena.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/finalarena.c",
+        "output": "psp/src/generated/source_data/finalarena_c__position_1.inc",
+        "sha256": "0c69c9431ad72a9fe4da306d072e73575ffbbd5c500777ad91a86ebb9f64caa2",
+        "symbol": "position"
+      }
+    },
+    {
+      "input": "generated/source_data/finalhazard_c__positions_0.inc",
+      "name": "mixed_finalhazard_c__positions_0",
+      "owners": [
+        "finalhazard.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/finalhazard.c",
+        "output": "psp/src/generated/source_data/finalhazard_c__positions_0.inc",
+        "sha256": "6664920fa9753f8e7afdc1c6da56c59c19da6fb9e9505c2509576094863d3443",
+        "symbol": "positions"
+      }
+    },
+    {
+      "input": "generated/source_data/finalhazard_c__angles_0.inc",
+      "name": "mixed_finalhazard_c__angles_0",
+      "owners": [
+        "finalhazard.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/finalhazard.c",
+        "output": "psp/src/generated/source_data/finalhazard_c__angles_0.inc",
+        "sha256": "183faf64689a696b1cb6131277f7e4109ef2a6a725a3410642fd8e0304a2e912",
+        "symbol": "angles"
+      }
+    },
+    {
+      "input": "generated/source_data/finalhazard_c__targets_0.inc",
+      "name": "mixed_finalhazard_c__targets_0",
+      "owners": [
+        "finalhazard.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/finalhazard.c",
+        "output": "psp/src/generated/source_data/finalhazard_c__targets_0.inc",
+        "sha256": "eefed5d211878ffc97d934de5d2e32054413bc10433903ba3fffa1ea02c673a2",
+        "symbol": "targets"
+      }
+    },
+    {
+      "input": "generated/source_data/finalhazard_c__points_0.inc",
+      "name": "mixed_finalhazard_c__points_0",
+      "owners": [
+        "finalhazard.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/finalhazard.c",
+        "output": "psp/src/generated/source_data/finalhazard_c__points_0.inc",
+        "sha256": "839a38fbc1f4e2264901e903ca78066d97b085aa3393884f2c55c71ea91b6dce",
+        "symbol": "points"
+      }
+    },
+    {
+      "input": "generated/source_data/finalprogress_c__rate_0.inc",
+      "name": "mixed_finalprogress_c__rate_0",
+      "owners": [
+        "finalprogress.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/finalprogress.c",
+        "output": "psp/src/generated/source_data/finalprogress_c__rate_0.inc",
+        "sha256": "7e09cae4d65991af76687bdc65054f304b9672a4c705a78deb0d13a8633aab54",
+        "symbol": "rate"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__PAR_T0_0.inc",
+      "name": "mixed_gang_c__par_t0_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__PAR_T0_0.inc",
+        "sha256": "90436032bd8adf528f2bd430200945883824f507cdd227aacc9c0cadf0c79e9b",
+        "symbol": "PAR_T0"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__PAR_T1_0.inc",
+      "name": "mixed_gang_c__par_t1_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__PAR_T1_0.inc",
+        "sha256": "1dbfdd60bffc65f9b7591ca8b92754644bd94f1880a05a320f3ff5df45472792",
+        "symbol": "PAR_T1"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__PARA_GROUND_0.inc",
+      "name": "mixed_gang_c__para_ground_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__PARA_GROUND_0.inc",
+        "sha256": "73f6736917a028937b80e5f741500b99b9217fd46139a95acf1bb33f24ee1837",
+        "symbol": "PARA_GROUND"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__PARA_AIR_0.inc",
+      "name": "mixed_gang_c__para_air_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__PARA_AIR_0.inc",
+        "sha256": "f3996d1f027aa53b02978738b969f87bb1df888ee9afee55ac398afed060415e",
+        "symbol": "PARA_AIR"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__FORM_COMMON_0.inc",
+      "name": "mixed_gang_c__form_common_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__FORM_COMMON_0.inc",
+        "sha256": "0323b0afc757c04b80cfd57b0f644b3874a56152d7d901b7b983ae38fffe3c75",
+        "symbol": "FORM_COMMON"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__FORM_KEIKAN_0.inc",
+      "name": "mixed_gang_c__form_keikan_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__FORM_KEIKAN_0.inc",
+        "sha256": "87c84489a1f0f2e11a1338f2781d6febe92f1de9afdb49ac4ca7c7d4a3dd69a8",
+        "symbol": "FORM_KEIKAN"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__FORM_KIDOUTAI_ALT_0.inc",
+      "name": "mixed_gang_c__form_kidoutai_alt_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__FORM_KIDOUTAI_ALT_0.inc",
+        "sha256": "b08ad018af003157325f3a2da738498fc0bbe839f7b5b7bcbcb0600b53112745",
+        "symbol": "FORM_KIDOUTAI_ALT"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__lengths_0.inc",
+      "name": "mixed_gang_c__lengths_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__lengths_0.inc",
+        "sha256": "9a755b59979bbd311161affcd9eca95f9b10fc7b22ee46ae754c78b04653f84e",
+        "symbol": "lengths"
+      }
+    },
+    {
+      "input": "generated/source_data/gang_c__ROUTE_FORM_0.inc",
+      "name": "mixed_gang_c__route_form_0",
+      "owners": [
+        "gang.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/gang.c",
+        "output": "psp/src/generated/source_data/gang_c__ROUTE_FORM_0.inc",
+        "sha256": "31aa3506491cfe60a2c775325ea48e47e688d3e62045a3399d98c0e4796c4943",
+        "symbol": "ROUTE_FORM"
+      }
+    },
+    {
+      "input": "generated/source_data/garage_pending_h__order_0.inc",
+      "name": "mixed_garage_pending_h__order_0",
+      "owners": [
+        "garage_pending.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/garage_pending.h",
+        "output": "psp/src/generated/source_data/garage_pending_h__order_0.inc",
+        "sha256": "26f061233cad44d90c3ce1d833f46bee444bc05d19db5c40b854bf7da0d9d39e",
+        "symbol": "order"
+      }
+    },
+    {
+      "input": "generated/source_data/garage_pending_h__stage_0.inc",
+      "name": "mixed_garage_pending_h__stage_0",
+      "owners": [
+        "garage_pending.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/garage_pending.h",
+        "output": "psp/src/generated/source_data/garage_pending_h__stage_0.inc",
+        "sha256": "983c54590764f118e20d096f384984d6198ed424f230eea07cd4b65ed1711f8a",
+        "symbol": "stage"
+      }
+    },
+    {
+      "input": "generated/source_data/garage_pending_h__chapter_0.inc",
+      "name": "mixed_garage_pending_h__chapter_0",
+      "owners": [
+        "garage_pending.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/garage_pending.h",
+        "output": "psp/src/generated/source_data/garage_pending_h__chapter_0.inc",
+        "sha256": "3491900831c1362de3cf39b77d79f57a24ce0640e3e2a9d38627d5b0bc1a5a89",
+        "symbol": "chapter"
+      }
+    },
+    {
+      "input": "generated/source_data/garage_pending_h__voice_0.inc",
+      "name": "mixed_garage_pending_h__voice_0",
+      "owners": [
+        "garage_pending.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/garage_pending.h",
+        "output": "psp/src/generated/source_data/garage_pending_h__voice_0.inc",
+        "sha256": "5703a02f3fd28d09921e29052cccec96964edfcc60321648dbe75cfdfc73d1ca",
+        "symbol": "voice"
+      }
+    },
+    {
+      "input": "generated/source_data/garage_ui_c__colors_0.inc",
+      "name": "mixed_garage_ui_c__colors_0",
+      "owners": [
+        "garage_ui.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/garage_ui.c",
+        "output": "psp/src/generated/source_data/garage_ui_c__colors_0.inc",
+        "sha256": "73f797ecfe510c50b8ffcc8be4175bc42a71be4ed1da1cf9114deb8078394463",
+        "symbol": "colors"
+      }
+    },
+    {
+      "input": "generated/source_data/graffiti_game_c__tone_0.inc",
+      "name": "mixed_graffiti_game_c__tone_0",
+      "owners": [
+        "graffiti_game.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/graffiti_game.c",
+        "output": "psp/src/generated/source_data/graffiti_game_c__tone_0.inc",
+        "sha256": "6a5ac4c625ab67bee9dfbcbcf90f8325b526057a55fa146a6eee0e8c94d45647",
+        "symbol": "tone"
+      }
+    },
+    {
+      "input": "generated/source_data/main_c__x_0.inc",
+      "name": "mixed_main_c__x_0",
+      "owners": [
+        "main.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/main.c",
+        "output": "psp/src/generated/source_data/main_c__x_0.inc",
+        "sha256": "3df7dbb3e26fe2c74b2f4edcf7e83d3b12aff5798828ffffdc36c2ccd766e816",
+        "symbol": "x"
+      }
+    },
+    {
+      "input": "generated/source_data/main_c__CHAR_HEALTH_0.inc",
+      "name": "mixed_main_c__char_health_0",
+      "owners": [
+        "main.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/main.c",
+        "output": "psp/src/generated/source_data/main_c__CHAR_HEALTH_0.inc",
+        "sha256": "b381c1d111dce3b7d42cc40b5144361dfdef048a77f9877d5d3178b6df11abdf",
+        "symbol": "CHAR_HEALTH"
+      }
+    },
+    {
+      "input": "generated/source_data/main_c__MARK_0.inc",
+      "name": "mixed_main_c__mark_0",
+      "owners": [
+        "main.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/main.c",
+        "output": "psp/src/generated/source_data/main_c__MARK_0.inc",
+        "sha256": "1686789eed5870f61c59253d419aa22b58136521f8b6593c4bc4989426c58436",
+        "symbol": "MARK"
+      }
+    },
+    {
+      "input": "generated/source_data/mission_c__RESULT_CLASS_0.inc",
+      "name": "mixed_mission_c__result_class_0",
+      "owners": [
+        "mission.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/mission.c",
+        "output": "psp/src/generated/source_data/mission_c__RESULT_CLASS_0.inc",
+        "sha256": "84acccdcf37d2f7c3d7435b735cd14bca2e3f1cbb75b098ed3c1a8332b5ba9fb",
+        "symbol": "RESULT_CLASS"
+      }
+    },
+    {
+      "input": "generated/source_data/mission_c__KIND_FLAGS_0.inc",
+      "name": "mixed_mission_c__kind_flags_0",
+      "owners": [
+        "mission.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/mission.c",
+        "output": "psp/src/generated/source_data/mission_c__KIND_FLAGS_0.inc",
+        "sha256": "39e48a66ba97d2aefeab4647479401e365a86332f4db62a4a222c0ff80e11d4a",
+        "symbol": "KIND_FLAGS"
+      }
+    },
+    {
+      "input": "generated/source_data/npc_c__local_0.inc",
+      "name": "mixed_npc_c__local_0",
+      "owners": [
+        "npc.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/npc.c",
+        "output": "psp/src/generated/source_data/npc_c__local_0.inc",
+        "sha256": "442809af57c290e211cbcf82ec39bbd6c49e0888578ea9e031e3cab5c87c54a4",
+        "symbol": "local"
+      }
+    },
+    {
+      "input": "generated/source_data/object_view_h__small_0.inc",
+      "name": "mixed_object_view_h__small_0",
+      "owners": [
+        "object_view.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/object_view.h",
+        "output": "psp/src/generated/source_data/object_view_h__small_0.inc",
+        "sha256": "2657b61798afd3b77fd401d80117af770fb77d7ae73c180d5afeb65ea18cfc7f",
+        "symbol": "small"
+      }
+    },
+    {
+      "input": "generated/source_data/player_c__GROUND_TYPES_0.inc",
+      "name": "mixed_player_c__ground_types_0",
+      "owners": [
+        "player.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/player.c",
+        "output": "psp/src/generated/source_data/player_c__GROUND_TYPES_0.inc",
+        "sha256": "a2af037ede5ab54224f20f613b84953fe86fd6fbe1bb98783ed5e73e6f0c7a57",
+        "symbol": "GROUND_TYPES"
+      }
+    },
+    {
+      "input": "generated/source_data/player_c__shallow_0.inc",
+      "name": "mixed_player_c__shallow_0",
+      "owners": [
+        "player.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/player.c",
+        "output": "psp/src/generated/source_data/player_c__shallow_0.inc",
+        "sha256": "eb994fd4236f4beae079b8138065488abe6e6c7380d4fffc5a81cc6e196354f9",
+        "symbol": "shallow"
+      }
+    },
+    {
+      "input": "generated/source_data/player_c__GRIND_MOTIONS_0.inc",
+      "name": "mixed_player_c__grind_motions_0",
+      "owners": [
+        "player.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/player.c",
+        "output": "psp/src/generated/source_data/player_c__GRIND_MOTIONS_0.inc",
+        "sha256": "5b6159c9e759b3d33af15461768cf6630553a19d2e51204e43b3f70afecd36a9",
+        "symbol": "GRIND_MOTIONS"
+      }
+    },
+    {
+      "input": "generated/source_data/police_member_inc__POLICE_CLIP_FRAMES_0.inc",
+      "name": "mixed_police_member_inc__police_clip_frames_0",
+      "owners": [
+        "police_member.inc"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/police_member.inc",
+        "output": "psp/src/generated/source_data/police_member_inc__POLICE_CLIP_FRAMES_0.inc",
+        "sha256": "193155204d3c20aaa1d1636c0b4756ed50c5dc7acc20ef1a8c6e336545003c0b",
+        "symbol": "POLICE_CLIP_FRAMES"
+      }
+    },
+    {
+      "input": "generated/source_data/police_member_inc__off_0.inc",
+      "name": "mixed_police_member_inc__off_0",
+      "owners": [
+        "police_member.inc"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/police_member.inc",
+        "output": "psp/src/generated/source_data/police_member_inc__off_0.inc",
+        "sha256": "18afa7af2c2d5f10b1fed0589a7a85d68a64482e8294d79b4a297af4f61e69df",
+        "symbol": "off"
+      }
+    },
+    {
+      "input": "generated/source_data/recruit_result_h__RESULT_FLAGS_0.inc",
+      "name": "mixed_recruit_result_h__result_flags_0",
+      "owners": [
+        "recruit_result.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/recruit_result.h",
+        "output": "psp/src/generated/source_data/recruit_result_h__RESULT_FLAGS_0.inc",
+        "sha256": "1724f592d8f588a0f2de40ebaa1621fb4b47f543a4084986d66e048480e28a53",
+        "symbol": "RESULT_FLAGS"
+      }
+    },
+    {
+      "input": "generated/source_data/recruit_result_h__classes_0.inc",
+      "name": "mixed_recruit_result_h__classes_0",
+      "owners": [
+        "recruit_result.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/recruit_result.h",
+        "output": "psp/src/generated/source_data/recruit_result_h__classes_0.inc",
+        "sha256": "d194a4a5dd4f5ab35ab9253290bf1c8a88843a0427aa1dac288f53c467d0169c",
+        "symbol": "classes"
+      }
+    },
+    {
+      "input": "generated/source_data/rival_spray_h__RIVAL_CAN_POINTS_0.inc",
+      "name": "mixed_rival_spray_h__rival_can_points_0",
+      "owners": [
+        "rival_spray.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/rival_spray.h",
+        "output": "psp/src/generated/source_data/rival_spray_h__RIVAL_CAN_POINTS_0.inc",
+        "sha256": "dcc11873b2d177f6b5bacfa4f058ca05abb34844451f791206e3f470b603a532",
+        "symbol": "RIVAL_CAN_POINTS"
+      }
+    },
+    {
+      "input": "generated/source_data/scene_c__colours_0.inc",
+      "name": "mixed_scene_c__colours_0",
+      "owners": [
+        "scene.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/scene.c",
+        "output": "psp/src/generated/source_data/scene_c__colours_0.inc",
+        "sha256": "ac414292a2c07d8b23c3429da463a92a5d5fe92a60e50a06a069ffcd4438e4f3",
+        "symbol": "colours"
+      }
+    },
+    {
+      "input": "generated/source_data/spray_c__skills_0.inc",
+      "name": "mixed_spray_c__skills_0",
+      "owners": [
+        "spray.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/spray.c",
+        "output": "psp/src/generated/source_data/spray_c__skills_0.inc",
+        "sha256": "85b4e2a7248b9a569502c90a5618601d646efca9fe3abf950a508f8b7f8b7088",
+        "symbol": "skills"
+      }
+    },
+    {
+      "input": "generated/source_data/spray_score_h__cue_x_0.inc",
+      "name": "mixed_spray_score_h__cue_x_0",
+      "owners": [
+        "spray_score.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/spray_score.h",
+        "output": "psp/src/generated/source_data/spray_score_h__cue_x_0.inc",
+        "sha256": "6167f05540ad6d4845964e37730310fb1e79e606d9a29937af3875e7a9f70195",
+        "symbol": "cue_x"
+      }
+    },
+    {
+      "input": "generated/source_data/stage_render_inc__volume_0.inc",
+      "name": "mixed_stage_render_inc__volume_0",
+      "owners": [
+        "stage_render.inc"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/stage_render.inc",
+        "output": "psp/src/generated/source_data/stage_render_inc__volume_0.inc",
+        "sha256": "8a523c4eff62ac76338521306d9b4d05a2081effa2effb2f684a14463c82fd54",
+        "symbol": "volume"
+      }
+    },
+    {
+      "input": "generated/source_data/stage_render_inc__seeds_0.inc",
+      "name": "mixed_stage_render_inc__seeds_0",
+      "owners": [
+        "stage_render.inc"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/stage_render.inc",
+        "output": "psp/src/generated/source_data/stage_render_inc__seeds_0.inc",
+        "sha256": "3dd27948f27020f40d1b4807479799c9cc780d8fb3f64a963311a062a389f1e2",
+        "symbol": "seeds"
+      }
+    },
+    {
+      "input": "generated/source_data/story_c__z_0.inc",
+      "name": "mixed_story_c__z_0",
+      "owners": [
+        "story.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/story.c",
+        "output": "psp/src/generated/source_data/story_c__z_0.inc",
+        "sha256": "6e603852eec7102efbda6c134f8e7f20d4481620718b459df8e22f38f4e3800a",
+        "symbol": "z"
+      }
+    },
+    {
+      "input": "generated/source_data/story_c__tbl_0.inc",
+      "name": "mixed_story_c__tbl_0",
+      "owners": [
+        "story.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/story.c",
+        "output": "psp/src/generated/source_data/story_c__tbl_0.inc",
+        "sha256": "226949775f296d8ceee816ff50c12b35cf2c40a265029a49a67844310aecca59",
+        "symbol": "tbl"
+      }
+    },
+    {
+      "input": "generated/source_data/story_c__scenes_0.inc",
+      "name": "mixed_story_c__scenes_0",
+      "owners": [
+        "story.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/story.c",
+        "output": "psp/src/generated/source_data/story_c__scenes_0.inc",
+        "sha256": "a3b79848d36938efbbfed8e91caff03044ee12febc3f88255b8d7d4b0bacccca",
+        "symbol": "scenes"
+      }
+    },
+    {
+      "input": "generated/source_data/street_props_c__spin_0.inc",
+      "name": "mixed_street_props_c__spin_0",
+      "owners": [
+        "street_props.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/street_props.c",
+        "output": "psp/src/generated/source_data/street_props_c__spin_0.inc",
+        "sha256": "fd25d19b985ec0d8cd091f350243c50d3088b7512ccf05d34842535ee350314c",
+        "symbol": "spin"
+      }
+    },
+    {
+      "input": "generated/source_data/traffic_contact_h__groups_0.inc",
+      "name": "mixed_traffic_contact_h__groups_0",
+      "owners": [
+        "traffic_contact.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/traffic_contact.h",
+        "output": "psp/src/generated/source_data/traffic_contact_h__groups_0.inc",
+        "sha256": "426a500ec7776db6e5098407a31c623d3b8e7a7a3593218a0d0233dd67f88f10",
+        "symbol": "groups"
+      }
+    },
+    {
+      "input": "motmap.h",
+      "name": "motmap",
+      "owners": [
+        "player.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "strip_directives": true,
+      "defines": {
+        "NMOTMAP": 112
+      }
+    },
+    {
+      "input": "spraytab.h",
+      "name": "spraytab",
+      "owners": [
+        "graffiti_game.c",
+        "spray.c",
+        "finalfixture.h",
+        "citysprayfixture.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "strip_directives": true,
+      "defines": {
+        "N_CUES": 11,
+        "N_PATROWS": 21
+      }
+    },
+    {
+      "input": "generated/source_data/reverb_parameters.inc",
+      "name": "reverb_parameters",
+      "owners": [],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "strip_directives": true
+    },
+    {
+      "input": "generated/source_data/hud_state_c__start_0.inc",
+      "name": "mixed_hud_state_c__start_0",
+      "owners": [
+        "hud_state.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/hud_state.c",
+        "output": "psp/src/generated/source_data/hud_state_c__start_0.inc",
+        "sha256": "8dc0ca62c10a371817a8302a78d68b19ee977661844d881eb5e6e13df0e1f132",
+        "symbol": "start"
+      }
+    },
+    {
+      "input": "generated/source_data/main_enemy_maps.inc",
+      "name": "main_enemy_maps",
+      "owners": [
+        "main.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/main.c",
+        "output": "psp/src/generated/source_data/main_enemy_maps.inc",
+        "sha256": "598167017ffbe774074bf823fa08cbffa4ee14c9630b92984d3f65047cdf06f9",
+        "symbol": "keikan"
+      }
+    },
+    {
+      "input": "generated/source_data/npc_squad_anim.inc",
+      "name": "npc_squad_anim",
+      "owners": [
+        "npc.c"
+      ],
+      "preamble": "typedef struct { signed char motion[4], frames[4]; } SquadAnim;\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/npc.c",
+        "output": "psp/src/generated/source_data/npc_squad_anim.inc",
+        "sha256": "faf3a42aaef4382fb5e17a13e53767f06a5f23a4b0b6e6c9ca026419d82bd3e0",
+        "symbol": "SQUAD_ANIMS"
+      }
+    },
+    {
+      "input": "generated/source_data/main_mark_model.inc",
+      "name": "main_mark_model",
+      "owners": [
+        "main.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/main.c",
+        "output": "psp/src/generated/source_data/main_mark_model.inc",
+        "sha256": "b5aec7b4e7ba609a0b9a15f5c82167c04207ef7bb5db990f79a58806d4644888",
+        "symbol": "MARK_MODEL"
+      }
+    },
+    {
+      "input": "generated/source_data/sniper_motion.inc",
+      "name": "sniper_motion",
+      "owners": [
+        "sniper_ai.h"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/sniper_ai.h",
+        "output": "psp/src/generated/source_data/sniper_motion.inc",
+        "sha256": "5c650ffd772c23b4fa44c3e66a400c40888717d233874b42c1500c3f1f1a5acb",
+        "symbol": "primary"
+      }
+    },
+    {
+      "input": "generated/source_data/police_clips.inc",
+      "name": "police_clips",
+      "owners": [
+        "police_member.inc"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/police_member.inc",
+        "output": "psp/src/generated/source_data/police_clips.inc",
+        "sha256": "53cc08a2ec955d0105f3275df4f72345cd7cae213db5c47061faf5ee68b52186",
+        "symbol": "clips"
+      }
+    },
+    {
+      "input": "generated/source_data/onishima_primary.inc",
+      "name": "onishima_primary",
+      "owners": [
+        "onishima.inc"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/onishima.inc",
+        "output": "psp/src/generated/source_data/onishima_primary.inc",
+        "sha256": "f5bdb8259ab7e49e79b847addc1f7aa2ec20f88973aa5841d6773455cf35dbed",
+        "symbol": "raw"
+      }
+    },
+    {
+      "input": "generated/source_data/onishima_overlay.inc",
+      "name": "onishima_overlay",
+      "owners": [
+        "onishima.inc"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/onishima.inc",
+        "output": "psp/src/generated/source_data/onishima_overlay.inc",
+        "sha256": "e5a7fb3f80465be759bbcd3472af6a010c146049223d6a0de382e9cdd67974fa",
+        "symbol": "overlays"
+      }
+    },
+    {
+      "input": "scene_dialogue_data.inc",
+      "name": "scene_dialogue_data",
+      "owners": [
+        "scene_dialogue.inc"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": []
+    },
+    {
+      "input": "generated/source_data/main_remaining_enemy_maps.inc",
+      "name": "main_remaining_enemy_maps",
+      "owners": [
+        "main.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": []
+    },
+    {
+      "input": "generated/source_data/final_emitter_texmap.inc",
+      "name": "final_emitter_texmap",
+      "owners": [
+        "finalemitter.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/finalemitter.c",
+        "output": "psp/src/generated/source_data/final_emitter_texmap.inc",
+        "sha256": "bb6605fcc2bf7b3d567e20deb6fdca5fd8a1d5e1d949ab0f42099d52c0909ccb",
+        "symbol": "texmap"
+      }
+    },
+    {
+      "input": "generated/source_data/scene_command_program.inc",
+      "name": "scene_command_program",
+      "owners": [
+        "scene.c"
+      ],
+      "preamble": "#include <stdint.h>\n",
+      "type_sources": [],
+      "source_fragment": {
+        "source": "psp/src/scene.c",
+        "output": "psp/src/generated/source_data/scene_command_program.inc",
+        "sha256": "58bbb2cd3736cfaf923f85a69c6a30fbaafb0260d9268b8c99fac15e10a5cfa2",
+        "symbol": "program"
+      }
+    }
+  ]
+}

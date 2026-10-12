@@ -1,0 +1,1 @@
+int source_data_stage_ped_proxy_data_load(void);

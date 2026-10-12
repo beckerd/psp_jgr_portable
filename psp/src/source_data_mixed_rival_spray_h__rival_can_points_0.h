@@ -1,0 +1,1 @@
+int source_data_mixed_rival_spray_h__rival_can_points_0_load(void);

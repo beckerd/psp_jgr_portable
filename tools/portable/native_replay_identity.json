@@ -1,0 +1,932 @@
+{
+  "baseline_manifest_crc32": "394bfa20",
+  "files": [
+    {
+      "bytes": 1434296,
+      "crc32": 2685948833,
+      "path": "challenge_rival_s1m07.bin",
+      "sha256": "fe879d944d4df9b154170d0d1419d1b19d0db7792121e64fe4c8a29701c3977f"
+    },
+    {
+      "bytes": 1986612,
+      "crc32": 97247761,
+      "path": "challenge_rival_s2m07.bin",
+      "sha256": "2da9487f0a061caa238cb7a9291c63ab3a35beac6da3bc7e9c358fe11c936e1f"
+    },
+    {
+      "bytes": 1480372,
+      "crc32": 564932019,
+      "path": "challenge_rival_s3m07.bin",
+      "sha256": "866f85b72793617d65bf07541359a2aa2d39c93030207f91170017a81b05ebe3"
+    },
+    {
+      "bytes": 142644,
+      "crc32": 2546643080,
+      "path": "challenge_s1m06_0.bin",
+      "sha256": "d0cb081e029c3939cfaa8fca223dd0c15af1b94abf8e10dad1415a9830258d2c"
+    },
+    {
+      "bytes": 241904,
+      "crc32": 3705757914,
+      "path": "challenge_s1m06_1.bin",
+      "sha256": "68f9b598e5483add661fe2101d174200d8dcc3b8e1c6c239fcca71a43667d663"
+    },
+    {
+      "bytes": 129884,
+      "crc32": 3793493903,
+      "path": "challenge_s1m06_2.bin",
+      "sha256": "a6060583b62d2b49a482f3daffa63cffe6f2a9c87dc2e488a8f0e4e1fc13cd3c"
+    },
+    {
+      "bytes": 133404,
+      "crc32": 3581869670,
+      "path": "challenge_s1m07_0.bin",
+      "sha256": "faa6d39d060d106c9e210198df7b77ba4e2e3749df3a4a2a94885e3df7756870"
+    },
+    {
+      "bytes": 249564,
+      "crc32": 1938642747,
+      "path": "challenge_s1m11_0.bin",
+      "sha256": "78e8cf51aaa6a27361a0cf56ed314b7bde5c9113b8e79628484506c2df4200e7"
+    },
+    {
+      "bytes": 137364,
+      "crc32": 3526730375,
+      "path": "challenge_s1m11_1.bin",
+      "sha256": "493ae992705bef25742f7098db5ca9e49f7eaacfcd5537ba7e85fe68f7517e8e"
+    },
+    {
+      "bytes": 349476,
+      "crc32": 1224784792,
+      "path": "challenge_s1m11_2.bin",
+      "sha256": "25cfd36c37ded5497776d3d791b3b85bdbd23df893b5a6357b886b5040c1e129"
+    },
+    {
+      "bytes": 210716,
+      "crc32": 809973437,
+      "path": "challenge_s1m11_3.bin",
+      "sha256": "0d81acaac0802442afe74822e6be0dc711d4feab965b5a4dd2eefcd16fcf5717"
+    },
+    {
+      "bytes": 224044,
+      "crc32": 3357443780,
+      "path": "challenge_s1m11_4.bin",
+      "sha256": "7bf8781f1b5a75c929add171689b56facb5700d62f524398988c375feabb9803"
+    },
+    {
+      "bytes": 669044,
+      "crc32": 466382204,
+      "path": "challenge_s1m11_5.bin",
+      "sha256": "9bb6f9a82ce4d8c84bf37516ba36a4c0c019f7c4876752bc524b2ba0fb71960b"
+    },
+    {
+      "bytes": 156284,
+      "crc32": 171881709,
+      "path": "challenge_s3m11_0.bin",
+      "sha256": "54904204159af3ad9d4aaca2f4f88cb1e0f2d87de53a534f43ab6730fc28916b"
+    },
+    {
+      "bytes": 156724,
+      "crc32": 4140381047,
+      "path": "challenge_s3m11_1.bin",
+      "sha256": "951f6e6b0655dd8e325a99014f60e1abd5f64b4d311f93443ef8d7f4679be937"
+    },
+    {
+      "bytes": 566804,
+      "crc32": 2401769953,
+      "path": "challenge_s3m11_2.bin",
+      "sha256": "9a7b828d08165c4d391b58e02ba0765f6c5e717b260888265c2d01fdc673cd62"
+    },
+    {
+      "bytes": 114484,
+      "crc32": 3922111849,
+      "path": "garam_demo0.bin",
+      "sha256": "c972caed70523a1e17d5b194c0e0aa6680a881047a1e7dc8d8f64f9d663311c5"
+    },
+    {
+      "bytes": 135164,
+      "crc32": 2063360781,
+      "path": "garam_demo1.bin",
+      "sha256": "b31c9d8a32229a16ecc9f62caa513062892bb1352c31b01de9864b326792f8a3"
+    },
+    {
+      "bytes": 146164,
+      "crc32": 4254183400,
+      "path": "garam_demo2.bin",
+      "sha256": "c822d06b6b86c8f34834bb739c4d1bed044cc02762e3f52b9b0b3a16642551fd"
+    },
+    {
+      "bytes": 749488,
+      "crc32": 1303720412,
+      "path": "love_rival0.bin",
+      "sha256": "9d565a71dd416deb65daf2d787db86b63083abd40e25b49e6cc7dde73541e121"
+    },
+    {
+      "bytes": 816384,
+      "crc32": 253166684,
+      "path": "love_rival1.bin",
+      "sha256": "44dc10ada76e7ad7d96b7a9c6dde8801dc6e97887cbd80dfb6fdda9fa0fad0fd"
+    },
+    {
+      "bytes": 749940,
+      "crc32": 3478998088,
+      "path": "love_rival2.bin",
+      "sha256": "4819063b0dcc18e4f04c67e3d213a1fd7109fd4c062fe51fc7c22fd77cb77b86"
+    },
+    {
+      "bytes": 1606028,
+      "crc32": 1106370665,
+      "path": "mask_rival0.bin",
+      "sha256": "ce357329aa35d685ca3174fa80e545cfd9b05e21b7ab84d903bac47190aacff4"
+    },
+    {
+      "bytes": 1684676,
+      "crc32": 147169188,
+      "path": "mask_rival1.bin",
+      "sha256": "e2f5fe7b4ec68218ba5b8af5092627336ba387ea13d68852752895d9e6cd8fdd"
+    },
+    {
+      "bytes": 1696880,
+      "crc32": 1699521340,
+      "path": "mask_rival2.bin",
+      "sha256": "43c8335ae571421d6140acf325106de28257bd5583403b68b85f442382f67b96"
+    },
+    {
+      "bytes": 129444,
+      "crc32": 840910720,
+      "path": "mew_demo0.bin",
+      "sha256": "ebaf80343a44fdafcdfd370aefef262fc296fd0aa8fe41bf36ea7e05627666eb"
+    },
+    {
+      "bytes": 297084,
+      "crc32": 1515705564,
+      "path": "mew_demo1.bin",
+      "sha256": "18842e4d51418ba40ca368b1caaa6f739a696cee0d3108e6e3044a1f7c8bba0e"
+    },
+    {
+      "bytes": 166404,
+      "crc32": 45074822,
+      "path": "mew_demo2.bin",
+      "sha256": "3272afc1eaaf56239826dc85eeb23afcbd2fc03ccf22c7f29c898d1b8f5f4910"
+    },
+    {
+      "bytes": 1123292,
+      "crc32": 1946636606,
+      "path": "noise_rival0.bin",
+      "sha256": "c733e589f6d0888d5f8c1cc14fd8cbf46a7dbc5b105be9b9fefc99dbed86631b"
+    },
+    {
+      "bytes": 1090296,
+      "crc32": 2811583846,
+      "path": "noise_rival1.bin",
+      "sha256": "5b541558f4fa13fa1ec7694e1e0a734db9b17484d74ac5c67728780b743ca535"
+    },
+    {
+      "bytes": 1023852,
+      "crc32": 3637198510,
+      "path": "noise_rival2.bin",
+      "sha256": "3040464f8aaf2291526d390bb411b74d7adad2c1d41bf9f90ae53c47990d841b"
+    },
+    {
+      "bytes": 1071312,
+      "crc32": 3887515982,
+      "path": "poison_rival0.bin",
+      "sha256": "e826723e80f00bfaf5cc164bd2f87bf98832c12d6ff41c9bd807b4137d8b1ad6"
+    },
+    {
+      "bytes": 1092104,
+      "crc32": 2813845047,
+      "path": "poison_rival1.bin",
+      "sha256": "fcc375f3b6c632cad67ba6f1b0c99b3355181a20ccbc7f784f5616709f710b43"
+    },
+    {
+      "bytes": 1093460,
+      "crc32": 3354002698,
+      "path": "poison_rival2.bin",
+      "sha256": "08bf59478298cf25341a548c63c214f3273ac6de927c615d8acd8d1c278a97a2"
+    },
+    {
+      "bytes": 6758,
+      "crc32": 3256522319,
+      "path": "source_data_ptr_challenge_demo_data.jsd",
+      "sha256": "2051a0295909f4f8ce3d9225e48cd59300c2abe84458b1a46913dec4351cc255"
+    },
+    {
+      "bytes": 3725920,
+      "crc32": 3966068871,
+      "path": "staffroute00.bin",
+      "sha256": "de418f7e3e8da20f528d43b3673f9947330ef798cd29f3f9db2598b8f3caf4bb"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 1339773717,
+      "path": "staffroute00_meta.bin",
+      "sha256": "05e90cfdad5d84299a1febcbfdafe99896ee62d6546954dd644c1c671af523c8"
+    },
+    {
+      "bytes": 3824836,
+      "crc32": 403706430,
+      "path": "staffroute01.bin",
+      "sha256": "10e49e35bcacd56dbad59c6e7eaed7ef2a542ad7c3707f3c300867d4eefa3d6f"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 3976696009,
+      "path": "staffroute01_meta.bin",
+      "sha256": "a9d6e2a5b077c8db8a2883541e0d05e792b51b1607eab9676c13d7e850a808c4"
+    },
+    {
+      "bytes": 3725920,
+      "crc32": 2818601012,
+      "path": "staffroute02.bin",
+      "sha256": "1216496e00550cff8a766da79e7e658cba60b933a4f26e403e6bcbd955ff7a6e"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 3507737324,
+      "path": "staffroute02_meta.bin",
+      "sha256": "d7f94d9b2217a3e8151aed07edefd7298a7bfcf6f76a74f708d649844ace3964"
+    },
+    {
+      "bytes": 3824836,
+      "crc32": 2804069467,
+      "path": "staffroute03.bin",
+      "sha256": "9fd305b4b0fb8187c3c27fa6ae1ac0d7207da49df20bca558e412223093b1451"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 1942950192,
+      "path": "staffroute03_meta.bin",
+      "sha256": "61f49a0f6f22743d3dc8973af8b1eb77874ffff5cd57b661ee664b3306a0038c"
+    },
+    {
+      "bytes": 3725920,
+      "crc32": 10107123,
+      "path": "staffroute04.bin",
+      "sha256": "f9b1f19e5232813782e36e79f6fd2f613286f6405690cb89ee74da1f61b73d2d"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 2839238310,
+      "path": "staffroute04_meta.bin",
+      "sha256": "2a6104d15720416a3d45a5fad00580351b4e1ce416a0f726f679b9fc45876d0a"
+    },
+    {
+      "bytes": 3725920,
+      "crc32": 831041874,
+      "path": "staffroute05.bin",
+      "sha256": "e91a60b9c9bce647e00ae739479a00656dd45bf3ba27fa9a06b6e7ef81b4ce97"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 199726458,
+      "path": "staffroute05_meta.bin",
+      "sha256": "cd8236742df3c9d90d2e4cacde0b1c0ef47ed5fc164075c02c1d703cf3dd05b4"
+    },
+    {
+      "bytes": 3725920,
+      "crc32": 4113975037,
+      "path": "staffroute06.bin",
+      "sha256": "0a6fc576faa005231e99557a26ac025137fadbfa8eb2090f4ce4708daac44939"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 938727263,
+      "path": "staffroute06_meta.bin",
+      "sha256": "ae965556173533813a943048d4277468fdb3babb3c92dff0fc345a36caa14cc3"
+    },
+    {
+      "bytes": 3824836,
+      "crc32": 1183388397,
+      "path": "staffroute07.bin",
+      "sha256": "c59cdabac05347939fbbcb387ee6de46f7658a6c62cde18466fa35b09239340e"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 2502890627,
+      "path": "staffroute07_meta.bin",
+      "sha256": "fb5767a9361f11dc2b666b66cf6eb551f63649ff69314c951a1f67fd020506a8"
+    },
+    {
+      "bytes": 3791864,
+      "crc32": 1975610132,
+      "path": "staffroute08.bin",
+      "sha256": "3621ac89a6645a8da247bef741996fabef59a26e694a0d3cbce3702d3b01573d"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 1500143154,
+      "path": "staffroute08_meta.bin",
+      "sha256": "a1e73408222ccf864fe1e1512d22c01122dfab954c01a546d3f4d9fd50bfa001"
+    },
+    {
+      "bytes": 3824836,
+      "crc32": 3482434682,
+      "path": "staffroute09.bin",
+      "sha256": "4bbe5ce4cb3a99c92e2d1123930f4cb1b04caa449cc242377a003e7353c604e1"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 4223049198,
+      "path": "staffroute09_meta.bin",
+      "sha256": "835fae4764aac99f300555f5c667007891a8f953cc01c9aafca508e783796228"
+    },
+    {
+      "bytes": 3725920,
+      "crc32": 3868892899,
+      "path": "staffroute10.bin",
+      "sha256": "074751c59e58d64bed5412e86df95107c82a97d109a9e348435e46112be50bbe"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 3349340107,
+      "path": "staffroute10_meta.bin",
+      "sha256": "657b1e4a9507b936364678cbbcc4fbcb05bc9223bd681241d64807491d3dcf11"
+    },
+    {
+      "bytes": 3824836,
+      "crc32": 2784294771,
+      "path": "staffroute11.bin",
+      "sha256": "1d5117aedfdeb318658206ca5365cdcfdb55fc6136b995330b27c852178b87be"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 1702763543,
+      "path": "staffroute11_meta.bin",
+      "sha256": "83000d663489574cd4f23e7ff318a9343946e28faadc24825c4902654e267a8e"
+    },
+    {
+      "bytes": 4616164,
+      "crc32": 1352040770,
+      "path": "staffroute12.bin",
+      "sha256": "608bf13b4795df4d9c87e7902561dfb6e99822e523ec7500b124c17894e863a4"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 3213515649,
+      "path": "staffroute12_meta.bin",
+      "sha256": "8022bc8e75167154c6d398dc83192f977924dbaff6dcf7a86606b1a03947cfb3"
+    },
+    {
+      "bytes": 3725920,
+      "crc32": 2768988427,
+      "path": "staffroute13.bin",
+      "sha256": "a2b5aec81acbfaf62b4c256aaeda788378630c3f49db3bd08366dba363161e8e"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 492214365,
+      "path": "staffroute13_meta.bin",
+      "sha256": "3bae966df1c68ba52eb5fd3f33cc6959378f94ea22f8159fbad401cf004dd4c3"
+    },
+    {
+      "bytes": 3627004,
+      "crc32": 745612183,
+      "path": "staffroute14.bin",
+      "sha256": "257dad21503cd30977faccaab121f0e2854d161a2bc905aa959bb97c1552157a"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 558029432,
+      "path": "staffroute14_meta.bin",
+      "sha256": "427125ce9dc96489f110c9196c10410c02d16098d509f0d4460b99ab2972bafe"
+    },
+    {
+      "bytes": 3725920,
+      "crc32": 1006311164,
+      "path": "staffroute15.bin",
+      "sha256": "aadd51e9dc39eccd69cbac056da7f54d910ef6d693fd1f3965d177b48dcfce20"
+    },
+    {
+      "bytes": 4472,
+      "crc32": 2208176548,
+      "path": "staffroute15_meta.bin",
+      "sha256": "4fa490a22aa44255b5091de9aec9f223662c528497bd585f776ddbd25772ac85"
+    },
+    {
+      "bytes": 2259924,
+      "crc32": 2197980199,
+      "path": "title_route.bin",
+      "sha256": "6ea655a242fcdb5089098dc539072918e7f38eb8cdefe365bb8fba10a9c305db"
+    }
+  ],
+  "generator_sha256": "4aa04743aaa08d83e92ab95cc1be1aa646bafa244328dc74e99db51cba895b4a",
+  "generator_sources": {
+    "psp/src/asset_progress.h": "b19c2a5dfaeec916140df61cd173e6aa5a24c7b8857a8bd390aba6849847ba5c",
+    "psp/src/canplay.c": "4e316340819989539e2abfa3b4379d5ec3e0825d974b0a4ea0e694ec3a0874db",
+    "psp/src/canplay.h": "7790751617a6a6965fa1a37bc95944f57911f543b5553253588290d458570028",
+    "psp/src/car_pull.h": "0d75d69ae71b55bbffba6181981655cff167075b009deb32e2d202ce4137a7fa",
+    "psp/src/charanim.h": "8b5283250edfb4731aa01a8a5ed5603c426e83a84b6076b3617fae4ab0bda05a",
+    "psp/src/charpose.c": "ea956605cd819d75f565f7cece3182d846ed9cdfcc6cee5ad7d68ee9001a76d8",
+    "psp/src/charpose.h": "3816a29be9499478f976bee4267ed971d7669c7058a03c954e6594e4711a99cb",
+    "psp/src/city_profile.h": "97291a4efd5ce6e41bd3b71216cb82d9c9a442ce9358b563324961505141da35",
+    "psp/src/collide.c": "7c17f80524cb313844efdde87857afa33747ccf0491a0e57c2e644cd9d9caf36",
+    "psp/src/collide.h": "67cdaa08d84e08e09218ae32011ee621866009347b8143036ef90529de0ce084",
+    "psp/src/collision_items.h": "475d0b58216737b675262c5e1a13659331d87529684e707ede343c6f93720bc1",
+    "psp/src/collision_math.h": "f803bb30459cfa321b24e4471d5bba50762e34591bb8a46d97085eb162f7eb31",
+    "psp/src/collision_reuse.h": "56b3b653ccd2718e4695aca7de3ad4095cb8a9669e3115e00b782330dd8ca132",
+    "psp/src/collision_source.h": "0f4aa86682ef7f697c21adf113735c0cc0ba9431f0d05d8b98059c09d1d68bfa",
+    "psp/src/crash.c": "7b4d308fc703dd6fbb240793235d6d917eed53a5a82218d5c69fd50b0c97d13a",
+    "psp/src/crash.h": "112d0edfe375393dbab147995c3cb14b1c2b0a04e01bf545de43d1907bba5886",
+    "psp/src/crash_report.h": "97d67b3bff2306717ebec2c3e809a92e783d3b8bc4e9faea8e2c5520c48f40c6",
+    "psp/src/crash_shared.h": "f98d077eea04fbd974163706d091773f6b702057b72ddb8d8ef107a17c71e2aa",
+    "psp/src/ctrl.c": "04111dd8ae84519e146d30b38e3bdf524c3cc097f0cd842dd691c162d177296e",
+    "psp/src/ctrl.h": "f5d3cdc0aef097ae30f6522106dd0eed9e18835121b83c2b13a9ea16d4ef167c",
+    "psp/src/diagnostics.h": "21450051e363b7ee0afda633f70bf823a676ba5ab08f485c890db5c52d93741c",
+    "psp/src/enemy_damage.h": "4d244e6531c0f6407d9cdc969d5a86e3ea728434b01c26c8ebf5ca76b18f2311",
+    "psp/src/finaldamage.h": "7915192e1f874ef8a93e930d2fab33cb7181f4a3ca3645311508626ecfe60e65",
+    "psp/src/finish_hud.h": "c6c2e1ec2fc504a15840ebfa39360f673aa675c66d0992c3132ff314631ba8cf",
+    "psp/src/follow_camera.h": "d2d551828959b9dd922937bd42c75c66c4ae109fb48fb14cfc10fe60c7cac9bc",
+    "psp/src/font_source.h": "1d237bfe919ca62911969a58fb457195fab124a3317e0bb715750d9d874c74d3",
+    "psp/src/game_controls.h": "c578312376393783544b5ea1096e6138c5ea301d781dec8a92ece0c6cb3b3c63",
+    "psp/src/graffiti.c": "26fe08eb2c144bf6c1c1bcf3ceffae4956efd619c68c1cb1d5e279d60187b90f",
+    "psp/src/graffiti.h": "6c9c6ac4e6e2afbf836bb3a5f074190536ad2d579434da3368cb540923bc39b6",
+    "psp/src/graffiti_game.c": "227e128d84e6b1fedecdba7265e8958b33bacbd5f62ae038f740c9c3e0044172",
+    "psp/src/hang.h": "fd8ca3f4ae82c0b4903bd97472ca10f1888f487d677ab0be6927283d3f286adc",
+    "psp/src/hud_text.h": "038e290a28b4ded4e89ef6b5d9f9f452a4708047288e68aafc597b275c4d77c7",
+    "psp/src/item_flight.h": "bc438f32a23819c64a4d7e9258cb9e77f488bc60721b94e22eba4fd6d05d12bc",
+    "psp/src/kogane_water.h": "bc3a43b5644c3aefc9495ce2626abee37c21bda279de4e186b9428379dc4ec08",
+    "psp/src/me.h": "c1f35a89e052bce9d743a74b7aa149a99dceae4955a9084211bee20a2a425762",
+    "psp/src/me_shared.h": "237adddc1650314669c4c6c13bc78930f48a15805c9c9909d8bc4c58dcc3d672",
+    "psp/src/message_hud.h": "3743b16e33a5121e29620405c4836495d9843daf3970d3ea79bd93af4bc557c4",
+    "psp/src/mission.c": "161b132c6b31bcc1235b41348c33c78c64bb686919c57ab56f15c00f24add845",
+    "psp/src/mission.h": "67a09fbf46a13312579c611dc6e140ef2f4d880b21d0a883ef6575f89ebb21a7",
+    "psp/src/mission_quad.c": "1115871fd0cf0a7c18598bcd7fc228fa486588017c432b5ea1deebed078b04ca",
+    "psp/src/mission_quad.h": "3a4e01d029fdc1e2011aff7c558b00e70d5f422059f9189e6242a357cb9bc87a",
+    "psp/src/pathcoll.c": "6100ced62aae12cc1c0dd53e17e14744d4d71acfb467ebbb344d82692c413175",
+    "psp/src/pathcoll.h": "e8f358037c4168c53cabec8d808d1d2dc6fc82fd484e54fdb8d0e0e111cb9563",
+    "psp/src/pathmission.c": "d9b8b22116ac007e2c7eaad07772b882a252eaa266ac518ee30ba717327fdb2f",
+    "psp/src/pathmission.h": "9ea598e0fe0d8de1a25293a1fed0738acd8fe04a4dbe0cad73023a5820a41481",
+    "psp/src/pathobject.c": "f77b7f737799cc489d7fa7d0d1c733391c13e59390b1551ed6f9750223f13941",
+    "psp/src/pathobject.h": "42d4e9f5cf044451dbd3410b63fda8207c577907f0963d6ad51ed86703ae3456",
+    "psp/src/pathplayer.h": "d186e9d3ad5a305d4aefd63a53cc3ed664bd0812d260f7926d602e291b39e9d3",
+    "psp/src/pathworld.c": "936e5d355b666747729551f4c0ba423269e3131df4da2d4f6f8d3d425e952ecc",
+    "psp/src/pathworld.h": "c86138ad7c0190c3f0c23eb14387144a17a4c25346ea1baf05cb27d3faae3c19",
+    "psp/src/player.c": "e9e873afe8fe4fc14e057ca8f19581349e1197050fe53e92a59435bbe5090ee0",
+    "psp/src/player.h": "c48140c8468d0618ae7be70acd8704873910b4bc00f3a0970b49b41479ca0002",
+    "psp/src/player_body.h": "8e4bbef855333c7679f52f17a83be032a2a6e2f5796934ec4f492422d162a01f",
+    "psp/src/player_body_cache.inc": "41004608e010f0754e832be91318aee8f44734979bfa6c68595f25ca062df366",
+    "psp/src/player_follow.h": "06ea88213ff0e65f52cfe849451bf716815145b5bea3761a5f8a5a5b4e5784e6",
+    "psp/src/player_light.h": "f9489ae173d4eee5a52d9e56fe13899eb913b216edc5a6f3594a47ecf279c7b0",
+    "psp/src/player_sound.h": "20a797f0a67a7c938c922d2920be98fd7bcbce18162e8eef435ace14239cf823",
+    "psp/src/police_grab.h": "22d61a31ed19cfefeb78d3637bd94ca9c542e52c21d280e9e38c634e2a4afdb5",
+    "psp/src/portable_assets.c": "f979a040042401859e10b89f2fc4b88e35e2d5c6157521991bb48139e6a8a911",
+    "psp/src/portable_assets.h": "3c818b4bbcb0289111588b9696f1c8944bca764e5013677843b0a7f99ab88f5f",
+    "psp/src/portable_bubble.c": "03357c0d2efdc0d9ce1532de085d07e943296fd11d1b86fc88f6baf45e47266f",
+    "psp/src/portable_bubble.h": "ba1d1fa62410b0748e1cd77f5305058d90f390251f116f51d0a7f998b38a304e",
+    "psp/src/portable_bundle.c": "4361f4972e13ecea38181a1dfaf93bb433004ce7e4f7d3567df4e8b662ceed9d",
+    "psp/src/portable_bundle.h": "d88f002ccb84f8b907069a647ce3617f6cc72b7ea92e24daaf89eab4c0e2b321",
+    "psp/src/portable_convert.c": "bc9ee16405bc93af0d0049080dca518512202ceb85b7ac1f4bbc4e31aaaf5ea4",
+    "psp/src/portable_convert.h": "0284a57e4689a32c66084c4c43bd3eeb45c319c22e4b8aa4277a4c4ff8714ca3",
+    "psp/src/portable_copy_worker.c": "60e382e239b5e2ddfa4d040e31a6433072da699fd42435e7b8d53b0a64fadd11",
+    "psp/src/portable_copy_worker.h": "ce8996c009f8cbaec0f2ef6fed71453d004b2ac559e16e3aca86f30de0029473",
+    "psp/src/portable_crc32.h": "4522eff26fad715b949d7398ecebc1e1b5826d07f0682972819e15e4641f9932",
+    "psp/src/portable_disc.c": "9d4810b45caa9e399b110e8ce8da9ce19f38b682f4c95386ca4e9d4fc70a8754",
+    "psp/src/portable_disc.h": "d763179a6aa8e666289d8942c4b864ac1f96dc3924a28f0c3d2bf0f6b12e826e",
+    "psp/src/portable_graffiti_convert.c": "15de8f0d39e9cff5ed738b6375fa78f5891a007d0ecd6d511e6ce8a6549dc480",
+    "psp/src/portable_graffiti_convert.h": "da9e2ba43dc116cdec22db53df918c06c723976bcb2726af8ff54de3f480b017",
+    "psp/src/portable_grind_convert.c": "6faf4c3c663c54f56b9deb54ea14ac7819cedc9ae721132a1dd1f6974eb0fc7f",
+    "psp/src/portable_grind_convert.h": "84c27326fe0a297549b09a2985a5d53004157cdc3741576ffd2e0bad869ed141",
+    "psp/src/portable_hardware.c": "b60b96227cd6cbef3f71caf105495ea677c78d3b71b264ccc390f6cb9077efe4",
+    "psp/src/portable_hardware.h": "a7da881bfc5afa1160166f3aa9486247590cd27525135af6ad235b607855b2c4",
+    "psp/src/portable_hardware_aica.inc": "d191493529d0c97a9cd146fdbd9ae36eec65975cf65061f43495a42a3167e9ab",
+    "psp/src/portable_hardware_fsca.inc": "65afcf736bbc17731d59cf7226ffa50e7219c055f52bfe44155c2c6558f4d121",
+    "psp/src/portable_indexed.c": "9e6dff49f018278bd4d2aa72925a06bfda8524d30db43a701f928750e25e04e5",
+    "psp/src/portable_indexed.h": "804e24dc02a0aa410d71636d7789e4086be80d7f6ce8df0bda12fde12f8e8c7d",
+    "psp/src/portable_indexed_sort.inc": "c67cdd6dec649a16f8ff61426341cb4f75a3239cfa41c7e91a2496f63248d049",
+    "psp/src/portable_install.c": "d1e9c1f8e15ac8f3e8d33e1e198b23af40ca667f9a275e4105680187dfbf997e",
+    "psp/src/portable_install.h": "5b7532be588567bd675f826778d574ae293b6b3ef688a8ab1423eecba7729076",
+    "psp/src/portable_launcher.c": "a76a7fb40485d4528a8ab9be65c81e8d53d65c7b4a31ae79109d98357f74d3f6",
+    "psp/src/portable_misc.c": "7028571faa9942971f88f1d915aa75082814ca8339a73f59d9a1fd2c0fc6c391",
+    "psp/src/portable_misc.h": "d4231ac82b3fe443938343cde0ece0ba5eeb72cd6fd47cdf316fb427e1b7baf1",
+    "psp/src/portable_misc_extra.inc": "9a317687274643435ddf807e058c572118668b5f1764bc24fb758a6cdee3d143",
+    "psp/src/portable_misc_final.inc": "696968357578f1c8444f1503ade6765e9309879c5f03421051ca07e8f63de04d",
+    "psp/src/portable_mission_cast.c": "78d215d7bad52fb359a7fa5723a00535983cb47fff4010c3f1611be8541a50ef",
+    "psp/src/portable_mission_cast.h": "8b97ac76912b5bfbc9a7b24beedac0f953d9dc4a32de133e9860d811c951b719",
+    "psp/src/portable_mission_convert.c": "4675b0954902db037217ac2998e8b6050f8e4948df73a7fbfb6a6c91c2f162a0",
+    "psp/src/portable_mission_convert.h": "3f8b9f9abd629e4c6a73675e3645fe17fd42120ba01b25f982ddd2e135338fe1",
+    "psp/src/portable_models.c": "8dd327bc6cfbdb8b8bdb33cf0a02a822282c799bcc210b7aa7f57a3394a29725",
+    "psp/src/portable_models.h": "5c8cf56bb3f9f50aac49d48c5af52c970763b0609f916427be49c49c5b8b95f8",
+    "psp/src/portable_models_colors.c": "83ab5ddb085d2615e2c6f19f3415779fc8a6b0e990bd3b882a75af2dba30318f",
+    "psp/src/portable_models_colors.h": "5c406228d3d5a9884f721d603c72a456e98183c3ac3d32c960f495b72f87e9bc",
+    "psp/src/portable_models_jobs.c": "e9299b4991cf221e729703066327697c16f5d5ebe09fb3dbd7d5c48cd61de697",
+    "psp/src/portable_models_jobs.h": "b9e8b5f34b2931279fbf1564d4108de3a849d890b061b1333834202897d857fc",
+    "psp/src/portable_models_pack.c": "28fc4c49ddb4eda6152ea839510016329c9cf177d61721624be6677328b90630",
+    "psp/src/portable_models_pack.h": "7e70e902a2d5bb71ac85ec6fe9685245abdd4a74be8d5784f3718c9825eb61c2",
+    "psp/src/portable_native_bank.c": "8bb087b0cc95d7f5e698c5820b69eb4111b873b0c381297da5b0105636fdf166",
+    "psp/src/portable_native_body.h": "e106e389e27b5d0626f0d13a21a6cc6455be0d76df1e34e6a00b46d56da56fb7",
+    "psp/src/portable_native_cache.c": "182d52f4b470422e14c2395232d038d128e4f01a5739b077e97fcf85d07fa512",
+    "psp/src/portable_native_cache.h": "a4b3c2cdf0bc61b667b8564b4b784cfc60c6b806b369556a1405c9db0459f59a",
+    "psp/src/portable_native_demo.c": "b75af087936c0c103682a948d91339ef683a10940f92783755ddd84007342fa4",
+    "psp/src/portable_native_demo.h": "b644d6222efae127f65a7c4e30e0e68e21955a98296bdc140f18d3f5cf93c783",
+    "psp/src/portable_native_math.c": "87aa575a3fe15e34a8f871df883bc0bab4206d9d0b57e56e6e8a1d089c8c7a9d",
+    "psp/src/portable_native_math.h": "a011e97da3d688a5e752cfc7c1f4514e8de4cf55c37d61b3929d744306c4ebd9",
+    "psp/src/portable_native_namespace.h": "830db9603f81f0a6190341aa03b2f81001cabc4139f6cb14807b55c7e4055ef4",
+    "psp/src/portable_native_objects.c": "7ac96a2fecf6a8715d177082c94ca5d5bdf741cbbe6fa761653c481c6295d908",
+    "psp/src/portable_native_objects.h": "93dabd9d843931df3fd438c3d2cc0515de7e1d0304efcfbffdd5f41e330cdaad",
+    "psp/src/portable_native_player.c": "28718a70c7cb42e713625424b2ade29c00336e84123ce9bfa5311a78f256c4ee",
+    "psp/src/portable_native_player.h": "3dc9567ab6bf9ae0a0ff0098609d9d958fe931c53a1c54e4e6ba552993113aea",
+    "psp/src/portable_native_pose.c": "5c89238dd087b745c357103d0503c1c1c4262490f7e6f040a87403ce9ac0db64",
+    "psp/src/portable_native_pose.h": "6a53cb55683d5dd337aac29120c370b27bb85642ffb21706f3cd33b20ddcddcc",
+    "psp/src/portable_native_rival.c": "41f3c8ad3532cbbd77273c9b5ea863561f4ff0214f7211f5afa75901669a1c03",
+    "psp/src/portable_native_rival.h": "dbe30bb260d4ae529ae93dc2013405ae10ee895fc21cb7b91921a023e77fe3c9",
+    "psp/src/portable_native_staff.c": "17223e6f9692e0498724af037694e064ffa13a6d1565ec3664dddd5dfc243da9",
+    "psp/src/portable_native_staff.h": "868249e1833974ca7efa6bf3dcb267bfb167cd20e553fe43f5cde975059a96a6",
+    "psp/src/portable_native_staff_pose.c": "289187ef5dff131dab7c5114c1afa8cfab9853ef6521f02ced4725e275a1fa5e",
+    "psp/src/portable_native_staff_pose.h": "3546004ca062020a1f3a6e764954be66d5350aa3e0ade17e5a3ef1eabf722f36",
+    "psp/src/portable_native_support.c": "84bc74400fd032f41b4af8370e20c05e1012e54d408ebcbc03492a12f749fa0c",
+    "psp/src/portable_native_tables.c": "142c7a4486797784ac9f7fd50e7c4b4833486833d5f9452a0b9c7a0fac81d2bb",
+    "psp/src/portable_native_tables.h": "19682decc41e8d043988fc183ebef2442b9f0649b2caf9424d8bf15aa1d44144",
+    "psp/src/portable_native_title.c": "bef3b2a43b1eed4e3295c2cacf1812f723c3b6789b0a7bb12df1eda8b1c51117",
+    "psp/src/portable_native_title.h": "da64eb6584b332905d13fefe9d90771aeb45c26b4b1cd4766e4852edad92b867",
+    "psp/src/portable_native_world.c": "b407db4f7e2e38365ed1d695a346162736dd0e11a71c395acb0755ec5402c0a0",
+    "psp/src/portable_native_world.h": "0b23d95cd45073d793ae9cf2f39ea2b77a16a0b1bbfc4fb4c913578484e214a1",
+    "psp/src/portable_people_convert.c": "68c0f638d244f8fdeb3f46f78f5dbe7c405e28f7d657d3d23f65ba5ede5ab09e",
+    "psp/src/portable_people_convert.h": "2945a89bd885ac6a49bb8469888e67eb3889d2da75470a2aa6b28d5340662ccb",
+    "psp/src/portable_quant_octree.inc": "68dda4483d60bfc887b09b2fce49ff4a0bb76573892b73b4d09cac3cee8b59ba",
+    "psp/src/portable_replay_arm.c": "6b989da1059daa5681cc47ace5825606a4c79762fe5cffdce16c3d6455073007",
+    "psp/src/portable_replay_arm.h": "01d8d8ac2d2a3bcd2a225efbcde3bece26e5f778fe91b4b8fb66b016a6949c21",
+    "psp/src/portable_replay_bootstrap.c": "1806311f1191290d3c3838e639e1ea16096ef507d906392917f7438616366aea",
+    "psp/src/portable_replay_bootstrap.h": "9abc04cd37e8c381fcc359fc989ab19c47e40c6d360f102c5566a1da63c8105c",
+    "psp/src/portable_replay_controller.c": "ced16416b3f9e547d963057b2c9eb7b8938515259eb678983c102e3dcc27e972",
+    "psp/src/portable_replay_controller.h": "4741abb636dab111d34d03af0bb3920e894ce18f26274891b88625c3870211b8",
+    "psp/src/portable_replay_cues.c": "49f8cb1379ab33217691a892ae3235db68ecf0242ebb62101bd7597669aec09c",
+    "psp/src/portable_replay_cues.h": "435bfc3d1e496ddd68ffd5590a0eee618cfd043fcbbeff3d714eb932dfbbbfea",
+    "psp/src/portable_replay_demo.c": "9ba68cb08ef03e83efadd7e431a18c152cb0dd29fdb43ecec4eaba5fdda70100",
+    "psp/src/portable_replay_demo.h": "84cb6418901f28ab69634f1bc7a68fa46803ecf189245727b2825f521998c942",
+    "psp/src/portable_replay_demo_table.c": "d1ffc56a9c4accaefc85814cc3e37587268fa90c7635d695c98013896055e04b",
+    "psp/src/portable_replay_demo_table.h": "b221726be2651fcd641315d8cf892abb84b367f384d61832782c9c76f08b8359",
+    "psp/src/portable_replay_demo_table_data.inc": "88e140a4a725a85f3c0e2082c4ee1b38e7cb6489f0adafce0ccca2a6f0812f5a",
+    "psp/src/portable_replay_gdrom.c": "44291af6765b43f76ff7cac41a48d9c01d88cba97fde5d2b99b3cd36470bf991",
+    "psp/src/portable_replay_gdrom.h": "646541f1a0d8609a4110db0d7f1a857857fbff7784aa09501e030fac0b42910a",
+    "psp/src/portable_replay_maple.c": "6244f0992f9fe903119ca5b34fcaf8bd6820bbde10602a7d9adbee8e870d24e6",
+    "psp/src/portable_replay_maple.h": "88889b08549e50b89d606f97f02fd2c7acf643acbc2bda5d933bc977a07a4a45",
+    "psp/src/portable_replay_pack.c": "61234017d37b9ff0600d8ffaa0443f2fb49a20d42cba200169adf4f8654386d5",
+    "psp/src/portable_replay_pack.h": "bcc7ede2384ebd164d17ff850cb6622de471e4f91fdabf37ec92175bd0cdf3ec",
+    "psp/src/portable_replay_scanline.h": "99393d2019a6b4431b7e706eacb1890c724540055482a0f814e71d048dc016b7",
+    "psp/src/portable_replay_session.c": "a20bea43618755671032f18bc7d3a91782b0c054e25c0d3340599bd8b517b79c",
+    "psp/src/portable_replay_session.h": "9502ae96b714530dcff9ea64e52d8e1e201cf27b030bdfe7dc65b6e35517af0e",
+    "psp/src/portable_replay_session_data.inc": "0b841bbfe2b4a845d6fd235f3b393910fae8b8f46f117929385220a9cf3b0850",
+    "psp/src/portable_replay_staff.c": "8af317244e9a32ce1de90c49bbb7efc7139dae98bd72446211308220f7690a0b",
+    "psp/src/portable_replay_staff.h": "962bd1a89347ae261811d3a61357113f40f50693eb15815fc7de6d705834ef55",
+    "psp/src/portable_replay_staff_reuse.h": "b6a51369492159205d8064d688a6a417f30b99500963b2383a0b2cac5d9f32e3",
+    "psp/src/portable_replay_staff_reuse.inc": "e4ff1767868168a96c5be80a4340207b648f417f676d20680fb2c88b16880f70",
+    "psp/src/portable_replay_vm.c": "29d3eba06cca51b41ee03a55a2438b1859817c724b20b5ee80cbcdeb2f1800aa",
+    "psp/src/portable_replay_vm.h": "2c2fdfdc7f3c1f282d36f1dd50073f968aeef54a7d346add6aa124f69b5ddad8",
+    "psp/src/portable_resources.c": "cac8d3cf66abef0ca9801300ddd34191eb08e2b2afabe6805b1a7e85fa8d669f",
+    "psp/src/portable_resources.h": "48fe700b624c6206ca4376817ba38c36585ab5ed08dfd1cf816d666abb147157",
+    "psp/src/portable_roster_convert.c": "58b848e9b67e1336d32865ba3a96d67aa532434fa8d7badec48c6b1c97086983",
+    "psp/src/portable_roster_convert.h": "f404dace1ff533d127422de82c2146eb857498ec48f49d7e0a69908392cd7e1d",
+    "psp/src/portable_scene_convert.c": "ad95204a982d9c60984ff6585660d4beca539b52abe62620095b9e78ece22c11",
+    "psp/src/portable_scene_convert.h": "a2485f18b8e2bbcfc63e8ab78a2f5afb293ccad3587a8656dfd0637b14989885",
+    "psp/src/portable_scratch.c": "4296ccf728fde765e55722516e55fe3f568b80d7457b093387a23d6c984a185d",
+    "psp/src/portable_scratch.h": "c48b393c4c52c6ee30cfb8ce3af3cf9779648e0c5e7c1205a258c2265e2515e0",
+    "psp/src/portable_setup_me.c": "e55dd9a7d95cbffa58f0bc46a60650d2f8e25ce1493abb9147a7178920437864",
+    "psp/src/portable_setup_me.h": "22251054395747dd85b714c0809382a2f59f443f35dfa86c644f508daa90af9b",
+    "psp/src/portable_stage.c": "25e0012727bd9bdaf0eb849134a45f87bf07538d4087dc238a520b7a88f2a17e",
+    "psp/src/portable_stage.h": "622f1261b4fe133f53196a63f310df5b10d0d1e921c3e9108169fdcc89bc173c",
+    "psp/src/portable_stage_derived.c": "821ac154a816a0ad58c8fe8ce83803b52e2eaefe00e0fb09204b67219eb8a859",
+    "psp/src/portable_stage_derived.h": "5dc90ceff80d67500d5269b7ff32ff24027291a035c5f9127f7c7388ca496fc8",
+    "psp/src/portable_stage_lod.inc": "815d8bf82b203104df5656d3c1802175408665da25a58890a5f59a4a1d111552",
+    "psp/src/portable_stage_pack.c": "6fd496058de2f6c4262f02872c47ccd045c887ee8e90ee914c8468b71b54129b",
+    "psp/src/portable_stage_pack.h": "3759cbe9e950e5f4fd4b974b75914485f570e248261e9a0ec1ca74e0c346e53b",
+    "psp/src/portable_stage_props.c": "b8cf2d074741a79a7a5952b80bb0dac82a02a1a2a1a04cbe2c1a00114b4c5e38",
+    "psp/src/portable_stage_props.h": "14b9869e24caa7bbab4a1147125b1e5fcff8159e581cc7239013e5c82a491276",
+    "psp/src/portable_stage_visibility.inc": "f049939d876a03e48f72873d0e89b05136e756ea621e4eeaffcd2a5a7fcf5356",
+    "psp/src/portable_stage_water.inc": "3cd9756dfe3cc5c6414291ae4cf7f310fcc25177592711a2654ebbe938b77a0d",
+    "psp/src/portable_startup_cache.c": "57726118ac8521f6846add7ec12465c0ea2be111110cf33f6820c8a83341b86c",
+    "psp/src/portable_startup_cache.h": "f9b9d9f473f94b11d3177fc80971d33c930a66ea146f1c09f126051b25ef1926",
+    "psp/src/portable_startup_warning.c": "38bfa240eb54328ccb792a6bae0c3a8a4330597d9bdcee4492ba18e9247f7743",
+    "psp/src/portable_startup_warning.h": "31f0c088f5f7af7fdcc6d06c7f419550652c2b10c688746f04879670a4e100f9",
+    "psp/src/portable_tables.c": "cbf1ea4510138ec7d53d8ccc24d0a6c91b8aabf3e99ca99055e632f8d7a98637",
+    "psp/src/portable_tables.h": "c850bf59ddbb98ec3fb5653b75d27d721614b9b22f7c116276a95779fb4a8226",
+    "psp/src/portable_tables_cached.c": "d8768ea922aac1adfdddadd3475e233a0b55eaedf1120a895156958174e9ad71",
+    "psp/src/portable_tables_controllers.inc": "c67504ccb26154e09d5600e9f9f0f6df7ca2b4b2f8cba08bfe55b5829a4c1dc4",
+    "psp/src/portable_tables_data.inc": "b8f95e0075d55ef0a889a68a8d69598ddf370ad9b6eef85f2fc6c749f45fbcc6",
+    "psp/src/portable_tables_effects.inc": "cbc0ada3d9d1b856ce5919673d2335e94d056e8d5b716a8f5f5811f7b9e2eec2",
+    "psp/src/portable_tables_enemy.inc": "c95c5193d76e218d3ec18b58d8524a99a4c7146e07e553567cb2a3269a88ffff",
+    "psp/src/portable_tables_event.inc": "73da68aa2e7f969c22044b3c4e5394675d57bc072353c6e6f565b4d00c497142",
+    "psp/src/portable_tables_garage.inc": "6f2efdd23495eb5620772ca712cd9370197b00234146be1a3ce9bbe8128d5025",
+    "psp/src/portable_tables_garage_ui.inc": "306bcc8ebcfc84dff07e4cc39dc68452f9fd8363851aa4db1517b0264f64bfad",
+    "psp/src/portable_tables_hud.inc": "c92ec7fc2b1826bbd8ef57e3dcc4becf49a8f7b0ce88cbd33fb4d46b4bbbd765",
+    "psp/src/portable_tables_pause.inc": "dbdda0ec8c0354a8b1b603a20e96b4161ace4fd9f3af781d9255d2ef07b91d33",
+    "psp/src/portable_tables_player.inc": "9de20e3d4a85c389db4c683377de8de492355a85d1708e8264c231d2cf965369",
+    "psp/src/portable_tables_props.inc": "39e2c9be71a5462909fffe8203068f6b8679f03d5cafa6f2b0a8e8c1ec1c59b4",
+    "psp/src/portable_tables_scenes.inc": "520152ef5ab10b3bbeb70a064ac3477ec36fffd80df7b52b71e92c02ea34a2b6",
+    "psp/src/portable_tables_street.inc": "04c24385d5e587486f5dadc2999a59571dd0aebe361b2f8b3eca9fb0c23b7783",
+    "psp/src/portable_tables_text.inc": "5da2d851b62b94c28e0b7b3a0f2b323185baaafa0c39098a64fab7cab0a14e62",
+    "psp/src/portable_tables_world.inc": "351a4431523b74ae14ded2e258187d946308e780e5c5e60d8b4b82e9140e9aa6",
+    "psp/src/portable_texture_job.c": "5d4595e8a67e753ef85e6d34069f02c81c4dfe6383a81baba8d4b4b2c7ff602c",
+    "psp/src/portable_texture_job.h": "2ddfafc6b56ec6c88b4d83910b78cdc6609b6e4c858d27ed3a6f54281573668b",
+    "psp/src/portable_world_collision.inc": "560120aaf46da544100713d6a2a685d5e98025ed2c9bba34b1a6c237b6ab97db",
+    "psp/src/portable_world_convert.c": "ffb17cf9e000ba490746d5b8852fdb7fa214ad477b57292a2ccec1e6a7982adf",
+    "psp/src/portable_world_convert.h": "5efba6d81ec2ebd2b065143d35f46c99d1a5bc59c218e556acfe25becd9e61b8",
+    "psp/src/portable_world_data.inc": "c6c889a85ea35b838bd2883a9e8a67707397b55908034ceed06179b765b9a3ff",
+    "psp/src/pose_cache.inc": "5c1014f6986d665011e948d172080c1bd10576ddb04f97fe42fd07c899367202",
+    "psp/src/pose_sample.h": "9a941bf03b8fd21fef96277a7d001ffb3f56635e343f23f2aee7e83e9d5dc16f",
+    "psp/src/release_report.c": "fdd958c764ae652cb761cc6b7ee3f1975cb8a5038e1e3f9d2fd6d7f0dd237801",
+    "psp/src/release_report.h": "920280a07f842b8a1c5a7fb000d4d00ef2068aa15c389e03baa47e0d28ef140a",
+    "psp/src/render_math.h": "c26c803d3a2f682cc838570a14ad0d9bd619ad404a4af95ebcb98a72b54499a5",
+    "psp/src/scene.c": "66dbb7a3c2e97dddb9d15d341badfaf5d8a7d50d7c7884b7ec3885390c1f495c",
+    "psp/src/scene.h": "f53a499ff2723545ab850fb8ad68cab662b6ad8b2e8cf87932ee577be0827f47",
+    "psp/src/scene_dialogue.inc": "9468ec1fa4b9e7ac84d1e49ed09ad896dc1a2b5796f54244c652da0068230096",
+    "psp/src/scene_njs_cel.inc": "24fe6349083d9ae698838d0544b2c04f1a1562b5c4e8fc1aeb8978989b3f75ea",
+    "psp/src/set_collision.h": "68962f66332fb29676c164e0de0571f3e132a3c5de1094cd2d9a1e08157c0498",
+    "psp/src/skatefx.h": "b8f86fa3e633ecb1a84f80739bdd2f2f49de17f44a72fd8bcaa17c554fca8341",
+    "psp/src/skatefx.inc": "bd9592429bd9596cbee107e20cb33a3f8ba00bf00ab334cfd8d6b47affd377b9",
+    "psp/src/small_spray.h": "4807b49742fbca24b2f66aaedcd81c19b73c355f051ff7c036378b110ecc80db",
+    "psp/src/source_body.h": "15abeab247bab865f2cf59d60ae81fc3390f5573629e20c65bb1d65aebb035e1",
+    "psp/src/source_data_benten_portals.c": "a49a2bbdd52d3b8cdc169647ff5e296ef4ab832ed0261e7e0e95228e33dd907b",
+    "psp/src/source_data_benten_portals.inc": "3d7c297e19bc575b7d6574560a15b52178148238c68e849206c836f67787e093",
+    "psp/src/source_data_io.c": "61aeb0b2ff12b0eef4b87259c87eb951e2f3a0099124cdf0247d1b2c64629e8b",
+    "psp/src/source_data_io.h": "bf5383a12844202d4f06b8e8c222e6cd463a87ba8537e614a1ecc24dc276f1bf",
+    "psp/src/source_data_kogane_portals.c": "2b6fdb72bb5241870bad79d099e918ff5fb3993c7e2987e0e2ca72abb2dfa7fb",
+    "psp/src/source_data_kogane_portals.inc": "ce0fe4a6c3adcbf4b4b39bc2f8d89e67b6eb168ba637dcf9548e5390ccc10ce7",
+    "psp/src/source_data_kogane_water_data.c": "48d6bc1df672c2f20aceb9990ec44edd4d2ab1024eaebc9c0ff1b5c60afd3a35",
+    "psp/src/source_data_kogane_water_data.inc": "1e4d1d058c488b9db1c47388918c7d6724383abbea33f448afa89ae9ef3bd03c",
+    "psp/src/source_data_mixed_collision_source_h__table_0.c": "198cd81b892ef116a228738093dffeaaf7268f00c6adf43a95d9203246b481b3",
+    "psp/src/source_data_mixed_collision_source_h__table_0.inc": "24ddcd5684ae43f6b140e1ab83ef4ee6f8ce64896467adc86a204896b6ce2552",
+    "psp/src/source_data_mixed_graffiti_game_c__tone_0.c": "a12f57ef76ad53cf4558cb621aff12fc94427f8f8210f317d58d380cad43c121",
+    "psp/src/source_data_mixed_graffiti_game_c__tone_0.inc": "7477155a7ddeefd18b38fc48eaf3aea46dfde5d29069f147a24bc2e027fe46e1",
+    "psp/src/source_data_mixed_mission_c__kind_flags_0.c": "27e89ca0d004bc6859fc25ee6a0ae68430b53d0dbd3610bc8e425741212ee49e",
+    "psp/src/source_data_mixed_mission_c__kind_flags_0.inc": "bfa63b0eecb81a1f3b137f4a6743c4159b5f333c23cc91b5c16f3a4bb6253680",
+    "psp/src/source_data_mixed_mission_c__result_class_0.c": "c006eeb52da2c832e5e79f54b0e39fd20eca36147dd531e7fda74e2b9d3b048e",
+    "psp/src/source_data_mixed_mission_c__result_class_0.inc": "36ff3b86accc801863626f456ead70e1736ddeb3bf77701e9513f0e4a7f48401",
+    "psp/src/source_data_mixed_player_c__grind_motions_0.c": "720ad0ef244b27dd05fb965cce3aa47be46dbd9b80c17b63b1c51ed2392f120c",
+    "psp/src/source_data_mixed_player_c__grind_motions_0.inc": "d7b39b25af438d389ed8b79df3333db879c99296bee16d38c44668573eac657f",
+    "psp/src/source_data_mixed_player_c__ground_types_0.c": "55c941a5a156451722d473d760aee36db3e642bcd67b1c096ebda7afc2a4d065",
+    "psp/src/source_data_mixed_player_c__ground_types_0.inc": "4b77280742c227930b868e339c1209ec8f2f02b70b8d1c47246c50c052f93b78",
+    "psp/src/source_data_mixed_player_c__shallow_0.c": "b73e7244bc0cb0e2a6fd83091d26880265472d7edaccbb6fd774c2b9153406b6",
+    "psp/src/source_data_mixed_player_c__shallow_0.inc": "6e4e8f95accb08eb9701cc4fb0e60f186993fbec563359f824347886958ac95c",
+    "psp/src/source_data_mixed_scene_c__colours_0.c": "846922a91583c233fb3b15b7caeee030ec929afd0058bd6cac414920cb8855a9",
+    "psp/src/source_data_mixed_scene_c__colours_0.inc": "8140d65bb68d4b22582505e07bf8e24e773a6ff4ff503395c38e2e36f3f75f07",
+    "psp/src/source_data_mixed_spray_c__skills_0.c": "d3e78b2823d4fd070f5f4b2b90e45d25fcfda7de0baa31428ac72493e925bae2",
+    "psp/src/source_data_mixed_spray_c__skills_0.inc": "aeee3896e30e15ffd4981f83f68aeb754e0495ac54902f039a602d09f2eaebee",
+    "psp/src/source_data_mixed_spray_score_h__cue_x_0.c": "896fac8652dd5da33c4671c90a7efba0d2ce92de83cf9257dc0640b894a21ba9",
+    "psp/src/source_data_mixed_spray_score_h__cue_x_0.inc": "0608f8421a0334974f8efa2bcb269f788c441d645efd21fb347df0892a17ae42",
+    "psp/src/source_data_motmap.c": "bdc90aa9ed2f73225d4019d5e8d6eab9ff99b44d526d59d38723fec851bdc3cf",
+    "psp/src/source_data_motmap.inc": "763c612873ae8dfaca5235b4223f76fa571e6ab3dea5183d9e8794e7fb794d70",
+    "psp/src/source_data_player_effects.c": "56fb5505f6a1bbb12b791cb48cc515993429caffd03f8decc54fa96bad8d9f26",
+    "psp/src/source_data_player_effects.inc": "01a9d527e3e8ef42e3d2896946598af2b3bdf028748814e0e939732df6aba881",
+    "psp/src/source_data_player_fsca.c": "1197e7b55fac75f51698608e7a9622b53a833c0127a7a363d7ecc779a5bfeb67",
+    "psp/src/source_data_player_fsca.inc": "bb6c2fb8b2517c1b54e1e5583208eebf5d0604770ade3831b4c97e411d4158e8",
+    "psp/src/source_data_player_sound_tables.c": "6de4c98b95c8ca28921114355a311b98e7a48b37a7006d02eebd3e6f33a275d9",
+    "psp/src/source_data_player_sound_tables.inc": "aa675c843fd946fd8950054d9da0ec04d54cd880c0a946025826ef37c9085bf5",
+    "psp/src/source_data_pointers.c": "f13daed3e638389f40cae12270ad747a0738a23c15b5317917f9ead6b6ea6dd8",
+    "psp/src/source_data_pointers.h": "0717303bb67fd8955f2139b7d90c15e1f479becc1bc52562d0cfbdc2b560d6bd",
+    "psp/src/source_data_ptr_challenge_demo_data.c": "e945751d20a178ab2346e984a6ed7246080f209b096e8828f2bcee8ae8dc5318",
+    "psp/src/source_data_ptr_eventnames.c": "b6873647585c1a9643a3f86d9d51eb39adb4deaa4407e40214892bd8847ecfeb",
+    "psp/src/source_data_ptr_eventnames.inc": "72acc7e8c91f37c3849aaae40c0b58f61030bc7c87f3cff53b2b65ffe030ed1c",
+    "psp/src/source_data_ptr_hud_text.inc": "74325e4ddda41eec987a42ecffc4ffb55b09c3bc47c3d6a5c58ad157c769aa04",
+    "psp/src/source_data_ptr_player_body.c": "d7379c281cd80f2711aaf409436d38a552813473c20c2581e3939a33e888eb08",
+    "psp/src/source_data_ptr_player_body.inc": "8fa8edb1a0c6714263d79d722283a8d7dc9698fe496c7d9a1dd180ee56e2040e",
+    "psp/src/source_data_ptr_player_motion.c": "114d9de983a4c0fa40518976719fa7e41c4b688b552e2123641b623522ae162c",
+    "psp/src/source_data_ptr_player_motion.inc": "7426efc7376b8d12de846d62654f6309b82a10f8f6c89edd5a50cbcbdad5ff53",
+    "psp/src/source_data_ptr_player_tuning.c": "0b6a007b01d629ebde0f4f68c0e09f1f59e94a7030c57cbe550de518c3bf70fb",
+    "psp/src/source_data_ptr_player_tuning.inc": "05434f2c09d8030ec36628181633c94b7bd8c3be8d2aeab12473f7b63cd160a4",
+    "psp/src/source_data_ptr_stage_camera.c": "94dc5045293065d8ff1cb3ce7822b1ee1b88c161cbfe29cbadcae95c4d9fca3d",
+    "psp/src/source_data_ptr_stage_camera.inc": "ab60d11fd1acf7709db9801eeb7a5717cac65f5ebb8362459cf8e085dcd4bbf3",
+    "psp/src/source_data_ptr_trick_hud_tables.c": "9506d1bbcd37f34886bbdc6b74aa951e00789d5b08f6e7bc08448e6b949eeabf",
+    "psp/src/source_data_ptr_trick_hud_tables.inc": "a5ebabe9de169f77f7bcb4a90a75cbfcf25fdfa34eab05e1eaf30dd329e07c93",
+    "psp/src/source_data_scene_command_program.c": "be9b2fb4be1ed4a59814f24e7cd2b4e503ef05c80bf8a1e0aca5a7d73dcfdd7d",
+    "psp/src/source_data_scene_command_program.inc": "8dd529eefc3abd26c5af8d31aa1e4c2fa1566a91e9efbed5cd368bb1c61b7610",
+    "psp/src/source_data_scene_dialogue_data.c": "c9a4e57303bab031a3b03034de666b0a4bd5d93511fd0197cbd17c19587e7694",
+    "psp/src/source_data_scene_dialogue_data.inc": "4ce52621fb95c238aeed00a68887eb103c3bd4b6660eba311e6001322c5a91de",
+    "psp/src/source_data_scene_tables.c": "b2c5fb9683bcce669bcca33f3f024cd5d2e36d55dfe8930d5a920ae3b7d46b2b",
+    "psp/src/source_data_scene_tables.inc": "8b17fe5f6fa8d11ec30811305dea5301676fce79ab62d8c8f399d7c287991311",
+    "psp/src/source_data_sections.c": "a06ae0fd72eab5a4bf8066a5d6a60c3000841fd24fb7a50581b21b6ad9ed245b",
+    "psp/src/source_data_sections.h": "572ca589b3da28e2b395d035a97337b00a6ec468650a30720b2304162cc6ba86",
+    "psp/src/source_data_shibuya_portals.c": "a4faee09c3140c65f796fec5c9efbd8fd66772c5ea73b7029a8bb67877eb7d87",
+    "psp/src/source_data_shibuya_portals.inc": "486630aff45d8515272775eaa6349b731a3614b3c27cd19e7a2d18c0a9be662b",
+    "psp/src/source_data_spraytab.c": "62b0209315442bb647ebf7cd4f930d93687257075faef64c0e76bb670a5d89ed",
+    "psp/src/source_data_spraytab.inc": "ad47f39a024af967084284852799f7faf816e9459366f99743e6a8719e0f66fd",
+    "psp/src/source_data_startup_registry.inc": "7a6b0fd2fd27b96834b357562c9b0b7ffb1bcbd0c2bddb1d5bed9ed9f0c69ae4",
+    "psp/src/source_float_fast.h": "40a1982f68c029a8c723a1ab070f630f52e2d12f0fb98c1324d33de172194c01",
+    "psp/src/source_fmac.h": "649fdf7c86e726fb03afe214947d9998a3eebd2e18d2c186bf70afb85158cbdf",
+    "psp/src/source_inverse.h": "c497f4a271d89018d20cfe902dce758bf4181af856d3b867e934833183f4f45d",
+    "psp/src/source_probe.h": "f21a0963997109cae1a8d56282dfdab7452eec56eea5da0df41fb7447326c612",
+    "psp/src/source_transform.h": "e0b1946638fc21d51980e637267518d514518da31ce0a76f2a2acdc8239a415d",
+    "psp/src/source_trs.h": "6e66f6c18e5345fddd16373d2d0d6eb38d7192a91a9eb72dadd75bb0560cdb89",
+    "psp/src/spray.c": "d8c624656b03d44ca6d9f348345a61662df9fac1f6858e09aea989706d3a34b3",
+    "psp/src/spray.h": "4af3984fa3c506fec19c2efb1e8b7dcf95e8703d26aa690910fa52dd0f453396",
+    "psp/src/spray_camera.h": "3194a1dee1ecd2329465682c2f8ff359e07e514284922867eac784169a522d9e",
+    "psp/src/spray_hud.h": "ce24c98be55b6ba0aa51a0976f12ae409de76bd70a21bff82a4ad786d0bf4f55",
+    "psp/src/spray_score.h": "d6401bab1f112f3ad8438930ec7e24391b228a3ab945819073f432055b59d26a",
+    "psp/src/spray_tracks.h": "14b4bc498e53af113cc8cd56495d245e6a0873bab3638c4b4e4e900a62564487",
+    "psp/src/staff_replay.c": "3402c2d85a1a702117530a1e9d011c91437ba13f76560abd2eae150ebe5b5db0",
+    "psp/src/staff_replay.h": "3b43ad285147a0608e74c6b82f67e1535648fe0407d4d64dcc76d26b7696f5f8",
+    "psp/src/stage.h": "b4ca80b688803452986da60618466dcb3712ef0ae18b9060ec170c601fe3eda9",
+    "psp/src/stage_camera.h": "25947806383ee33732efc4fd68959bb716170c3baba84db3c7aa596160ffde6e",
+    "psp/src/stage_portal.h": "4ed94280bc6a545ed999e76a6fcbbbcf582a2b940dce11975320fb5ef0cd443b",
+    "psp/src/stage_texture_usage.inc": "d87bd1b7a45ae16ee3a782b5a44dcc084b7fa3e06d7c03debe2e368509770443",
+    "psp/src/trial.h": "2722ffb4f0787931adcac8c3251d98ee3914107265deebbbba82a0977f41021e",
+    "psp/src/trick_hud.h": "9c82e6c3872d2672ea9cb7ef2193a589e4779d654a29ae5fb566287ecb5c7f23",
+    "psp/src/vfpu_profile.h": "0b4e001d74f8c3aeb3a2c80e9441310637975b18ea8a48a2b99abbbf908a42ff",
+    "psp/src/zones.c": "8a4a430f3c68ef3dda52f6a99bd3625b2339f97b185444b92ac0e8cbd9020f83",
+    "psp/src/zones.h": "c9e8ca328b8e290cefccfb69c9244e8de0ae18661f43ed84ec6cd6bf7222f56a"
+  },
+  "profile": "native-v1",
+  "schema": 1,
+  "source_compatibility_reviews": [
+    {
+      "after_sha256": "3bd03fa839658dc1dad5dad5c5402c16653902ac69cf7f9262c1cea2c37bf260",
+      "before_sha256": "abe82287f4ba481db6d9b9503dc15e04c0df3a97411809ee3182baddc73f6e44",
+      "change": "PSP saves outside the installation folder",
+      "non_psp_object_byte_identical": true,
+      "non_psp_object_sha256": "71ac547fb8faea34793ac13e262a24e87cc0ce1fa8eff46e01ac50b33d139673",
+      "path": "psp/src/portable_assets.c",
+      "previous_generator_sha256": "082656d4911c9a0a8d4c6caee6ab588e07fdd4d7dbab2a839c6199f23cbcbc1a",
+      "scope": "PSP-only save-root derivation and deferred directory creation. Asset reads, output identities, replay math and other generator sources are unchanged; validation uses non-PSP object parity and the existing PSP fidelity receipt."
+    },
+    {
+      "after_sha256": "237adddc1650314669c4c6c13bc78930f48a15805c9c9909d8bc4c58dcc3d672",
+      "before_sha256": "8839d04adea270e70cf56d47d642a688b16a02e2fd8c0c960cb6a41892c29d2b",
+      "change": "Documentation-only Media Engine comment cleanup",
+      "comments_only": true,
+      "line_count_unchanged": true,
+      "noncomment_bytes_sha256": "ba99b892e18aa4b9ff179ae853008f1aa2ed32bb073573ba7cd30fefcf858bd3",
+      "path": "psp/src/me_shared.h",
+      "previous_generator_sha256": "5db88f7b42c063e48127b9b07104bf6f16ed7e9afc5020b526450fb7085c6221",
+      "scope": "Comment-only change preserving noncomment bytes, line counts and expected asset hashes; validation uses the existing PSP fidelity receipt."
+    },
+    {
+      "after_sha256": "87d8d764ba4484e515c94d8d4db1ef73063d864131b08cbe10e1efa06417b5e3",
+      "before_sha256": "9651f6aedee4223c0634eab92893458d8dd18163e3e5e50c36ee0182be259864",
+      "change": "Describe installation receipt behavior",
+      "comments_only": true,
+      "line_count_unchanged": true,
+      "noncomment_bytes_sha256": "b072080486b9ee3fadb0fb16250c165aa4f6e2cd42f30595671a395a1a8ce2ba",
+      "path": "psp/src/portable_assets.c",
+      "previous_generator_sha256": "36cbb0bf270fb5c1dbdf9e4f7deecbc0e02322ad09ee0cc89b7369dac7661906",
+      "scope": "Comment-only change preserving noncomment bytes, line counts and expected asset hashes; validation uses the existing PSP fidelity receipt."
+    },
+    {
+      "browser_conversion_receipt_sha256": "34862db531ced6fb69b5b8d2e8cb6455ce98ada7504a44d27765d61472c91d2d",
+      "change": "Remove obsolete prepared-data and installer compatibility paths",
+      "converter_sha256": "395b125ee60539ca8efcc39398431aaaf3ab2eea40f0608a6f7247795632a519",
+      "exact_prepared_bytes": 1001644722,
+      "exact_prepared_files": 1893,
+      "generator_sha256": "a8f0d2bc9c3872a79f6872081e9c55e44b25305be8e2cc7cc31169aab41e574b",
+      "hardware_retested": false,
+      "previous_generator_sha256": "0c24a65e27a27404b369756a27d7432e9fc91a9e85cd6c2d276ca5e12047e923",
+      "scope": "A fresh complete browser conversion from the supported disc matched all prepared assets and the manifest byte-for-byte. Current-format loader, installer, copy-worker, save and bundle tests passed. Expected output identities and the existing PSP replay-fidelity receipt are retained; this is not a new hardware validation.",
+      "sources": {
+        "psp/src/canplay.c": {
+          "after_sha256": "4e316340819989539e2abfa3b4379d5ec3e0825d974b0a4ea0e694ec3a0874db",
+          "before_sha256": "5dec88f6f38bb58955202cb307b6aa40a17abec6a5b018643f976f67bafdb6d3"
+        },
+        "psp/src/graffiti.c": {
+          "after_sha256": "26fe08eb2c144bf6c1c1bcf3ceffae4956efd619c68c1cb1d5e279d60187b90f",
+          "before_sha256": "49ba6d12d2d4e812bfc972e4d7cb6f5bb6383bca3e259410029596050b773af1"
+        },
+        "psp/src/graffiti.h": {
+          "after_sha256": "6c9c6ac4e6e2afbf836bb3a5f074190536ad2d579434da3368cb540923bc39b6",
+          "before_sha256": "e29d0725f9d6a418bc181a609dd01599657572f7091af75355b8d0f76a2f6d76"
+        },
+        "psp/src/graffiti_game.c": {
+          "after_sha256": "227e128d84e6b1fedecdba7265e8958b33bacbd5f62ae038f740c9c3e0044172",
+          "before_sha256": "b5748483a5226f7f5023e1ad7d58fb49b28514b589aa4b67b4a06dfb9bd321bb"
+        },
+        "psp/src/mission.c": {
+          "after_sha256": "161b132c6b31bcc1235b41348c33c78c64bb686919c57ab56f15c00f24add845",
+          "before_sha256": "43167830f392ed42f46cdb80839a0415cb226e21980c6a5b4ac388e9fc2b6fef"
+        },
+        "psp/src/player.c": {
+          "after_sha256": "e9e873afe8fe4fc14e057ca8f19581349e1197050fe53e92a59435bbe5090ee0",
+          "before_sha256": "a25c58407e4d164d9daf3cf2f7da095f0e0399dadd52c9708e2a2c47d64f3c63"
+        },
+        "psp/src/portable_assets.c": {
+          "after_sha256": "f979a040042401859e10b89f2fc4b88e35e2d5c6157521991bb48139e6a8a911",
+          "before_sha256": "87d8d764ba4484e515c94d8d4db1ef73063d864131b08cbe10e1efa06417b5e3"
+        },
+        "psp/src/portable_assets.h": {
+          "after_sha256": "3c818b4bbcb0289111588b9696f1c8944bca764e5013677843b0a7f99ab88f5f",
+          "before_sha256": "a3350ed07fb68ccd2016f0b23e54637170043bb3c1b59bd3cefe457e8a29dd37"
+        },
+        "psp/src/portable_bundle.c": {
+          "after_sha256": "230a1e79fc242f97d2f769cd875be066db50d77959ea518503c93da3d1d76710",
+          "before_sha256": "0c9a9f6cf6d05ad4ceafe28c8343b6f3b90aac2ee7292ff92093c53fa87fa115"
+        },
+        "psp/src/portable_copy_worker.c": {
+          "after_sha256": "60e382e239b5e2ddfa4d040e31a6433072da699fd42435e7b8d53b0a64fadd11",
+          "before_sha256": "75c27518506128b3e9df3984bb79a8d88d61a2c4c8e1b328ef1c4e49a5505502"
+        },
+        "psp/src/portable_copy_worker.h": {
+          "after_sha256": "ce8996c009f8cbaec0f2ef6fed71453d004b2ac559e16e3aca86f30de0029473",
+          "before_sha256": "cda58802ceb23e37a68de07093b7a85bf8c950790d160b7dda9386c9156623db"
+        },
+        "psp/src/portable_install.c": {
+          "after_sha256": "7c23889c9dcac78ac98501ef20b71166e1c4e3fcb790c28bf83e2d7535d25ce3",
+          "before_sha256": "e4007a87db18719b75fad1b7eb0c32d5d449ea9c6d727f854525b5f5e55af082"
+        }
+      }
+    },
+    {
+      "baseline_manifest_crc32": "3cae19a6",
+      "change": "Restore Benten contact-animated lantern frames",
+      "exact_checked_outputs": 170,
+      "generator_sha256": "bb2751f8a0993f1febe25f7138b9172e6df5144fbf7c3fcf8e90d430ecfeef1a",
+      "hardware_retested": false,
+      "native_asset_parity_receipt_sha256": "9eccf670b37b8600609c0621ace7b87c72bcb0e053a403e185503430255cb5c7",
+      "native_collision_receipt_sha256": "048c3a98726822583412203ca351ce11eed31361f0bf7a1193f39023e161b46c",
+      "previous_baseline_manifest_crc32": "70e28324",
+      "previous_generator_sha256": "a8f0d2bc9c3872a79f6872081e9c55e44b25305be8e2cc7cc31169aab41e574b",
+      "scope": "The new Benten model, placement table and runtime collision match independent original-source exports. All other outputs supported by the standalone numeric/world drivers match the prior asset pack. Before/after native-solid Benten collision is byte-identical; that replay path ignores the changed runtime exclusion mask. The changed table handler and layout apply only to Benten scenery, not replay inputs. Existing replay output identities and PSP fidelity receipt are retained; this is not a new replay fidelity validation.",
+      "sources": {
+        "psp/src/portable_tables_data.inc": {
+          "after_sha256": "b8f95e0075d55ef0a889a68a8d69598ddf370ad9b6eef85f2fc6c749f45fbcc6",
+          "before_sha256": "046a685d66b430a63e66ce096e1728fb7f76ec94faae6708162e8d19d39e4f6d"
+        },
+        "psp/src/portable_tables_props.inc": {
+          "after_sha256": "39e2c9be71a5462909fffe8203068f6b8679f03d5cafa6f2b0a8e8c1ec1c59b4",
+          "before_sha256": "7ef24588c2cc9a5c429f346a2224f480e4ab7a08d75c9dee4c16eff69f355b38"
+        },
+        "psp/src/portable_world_data.inc": {
+          "after_sha256": "c6c889a85ea35b838bd2883a9e8a67707397b55908034ceed06179b765b9a3ff",
+          "before_sha256": "b83f6092301f63098f927e57ef3ec0e113d9a64116abe9cacc085d16aa229d03"
+        }
+      }
+    },
+    {
+      "change": "Dated provenance notices for unchanged GPL hardware tables",
+      "date": "2026-10-11",
+      "generator_sha256": "54f49504a5e4f4dec558f11f24d1d368b8e05c3bd4350a15f9c510f0dd9d6467",
+      "hardware_retested": false,
+      "previous_generator_sha256": "bb2751f8a0993f1febe25f7138b9172e6df5144fbf7c3fcf8e90d430ecfeef1a",
+      "scope": "Re-extraction from the pinned upstream revision changes comments only. Both include files preprocess to identical bytes before and after. Hardware values, executable expressions, native output identities and the existing PSP fidelity receipt are unchanged; this is not a new fidelity validation.",
+      "sources": {
+        "psp/src/portable_hardware_aica.inc": {
+          "after_sha256": "d191493529d0c97a9cd146fdbd9ae36eec65975cf65061f43495a42a3167e9ab",
+          "before_sha256": "dbbacc419ba84ad35ec220748369ae181a9954bd3faba6f5d91efda21befd05b",
+          "preprocessed_bytes_identical": true,
+          "preprocessed_sha256": "9b97a4ec5dc47cd211cbf8a8b0f46d6f343d44aa8511e486085450ce374737fb"
+        },
+        "psp/src/portable_hardware_fsca.inc": {
+          "after_sha256": "65afcf736bbc17731d59cf7226ffa50e7219c055f52bfe44155c2c6558f4d121",
+          "before_sha256": "3135a8eee20e07dd3809fed3a0f079a1c0fadee2fdeb23f764d5485581bfcedf",
+          "preprocessed_bytes_identical": true,
+          "preprocessed_sha256": "2ab87d6df67546c8a27febafb2c2e520fd1266b91633e4edfa8ec48b58218300"
+        }
+      }
+    },
+    {
+      "change": "Allow the complete PSP runtime notices in the application bundle",
+      "date": "2026-10-11",
+      "path": "psp/src/portable_bundle.c",
+      "before_sha256": "230a1e79fc242f97d2f769cd875be066db50d77959ea518503c93da3d1d76710",
+      "after_sha256": "4361f4972e13ecea38181a1dfaf93bb433004ce7e4f7d3567df4e8b662ceed9d",
+      "previous_generator_sha256": "54f49504a5e4f4dec558f11f24d1d368b8e05c3bd4350a15f9c510f0dd9d6467",
+      "generator_sha256": "8ec29d21fe6de168069a54419cc8c9d3478bfc2f8ef8bf54d126020cfe043a07",
+      "notice_limit_before_bytes": 65536,
+      "notice_limit_after_bytes": 131072,
+      "bundle_tests_passed": 27,
+      "hardware_retested": false,
+      "scope": "Only the MAX_NOTICE bound changes in the PBP/PSAR container reader. Native replay and converter arithmetic, data schemas and expected output identities are unchanged. Native-reader tests verify large-notice extraction/cache reuse and matching host/runtime size bounds. The existing replay-fidelity receipt is retained; this is not new hardware or full-conversion validation."
+    },
+    {
+      "change": "Prepare original Grind City map metadata, font and return marker",
+      "previous_generator_sha256": "8ec29d21fe6de168069a54419cc8c9d3478bfc2f8ef8bf54d126020cfe043a07",
+      "generator_sha256": "4aa04743aaa08d83e92ab95cc1be1aa646bafa244328dc74e99db51cba895b4a",
+      "previous_baseline_manifest_crc32": "3cae19a6",
+      "baseline_manifest_crc32": "a54c4123",
+      "sources": {
+        "psp/src/portable_install.c": {
+          "before_sha256": "7c23889c9dcac78ac98501ef20b71166e1c4e3fcb790c28bf83e2d7535d25ce3",
+          "after_sha256": "d1e9c1f8e15ac8f3e8d33e1e198b23af40ca667f9a275e4105680187dfbf997e"
+        },
+        "psp/src/portable_resources.c": {
+          "before_sha256": "42bb68343739b9614cfa6c0463f28c7ae34e6a3b72b842fa9e6a6b0240dbaf1c",
+          "after_sha256": "cac8d3cf66abef0ca9801300ddd34191eb08e2b2afabe6805b1a7e85fa8d669f"
+        },
+        "psp/src/portable_resources.h": {
+          "before_sha256": "fc74876b7a41ef2519621fddb7f033b6ebd05e522ce1bd8138e55bddd330d7cb",
+          "after_sha256": "48fe700b624c6206ca4376817ba38c36585ab5ed08dfd1cf816d666abb147157"
+        }
+      },
+      "conversion_receipt_sha256": "41c10186e349b803e2ad935d7e908229fb0fbc8acc7faf6c49dd17d898381482",
+      "hardware_retested": false,
+      "scope": "Adds resource operation 47 and one independent model recipe. Both new outputs match independent original-source exports byte-for-byte; all existing UI/resource conversions match their catalog identities. Existing converter cases, replay algorithms, replay output identities and the PSP replay-fidelity receipt are unchanged. This is not new replay fidelity validation."
+    },
+    {
+      "change": "Restore Radio texture bindings and screen detail",
+      "generator_sha256": "4aa04743aaa08d83e92ab95cc1be1aa646bafa244328dc74e99db51cba895b4a",
+      "previous_baseline_manifest_crc32": "a54c4123",
+      "baseline_manifest_crc32": "394bfa20",
+      "conversion_receipt_sha256": "1585efdafd39c5c80eea3843fb23df420a55cf79cc4d0780c4be7c303b07af78",
+      "hardware_retested": false,
+      "scope": "Only the radio.jgc model recipe and expected output change. Native and independent Python conversion of the user-disc model, motion and two bound textures agree byte-for-byte. Generator sources, replay inputs, replay outputs and the existing PSP replay-fidelity receipt are unchanged. This is not new replay fidelity validation."
+    }
+  ],
+  "validation": {
+    "cue_layout": {
+      "bytes": 6758,
+      "crc32": 238908612,
+      "fixups": 95,
+      "sections": 40
+    },
+    "fidelity_reviewed": true,
+    "method": "ppsspp",
+    "receipt_sha256": "6a433ab2d2ffdd0547fb74e96f7c7d25c7840619b5f324d45f218ce38a23cf94",
+    "target": "psp"
+  }
+}
