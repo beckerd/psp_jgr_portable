@@ -1819,13 +1819,13 @@
     },
     {
       "path": "psp/src/gfx.c",
-      "bytes": 14599,
-      "sha256": "bb0320a64a11b4c9a2d415db2d3ba60cb5423547c01e923f7b0d4530e0fb2253"
+      "bytes": 14716,
+      "sha256": "ff1680b77f9402e56761a7b342e4716a7f719ab3eb3ef1305611f1cc4836efd9"
     },
     {
       "path": "psp/src/gfx.h",
-      "bytes": 3512,
-      "sha256": "0f5995d00b6bbc85f2dcfaeca4c0ba8cd0828892681d48de1c40360cea1f6250"
+      "bytes": 3815,
+      "sha256": "baa884fe194326e286db83fe5e116389c970ec380bb86670be749dbef2362e3e"
     },
     {
       "path": "psp/src/graffiti.c",
@@ -2019,8 +2019,8 @@
     },
     {
       "path": "psp/src/main.c",
-      "bytes": 519887,
-      "sha256": "9b3844189bb361a22b06d4993c2eae6818fd6e653074af68a0f0d4c1de5955a4"
+      "bytes": 520102,
+      "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08"
     },
     {
       "path": "psp/src/me.c",
@@ -5718,6 +5718,11 @@
       "sha256": "b250a0ac494b4307bf9756d4be22366f901f858f1e280fd7b6033260f78ad4ab"
     },
     {
+      "path": "psp/src/title_smoothing.inc",
+      "sha256": "c45bd2cdabbbbd470fa0b7d207d24b302d5057ffd1d82c09e2856c6e02be9aeb",
+      "bytes": 3278
+    },
+    {
       "path": "psp/src/traffic_bounds.c",
       "bytes": 3090,
       "sha256": "a38f820ef6d993a4c8f0d19d358c485e2e01566174cc702713cc8097e8175dc2"
@@ -6013,6 +6018,11 @@
       "sha256": "7581bae040e5d6d217870cde2e1127a64661fd9bf6e4ed999727b7191b4b1fa6"
     },
     {
+      "path": "psp/tests/test_title_smoothing.py",
+      "sha256": "5352f57b11e84a1f8faedb2abbc94d9d236cef527238d0b3c75ff8e3c4b3c68b",
+      "bytes": 997
+    },
+    {
       "path": "psp/tests/test_traffic_preload.py",
       "bytes": 8646,
       "sha256": "8bab04efd6b4fcf83ab03c3461219d33833839f0747740494f7a7bff67e00d11"
@@ -6021,6 +6031,11 @@
       "path": "psp/tests/title_route_prefetch_sanitize.c",
       "bytes": 9802,
       "sha256": "0e5965d10f556ce7e9e92c12f573dac62b487e871e320f3e63ee663a938b72dc"
+    },
+    {
+      "path": "psp/tests/title_smoothing.c",
+      "sha256": "848032395d53bed07e5d394bce1e162f12d5731399ce7142cc684d0b7464fe8b",
+      "bytes": 5461
     },
     {
       "path": "psp/tools/crashprx/Makefile",
@@ -7217,7 +7232,7 @@
       "status": "resolved",
       "resolution": {
         "disposition": "replaced",
-        "sha256": "9b3844189bb361a22b06d4993c2eae6818fd6e653074af68a0f0d4c1de5955a4",
+        "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08",
         "evidence": "All seven local motion maps are validated and loaded into BSS at startup. Regeneration from the user executable and enemy banks matched all 210 entries."
       }
     },
@@ -7259,7 +7274,7 @@
       "status": "resolved",
       "resolution": {
         "disposition": "replaced",
-        "sha256": "9b3844189bb361a22b06d4993c2eae6818fd6e653074af68a0f0d4c1de5955a4",
+        "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08",
         "evidence": "Garage marker ordering is loaded from a validated startup blob derived from the user executable pointer table. All 24 converted entries matched the former map."
       }
     },
@@ -7440,7 +7455,7 @@
       "status": "resolved",
       "resolution": {
         "disposition": "replaced",
-        "sha256": "9b3844189bb361a22b06d4993c2eae6818fd6e653074af68a0f0d4c1de5955a4",
+        "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08",
         "evidence": "Six binding arrays are extracted from the user disc and loaded through a startup blob. The production-loader harness matched 95,104,800 actor-selection cases against the former bindings."
       }
     },

@@ -2317,6 +2317,7 @@ static void level_load(Level *L, int id, const Mission *m)
     loading_begin();
     loading_phase="collision";
     level_unload(L); memset(L, 0, sizeof *L); L->saved_pchar = -1; L->id = id; L->loaded = 1;
+    gfx_title_smoothing(title_stage_load);
     hang_progress.stage=(unsigned)id;
     if(!title_stage_load && !ending_stage_load)gameplay_hud_load();
     if(gameplay_characters_load(m,ending_stage_load || !m)){L->err=-2;L->campaign_error=8;loading_end();return;}
@@ -6084,7 +6085,7 @@ render_bench_redraw:
             m_perspective(tproj,2.f*atanf(240.f/logo_focal),640.f/480.f,.1f,32768.f);
             hud_projection(tproj,HUD_CENTRE);
             player_camera_matrix(teye,tfwd,0,tview);
-            gu_set(GU_PROJECTION, tproj); gu_set(GU_VIEW, tview); sceGuClear(GU_DEPTH_BUFFER_BIT);
+            gu_set(GU_PROJECTION, tproj); gu_set(GU_VIEW, tview);
             /* 017774 plays 0..159 once, then loops 160..259 while the
                large title panel is alive (through its idle/fade states). */
             float logo_frame=(float)L.demo_tick_n+L.replay_clock.remainder*30.f;
@@ -6095,15 +6096,19 @@ render_bench_redraw:
             float logo_xf[16];m_identity(logo_xf);
             logo_xf[0]=logo_xf[5]=logo_xf[10]=.0170000009f;
             logo_xf[3]=-10.6000004f;logo_xf[7]=28.1499996f;logo_xf[11]=600.f;
-            for (int i = 0; i < 4; i++) {
-                /* 017e08 holds the first three roots in their bind pose
-                   once state 4 starts. Only the outline keeps animating. */
-                const JgcChar *ch=&tlogo.chars[i];
-                if(L.demo_tick_n>=221 && i<3 && ch->nbones<=32) {
-                    CharPose pose[32];
-                    for(unsigned bi=0;bi<ch->nbones;bi++)chars_sample_pose(&tlogo,ch,-1,0.f,bi,&pose[bi]);
-                    chars_draw_one_pose(&tlogo,i,logo_xf,pose,-1,0.f,0.f);
-                } else chars_draw_one_xf(&tlogo, i, logo_xf, 0, logo_frame);
+            for(unsigned tile=0;tile<gfx_title_tiles();tile++) {
+                gfx_title_tile_begin(tile);
+                for (int i = 0; i < 4; i++) {
+                    /* 017e08 holds the first three roots in their bind pose
+                       once state 4 starts. Only the outline keeps animating. */
+                    const JgcChar *ch=&tlogo.chars[i];
+                    if(L.demo_tick_n>=221 && i<3 && ch->nbones<=32) {
+                        CharPose pose[32];
+                        for(unsigned bi=0;bi<ch->nbones;bi++)chars_sample_pose(&tlogo,ch,-1,0.f,bi,&pose[bi]);
+                        chars_draw_one_pose(&tlogo,i,logo_xf,pose,-1,0.f,0.f);
+                    } else chars_draw_one_xf(&tlogo, i, logo_xf, 0, logo_frame);
+                }
+                gfx_title_tile_end(tile);
             }
         }
         if(!title_mode && !scene_frozen && !L.pause.active && !L.gferr && !L.ms.phase){

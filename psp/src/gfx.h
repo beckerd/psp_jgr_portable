@@ -37,6 +37,12 @@ void gfx_begin_room(void);
 void *gfx_stage_command_memory(void);
 /* Remaining live GU arena, for optional transient geometry paths. */
 unsigned gfx_list_available(void);
+/* Select before loading a city, after freeing its previous texture pins.
+   Title-only 2x2 supersampling borrows EDRAM, never a heap framebuffer. */
+void gfx_title_smoothing(int enabled);
+unsigned gfx_title_tiles(void);
+void gfx_title_tile_begin(unsigned tile);
+void gfx_title_tile_end(unsigned tile);
 void gfx_end(void);
 void gfx_end_vsync(int enabled);
 /* Wall-clock measurements on the PSP, including audio-thread preemption.

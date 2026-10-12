@@ -45,6 +45,8 @@ unsigned gfx_list_available(void)
     return used<list_capacity ? list_capacity-used:0;
 }
 static unsigned present_vblank;
+static void *draw_buffer;
+static unsigned title_target;
 static int present_started;
 static int pending_present,pending_vsync;
 static int begin_prepared;
@@ -184,12 +186,12 @@ void gfx_init(void)
 }
 
 /* The two 8888 color buffers and the 16-bit depth buffer end at 0x154000.
-   No render target uses the rest of EDRAM. Only load-time texture copies may
-   write it, after this fence; never evict textures while a list is reading. */
+   Keep the title's temporary target out of the stage texture allocator.
+   Texture pins live until stage_free; never evict them during a draw. */
 void *gfx_stage_texture_memory(unsigned *bytes)
 {
     const unsigned first=BUF_WIDTH*SCR_H*(4+4+2);
-    unsigned size=sceGeEdramGetSize();*bytes=size>first ? size-first:0;
+    unsigned size=title_target ? title_target:sceGeEdramGetSize();*bytes=size>first ? size-first:0;
     if(!*bytes)return NULL;
     gfx_wait_idle();
     return (void *)(((uintptr_t)sceGeEdramGetAddr()|0x40000000u)+first);
@@ -221,7 +223,7 @@ void gfx_wait_idle(void)
         while(!frame_pacer_due(present_vblank,now,present_started));
         present_vblank=now;present_started=1;
     } else present_started=0;
-    sceGuSwapBuffers();
+    draw_buffer=sceGuSwapBuffers();
 #if JGR_DIAGNOSTICS
     unsigned end=sceKernelGetSystemTimeLow();
     unsigned elapsed=end-(last_present ? last_present:pending_frame_start);
@@ -325,6 +327,8 @@ void gfx_mode2d(void)
     sceGuBlendFunc(GU_ADD, GU_SRC_ALPHA, GU_ONE_MINUS_SRC_ALPHA, 0, 0);
     sceGuDisable(GU_TEXTURE_2D);
 }
+
+#include "title_smoothing.inc"
 
 void gfx_clear(unsigned int color)
 {

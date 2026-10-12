@@ -963,6 +963,16 @@
       "review": "Background audio loading request/result API with no timing diagnostics."
     },
     {
+      "path": "psp/src/gfx.c",
+      "sha256": "ff1680b77f9402e56761a7b342e4716a7f719ab3eb3ef1305611f1cc4836efd9",
+      "review": "GU frame lifecycle and stage texture allocation, with a disjoint title-only EDRAM target and draw-buffer restoration."
+    },
+    {
+      "path": "psp/src/gfx.h",
+      "sha256": "baa884fe194326e286db83fe5e116389c970ec380bb86670be749dbef2362e3e",
+      "review": "Graphics API, including title-only smoothing setup and tile boundaries."
+    },
+    {
       "path": "psp/src/grind_map.c",
       "sha256": "cb58da888cccdb82e3280d46313e79fdd59860b61113e47cee18656b47e25e2e",
       "review": "Loads and validates separately prepared Grind City metadata/font; no map coordinates, text, palette or texels embedded."
@@ -974,8 +984,8 @@
     },
     {
       "path": "psp/src/main.c",
-      "sha256": "9b3844189bb361a22b06d4993c2eae6818fd6e653074af68a0f0d4c1de5955a4",
-      "review": "Gameplay lifecycle and successful story load/save hooks for XMB presentation; game-data boundaries preserved."
+      "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08",
+      "review": "Gameplay lifecycle and save hooks; preserves the authored title animation while rendering it through a title-only supersampling pass."
     },
     {
       "path": "psp/src/radio_ui.h",
@@ -996,6 +1006,11 @@
       "path": "psp/src/savedata_imports.S",
       "sha256": "cf24e88dd2dd56cd0e5ecf387072cdf6b3874c197f6bd61c62c48544947f94b9",
       "review": "Three PSP save-hashing API imports with explicit weak binding; contains only SDK interface identifiers and assembler macro calls."
+    },
+    {
+      "path": "psp/src/title_smoothing.inc",
+      "sha256": "c45bd2cdabbbbd470fa0b7d207d24b302d5057ffd1d82c09e2856c6e02be9aeb",
+      "review": "Title-only tiled supersampling: reserves a disjoint EDRAM target, preserves background pixels and alpha blending, and restores the normal framebuffer and viewport."
     },
     {
       "path": "psp/tests/enemy_audio_preload_sanitize.c",
@@ -1218,6 +1233,11 @@
       "review": "Tests threaded route prefetch, exact samples, concurrent readers, and fallback and lifecycle behavior."
     },
     {
+      "path": "psp/tests/test_title_smoothing.py",
+      "sha256": "5352f57b11e84a1f8faedb2abbc94d9d236cef527238d0b3c75ff8e3c4b3c68b",
+      "review": "Builds and runs the synthetic title supersampling checks with address and undefined-behavior sanitizers."
+    },
+    {
       "path": "psp/tests/test_traffic_preload.py",
       "sha256": "8bab04efd6b4fcf83ab03c3461219d33833839f0747740494f7a7bff67e00d11",
       "review": "Tests traffic resource preparation with synthetic failures and retries while checking level callbacks."
@@ -1226,6 +1246,11 @@
       "path": "psp/tests/title_route_prefetch_sanitize.c",
       "sha256": "0e5965d10f556ce7e9e92c12f573dac62b487e871e320f3e63ee663a938b72dc",
       "review": "Threaded sanitizer harness for route-buffer handoff, exact samples, failures, and reader lifetimes."
+    },
+    {
+      "path": "psp/tests/title_smoothing.c",
+      "sha256": "848032395d53bed07e5d394bce1e162f12d5731399ce7142cc684d0b7464fe8b",
+      "review": "Synthetic host raster and memory-boundary checks for title supersampling, including background identity, diagonal coverage, tile seams and framebuffer swaps."
     },
     {
       "path": "psp/tools/crashprx/Makefile",
