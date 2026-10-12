@@ -11,6 +11,11 @@ the preparation tools process it locally.
 
 This project is not affiliated with or endorsed by SEGA.
 
+This was created using GPT6 Astra & Claude Fable 5.1. 
+If you do not want code written by AI on your PSP, this is not a project for you.
+
+
+
 ## Download
 
 Download a compiled package from this repository's **GitHub Releases** page.
