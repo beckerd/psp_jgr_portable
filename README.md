@@ -1,4 +1,5 @@
 # JGR Portable
+<img width="144" height="80" alt="ICON0" src="https://github.com/user-attachments/assets/2efe5097-aa16-48ea-8c9a-91e8b9d81ac2" />
 
 JGR Portable is an unofficial native PSP port of Jet Grind Radio.
 
@@ -26,21 +27,19 @@ Jet Grind Radio for Dreamcast, USA release **MK-51058, V1.005**. Use a GDI
 descriptor with every referenced track file. Other regions, revisions, CHD and
 CDI are not currently supported. A PSP capable of running homebrew is required.
 
-The port targets PSP-1000, PSP-2000, PSP-3000 and PSP Go. Hardware testing has
-used the maintainer's PSP; coverage of every model and firmware combination
-is still pending.
+The port targets PSP-1000, PSP-2000, PSP-3000 and PSP Go.
 
 ## Prepare on your computer
 
 The recommended setup uses desktop Google Chrome and the matching
 `EBOOT.PBP` and `Prepare 1.0.html` from one release. Complete conversion has been
-tested with Chrome 154.0.8037.98 on macOS (Apple silicon). Chrome on Windows and
+tested with Chrome on MacOS. Chrome on Windows and
 Linux is expected to work, but conversion and folder-access testing on those
 systems is still pending.
 
 1. Put your GDI and all its track files in the release folder. Keep the track
    filenames unchanged.
-2. Open `Prepare 1.0.html` in Chrome, choose that folder and allow read/write access.
+2. Open `Prepare 1.0.html` in Chrome, choose your release folder and allow read/write access.
    The page lists any missing files.
 3. Click **Prepare Assets** and leave the page open until it finishes.
 4. Copy `EBOOT.PBP` and the complete generated `data` folder into
