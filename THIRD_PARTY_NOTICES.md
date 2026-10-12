@@ -85,3 +85,9 @@ The generated `source_data_player_fsca.jsd` copies the GPL-covered FSCA table;
 `source_data_smsb_tables.jsd` combines derived AICA timing tables with MANATEE
 pitch data read from the user's disc. Local generation does not remove the
 underlying rights or license the disc-derived data under the GPL or MIT.
+
+## Trademarks and affiliation
+
+Jet Grind Radio and SEGA are trademarks of SEGA Corporation. PlayStation and PSP
+are trademarks of Sony Interactive Entertainment Inc. This is an unofficial
+project, not affiliated with, endorsed by, or sponsored by either company.

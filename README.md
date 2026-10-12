@@ -9,7 +9,8 @@ This repository contains source code and conversion tools. Original game assets
 are not included. Supply a supported Dreamcast disc image from your own copy;
 the preparation tools process it locally.
 
-This project is not affiliated with or endorsed by SEGA.
+This project is not affiliated with or endorsed by SEGA or Sony Interactive
+Entertainment.
 
 This was created using GPT6 Astra & Claude Fable 5.1. 
 If you do not want code written by AI on your PSP, this is not a project for you.
@@ -154,3 +155,9 @@ This is a work in progress; performance varies by level and scene.
 Original code, tools and documentation are [MIT-licensed](LICENSE).
 Third-party material retains its own terms; see
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for attribution and GPL build scope.
+
+## Trademarks and affiliation
+
+Jet Grind Radio and SEGA are trademarks of SEGA Corporation. PlayStation and PSP
+are trademarks of Sony Interactive Entertainment Inc. This is an unofficial
+project, not affiliated with, endorsed by, or sponsored by either company.

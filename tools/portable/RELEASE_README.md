@@ -1,7 +1,7 @@
 # JGR Portable — @VERSION@
 
 An unofficial native PSP port of Jet Grind Radio. The project is not affiliated
-with or endorsed by SEGA.
+with or endorsed by SEGA or Sony Interactive Entertainment.
 
 No Dreamcast disc image, music, textures, or other original game assets are
 included. You must prepare the game data from your own supported copy.
@@ -145,3 +145,9 @@ what happened, and any available logs.
 Project and third-party terms are included in `LICENSES.txt` and in the
 preparer's **Licenses & source** disclosure. The preparer links to the
 [release tag source](https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/@VERSION@.zip). Asset preparation itself still works offline.
+
+## Trademarks and affiliation
+
+Jet Grind Radio and SEGA are trademarks of SEGA Corporation. PlayStation and PSP
+are trademarks of Sony Interactive Entertainment Inc. This is an unofficial
+project, not affiliated with, endorsed by, or sponsored by either company.

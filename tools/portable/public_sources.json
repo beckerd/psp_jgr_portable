@@ -14,12 +14,12 @@
     },
     {
       "path": "README.md",
-      "sha256": "7912522653dad7b3e03f712cdfc5b90a0f3e128f0626d08bbcf29214f273960a",
+      "sha256": "72df702b29150a0b4f0baaae8a047d9547a93a30fe3d0cadffbfe215a32da62d",
       "review": "Project overview, installation steps, build requirements, and development links."
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "eab113a3bae78e35b3262f31b3bef1daa9e38417a0e8b273c806e1f0f1d27847",
+      "sha256": "f86a793f59e56fff9dfcf3db7b718b4146a33a58053a9f8e8991fb573c463bcf",
       "review": "Central provenance, attribution, and license information for the project."
     },
     {
@@ -1274,7 +1274,7 @@
     },
     {
       "path": "tools/portable/RELEASE_README.md",
-      "sha256": "d62008e669ff5cc309f6dee43d0014ffc4dab227b2afeba190faaba2be8bce3c",
+      "sha256": "5ae5a3c5de918cbe9cb20046468fd430d36fd02df7a17f94e31332f7300107e1",
       "review": "Player installation README template with release-version substitution, setup steps, build instructions and source/license links."
     },
     {
@@ -1349,7 +1349,7 @@
     },
     {
       "path": "tools/portable/browser/prepare.html",
-      "sha256": "421e706497812fd0e5e2d3b1c0ea7ad3580fd07d3186ca421d2747b4ff64d2b4",
+      "sha256": "8acb2e3266f9c5af31c3e9edcea87bcba0d72cd6b966c4e014b2fd050f2bf522",
       "review": "Offline preparer page structure, controls, decorative artwork, and static license disclosure."
     },
     {
