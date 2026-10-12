@@ -14,7 +14,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "dd17257bad3da08dd745abcc6923ae7e22b0bb799fdd86b9be79acdd23afe249",
+      "sha256": "7912522653dad7b3e03f712cdfc5b90a0f3e128f0626d08bbcf29214f273960a",
       "review": "Project overview, installation steps, build requirements, and development links."
     },
     {
@@ -1269,8 +1269,13 @@
     },
     {
       "path": "tools/portable/README.md",
-      "sha256": "7b4826fa71325f362d7e644faff060760370130e4fce13af07b5c08b55ef23c4",
+      "sha256": "92eca9976f250cc6797f44dad273f12f1f947ec6ff370620014a94fc857a3c7a",
       "review": "Asset preparation, source export, build, packaging, and validation instructions."
+    },
+    {
+      "path": "tools/portable/RELEASE_README.md",
+      "sha256": "d62008e669ff5cc309f6dee43d0014ffc4dab227b2afeba190faaba2be8bce3c",
+      "review": "Player installation README template with release-version substitution, setup steps, build instructions and source/license links."
     },
     {
       "path": "tools/portable/asset_aliases.json",
@@ -1289,7 +1294,7 @@
     },
     {
       "path": "tools/portable/browser/README.md",
-      "sha256": "b3a30eb26fca2c63ea9d337a95384fdb2c2b785f74b70535d360f1bf9922e04f",
+      "sha256": "e86a56cb12a953716603695550e6c06e0ab926b293846c7bbbeca5c59b92d9d4",
       "review": "Offline browser preparation, supported browsers, build requirements, matching-source packaging, and validation instructions."
     },
     {

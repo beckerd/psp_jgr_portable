@@ -44,14 +44,34 @@ tested with Chrome on MacOS. Chrome on Windows and
 Linux is expected to work, but conversion and folder-access testing on those
 systems is still pending.
 
-1. Put your GDI and all its track files in the release folder. Keep the track
-   filenames unchanged.
-2. Open `Prepare 1.0.html` in Chrome, choose your release folder and allow read/write access.
-   The page lists any missing files.
-3. Click **Prepare Assets** and leave the page open until it finishes.
-4. Copy `EBOOT.PBP` and the complete generated `data` folder into
-   `PSP/GAME/JGR_PORTABLE/` on your memory card. Safely eject it and launch
-   JGR Portable from the XMB.
+1. Extract `JGR-Portable-1.0.zip` to a folder on your computer. Don't run files
+   from inside the ZIP.
+2. Add your own copy of Jet Grind Radio. A Dreamcast game copy in GDI format
+   consists of several files: a small file ending in `.gdi` and track files
+   usually ending in `.bin`. Copy the `.gdi` file and all its track files into
+   the same folder as `EBOOT.PBP`. Don't rename them or mix files from different
+   copies of the game.
+3. Open `Prepare 1.0.html` in Google Chrome on your computer.
+4. Click **Choose folder** and select the folder where you placed everything.
+   Allow Chrome to read and save files in that folder when prompted. The page
+   will tell you if anything is missing.
+5. Click **Prepare Assets**. Leave the page open until it reports success.
+   This creates a folder named `data` containing everything the PSP needs.
+   All preparation happens on your computer; your game files aren't uploaded.
+6. Copy the prepared game to your PSP. Connect your PSP by USB or insert its
+   memory card into your computer. Inside `PSP/GAME`, create a folder named
+   `JGR_PORTABLE`. Copy `EBOOT.PBP` and the entire `data` folder into it:
+
+   ```text
+   PSP/
+     GAME/
+       JGR_PORTABLE/
+         EBOOT.PBP
+         data/
+   ```
+
+7. Safely eject your PSP or memory card, then launch **JGR Portable** from the
+   PSP's Game menu.
 
 Preparation time depends on your computer, browser and destination storage.
 Copying the finished data to the Memory Stick takes additional time. Chrome

@@ -116,11 +116,15 @@ python3 tools/portable/browser/build.py \
   --psp psp --out build/browser/preparer
 cp build/browser/preparer/prepare.html \
   "build/release/JGR_PORTABLE/Prepare 1.0.html"
+sed 's/@VERSION@/1.0/g' tools/portable/RELEASE_README.md \
+  > build/release/JGR_PORTABLE/README.md
 ```
 
-The game folder now contains `EBOOT.PBP` and `Prepare 1.0.html`. Add the
-installation `README.md` and complete `LICENSES.txt`, and ZIP only those four
-files. Keep any checksum file outside the game ZIP.
+The game folder now contains `EBOOT.PBP`, `Prepare 1.0.html` and `README.md`.
+Use [RELEASE_README.md](RELEASE_README.md) as the installation README for
+every release, replacing `@VERSION@` with that release's version as shown
+above. Add the complete `LICENSES.txt`, and ZIP only those four files.
+Keep any checksum file outside the game ZIP.
 
 Set `--source-url` to GitHub's automatic source download for the release tag
 that contains the exact source used to build both converters. Do not upload a

@@ -10,22 +10,40 @@ validation steps; a successful build alone does not establish compatibility.
 
 ## Preparing a release on your computer
 
-1. Download and extract a compiled package from this repository's GitHub
-   Releases page. Use its matching `Prepare 1.0.html` and `EBOOT.PBP`.
-2. Place your supported GDI image and all its track files beside `EBOOT.PBP`.
-   Keep the track filenames unchanged. The folder should contain one GDI image.
-3. Open `Prepare 1.0.html` in desktop Google Chrome. Select the release folder and
-   allow the requested read/write access. The page checks for `EBOOT.PBP`, one
-   GDI, and every track named by that GDI. Missing files are listed before
-   preparation can start in an always-visible checklist above the action button,
-   with a checkmark for each file found and an X for each missing file. After
-   adding missing files, choose **Try again** to recheck the same folder.
-   A successfully checked folder is remembered for this
-   preparer's location and restored on later visits. Chrome may ask for access
-   again when you choose **Prepare Assets**; **Change folder** remains available.
-4. Choose **Prepare Assets** and keep the page open until it reports success.
-5. Copy `EBOOT.PBP` and the complete generated `data` folder together into a game
-   folder under `PSP/GAME/` on the memory card, then safely eject the card.
+1. Extract `JGR-Portable-1.0.zip` to a folder on your computer. Don't run files
+   from inside the ZIP.
+2. Add your own copy of Jet Grind Radio. A Dreamcast game copy in GDI format
+   consists of several files: a small file ending in `.gdi` and track files
+   usually ending in `.bin`. Copy the `.gdi` file and all its track files into
+   the same folder as `EBOOT.PBP`. Don't rename them or mix files from different
+   copies of the game.
+3. Open `Prepare 1.0.html` in Google Chrome on your computer.
+4. Click **Choose folder** and select the folder where you placed everything.
+   Allow Chrome to read and save files in that folder when prompted. The page
+   will tell you if anything is missing.
+5. Click **Prepare Assets**. Leave the page open until it reports success.
+   This creates a folder named `data` containing everything the PSP needs.
+   All preparation happens on your computer; your game files aren't uploaded.
+6. Copy the prepared game to your PSP. Connect your PSP by USB or insert its
+   memory card into your computer. Inside `PSP/GAME`, create a folder named
+   `JGR_PORTABLE`. Copy `EBOOT.PBP` and the entire `data` folder into it:
+
+   ```text
+   PSP/
+     GAME/
+       JGR_PORTABLE/
+         EBOOT.PBP
+         data/
+   ```
+
+7. Safely eject your PSP or memory card, then launch **JGR Portable** from the
+   PSP's Game menu.
+
+The page lists each required file with a checkmark or an X. After adding
+missing files, choose **Try again** to recheck the same folder. A successfully
+checked folder is remembered for this preparer's location and restored on later
+visits. Chrome may ask for access again when you choose **Prepare Assets**;
+**Change folder** remains available.
 
 The original GDI and track files stay in place. They are not needed on the PSP
 after preparation succeeds. `Prepare 1.0.html` is also only needed on the computer.
@@ -125,6 +143,8 @@ python3 tools/portable/browser/build.py \
   --psp psp --out build/browser/preparer
 cp build/browser/preparer/prepare.html \
   "build/release/JGR_PORTABLE/Prepare 1.0.html"
+sed 's/@VERSION@/1.0/g' tools/portable/RELEASE_README.md \
+  > build/release/JGR_PORTABLE/README.md
 ```
 
 The build emits `prepare.html` linked to GitHub's existing source download for
@@ -132,8 +152,10 @@ release tag `1.0`; change the URL for another release and ensure that tag contai
 the exact source used for both converters. With `--source-url`, no additional
 source ZIP is emitted. Package only `README.md`, `Prepare 1.0.html`,
 `LICENSES.txt` and the matching `EBOOT.PBP` inside the game ZIP. Use a fresh
-browser output directory for each release. The source `prepare.html` in this
-directory is a template, not the working preparer.
+browser output directory for each release. Generate its installation README
+from [RELEASE_README.md](../RELEASE_README.md), substituting the release
+version as shown above. The source `prepare.html` in this directory is a
+template, not the working preparer.
 Do not include compiler objects, test profiles or generated game assets in
 a release. No disc image or EBOOT is read when compiling the browser converter;
 the user supplies those at preparation time.

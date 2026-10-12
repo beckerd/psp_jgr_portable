@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 5815,
-      "sha256": "dd17257bad3da08dd745abcc6923ae7e22b0bb799fdd86b9be79acdd23afe249"
+      "bytes": 6686,
+      "sha256": "7912522653dad7b3e03f712cdfc5b90a0f3e128f0626d08bbcf29214f273960a"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
@@ -6064,8 +6064,13 @@
     },
     {
       "path": "tools/portable/README.md",
-      "bytes": 11006,
-      "sha256": "7b4826fa71325f362d7e644faff060760370130e4fce13af07b5c08b55ef23c4"
+      "bytes": 11245,
+      "sha256": "92eca9976f250cc6797f44dad273f12f1f947ec6ff370620014a94fc857a3c7a"
+    },
+    {
+      "path": "tools/portable/RELEASE_README.md",
+      "bytes": 6533,
+      "sha256": "d62008e669ff5cc309f6dee43d0014ffc4dab227b2afeba190faaba2be8bce3c"
     },
     {
       "path": "tools/portable/asset_aliases.json",
@@ -6084,8 +6089,8 @@
     },
     {
       "path": "tools/portable/browser/README.md",
-      "bytes": 11678,
-      "sha256": "b3a30eb26fca2c63ea9d337a95384fdb2c2b785f74b70535d360f1bf9922e04f"
+      "bytes": 12376,
+      "sha256": "e86a56cb12a953716603695550e6c06e0ab926b293846c7bbbeca5c59b92d9d4"
     },
     {
       "path": "tools/portable/browser/THIRD_PARTY_NOTICES.txt",
