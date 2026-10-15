@@ -1,5 +1,5 @@
 {
-  "baseline_manifest_crc32": "394bfa20",
+  "baseline_manifest_crc32": "0ad1a388",
   "files": [
     {
       "bytes": 1434296,
@@ -410,7 +410,7 @@
       "sha256": "6ea655a242fcdb5089098dc539072918e7f38eb8cdefe365bb8fba10a9c305db"
     }
   ],
-  "generator_sha256": "4aa04743aaa08d83e92ab95cc1be1aa646bafa244328dc74e99db51cba895b4a",
+  "generator_sha256": "dd0ca67d99acea35a8cd1ae1239747e6be74729b989428a0aaa0f1ec96405538",
   "generator_sources": {
     "psp/src/asset_progress.h": "b19c2a5dfaeec916140df61cd173e6aa5a24c7b8857a8bd390aba6849847ba5c",
     "psp/src/canplay.c": "4e316340819989539e2abfa3b4379d5ec3e0825d974b0a4ea0e694ec3a0874db",
@@ -583,7 +583,7 @@
     "psp/src/portable_scratch.h": "c48b393c4c52c6ee30cfb8ce3af3cf9779648e0c5e7c1205a258c2265e2515e0",
     "psp/src/portable_setup_me.c": "e55dd9a7d95cbffa58f0bc46a60650d2f8e25ce1493abb9147a7178920437864",
     "psp/src/portable_setup_me.h": "22251054395747dd85b714c0809382a2f59f443f35dfa86c644f508daa90af9b",
-    "psp/src/portable_stage.c": "25e0012727bd9bdaf0eb849134a45f87bf07538d4087dc238a520b7a88f2a17e",
+    "psp/src/portable_stage.c": "e8ff98f9f14b37d552ef89bfd6e98f14049ef54773858be1f0ab9e73d4f68b4c",
     "psp/src/portable_stage.h": "622f1261b4fe133f53196a63f310df5b10d0d1e921c3e9108169fdcc89bc173c",
     "psp/src/portable_stage_derived.c": "821ac154a816a0ad58c8fe8ce83803b52e2eaefe00e0fb09204b67219eb8a859",
     "psp/src/portable_stage_derived.h": "5dc90ceff80d67500d5269b7ff32ff24027291a035c5f9127f7c7388ca496fc8",
@@ -718,7 +718,7 @@
     "psp/src/stage.h": "b4ca80b688803452986da60618466dcb3712ef0ae18b9060ec170c601fe3eda9",
     "psp/src/stage_camera.h": "25947806383ee33732efc4fd68959bb716170c3baba84db3c7aa596160ffde6e",
     "psp/src/stage_portal.h": "4ed94280bc6a545ed999e76a6fcbbbcf582a2b940dce11975320fb5ef0cd443b",
-    "psp/src/stage_texture_usage.inc": "d87bd1b7a45ae16ee3a782b5a44dcc084b7fa3e06d7c03debe2e368509770443",
+    "psp/src/stage_texture_usage.inc": "9880a161e18f0ef728cef74b26148ff2e289e07dcaeb782ea7e8f118267b584b",
     "psp/src/trial.h": "2722ffb4f0787931adcac8c3251d98ee3914107265deebbbba82a0977f41021e",
     "psp/src/trick_hud.h": "9c82e6c3872d2672ea9cb7ef2193a589e4779d654a29ae5fb566287ecb5c7f23",
     "psp/src/vfpu_profile.h": "0b4e001d74f8c3aeb3a2c80e9441310637975b18ea8a48a2b99abbbf908a42ff",
@@ -915,6 +915,26 @@
       "conversion_receipt_sha256": "1585efdafd39c5c80eea3843fb23df420a55cf79cc4d0780c4be7c303b07af78",
       "hardware_retested": false,
       "scope": "Only the radio.jgc model recipe and expected output change. Native and independent Python conversion of the user-disc model, motion and two bound textures agree byte-for-byte. Generator sources, replay inputs, replay outputs and the existing PSP replay-fidelity receipt are unchanged. This is not new replay fidelity validation."
+    },
+    {
+      "change": "Restore authored Kogane and Benten overhead wires and utility poles",
+      "previous_generator_sha256": "4aa04743aaa08d83e92ab95cc1be1aa646bafa244328dc74e99db51cba895b4a",
+      "generator_sha256": "dd0ca67d99acea35a8cd1ae1239747e6be74729b989428a0aaa0f1ec96405538",
+      "previous_baseline_manifest_crc32": "394bfa20",
+      "baseline_manifest_crc32": "0ad1a388",
+      "sources": {
+        "psp/src/portable_stage.c": {
+          "before_sha256": "25e0012727bd9bdaf0eb849134a45f87bf07538d4087dc238a520b7a88f2a17e",
+          "after_sha256": "e8ff98f9f14b37d552ef89bfd6e98f14049ef54773858be1f0ab9e73d4f68b4c"
+        },
+        "psp/src/stage_texture_usage.inc": {
+          "before_sha256": "d87bd1b7a45ae16ee3a782b5a44dcc084b7fa3e06d7c03debe2e368509770443",
+          "after_sha256": "9880a161e18f0ef728cef74b26148ff2e289e07dcaeb782ea7e8f118267b584b"
+        }
+      },
+      "conversion_receipt_sha256": "946a4317d8ce0382c8a3502ed73602ce78d18cb3ee4f9ad007e643df08899c1d",
+      "hardware_retested": false,
+      "scope": "Only static city placement transforms, subdivision packing for restored spans and associated geometry/sidecar identities change. All eight final native assets match independent Python conversion byte-for-byte. All 124 audited wire/pole placements and both LODs match authored disc vertices within 0.001 units; 97 placements change. All 4940 unrelated objects and texture payloads/ordinals remain identical. Native replay algorithms, input recipes, output identities and the existing PSP replay-fidelity receipt are unchanged. This is source compatibility review, not new hardware or replay fidelity validation."
     }
   ],
   "validation": {

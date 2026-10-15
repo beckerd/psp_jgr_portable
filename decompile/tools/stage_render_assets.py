@@ -55,6 +55,11 @@ KOGANE_TAG_ROOFS=(0x8cd6b198,0x8cd6bbb8,0x8cd6bb84)
 def kogane_roof_placement(pid,record):
  return pid in (87,88) or (record and record['address'] in KOGANE_TAG_ROOFS)
 
+def powerline_placement(stage,tag,pid):
+ # 039558 / 048580: overhead wires and utility poles use full record TRS.
+ return tag=='F' and ((stage==2 and (23<=pid<=27 or pid==70)) or
+                      (stage==3 and pid in (7,95)))
+
 class Source:
  def __init__(self, stage):
   self.exe=(DC/'extracted/1ST_READ.BIN').read_bytes()
@@ -90,13 +95,14 @@ def placement_for(stage,tag,pid,pos,ang,record):
  # sloped roof pairs use 0393a4: translate, Z/Y/X rotation, record scale.
  # See kogane_roof_assets.py for the lossless near/far geometry migration.
  roof=stage==2 and tag=='IT' and kogane_roof_placement(pid,record)
- audited=stage==1 or roof or (stage==3 and tag=='IT' and pid in (7,8,9,22,23,24,25,30,49,59,72,73,74,86))
+ powerline=powerline_placement(stage,tag,pid)
+ audited=stage==1 or roof or powerline or (stage==3 and tag=='IT' and pid in (7,8,9,22,23,24,25,30,49,59,72,73,74,86))
  if audited:
   matrix=nl.placement_matrix(pos,ang)
  else:
   rx,ry,rz=[a*nl.A2R for a in ang]
   matrix=nl.mmul(nl.mtrans(*pos),nl.mmul(nl.mrotx(rx),nl.mmul(nl.mroty(ry),nl.mrotz(rz))))
- return nl.mmul(matrix,nl.mscale(*record['scale'])) if roof else matrix
+ return nl.mmul(matrix,nl.mscale(*record['scale'])) if roof or powerline else matrix
 
 def placement_geometry(stage,tag,pid,pos,ang,record):
  matrix=placement_for(stage,tag,pid,pos,ang,record)
@@ -112,7 +118,7 @@ def placement_light_transform(stage,tag,pid,pos,ang,record,matrix):
  # Geometry-only corrections intentionally retained the shipping vertex
  # colors. Fresh-disc generation must shade with that historical transform,
  # including both LODs, while positions follow the corrected source matrix.
- changed=(stage==2 and tag=='IT' and kogane_roof_placement(pid,record)) or (stage==3 and tag=='IT' and pid in (7,8,9,22,23,24,25,30,49,59,72,73,74,86))
+ changed=powerline_placement(stage,tag,pid) or (stage==2 and tag=='IT' and kogane_roof_placement(pid,record)) or (stage==3 and tag=='IT' and pid in (7,8,9,22,23,24,25,30,49,59,72,73,74,86))
  if not changed:return None
  rx,ry,rz=[a*nl.A2R for a in ang]
  old=nl.mmul(nl.mtrans(*pos),nl.mmul(nl.mrotx(rx),nl.mmul(nl.mroty(ry),nl.mrotz(rz))))

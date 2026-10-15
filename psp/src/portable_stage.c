@@ -140,7 +140,7 @@ typedef struct {
  unsigned char *node_flags;
  Owner *owners;unsigned nowners,owner_capacity,record,object_flags,force_list,near_objects;
  Origin *origins;unsigned origin_capacity;uint32_t root;unsigned origin_kind;
- unsigned final_city,key_batch;Tunnel *tunnel;
+ unsigned final_city,key_batch,roof_keys;Tunnel *tunnel;
 
 } Stage;
 static uint32_t word(const unsigned char *p){return p[0]|(uint32_t)p[1]<<8|(uint32_t)p[2]<<16|(uint32_t)p[3]<<24;}
@@ -293,7 +293,9 @@ static int visit(const JgrModelNode *node,const double matrix[16],unsigned ordin
  double lm[16];if(s->lighting){jgr_model_multiply(lm,s->lighting,matrix);o.light_matrix=lm;}
  unsigned first=s->batches;s->npoints=0;
  if(jgr_model_mesh(s->model,s->disc,node->model>=SB?&s->source:&s->exe,node->model>=SB?SB:EB,node->model,&o,emit,s))return -1;
- if(s->final_city&&s->stage==2&&s->lighting){
+ /* Only the earlier roof migration retains legacy packing keys. Wires are
+  * subdivided at their restored length, so their vertex counts can change. */
+ if(s->final_city&&s->stage==2&&s->roof_keys&&s->lighting){
   JgrModelOptions old=o;jgr_model_multiply(old.matrix,s->lighting,matrix);old.post_matrix=NULL;old.light_matrix=NULL;
   s->key_batch=first;unsigned expected=s->batches;
   if(jgr_model_mesh(s->model,s->disc,node->model>=SB?&s->source:&s->exe,node->model>=SB?SB:EB,node->model,&old,legacy_key_emit,s)||s->key_batch!=expected||fseek(s->sections[1],0,SEEK_END)||fseek(s->sections[6],0,SEEK_END))return -1;
@@ -452,9 +454,13 @@ static void placement_matrices(Stage *s,const Placement *p,double matrix[16],dou
 {
  unsigned special=p->address==0x8cd6b198||p->address==0x8cd6bbb8||p->address==0x8cd6bb84;
  unsigned roof=s->stage==2&&p->category==2&&(p->pid==87||p->pid==88||special);
- static const unsigned benten[]={7,8,9,22,23,24,25,30,49,59,72,73,74,86};unsigned changed=roof;
+ /* 039558 / 048580 apply Z/Y/X rotation and record scale to these
+  * overhead wires and their utility poles, in both near and far draws. */
+ unsigned powerline=p->category==1&&((s->stage==2&&((p->pid>=23&&p->pid<=27)||p->pid==70))||
+                                    (s->stage==3&&(p->pid==7||p->pid==95)));
+ static const unsigned benten[]={7,8,9,22,23,24,25,30,49,59,72,73,74,86};unsigned changed=roof||powerline;
  if(s->stage==3&&p->category==2)for(unsigned i=0;i<sizeof benten/sizeof benten[0];i++)changed|=p->pid==benten[i];
- placed(matrix,p,s->stage==1||changed,roof);s->post=NULL;s->lighting=NULL;
+ placed(matrix,p,s->stage==1||changed,roof||powerline);s->post=NULL;s->lighting=NULL;s->roof_keys=roof;
  if(changed){double old[16],inverse[16];placed(old,p,0,0);jgr_model_inverse(inverse,matrix);jgr_model_multiply(light,old,inverse);s->lighting=light;}
  if(roof&&special){double old[16],inverse[16];placed(old,p,0,0);jgr_model_inverse(inverse,old);jgr_model_multiply(post,matrix,inverse);memcpy(matrix,old,sizeof old);s->post=post;jgr_model_identity(light);}
 }
