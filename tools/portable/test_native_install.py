@@ -264,8 +264,8 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.cached(files);p=self.plan(files)
         result=self.install(p)
         self.assertEqual(result.status,0);self.assertEqual(result.reused,2);self.assertEqual(result.written,0)
-        expected='JGR_ASSETS 1\nlayout 1\ncount 2\n'+''.join(f'{len(v)} {zlib.crc32(v):08x} {k}\n' for k,v in sorted(files.items()))
-        self.assertEqual((self.root/'data/assets/assets.manifest').read_text(),expected)
+        expected='JGR_ASSETS 1\nlayout 2\ncount 2\n'+''.join(f'{len(v)} {zlib.crc32(v):08x} {k}\n' for k,v in sorted(files.items()))
+        self.assertEqual((self.root/'data/assets/assets-manifest.txt').read_text(),expected)
         # Repeat after the source has been removed: only generated files matter.
         self.assertEqual(self.install(p).status,0)
     def test_crc_recipe_checks_contents_and_rejects_noncanonical_digest_padding(self):
@@ -273,7 +273,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.cached(files);p=self.plan(files)
         data=p.read_bytes();self.assertEqual(struct.unpack_from('<I',data,8)[0],3)
         self.assertEqual(self.install(p).status,0)
-        manifest=self.root/'data/assets/assets.manifest';manifest.unlink()
+        manifest=self.root/'data/assets/assets-manifest.txt';manifest.unlink()
         bad=bytearray(data);bad[40+28]=1
         struct.pack_into('<I',bad,24,zlib.crc32(bad[40:]))
         p.write_bytes(bad)
@@ -335,9 +335,9 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                 self.assertEqual(self.lib.test_read_bytes(),0)
                 self.assertEqual(self.lib.test_write_bytes(),len(original))
                 for name in files:self.assertEqual((self.root/'data/assets'/name).read_bytes(),original)
-                expected='JGR_ASSETS 1\nlayout 1\ncount 3\n'+''.join(
+                expected='JGR_ASSETS 1\nlayout 2\ncount 3\n'+''.join(
                     f'{len(data)} {zlib.crc32(data):08x} {name}\n' for name,data in sorted(files.items()))
-                self.assertEqual((self.root/'data/assets/assets.manifest').read_text(),expected)
+                self.assertEqual((self.root/'data/assets/assets-manifest.txt').read_text(),expected)
                 if not disabled:
                     self.assertIn(5,phases,'Queued audio reports the conversion phase')
                     self.assertTrue(released,'Completed workers were observed before final return')
@@ -402,7 +402,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                     self.assertEqual(result.status,-4,result.detail.decode())
                     self.assertEqual(result.written,1)
                     self.assertTrue(altered)
-                    self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+                    self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
                     if damage=='directory':self.assertEqual((target/'keep').read_text(),'keep')
         self.root=base
     def test_fresh_foreground_rename_failure_preserves_directory_and_no_manifest(self):
@@ -418,7 +418,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.assertEqual(result.written,0)
         self.assertEqual((target/'keep').read_text(),'keep')
         self.assertFalse((self.root/'data/assets/voice.bin.setup-tmp').exists())
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_background_audio_errors_do_not_publish_bad_or_later_files(self):
         supplied,original=self.audio_fixture();base=self.root
         for failure in ('crc','write','flush','close','publish'):
@@ -439,7 +439,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                 self.assertEqual(result.status,-4 if failure=='crc' else -1,result.detail.decode())
                 self.assertEqual(result.pipeline.queued,2)
                 self.assertEqual(result.pipeline.published,0)
-                self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+                self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
                 self.assertFalse((self.root/'data/assets/adx/b.adx').exists())
                 self.assertFalse(list((self.root/'data/assets').rglob('*.setup-tmp')))
                 if failure=='publish':self.assertEqual((target/'preserve').read_text(),'existing contents')
@@ -458,7 +458,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         actual=list((self.root/'data/assets/adx').glob('*.adx'))
         self.assertEqual(len(actual),result.written)
         for item in actual:self.assertEqual(item.read_bytes(),original)
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
         self.assertFalse(list((self.root/'data/assets').rglob('*.setup-tmp')))
         resumed=self.install(p,disc=supplied)
         self.assertEqual(resumed.status,0,resumed.detail.decode())
@@ -552,7 +552,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                 else:
                     self.assertEqual(result.status,-4 if failure==4 else -1,result.detail.decode())
                     self.assertFalse(target.exists())
-                    self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+                    self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
                     self.assertFalse(Path(str(target)+'.setup-tmp').exists())
                     if failure<4:self.assertEqual(self.lib.test_output_failure_hits(),1)
         self.root=base
@@ -626,7 +626,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                 self.assertEqual(result.written,0)
                 self.assertFalse(target.exists())
                 self.assertFalse(Path(str(target)+'.setup-tmp').exists())
-                self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+                self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
                 self.assertEqual(self.lib.test_read_bytes(),0)
                 if kind:self.assertEqual(self.lib.test_output_failure_hits(),1)
                 else:self.assertEqual(self.lib.test_write_bytes(),0)
@@ -663,7 +663,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         result=self.install(plan,disc=supplied,callback=CALLBACK(progress))
         self.assertEqual(result.status,-7,result.detail.decode())
         self.assertEqual(self.lib.test_write_bytes(),0)
-        self.assertFalse(target.exists());self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse(target.exists());self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
 
     def dependency_copy_plan(self,data):
         files={name:data for name in ('base.jgc','copy-a.jgc','copy-b.jgc')}
@@ -685,9 +685,9 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.lib.test_watch_io(os.fsencode(source))
         self.assertEqual(self.install(p).status,0)
         self.assertEqual(self.lib.test_read_bytes(),len(data))
-        source.write_bytes(b'X'+data[1:]);(source.parent/'assets.manifest').unlink()
+        source.write_bytes(b'X'+data[1:]);(source.parent/'assets-manifest.txt').unlink()
         self.assertEqual(self.install(p).status,-6)
-        self.assertFalse((source.parent/'assets.manifest').exists())
+        self.assertFalse((source.parent/'assets-manifest.txt').exists())
     def test_dependency_cache_rejects_type_or_size_changes_before_each_consumer(self):
         supplied=os.environ.get('JGR_TEST_GDI')
         if not supplied:self.skipTest('Set JGR_TEST_GDI to test your supported original disc')
@@ -709,7 +709,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                 self.assertNotEqual(result.status,0)
                 self.assertEqual((source.parent/'copy-a.jgc').read_bytes(),data)
                 self.assertFalse((source.parent/'copy-b.jgc').exists())
-                self.assertFalse((source.parent/'assets.manifest').exists())
+                self.assertFalse((source.parent/'assets-manifest.txt').exists())
                 if source.is_dir():source.rmdir()
                 (source.parent/'copy-a.jgc').unlink()
     def test_cast_lighting_mismatch_does_not_publish_either_new_output(self):
@@ -723,7 +723,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         result=self.install(p,disc=supplied)
         self.assertEqual(result.status,-4,result.detail.decode())
         self.assertIn(b'cast lighting',result.detail)
-        for name in ('chars.jgc','playerlight.bin','assets.manifest','chars.jgc.setup-tmp','playerlight.bin.setup-tmp'):
+        for name in ('chars.jgc','playerlight.bin','assets-manifest.txt','chars.jgc.setup-tmp','playerlight.bin.setup-tmp'):
             self.assertFalse((self.root/'data/assets'/name).exists(),name)
     def test_cast_and_lighting_are_published_from_one_geometry_pass(self):
         supplied=os.environ.get('JGR_TEST_GDI')
@@ -746,7 +746,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         p=self.plan({'unimplemented.bin':b'x'},raw={})
         for partial in (0,1):
             r=self.install(p,partial);self.assertEqual(r.status,-6);self.assertEqual(r.missing,1)
-            self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+            self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_unimplemented_operation_can_repair_manifest_from_complete_cache(self):
         files={'replay.bin':b'complete generated replay'};self.cached(files)
         self.assertEqual(self.install(self.plan(files,raw={})).status,0)
@@ -803,12 +803,12 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         result=self.install(p)
         self.assertEqual((result.status,result.reused,result.written),(0,2,0),result.detail.decode())
         self.assertEqual(self.install(p).status,0)
-        (self.root/'data/assets/assets.manifest').unlink()
+        (self.root/'data/assets/assets-manifest.txt').unlink()
         path=self.root/'data/assets/challenge_s1m11_0.bin'
         path.write_bytes(b'X'*len(files['challenge_s1m11_0.bin']))
         result=self.install(p)
         self.assertEqual(result.status,-3,'Damaged native output must require the original disc')
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_native_profile_rejects_mixed_recipe_modes_before_any_output(self):
         files={'challenge_s1m11_0.bin':b'a','title_route.bin':b'b'}
         p=self.native_profile_plan(files);good=p.read_bytes()
@@ -827,7 +827,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         result=self.install(self.plan(files))
         self.assertEqual(result.status,-3);self.assertEqual(saved.read_bytes(),b'my progress')
         self.assertEqual((self.root/'data/assets/ui.bin').read_bytes(),b'damaged!')
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_corrupt_plan_refused_before_creating_data(self):
         p=self.plan({'ui.bin':b'hello'});data=bytearray(p.read_bytes());data[-1]^=1;p.write_bytes(data)
         self.assertEqual(self.install(p).status,-2);self.assertFalse((self.root/'data').exists())
@@ -877,7 +877,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.assertNotEqual(result.status,0)
         self.assertEqual((self.root/'data/assets/stage1.jgs').read_bytes(),original)
         self.assertFalse((self.root/'data/assets/stage1.jgm').exists())
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_real_copy_hashes_while_writing_and_reads_reused_assets_once(self):
         supplied=os.environ.get('JGR_TEST_GDI')
         if not supplied:self.skipTest('Set JGR_TEST_GDI to test your supported original disc')
@@ -905,9 +905,9 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.assertEqual((self.lib.test_write_bytes(),self.lib.test_read_bytes()),(len(original),0))
         self.assertEqual((self.lib.test_write_calls(),self.lib.test_read_calls()),(chunks,0))
         self.assertEqual((self.root/'data/assets/z_copied.bin').read_bytes(),original)
-        expected='JGR_ASSETS 1\nlayout 1\ncount 2\n'+''.join(
+        expected='JGR_ASSETS 1\nlayout 2\ncount 2\n'+''.join(
             f'{len(content)} {zlib.crc32(content):08x} {name}\n' for name,content in sorted(files.items()))
-        self.assertEqual((self.root/'data/assets/assets.manifest').read_text(),expected)
+        self.assertEqual((self.root/'data/assets/assets-manifest.txt').read_text(),expected)
     def test_same_size_change_after_hash_is_accepted_only_for_current_invocation(self):
         supplied=os.environ.get('JGR_TEST_GDI')
         if not supplied:self.skipTest('Set JGR_TEST_GDI to test your supported original disc')
@@ -928,11 +928,11 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         # read in this invocation. This is not persistent trust in that file.
         self.assertEqual(result.status,0,result.detail.decode())
         self.assertEqual(changed,[True])
-        self.assertTrue((self.root/'data/assets/assets.manifest').is_file())
-        (self.root/'data/assets/assets.manifest').unlink()
+        self.assertTrue((self.root/'data/assets/assets-manifest.txt').is_file())
+        (self.root/'data/assets/assets-manifest.txt').unlink()
         result=self.install(plan)
         self.assertEqual(result.status,-3)
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_publication_rejects_deleted_or_resized_previously_hashed_assets(self):
         supplied=os.environ.get('JGR_TEST_GDI')
         if not supplied:self.skipTest('Set JGR_TEST_GDI to test your supported original disc')
@@ -959,7 +959,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                     self.assertLess(result.status,0)
                     self.assertEqual(result.file,name.encode())
                     self.assertEqual(changed,[True])
-                    self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+                    self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_raw_copy_rejects_wrong_source_digest_and_extent_before_publication(self):
         supplied=os.environ.get('JGR_TEST_GDI')
         if not supplied:self.skipTest('Set JGR_TEST_GDI to test your supported original disc')
@@ -977,7 +977,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                 self.assertEqual(self.lib.test_read_bytes(),0)
                 if expected_status==-1:self.assertEqual(self.lib.test_write_bytes(),0)
                 self.assertFalse((self.root/'data/assets/audio.bin').exists())
-                self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+                self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_bulk_copy_and_low_memory_fallback_keep_output_identity(self):
         supplied=os.environ.get('JGR_TEST_GDI')
         if not supplied:self.skipTest('Set JGR_TEST_GDI to test your supported original disc')
@@ -1025,7 +1025,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.assertEqual(result.status,-7)
         self.assertEqual(seen,[1024*1024])
         self.assertEqual(result.copy.files,0)
-        for name in ('audio.bin','audio.bin.setup-tmp','assets.manifest'):
+        for name in ('audio.bin','audio.bin.setup-tmp','assets-manifest.txt'):
             self.assertFalse((self.root/'data/assets'/name).exists())
         result=self.install(plan,disc=supplied)
         self.assertEqual(result.status,0,result.detail.decode())
@@ -1048,7 +1048,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                     f"Asset {('conversion','flush','close')[kind-1]} failed (operation 1, errno {errno.EIO})")
                 self.assertEqual(result.written,0)
                 self.assertFalse((self.root/'data/assets/audio.bin').exists())
-                self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+                self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
                 self.lib.test_fail_output(0)
     def test_real_city_chain_sidecars_and_interrupted_pair_repair(self):
         supplied=os.environ.get('JGR_TEST_GDI')
@@ -1118,7 +1118,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.assertEqual(work.city.bytes,0)
         self.assertIn(b'city sidecar',result.detail)
         self.assertFalse((self.root/'data/assets/stage6.jgs').exists())
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
 
     def test_roster_runs_after_verified_generated_dependencies(self):
         supplied=os.environ.get('JGR_TEST_GDI')
@@ -1147,7 +1147,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         callback=CALLBACK(lambda r,user:0)
         self.assertEqual(self.install(p,callback=callback).status,-7)
         self.assertEqual((self.root/'data/assets/ui.bin').read_bytes(),files['ui.bin'])
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
         self.assertEqual(self.install(p).status,0)
     def test_fresh_preflight_reports_phases_and_avoids_per_file_stats(self):
         files={f'group/asset{i:04}.bin':b'asset' for i in range(1892)}
@@ -1162,7 +1162,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
             counts=[current for value,current,total in events if value==phase]
             self.assertEqual(counts[0],0);self.assertEqual(counts[-1],1892)
         self.assertLess(self.lib.test_stat_calls(),80)
-        self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_cached_progress_reaches_final_verification_and_completion(self):
         files={'nested/voice.bin':b'voice','ui.bin':b'ui'};self.cached(files);events=[]
         def progress(pointer,user):
@@ -1172,6 +1172,30 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         self.assertEqual(set(phase for phase,_,_ in events),{0,1,2,6,7,8})
         self.assertEqual(events[-1],(8,1,1))
         self.assertIn((6,2,2),events)
+    def test_manifest_publication_failure_names_manifest_and_keeps_assets(self):
+        files={'zones6.bin':b'verified cached asset'};self.cached(files)
+        target=self.root/'data/assets/assets-manifest.txt'
+        target.mkdir();(target/'keep.txt').write_text('preserve')
+        result=self.install(self.plan(files))
+        self.assertEqual(result.status,-1)
+        self.assertEqual(result.file,b'assets-manifest.txt')
+        self.assertIn(b'Cannot replace manifest:',result.detail)
+        self.assertEqual((target/'keep.txt').read_text(),'preserve')
+        self.assertEqual((self.root/'data/assets/zones6.bin').read_bytes(),files['zones6.bin'])
+        self.assertFalse((self.root/'data/assets/.assets-manifest.tmp').exists())
+    def test_manifest_identity_failure_is_distinct_from_io_failure(self):
+        files={'zones6.bin':b'verified cached asset'};self.cached(files);plan=self.plan(files)
+        data=bytearray(plan.read_bytes());struct.pack_into('<I',data,28,0x12345678);plan.write_bytes(data)
+        result=self.install(plan)
+        self.assertEqual(result.status,-4)
+        self.assertEqual(result.file,b'.assets-manifest.tmp')
+        self.assertIn(b'Manifest checksum',result.detail)
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
+    def test_previous_asset_layout_is_rejected_before_publication(self):
+        files={'zones6.bin':b'verified cached asset'};self.cached(files);plan=self.plan(files)
+        data=bytearray(plan.read_bytes());struct.pack_into('<I',data,32,1);plan.write_bytes(data)
+        self.assertEqual(self.install(plan).status,-2)
+        self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_preflight_cancellation_preserves_status_at_each_stage(self):
         for stage in (0,1,2,3,4):
             with self.subTest(stage=stage):
@@ -1179,7 +1203,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
                 result=self.install(self.plan({'missing.bin':b'asset'}),callback=callback)
                 self.assertEqual(result.status,-7)
                 self.assertEqual(result.phase,stage)
-                self.assertFalse((self.root/'data/assets/assets.manifest').exists())
+                self.assertFalse((self.root/'data/assets/assets-manifest.txt').exists())
     def test_large_unrelated_directory_falls_back_without_deleting_unknowns(self):
         files={'ui.bin':b'ui'};self.cached(files)
         asset_dir=self.root/'data/assets'

@@ -124,7 +124,7 @@ class PackageTests(unittest.TestCase):
         Image.new('RGB', (480, 272), 'red').save(source_png)
         destination = self.root / 'image'
         report = package.install_image(build, assets, catalog, destination, source_png)
-        self.assertEqual((destination / 'data/assets/assets.manifest').read_bytes(), original_manifest)
+        self.assertEqual((destination / 'data/assets/assets-manifest.txt').read_bytes(), original_manifest)
         self.assertEqual((destination / 'data/setup/background.jbg').stat().st_size, 261144)
         self.assertFalse((destination / 'data/assets/background.jbg').exists())
         self.assertFalse(report['setup_background']['verified_game_asset'])
@@ -163,7 +163,7 @@ class StarterTests(unittest.TestCase):
         (self.build / 'module.prx').write_bytes(prx)
         (self.build / 'notice.txt').write_text('Synthetic test notice')
         catalog = {'files': [{'path': 'synthetic.bin', 'bytes': 1,
-                             'sha256': hashlib.sha256(b'x').hexdigest()}]}
+                             'sha256': hashlib.sha256(b'x').hexdigest(), 'crc32': zlib.crc32(b'x')}]}
         self.plan, self.coverage = make_plan(catalog, {'synthetic.bin': 'decompile/extracted/SYNTH.BIN'}, conversions={})
         (self.build / 'recipe').write_bytes(self.plan)
         payload, self.bundle = bundle.build(self.build / 'module.prx', self.build / 'module.prx',

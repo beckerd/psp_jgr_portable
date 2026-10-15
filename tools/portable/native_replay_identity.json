@@ -1,5 +1,5 @@
 {
-  "baseline_manifest_crc32": "0ad1a388",
+  "baseline_manifest_crc32": "771fa12c",
   "files": [
     {
       "bytes": 1434296,
@@ -410,7 +410,7 @@
       "sha256": "6ea655a242fcdb5089098dc539072918e7f38eb8cdefe365bb8fba10a9c305db"
     }
   ],
-  "generator_sha256": "dd0ca67d99acea35a8cd1ae1239747e6be74729b989428a0aaa0f1ec96405538",
+  "generator_sha256": "20a953951bd6fa256669ef5993a907e632239e7c7e75b222d714a4cff316a20c",
   "generator_sources": {
     "psp/src/asset_progress.h": "b19c2a5dfaeec916140df61cd173e6aa5a24c7b8857a8bd390aba6849847ba5c",
     "psp/src/canplay.c": "4e316340819989539e2abfa3b4379d5ec3e0825d974b0a4ea0e694ec3a0874db",
@@ -470,7 +470,7 @@
     "psp/src/player_light.h": "f9489ae173d4eee5a52d9e56fe13899eb913b216edc5a6f3594a47ecf279c7b0",
     "psp/src/player_sound.h": "20a797f0a67a7c938c922d2920be98fd7bcbce18162e8eef435ace14239cf823",
     "psp/src/police_grab.h": "22d61a31ed19cfefeb78d3637bd94ca9c542e52c21d280e9e38c634e2a4afdb5",
-    "psp/src/portable_assets.c": "f979a040042401859e10b89f2fc4b88e35e2d5c6157521991bb48139e6a8a911",
+    "psp/src/portable_assets.c": "e26b1118998e2cf391a1ee74c6cd3c5e68ad0bea3c81055aabfb74b2cb67cf29",
     "psp/src/portable_assets.h": "3c818b4bbcb0289111588b9696f1c8944bca764e5013677843b0a7f99ab88f5f",
     "psp/src/portable_bubble.c": "03357c0d2efdc0d9ce1532de085d07e943296fd11d1b86fc88f6baf45e47266f",
     "psp/src/portable_bubble.h": "ba1d1fa62410b0748e1cd77f5305058d90f390251f116f51d0a7f998b38a304e",
@@ -494,7 +494,7 @@
     "psp/src/portable_indexed.c": "9e6dff49f018278bd4d2aa72925a06bfda8524d30db43a701f928750e25e04e5",
     "psp/src/portable_indexed.h": "804e24dc02a0aa410d71636d7789e4086be80d7f6ce8df0bda12fde12f8e8c7d",
     "psp/src/portable_indexed_sort.inc": "c67cdd6dec649a16f8ff61426341cb4f75a3239cfa41c7e91a2496f63248d049",
-    "psp/src/portable_install.c": "d1e9c1f8e15ac8f3e8d33e1e198b23af40ca667f9a275e4105680187dfbf997e",
+    "psp/src/portable_install.c": "8603013a4b8a0aa0833a04ce74dc593972fb898b970825760664dfdf1c315d59",
     "psp/src/portable_install.h": "5b7532be588567bd675f826778d574ae293b6b3ef688a8ab1423eecba7729076",
     "psp/src/portable_launcher.c": "a76a7fb40485d4528a8ab9be65c81e8d53d65c7b4a31ae79109d98357f74d3f6",
     "psp/src/portable_misc.c": "7028571faa9942971f88f1d915aa75082814ca8339a73f59d9a1fd2c0fc6c391",
@@ -935,6 +935,25 @@
       "conversion_receipt_sha256": "946a4317d8ce0382c8a3502ed73602ce78d18cb3ee4f9ad007e643df08899c1d",
       "hardware_retested": false,
       "scope": "Only static city placement transforms, subdivision packing for restored spans and associated geometry/sidecar identities change. All eight final native assets match independent Python conversion byte-for-byte. All 124 audited wire/pole placements and both LODs match authored disc vertices within 0.001 units; 97 placements change. All 4940 unrelated objects and texture payloads/ordinals remain identical. Native replay algorithms, input recipes, output identities and the existing PSP replay-fidelity receipt are unchanged. This is source compatibility review, not new hardware or replay fidelity validation."
+    },
+    {
+      "change": "Use a browser-safe manifest filename and asset layout 2",
+      "previous_generator_sha256": "dd0ca67d99acea35a8cd1ae1239747e6be74729b989428a0aaa0f1ec96405538",
+      "generator_sha256": "20a953951bd6fa256669ef5993a907e632239e7c7e75b222d714a4cff316a20c",
+      "previous_baseline_manifest_crc32": "0ad1a388",
+      "baseline_manifest_crc32": "771fa12c",
+      "sources": {
+        "psp/src/portable_assets.c": {
+          "before_sha256": "f979a040042401859e10b89f2fc4b88e35e2d5c6157521991bb48139e6a8a911",
+          "after_sha256": "e26b1118998e2cf391a1ee74c6cd3c5e68ad0bea3c81055aabfb74b2cb67cf29"
+        },
+        "psp/src/portable_install.c": {
+          "before_sha256": "d1e9c1f8e15ac8f3e8d33e1e198b23af40ca667f9a275e4105680187dfbf997e",
+          "after_sha256": "8603013a4b8a0aa0833a04ce74dc593972fb898b970825760664dfdf1c315d59"
+        }
+      },
+      "hardware_retested": false,
+      "scope": "The manifest filename and layout header change; publication errors identify the manifest and failing operation. Asset conversion, replay algorithms, input recipes and asset file identities are unchanged. Source compatibility review only; not new hardware validation."
     }
   ],
   "validation": {

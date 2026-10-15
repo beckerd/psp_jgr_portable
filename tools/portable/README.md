@@ -13,7 +13,7 @@ The Git repository contains source, build tools, documentation and packaging
 inputs. Build a checkout or GitHub's automatic source download using the steps
 below. Compiled packages are distributed through GitHub Releases.
 
-A game release ZIP contains only `README.md`, `Prepare 1.0.html`, `LICENSES.txt`
+A game release ZIP contains only `README.md`, `Prepare 1.0.1.html`, `LICENSES.txt`
 and `EBOOT.PBP`. Use GitHub's automatic source downloads for the matching release tag; do not
 upload another source archive. Users still prepare the game assets from their own supported disc
 image before playing. Keep local builds and release packages under ignored
@@ -112,15 +112,15 @@ the browser converter. Then run:
 ```sh
 python3 tools/portable/browser/build.py \
   --emcc /path/to/emsdk/upstream/emscripten/emcc.py \
-  --source-url https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.zip \
+  --source-url https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.1.zip \
   --psp psp --out build/browser/preparer
 cp build/browser/preparer/prepare.html \
-  "build/release/JGR_PORTABLE/Prepare 1.0.html"
-sed 's/@VERSION@/1.0/g' tools/portable/RELEASE_README.md \
+  "build/release/JGR_PORTABLE/Prepare 1.0.1.html"
+sed 's/@VERSION@/1.0.1/g' tools/portable/RELEASE_README.md \
   > build/release/JGR_PORTABLE/README.md
 ```
 
-The game folder now contains `EBOOT.PBP`, `Prepare 1.0.html` and `README.md`.
+The game folder now contains `EBOOT.PBP`, `Prepare 1.0.1.html` and `README.md`.
 Use [RELEASE_README.md](RELEASE_README.md) as the installation README for
 every release, replacing `@VERSION@` with that release's version as shown
 above. Add the complete `LICENSES.txt`, and ZIP only those four files.

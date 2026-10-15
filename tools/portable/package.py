@@ -15,8 +15,8 @@ import zlib
 import re
 import struct
 
-LAYOUT_VERSION = 1
-MANIFEST_NAME = 'assets.manifest'
+LAYOUT_VERSION = 2
+MANIFEST_NAME = 'assets-manifest.txt'
 EXECUTABLES = {'EBOOT.PBP', 'jgr_me.prx', 'jgr_crash.prx'}
 NON_ASSETS = EXECUTABLES | {'crash_handler_license.txt'}
 

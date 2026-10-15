@@ -14,7 +14,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "72df702b29150a0b4f0baaae8a047d9547a93a30fe3d0cadffbfe215a32da62d",
+      "sha256": "5f3fef18e978c30262ca9de60cf204322b505567355f51a3469bb42dab0c2643",
       "review": "Project overview, installation steps, build requirements, and development links."
     },
     {
@@ -1074,7 +1074,7 @@
     },
     {
       "path": "psp/tests/portable_assets_psp_bridge.c",
-      "sha256": "df10471e29669006cb8135304e09f436b96fd45c2834cc718f04db3a0038c756",
+      "sha256": "e717dfeedfb0e06a7f8f7fe385b75daf46b5639252a09348db48794a53bcb7cc",
       "review": "PSP-path and system-call bridge for portable asset loader tests."
     },
     {
@@ -1214,7 +1214,7 @@
     },
     {
       "path": "psp/tests/test_portable_assets.py",
-      "sha256": "bd4e43cc95a6934ff47f063afa15a4926950a621972a09cddd515847f5bda797",
+      "sha256": "d05d857ba7e9f8510f995f1a773ecd31cdb6426c096766d28025f704e610a6ef",
       "review": "Tests portable asset validation, startup, path routing, external saves, metadata preservation, and firmware-service failures or missing hash outputs."
     },
     {
@@ -1294,7 +1294,7 @@
     },
     {
       "path": "tools/portable/README.md",
-      "sha256": "92eca9976f250cc6797f44dad273f12f1f947ec6ff370620014a94fc857a3c7a",
+      "sha256": "f9f2c99803fd80e2df38df1b3edc5b9466ab6710defc58d125bc43db7e916ded",
       "review": "Asset preparation, source export, build, packaging, and validation instructions."
     },
     {
@@ -1319,7 +1319,7 @@
     },
     {
       "path": "tools/portable/browser/README.md",
-      "sha256": "e86a56cb12a953716603695550e6c06e0ab926b293846c7bbbeca5c59b92d9d4",
+      "sha256": "87802ceb279181c8eff0e4de0d2648fd935327688405f0f86c559f53944d8e20",
       "review": "Offline browser preparation, supported browsers, build requirements, matching-source packaging, and validation instructions."
     },
     {
@@ -1339,12 +1339,12 @@
     },
     {
       "path": "tools/portable/browser/filesystem.js",
-      "sha256": "f2406f4ba3d89260b1e3a8a1b794c99f21327ddf4ae5e1208d3a94c8dc8148a3",
+      "sha256": "780231135648f5618cdb50f4678527e9f5a09816c47c631e13cd3d42c10f3e47",
       "review": "Browser filesystem adapter for the selected release directory, with scoped reads, writes, and handle management."
     },
     {
       "path": "tools/portable/browser/io.c",
-      "sha256": "eb22188524bfa2fd2512f89b4ae4061941fafea17530a21ab75e7096fb8b1ec8",
+      "sha256": "0eaa3d9e271024f3b5afd1ae07400b36aa222c5b7ab150f547e36c4bad745f98",
       "review": "C stdio and POSIX descriptor adapters for asynchronous browser filesystem operations."
     },
     {
@@ -1364,7 +1364,7 @@
     },
     {
       "path": "tools/portable/browser/page.js",
-      "sha256": "5a4049d17df806fd343f9052dd495a07c1b5aa59af75a65e58dfc29b25fef6b3",
+      "sha256": "d020978e151cd79762cc44828b313e7a592aa17d84904b0964907cd5781f6d64",
       "review": "Browser eligibility, folder selection, source-file validation, progress, cancellation, and result UI."
     },
     {
@@ -1374,7 +1374,7 @@
     },
     {
       "path": "tools/portable/browser/prepare.html",
-      "sha256": "8acb2e3266f9c5af31c3e9edcea87bcba0d72cd6b966c4e014b2fd050f2bf522",
+      "sha256": "1fbe59f84c9d901cebcc6ae2eb29384b383fa665c50edb37aaeb464ee5181df0",
       "review": "Offline preparer page structure, controls, decorative artwork, and static license disclosure."
     },
     {
@@ -1399,7 +1399,7 @@
     },
     {
       "path": "tools/portable/browser/test_filesystem.mjs",
-      "sha256": "0d7b8d08f2fb8a911d972c8447c1e8cf9c2d07205c297b78b831354f87f9f531",
+      "sha256": "513d87762fb9bb663a829bef552fb9b128be3abc75d38a9258e18da2d4157ba3",
       "review": "Browser tests for filesystem operations, errors, handle lifetimes, and cancellation."
     },
     {
@@ -1524,7 +1524,7 @@
     },
     {
       "path": "tools/portable/install_plan.py",
-      "sha256": "7885f991b191e97e18cbe91c010e02429c83ebb7a4a091fda66576b9a6356f56",
+      "sha256": "dd43e1f709fa26c4f4114a2114e50b28d333c4c1ffdb07243bc3fb3fc4b3086d",
       "review": "Generates on-device conversion instructions, output identities, and coverage reports."
     },
     {
@@ -1584,7 +1584,7 @@
     },
     {
       "path": "tools/portable/native_replay_identity.json",
-      "sha256": "8cebd595ef4eefe8408f47f9355cf2b1f476e4e9eb78bf1f2e28356b38adf735",
+      "sha256": "71b56fd2dd4f375bcd2ba5ae93835fd4cf0f9d5b137ca19677904e446f7c28a4",
       "review": "Native replay output identities, generator source fingerprints, and compatibility-review records."
     },
     {
@@ -1639,7 +1639,7 @@
     },
     {
       "path": "tools/portable/package.py",
-      "sha256": "b22e86b578f00a1f93ba0e8374613c521e1a87dda736048c7e60c95ac2e24de8",
+      "sha256": "71c1d351316d1dde1e5703bcaa703e3ef8238931312142c8974d860bc8c94c61",
       "review": "Builds validated asset packs, starter EBOOT packages, and isolated PSP test installations."
     },
     {
@@ -1654,7 +1654,7 @@
     },
     {
       "path": "tools/portable/public_review.json",
-      "sha256": "33221ed71db358a886cd84d4617dd6dd734681df3c2fa58f59a1d9e31d802be0",
+      "sha256": "8095c68b51bf623da72a907487c939d57b43cb179f3317336ba365cbcce8fe52",
       "review": "Hash-bound source inventory and dispositions of content-review findings."
     },
     {
@@ -1854,7 +1854,7 @@
     },
     {
       "path": "tools/portable/run_install_probe.py",
-      "sha256": "28f020ce7bd699ffce9b002e57027f7c5f300beb553b3e048a5b28275054f191",
+      "sha256": "6c5f03fecc0f667ed3bc85d49c5aae18d22bc1b74994379da88a634092468ac8",
       "review": "Runs selected native conversion jobs and checks a subsequent boot without the disc."
     },
     {
@@ -1889,7 +1889,7 @@
     },
     {
       "path": "tools/portable/setup_assets.py",
-      "sha256": "b312664741f6a7b75b4a251dc06d791d0c1cd53cf344394b1a4ae93f893b9868",
+      "sha256": "6eb1f236144045dc24e41698b24dda380595f6cd0252e00bb25eec3f2b3a6ef2",
       "review": "Runs desktop conversion from a supported GDI in an isolated staging tree."
     },
     {
@@ -1899,7 +1899,7 @@
     },
     {
       "path": "tools/portable/smoke.py",
-      "sha256": "855d34f50ef884f61b27d52764d5312bd37ffc9e2f156e35b43a9d79a7d50aba",
+      "sha256": "cf29bd5b0f62b72edb950e4ae0f1af87a5657dcd317f9d1fe5bdbd6144e557eb",
       "review": "Isolated PPSSPP loading and rendering checks, including setup recovery; coverage is limited to the exercised startup paths."
     },
     {
@@ -1929,7 +1929,7 @@
     },
     {
       "path": "tools/portable/source_data_manifest.json",
-      "sha256": "0d5b2b47d2eef91364ca3f29c5cfedc8bc701d5c5edd20e8fc8941c0d6eee4a4",
+      "sha256": "fb7fba2059ca5a06b71d6c6052f3a1157bfe13abf79035ac0fae3f611c1491f4",
       "review": "Inventory of generated runtime data, external symbols, source dependencies, and exact output identities."
     },
     {
@@ -2049,7 +2049,7 @@
     },
     {
       "path": "tools/portable/test_browser_entry.py",
-      "sha256": "0271f9102b3c1c3d12fc6cad26f45c6452cfe50e365261c66ff7f62068b15b08",
+      "sha256": "4226e4c2d079dc49a2f0a21446d5234d8d6c2d04481b5749871f1a5d924b5d63",
       "review": "Tests browser conversion transactions, completion-marker ordering, optional warning failures and repair, cancellation, and save preservation."
     },
     {
@@ -2174,7 +2174,7 @@
     },
     {
       "path": "tools/portable/test_native_install.py",
-      "sha256": "98a61993b7445560718f25760f2905089ecb3e331016ded688a281f78fe36139",
+      "sha256": "4c635611c318e1e94ad2994d9bd88fe9865b1ecd98bf907d0c56f394e8214677",
       "review": "Tests native installer transactions and cache-only startup, with optional source-disc conversion comparisons."
     },
     {
@@ -2199,7 +2199,7 @@
     },
     {
       "path": "tools/portable/test_package.py",
-      "sha256": "da1114023ae4e421edcd360b4dfb57f81d773f521a4bcf143db725099065a63c",
+      "sha256": "d620393eb8fffb1613a6f9f6b2082458e7fbe80434f08ff4a33ba81a8eba24f1",
       "review": "Tests manifest identity and starter EBOOT packaging boundaries with synthetic modules and recipes."
     },
     {
@@ -2279,7 +2279,7 @@
     },
     {
       "path": "tools/portable/test_smoke_background.py",
-      "sha256": "c61f13d4044722e34a39c076f27aadf0e421718b04051368c8b7b4df3e53f653",
+      "sha256": "ac159afccd69c4a457e1c9342565d99ac300440cb7d59ff4fe830be5b11bc162",
       "review": "Tests optional independent background copies and rejection of incomplete setup recovery."
     },
     {

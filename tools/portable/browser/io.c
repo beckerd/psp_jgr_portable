@@ -19,6 +19,14 @@
 
 #define IO_PATH_BYTES 1024u
 #define IO_BUFFER_BYTES (128u*1024u)
+EM_JS(void,io_error_message,(char *out,unsigned bytes),{
+    stringToUTF8(Module.browserIo.lastError || "",out,bytes);
+});
+const char *jgr_browser_last_io_error(void)
+{
+    static char message[384];
+    io_error_message(message,sizeof message);return message;
+}
 /* Unlike libc errno values, the JS boundary uses conventional POSIX numbers
  * on every host. Emscripten's musl/WASI errno numbering differs. */
 static int io_errno(int code)

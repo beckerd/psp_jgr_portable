@@ -70,7 +70,7 @@ def run(args):
         assert hashlib.sha256(generated.read_bytes()).hexdigest()==row['sha256'],row['path']
     assert first['indexed']==0 and (game/'texture-output.bin').read_bytes()==expected
     for link in links:link.unlink()  # Local symlinks only; source media untouched.
-    (game/'data/assets/assets.manifest').unlink()
+    (game/'data/assets/assets-manifest.txt').unlink()
     second=boot(args.emulator.resolve(),root,game,'without-disc',args.timeout)
     assert second['status']==0 and second['written']==0 and second['reused']==len(catalog['files']),second
     summary={'environment':'PPSSPP PSP-1000, not physical PSP timing','subset_only':True,
