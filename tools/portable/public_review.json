@@ -859,8 +859,8 @@
     },
     {
       "path": "decompile/tools/stage_render_assets.py",
-      "bytes": 25841,
-      "sha256": "2e09fb6ee68bb6d9480ea2b1e211d2ec2b9be12610401ebeb89a715e817b7c8c"
+      "bytes": 26183,
+      "sha256": "87b4bab27e322b44adf03520a388b0da93d4a4de78239177a89d330b1d5fe86e"
     },
     {
       "path": "decompile/tools/stage_texture_residency.py",
@@ -2395,7 +2395,7 @@
     {
       "path": "psp/src/portable_asset_identity.h",
       "bytes": 257,
-      "sha256": "7b689f5705e5d725e1345e76c5786afe59e620fedeb75da027bf351966649985"
+      "sha256": "bd4a5c3f366a913efa482d49b66a5dca294c90a0e101a68ca881f294754b6019"
     },
     {
       "path": "psp/src/portable_assets.c",
@@ -2964,8 +2964,8 @@
     },
     {
       "path": "psp/src/portable_stage.c",
-      "bytes": 49622,
-      "sha256": "25e0012727bd9bdaf0eb849134a45f87bf07538d4087dc238a520b7a88f2a17e"
+      "bytes": 50152,
+      "sha256": "e8ff98f9f14b37d552ef89bfd6e98f14049ef54773858be1f0ab9e73d4f68b4c"
     },
     {
       "path": "psp/src/portable_stage.h",
@@ -5635,7 +5635,7 @@
     {
       "path": "psp/src/stage_texture_usage.inc",
       "bytes": 7554,
-      "sha256": "d87bd1b7a45ae16ee3a782b5a44dcc084b7fa3e06d7c03debe2e368509770443"
+      "sha256": "9880a161e18f0ef728cef74b26148ff2e289e07dcaeb782ea7e8f118267b584b"
     },
     {
       "path": "psp/src/stage_visibility.inc",
@@ -6094,8 +6094,8 @@
     },
     {
       "path": "tools/portable/asset_catalog.json",
-      "bytes": 348634,
-      "sha256": "2fa8c8eb42208cf3870517053b68eec6ad414b0d6fe5f8ae990ed95274d170af"
+      "bytes": 348635,
+      "sha256": "811bac97a61bf63f22a35a598350f2b763c3fec54be2914024cd6858222d30be"
     },
     {
       "path": "tools/portable/audit_build.py",
@@ -6369,8 +6369,8 @@
     },
     {
       "path": "tools/portable/native_replay_identity.json",
-      "bytes": 58959,
-      "sha256": "112b4f124031b3f47fdc3458aa53fe2c6cc80e29b2e90884ca130dd6f7bb911b"
+      "bytes": 60628,
+      "sha256": "8cebd595ef4eefe8408f47f9355cf2b1f476e4e9eb78bf1f2e28356b38adf735"
     },
     {
       "path": "tools/portable/notices/Flycast-GPL-2.0.txt",
@@ -6709,8 +6709,8 @@
     },
     {
       "path": "tools/portable/source_data_manifest.json",
-      "bytes": 503032,
-      "sha256": "b401e8f981f28e853dc5051aab2f621f78a0dbf61b19b27ea8bc29931ec19918"
+      "bytes": 503434,
+      "sha256": "0d5b2b47d2eef91364ca3f29c5cfedc8bc701d5c5edd20e8fc8941c0d6eee4a4"
     },
     {
       "path": "tools/portable/source_data_mixed.json",
@@ -7069,8 +7069,8 @@
     },
     {
       "path": "tools/portable/test_stage_convert.py",
-      "bytes": 7084,
-      "sha256": "d20896c15829a3b4383d9a2404dcf6a7622a1764ad47a508b939dd7778353fd7"
+      "bytes": 10854,
+      "sha256": "189b1cc6be7cfa3e9fe031a044e799c268646cf02df12f676f1aeb87044b2d9e"
     },
     {
       "path": "tools/portable/test_stage_derived.py",

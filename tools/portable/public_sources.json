@@ -859,7 +859,7 @@
     },
     {
       "path": "decompile/tools/stage_render_assets.py",
-      "sha256": "2e09fb6ee68bb6d9480ea2b1e211d2ec2b9be12610401ebeb89a715e817b7c8c",
+      "sha256": "87b4bab27e322b44adf03520a388b0da93d4a4de78239177a89d330b1d5fe86e",
       "review": "Extracts sector ownership and distant geometry for stage rendering."
     },
     {
@@ -1309,7 +1309,7 @@
     },
     {
       "path": "tools/portable/asset_catalog.json",
-      "sha256": "2fa8c8eb42208cf3870517053b68eec6ad414b0d6fe5f8ae990ed95274d170af",
+      "sha256": "811bac97a61bf63f22a35a598350f2b763c3fec54be2914024cd6858222d30be",
       "review": "Expected asset filenames, sizes, SHA-256 and CRC32 identities, and geometry precision policy."
     },
     {
@@ -1584,7 +1584,7 @@
     },
     {
       "path": "tools/portable/native_replay_identity.json",
-      "sha256": "112b4f124031b3f47fdc3458aa53fe2c6cc80e29b2e90884ca130dd6f7bb911b",
+      "sha256": "8cebd595ef4eefe8408f47f9355cf2b1f476e4e9eb78bf1f2e28356b38adf735",
       "review": "Native replay output identities, generator source fingerprints, and compatibility-review records."
     },
     {
@@ -1929,7 +1929,7 @@
     },
     {
       "path": "tools/portable/source_data_manifest.json",
-      "sha256": "b401e8f981f28e853dc5051aab2f621f78a0dbf61b19b27ea8bc29931ec19918",
+      "sha256": "0d5b2b47d2eef91364ca3f29c5cfedc8bc701d5c5edd20e8fc8941c0d6eee4a4",
       "review": "Inventory of generated runtime data, external symbols, source dependencies, and exact output identities."
     },
     {
@@ -2289,7 +2289,7 @@
     },
     {
       "path": "tools/portable/test_stage_convert.py",
-      "sha256": "d20896c15829a3b4383d9a2404dcf6a7622a1764ad47a508b939dd7778353fd7",
+      "sha256": "189b1cc6be7cfa3e9fe031a044e799c268646cf02df12f676f1aeb87044b2d9e",
       "review": "Tests native stage geometry, bounds, and palette serialization with optional source-disc and canonical intermediate-hash comparisons."
     },
     {

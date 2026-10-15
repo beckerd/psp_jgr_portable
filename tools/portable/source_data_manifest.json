@@ -4386,9 +4386,9 @@
     },
     {
       "path": "psp/src/portable_stage.c",
-      "sha256": "25e0012727bd9bdaf0eb849134a45f87bf07538d4087dc238a520b7a88f2a17e",
+      "sha256": "e8ff98f9f14b37d552ef89bfd6e98f14049ef54773858be1f0ab9e73d4f68b4c",
       "kind": "portable_implementation",
-      "review": "Geometry/collision/visibility conversion using source addresses, format extents, reconstructed dispatch and port occluder/LOD calibration. Reads positions, triangles, materials and textures from disc or verified generated files."
+      "review": "Geometry/collision/visibility conversion using source addresses, format extents, reconstructed dispatch and port occluder/LOD calibration. Reads positions, triangles, materials and textures from disc or verified generated files. Audited Kogane and Benten wire/pole families now apply source-record scale and Z/Y/X rotation, including distant draws. Geometry remains generated from the user disc; no coordinates or meshes are embedded."
     },
     {
       "path": "psp/src/portable_stage.h",
@@ -8178,9 +8178,9 @@
     },
     {
       "path": "psp/src/stage_texture_usage.inc",
-      "sha256": "d87bd1b7a45ae16ee3a782b5a44dcc084b7fa3e06d7c03debe2e368509770443",
+      "sha256": "9880a161e18f0ef728cef74b26148ff2e289e07dcaeb782ea7e8f118267b584b",
       "kind": "port_numeric_calibration",
-      "review": "Port performance calibration: texture lookup keys/counts and residency priorities fitted from projected-area/draw-count samples by stage_texture_residency.py. The five canonical-subdivision geometry fingerprints have independent equivalence evidence for texture ordinals, descriptors, palettes, pixels and weights; reproducing the fit requires private telemetry."
+      "review": "Port performance calibration: texture lookup keys/counts and residency priorities fitted from projected-area/draw-count samples by stage_texture_residency.py. The five canonical-subdivision geometry fingerprints have independent equivalence evidence for texture ordinals, descriptors, palettes, pixels and weights; reproducing the fit requires private telemetry. Geometry lookup keys updated for corrected wire/pole transforms after independent native/desktop parity and unchanged texture ordinal/payload verification; measured texture weights are unchanged."
     },
     {
       "path": "psp/src/stage_visibility.inc",
