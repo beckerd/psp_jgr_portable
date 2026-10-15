@@ -73,7 +73,7 @@ def clone(source, destination, case, seal):
             target = assets / path.relative_to(source / 'data/assets')
             target.parent.mkdir(parents=True, exist_ok=True)
             target.symlink_to(path.resolve())
-        first = (assets / 'assets.manifest').read_text().splitlines()[3].split(' ', 2)[2]
+        first = (assets / 'assets-manifest.txt').read_text().splitlines()[3].split(' ', 2)[2]
         changed = assets / first
         original = changed.read_bytes()
         changed.unlink()

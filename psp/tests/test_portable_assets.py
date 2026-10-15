@@ -15,7 +15,7 @@ SILENT_COUNTERS = ('asset_stats', 'asset_opens', 'manifest_opens', 'background_o
 
 
 def manifest(data=DATA):
-    rows = ['JGR_ASSETS 1', 'layout 1', f'count {len(data)}']
+    rows = ['JGR_ASSETS 1', 'layout 2', f'count {len(data)}']
     rows += [f'{len(value)} {zlib.crc32(value):08x} {name}' for name, value in sorted(data.items())]
     return ('\n'.join(rows) + '\n').encode('ascii')
 
@@ -32,7 +32,7 @@ class PortableAssets(unittest.TestCase):
         cls.build = tempfile.TemporaryDirectory(prefix='jgr-portable-build-')
         build = Path(cls.build.name)
         identity = build / 'identity.h'
-        identity.write_text(f'#define JGR_ASSET_LAYOUT_VERSION 1u\n'
+        identity.write_text(f'#define JGR_ASSET_LAYOUT_VERSION 2u\n'
                             f'#define JGR_ASSET_MANIFEST_CRC32 0x{zlib.crc32(manifest()):08x}u\n'
                             f'#define JGR_ASSET_FILE_COUNT {len(DATA)}u\n'
                             '#include <stddef.h>\n'
@@ -134,7 +134,7 @@ class PortableAssets(unittest.TestCase):
             path = Path('data/assets') / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(data)
-        Path('data/assets/assets.manifest').write_bytes(manifest())
+        Path('data/assets/assets-manifest.txt').write_bytes(manifest())
 
     def tearDown(self):
         self.assertEqual(self.background_live.value,0,'Setup background remains allocated after returning')
@@ -191,7 +191,7 @@ class PortableAssets(unittest.TestCase):
 
     def test_direct_bootstrap_trusts_marker_without_reading_manifest(self):
         self.assertEqual(self.init().status,0)
-        Path('data/assets/assets.manifest').unlink()
+        Path('data/assets/assets-manifest.txt').unlink()
         self.reset_silent_counters()
         self.assertEqual(self.lib.portable_assets_bootstrap(),0)
         self.assert_silent_counters()
@@ -222,7 +222,7 @@ class PortableAssets(unittest.TestCase):
 
     def test_valid_seal_does_not_override_missing_or_changed_manifest(self):
         self.assertEqual(self.init().status,0)
-        index=Path('data/assets/assets.manifest')
+        index=Path('data/assets/assets-manifest.txt')
         index.write_bytes(manifest().replace(b'font.bin',b'evil.bin'))
         self.assertEqual(self.init().status,-4)
         index.unlink()
@@ -250,7 +250,7 @@ class PortableAssets(unittest.TestCase):
         self.assertEqual(self.lib.portable_test_read(b'font.bin'),-1)
 
     def test_completed_install_still_rejects_bad_manifest_missing_and_resized_files(self):
-        index = Path('data/assets/assets.manifest')
+        index = Path('data/assets/assets-manifest.txt')
         asset = Path('data/assets/music1.adx')
         for change in ('manifest', 'missing', 'size'):
             with self.subTest(change=change):
@@ -350,7 +350,7 @@ void portable_test_error_screen(void)
                  str(bridge),'-o',str(library)]
         subprocess.run(command,cwd=ROOT,check=True)
         device=C.CDLL(str(library))
-        Path('data/assets/assets.manifest').unlink()
+        Path('data/assets/assets-manifest.txt').unlink()
         self.assertLess(device.portable_assets_bootstrap(),0)
         log=Path('data/log/setup.log').read_text()
         self.assertIn('SETUP_MODELS',log)
@@ -456,7 +456,7 @@ int jgr_install_run(const char *root,const char *plan,const char *disc,int parti
                     self.assertIn('APPLICATION status=-1 detail=bundle',Path('data/log/setup.log').read_text())
                     for name in ('asset_stats','asset_opens','manifest_opens','directory_writes'):
                         self.assertEqual(C.c_uint.in_dll(lib,'portable_test_'+name).value,0,name)
-        Path('data/assets/assets.manifest').unlink()
+        Path('data/assets/assets-manifest.txt').unlink()
         # The direct path deliberately trusts a completed marker. Corrupt it
         # to exercise first-install/repair UI and worker failure paths below.
         incomplete=completed.replace(b'JGR_CHECKED 1',b'JGR_CHECKED 2')
@@ -491,7 +491,7 @@ int jgr_install_run(const char *root,const char *plan,const char *disc,int parti
         self.assertIn('SETUP_CRASH status=-1 build=fixture',log)
 
     def test_missing_manifest_blocks_asset_access_before_any_original_loader(self):
-        Path('data/assets/assets.manifest').unlink()
+        Path('data/assets/assets-manifest.txt').unlink()
         Path('font.bin').write_bytes(b'legacy')
         result = self.init()
         self.assertEqual(result.status, -1)
@@ -501,13 +501,13 @@ int jgr_install_run(const char *root,const char *plan,const char *disc,int parti
     def test_wrong_format_layout_identity_and_missing_records_are_rejected(self):
         original = manifest()
         for data, expected in [(original.replace(b'JGR_ASSETS 1', b'JGR_ASSETS 2'), -3),
-                               (original.replace(b'layout 1', b'layout 2'), -3),
+                               (original.replace(b'layout 2', b'layout 1'), -3),
                                (original.replace(b'count 3', b'count 2'), -4),
                                (original[:-1], -4),
                                (original + b'extra\n', -4),
                                (original.replace(b'font.bin', b'evil.bin'), -4)]:
             with self.subTest(data=data):
-                Path('data/assets/assets.manifest').write_bytes(data)
+                Path('data/assets/assets-manifest.txt').write_bytes(data)
                 self.assertEqual(self.init().status, expected)
                 self.assertEqual(self.lib.portable_test_read(b'font.bin'), -1)
 
@@ -530,7 +530,7 @@ int jgr_install_run(const char *root,const char *plan,const char *disc,int parti
         good = seal.read_bytes()
         for invalid in [b'', good[:-1], good + b'extra',good[:-9]+b'zzzzzzzz\n',
                         good[:-9]+b'0000000\n',good[:-9]+b'000000000\n',
-                        good.replace(b' 1 3 ',b' 2 3 '),good.replace(b' 1 3 ',b' 1 4 '),
+                        good.replace(b' 2 3 ',b' 1 3 '),good.replace(b' 2 3 ',b' 2 4 '),
                         good.replace(b'JGR_CHECKED 1', b'JGR_CHECKED 2'),
                         good.replace(f'{zlib.crc32(manifest()):08x}'.encode(), b'00000000')]:
             with self.subTest(invalid=invalid):
@@ -615,7 +615,7 @@ int jgr_install_run(const char *root,const char *plan,const char *disc,int parti
             path = app / 'data/assets' / name
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_bytes(data)
-        (app / 'data/assets/assets.manifest').write_bytes(manifest())
+        (app / 'data/assets/assets-manifest.txt').write_bytes(manifest())
         self.app_root.value=str(app).encode()
         return app
 
@@ -982,7 +982,7 @@ int jgr_install_run(const char *root,const char *plan,const char *disc,int parti
                                          [0xff00d6ff] * 360)
 
     def test_setup_error_screens_stay_inside_framebuffer_and_block_boot(self):
-        for path in ('data/assets/music1.adx', 'data/assets/assets.manifest'):
+        for path in ('data/assets/music1.adx', 'data/assets/assets-manifest.txt'):
             with self.subTest(path=path):
                 self.screen[:] = [0x12345678] * len(self.screen)
                 Path(path).unlink()
@@ -1059,7 +1059,7 @@ int jgr_install_run(const char *root,const char *plan,const char *disc,int parti
 
     def test_setup_failure_and_generated_data_error_draw_and_release_optional_background(self):
         self.write_background(self.background())
-        Path('data/assets/assets.manifest').unlink()
+        Path('data/assets/assets-manifest.txt').unlink()
         self.assertEqual(self.lib.portable_assets_bootstrap(),-1)
         self.assert_background_pixels(0xff000099)
         self.assertEqual(self.background_live.value,0)

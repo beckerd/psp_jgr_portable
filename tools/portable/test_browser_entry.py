@@ -8,12 +8,12 @@ import tempfile
 import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
-# Project-generated native-v1 recipe header from the accepted release. These
+# Synthetic native-v1 recipe header with the current asset layout. These
 # are format/count/checksum metadata, not original disc bytes or game assets.
 # Test the explicit release identity override: the development tree can carry
 # a different profile's identity header and must not silently select it.
-NATIVE_HEADER = bytes.fromhex('4a4752494e53310004000000b80100006407000064070000982c2523f423947e0100000074101c00')
-NATIVE_IDENTITY = '''#define JGR_ASSET_LAYOUT_VERSION 1u
+NATIVE_HEADER = bytes.fromhex('4a4752494e53310004000000b80100006407000064070000982c2523f423947e0200000074101c00')
+NATIVE_IDENTITY = '''#define JGR_ASSET_LAYOUT_VERSION 2u
 #define JGR_ASSET_MANIFEST_CRC32 0x7e9423f4u
 #define JGR_ASSET_FILE_COUNT 1892u
 '''

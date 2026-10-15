@@ -227,7 +227,7 @@
     }
     const current = Number(message.current);
     const total = Number(message.total);
-    const determinate = Number.isFinite(current) && Number.isFinite(total) && current >= 0 && total > 0;
+    const determinate = phase !== 'publish' && Number.isFinite(current) && Number.isFinite(total) && current >= 0 && total > 0;
     ui['progress-track'].classList.toggle('indeterminate', !determinate);
     if (determinate) {
       const percentage = Math.min(100, Math.max(0, current / total * 100));
@@ -241,7 +241,7 @@
     } else {
       ui['progress-value'].textContent = '…';
       ui['progress-bar'].removeAttribute('aria-valuenow');
-      ui['progress-count'].textContent = 'Working…';
+      ui['progress-count'].textContent = phase === 'publish' ? 'Finalizing' : 'Working…';
     }
     // Raw filenames and converter details intentionally stay out of progress.
   }

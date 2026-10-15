@@ -20,6 +20,7 @@ from disc import Disc, DiscError, extract_afs, safe_name, sha256
 from pipeline import CAPTURE_FAMILIES, graph, run, seed_sources
 from semantic import cans_digest
 from observations import jobs as observation_jobs, prepare as prepare_observations
+from package import LAYOUT_VERSION, MANIFEST_NAME
 
 ROOT=Path(__file__).resolve().parents[2]
 DEFAULT_EXPECTED=Path(__file__).with_name('asset_catalog.json')
@@ -66,9 +67,9 @@ def publish(source,out,rows,fingerprint):
         for r in rows:
             dst=temporary/r['path'];dst.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(source/r['path'],dst)
             if dst.stat().st_size!=r['bytes'] or sha256(dst)!=r['sha256']:raise ValueError('Copied asset verification failed')
-        manifest='JGR_ASSETS 1\nlayout 1\ncount '+str(len(rows))+'\n'
+        manifest=f'JGR_ASSETS 1\nlayout {LAYOUT_VERSION}\ncount '+str(len(rows))+'\n'
         manifest+=''.join(f'{r["bytes"]} {r["crc32"]} {r["path"]}\n' for r in rows)
-        (temporary/'assets.manifest').write_text(manifest,encoding='ascii')
+        (temporary/MANIFEST_NAME).write_text(manifest,encoding='ascii')
         (temporary/'source.json').write_text(json.dumps(fingerprint,indent=2)+'\n')
         (temporary/'catalog.json').write_text(json.dumps(dict(schema=1,source='user-disc',complete=True,files=rows),indent=2)+'\n')
         temporary.rename(out)

@@ -11,7 +11,7 @@ import json
 from pathlib import Path
 import struct
 import zlib
-from package import safe_name,asset_manifest
+from package import safe_name,asset_manifest,LAYOUT_VERSION
 
 MAGIC=b'JGRINS1\0'
 HEADER=struct.Struct('<8s8I')
@@ -117,7 +117,7 @@ def make_plan(catalog,raw,conversions=None,manifest_crc=0,replay_profile='origin
     body=bytearray();appendix=bytearray();seen=set();implemented=[];missing=[]
     for row in rows:
         name=safe_name(row['path'])
-        if name in seen or name.startswith(('data/','jgr_','shot_')) or name in ('assets.manifest','level.txt'):
+        if name in seen or name.startswith(('data/','jgr_','shot_')) or name in ('assets-manifest.txt','level.txt'):
             raise ValueError('Duplicate or reserved asset name: '+name)
         seen.add(name)
         size=row['bytes'];digest=row['sha256']
@@ -153,7 +153,7 @@ def make_plan(catalog,raw,conversions=None,manifest_crc=0,replay_profile='origin
     if len(appendix)>4*1024*1024-HEADER.size-len(body):
         raise ValueError('Conversion plan exceeds bundled recipe limit')
     header=HEADER.pack(MAGIC,4 if replay_profile=='native-v1' else 3,RECORD.size,len(rows),len(implemented),
-                       zlib.crc32(body+appendix),manifest_crc,1,len(appendix))
+                       zlib.crc32(body+appendix),manifest_crc,LAYOUT_VERSION,len(appendix))
     plan=header+body+appendix
     report=dict(schema=1,complete=not missing,files=len(rows),available=len(implemented),
                 missing=missing,implemented=implemented,sha256=hashlib.sha256(plan).hexdigest(),

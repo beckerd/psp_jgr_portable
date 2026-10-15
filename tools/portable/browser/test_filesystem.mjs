@@ -235,6 +235,27 @@ async function browserTests() {
     equal(await read(io, 'data/assets/final.bin'), 'new');
     await rejects(() => io.stat('/game/data/assets/tmp.bin'), 2);
   });
+  await run('manifest publication works with the Windows restricted extension rule', async () => {
+    // OPFS does not enforce external Windows filename rules. Model the
+    // observed restriction here; real Windows folder testing remains separate.
+    function restricted(directory) {
+      const base = wrapped(directory, false);
+      return {...base,
+        getDirectoryHandle: async (name, options) => restricted(await directory.getDirectoryHandle(name, options)),
+        getFileHandle: async (name, options) => {
+          if (name.endsWith('.manifest')) throw new TypeError('Name is not allowed.');
+          return base.getFileHandle(name, options);
+        }};
+    }
+    const {io} = await fixture(restricted);
+    await rejects(() => io.open('/game/data/assets/assets.manifest', 'wb'), 5);
+    const error = io.translate(new TypeError('Name is not allowed.'));
+    equal(error.errno, 5); equal(io.lastError, 'TypeError: Name is not allowed.');
+    await write(io, 'data/assets/.assets-manifest.tmp', 'verified manifest');
+    await io.rename('/game/data/assets/.assets-manifest.tmp', '/game/data/assets/assets-manifest.txt');
+    equal(await read(io, 'data/assets/assets-manifest.txt'), 'verified manifest');
+    await rejects(() => io.stat('/game/data/assets/.assets-manifest.tmp'), 2);
+  });
   await run('publish failure keeps source and never produces completion marker', async () => {
     const {io} = await fixture(directory => wrapped(directory, true));
     await write(io, 'data/assets/tmp.bin', 'keep-source');

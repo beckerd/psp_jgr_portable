@@ -21,6 +21,7 @@ globalThis.JgrBrowserIO = class JgrBrowserIO {
   }
   error(errno, message) { return Object.assign(new Error(message), {errno}); }
   translate(error) {
+    this.lastError = `${error.name || 'Error'}: ${error.message || 'Could not access the selected folder.'}`;
     if (error.errno) return error;
     const code = {NotFoundError: 2, NotAllowedError: 13, SecurityError: 13,
       TypeMismatchError: 20, InvalidModificationError: 39, QuotaExceededError: 28,

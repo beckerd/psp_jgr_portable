@@ -359,7 +359,7 @@ static int validate(Installer *s)
 {
     unsigned char header[PLAN_HEADER],raw[PLAN_RECORD];Recipe r;char previous[192]={0};unsigned available=0;
     if(fread(header,1,sizeof header,s->plan)!=sizeof header || memcmp(header,"JGRINS1\0",8) ||
-       (word(header+8)!=3 && word(header+8)!=4) || word(header+12)!=PLAN_RECORD || word(header+32)!=1)return -1;
+       (word(header+8)!=3 && word(header+8)!=4) || word(header+12)!=PLAN_RECORD || word(header+32)!=JGR_ASSET_LAYOUT_VERSION)return -1;
     unsigned count=word(header+16);if(!count || count>PLAN_MAX_FILES)return -1;
     s->result->total=count;s->manifest_crc=word(header+28);
     s->native_replay=word(header+8)==4;unsigned replay_count=0;
@@ -377,7 +377,7 @@ static int validate(Installer *s)
         for(unsigned j=4;j<sizeof r.hash;j++)if(r.hash[j])return -1;
         crc=crc_add(crc,raw,sizeof raw);
         if(r.bytes>0x7fffffffu || !safe(r.name,0) || !safe(r.source,r.op==0) || strcmp(previous,r.name)>=0 ||
-           !strcmp(r.name,"assets.manifest") || strstr(r.name,".setup-tmp") || !strcmp(r.name,".assets-manifest.tmp") || !strncmp(r.name,"data/",5) || !strncmp(r.name,"jgr_",4) ||
+           !strcmp(r.name,"assets-manifest.txt") || strstr(r.name,".setup-tmp") || !strcmp(r.name,".assets-manifest.tmp") || !strncmp(r.name,"data/",5) || !strncmp(r.name,"jgr_",4) ||
            !strncmp(r.name,"shot",4) || !strcmp(r.name,"level.txt") ||
            (r.op>3 && (r.op<10 || r.op>18) && r.op!=20 && r.op!=30 && r.op!=50 && r.op!=60 && r.op!=61 && r.op!=62 && r.op!=63 && r.op!=64 && r.op!=70 && r.op!=71 && (r.op<80 || r.op>82) && (r.op<84 || r.op>93) && (r.op<40 || r.op>47)))return -1;
         if((r.op<=1 && (r.arg[0]||r.arg[1]||r.arg[2]||r.arg[3])) ||
@@ -952,29 +952,52 @@ static int generate(Installer *s,const Recipe *r,FILE *out,unsigned *copied_crc)
     if(r->op>=40 && r->op<=47)return jgr_resource_convert(s->disc,&input,r->op,r->arg,out);
     return -1;
 }
+static int manifest_io_failure(Installer *s,const char *operation)
+{
+    const char *reason=errno?strerror(errno):"I/O failure";
+#ifdef __EMSCRIPTEN__
+    extern const char *jgr_browser_last_io_error(void);
+    const char *browser_reason=jgr_browser_last_io_error();
+    if(*browser_reason)reason=browser_reason;
+#endif
+    char detail[sizeof s->result->detail];
+    snprintf(detail,sizeof detail,"%s: %s",operation,reason);
+    return fail(s,JGR_INSTALL_IO,detail);
+}
 static int publish(Installer *s,const char *temporary)
 {
     struct stat st;
-    if(info(temporary,&st)==0 && !S_ISREG(st.st_mode))return -1;
-    FILE *f=fopen(temporary,"wb");if(!f)return -1;
-    int bad=fprintf(f,"JGR_ASSETS 1\nlayout 1\ncount %u\n",s->result->total)<0;
-    if(fseek(s->plan,PLAN_HEADER,SEEK_SET))bad=1;
-    for(unsigned i=0;!bad && i<s->result->total;i++) {
+    strcpy(s->result->file,".assets-manifest.tmp");
+    if(info(temporary,&st)==0 && !S_ISREG(st.st_mode))
+        return fail(s,JGR_INSTALL_IO,"Manifest temporary path is not a regular file");
+    FILE *f=fopen(temporary,"wb");if(!f)return manifest_io_failure(s,"Cannot create manifest");
+    int status=0;
+    if(fprintf(f,"JGR_ASSETS 1\nlayout %u\ncount %u\n",JGR_ASSET_LAYOUT_VERSION,s->result->total)<0)
+        status=manifest_io_failure(s,"Cannot write manifest");
+    if(!status && fseek(s->plan,PLAN_HEADER,SEEK_SET))status=manifest_io_failure(s,"Cannot read manifest instructions");
+    for(unsigned i=0;!status && i<s->result->total;i++) {
         Recipe r;unsigned char raw[PLAN_RECORD];
-        if(read_recipe(s,&r,raw) || fprintf(f,"%u %08x %s\n",r.bytes,s->checksums[i],r.name)<0)bad=1;
+        if(read_recipe(s,&r,raw))status=fail(s,JGR_INSTALL_PLAN,"Cannot read manifest instructions");
+        else if(fprintf(f,"%u %08x %s\n",r.bytes,s->checksums[i],r.name)<0)
+            status=manifest_io_failure(s,"Cannot write manifest");
     }
-    if(fflush(f))bad=1;
-    if(fclose(f))bad=1;
-    if(bad)return -1;
-    f=fopen(temporary,"rb");if(!f)return -1;uint32_t crc=0xffffffffu;size_t n;
+    if(!status && fflush(f))status=manifest_io_failure(s,"Cannot flush manifest");
+    if(fclose(f) && !status)status=manifest_io_failure(s,"Cannot close manifest");
+    if(status)return status;
+    f=fopen(temporary,"rb");if(!f)return manifest_io_failure(s,"Cannot reopen manifest");
+    uint32_t crc=0xffffffffu;size_t n;
     while((n=fread(s->buffer,1,COPY_BYTES,f)))crc=crc_add(crc,s->buffer,n);
-    if(ferror(f))bad=1;
-    if(fclose(f))bad=1;
-    if(s->manifest_crc && (crc^0xffffffffu)!=s->manifest_crc)return -1;
-    char target[PATH_MAXIMUM];if(path(s,target,"data/assets/","assets.manifest"))return -1;
-    if(!bad && remove(target) && errno!=ENOENT)bad=1;
-    if(!bad && rename(temporary,target))bad=1;
-    return bad?-1:0;
+    if(ferror(f))status=manifest_io_failure(s,"Cannot read back manifest");
+    if(fclose(f) && !status)status=manifest_io_failure(s,"Cannot close verified manifest");
+    if(status)return status;
+    if(s->manifest_crc && (crc^0xffffffffu)!=s->manifest_crc)
+        return fail(s,JGR_INSTALL_CHECKSUM,"Manifest checksum does not match this build");
+    strcpy(s->result->file,"assets-manifest.txt");
+    char target[PATH_MAXIMUM];
+    if(path(s,target,"data/assets/",s->result->file))return fail(s,JGR_INSTALL_IO,"Manifest path is too long");
+    if(remove(target) && errno!=ENOENT)return manifest_io_failure(s,"Cannot replace manifest");
+    if(rename(temporary,target))return manifest_io_failure(s,"Cannot publish manifest");
+    return 0;
 }
 int jgr_install_run(const char *root,const char *plan_path,const char *gdi,
                     int allow_incomplete,JgrInstallProgress progress,void *user,JgrInstallResult *result)
@@ -1235,6 +1258,7 @@ int jgr_install_run(const char *root,const char *plan_path,const char *gdi,
         if(!valid){status=fail(&s,result->status?result->status:JGR_INSTALL_CHECKSUM,NULL);goto done;}
         result->phase_current=i+1;if(notify(&s)){status=result->status;goto done;}
     }
+    strcpy(result->file,"assets-manifest.txt");
     if(phase(&s,JGR_INSTALL_PHASE_PUBLISH,0,1)){status=result->status;goto done;}
     /* Reclaim conversion storage before the optional 512 KiB startup pack.
      * Its absence must never fail a verified installation: the game can read
@@ -1251,7 +1275,8 @@ int jgr_install_run(const char *root,const char *plan_path,const char *gdi,
          * already owns the user's disc. Normal game boot never opens it. */
         if(s.disc)(void)portable_startup_warning_prepare(s.disc,s.root);
     }
-    if(path(&s,temporary,"data/assets/",".assets-manifest.tmp") || publish(&s,temporary))status=fail(&s,JGR_INSTALL_IO,"Cannot publish the verified asset manifest");
+    if(path(&s,temporary,"data/assets/",".assets-manifest.tmp"))status=fail(&s,JGR_INSTALL_IO,"Manifest temporary path is too long");
+    else status=publish(&s,temporary);
     if(!status){result->phase=JGR_INSTALL_PHASE_DONE;result->phase_current=result->phase_total=1;if(notify(&s))status=result->status;}
 done:
     if(s.work)s.work->failed++;

@@ -16,7 +16,7 @@ class SmokeBackgroundTests(unittest.TestCase):
         assets = self.source / 'data/assets'
         assets.mkdir(parents=True)
         (assets / 'test.bin').write_bytes(b'synthetic asset')
-        (assets / 'assets.manifest').write_text('JGR_ASSETS 1\nlayout 1\ncount 1\n15 00000000 test.bin\n')
+        (assets / 'assets-manifest.txt').write_text('JGR_ASSETS 1\nlayout 2\ncount 1\n15 00000000 test.bin\n')
 
     def test_background_is_optional(self):
         destination = self.root / 'no-background'

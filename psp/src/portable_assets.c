@@ -44,7 +44,7 @@
 #include <psppower.h>
 #endif
 
-#define MANIFEST_NAME "data/assets/assets.manifest"
+#define MANIFEST_NAME "data/assets/assets-manifest.txt"
 #define SEAL_NAME "data/cache/assets.checked"
 #define SEAL_TEMP "data/cache/assets.checked.tmp"
 #define MAX_MANIFEST_BYTES (4u*1024u*1024u)

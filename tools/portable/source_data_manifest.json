@@ -3702,15 +3702,15 @@
     },
     {
       "path": "psp/src/portable_asset_identity.h",
-      "sha256": "abaecd4ff38281f651b389308283cab9f3e5c2353c8a78840c09fcba3973298f",
+      "sha256": "c7d83e5cf2bc55310b51c0a8a2e1e2b846fe92eec53bddf943b12cf10d808006",
       "kind": "portable_implementation",
-      "review": "Generated layout version, canonical manifest CRC32 and 1892-file count from public checksum metadata; generated without game inputs."
+      "review": "Generated layout version, canonical manifest CRC32 and 1892-file count from public checksum metadata; generated without game inputs. Browser-safe manifest filename and layout 2; installation publication reports its own file and operation. No game payload or conversion algorithm changed."
     },
     {
       "path": "psp/src/portable_assets.c",
-      "sha256": "87d8d764ba4484e515c94d8d4db1ef73063d864131b08cbe10e1efa06417b5e3",
+      "sha256": "e26b1118998e2cf391a1ee74c6cd3c5e68ad0bea3c81055aabfb74b2cb67cf29",
       "kind": "portable_implementation",
-      "review": "Asset validation, cache manifest/path routing, optional local background, setup progress/power/error handling and conditional installer invocation. PSP save I/O uses only the launching device's PSP/SAVEDATA/JGR_PORTABLE directory; conversion does not create save directories."
+      "review": "Asset validation, cache manifest/path routing, optional local background, setup progress/power/error handling and conditional installer invocation. PSP save I/O uses only the launching device's PSP/SAVEDATA/JGR_PORTABLE directory; conversion does not create save directories. Browser-safe manifest filename and layout 2; installation publication reports its own file and operation. No game payload or conversion algorithm changed."
     },
     {
       "path": "psp/src/portable_assets.h",
@@ -3852,9 +3852,9 @@
     },
     {
       "path": "psp/src/portable_install.c",
-      "sha256": "e4007a87db18719b75fad1b7eb0c32d5d449ea9c6d727f854525b5f5e55af082",
+      "sha256": "8603013a4b8a0aa0833a04ce74dc593972fb898b970825760664dfdf1c315d59",
       "kind": "portable_implementation",
-      "review": "Bounded installer with plan records and named scratch formats. Preserves checksum failure diagnostics and reclaims converter-owned scratch after plan validation, before the capacity check; unknown files, saves, links and committed outputs are preserved."
+      "review": "Bounded installer with plan records and named scratch formats. Preserves checksum failure diagnostics and reclaims converter-owned scratch after plan validation, before the capacity check; unknown files, saves, links and committed outputs are preserved. Browser-safe manifest filename and layout 2; installation publication reports its own file and operation. No game payload or conversion algorithm changed."
     },
     {
       "path": "psp/src/portable_install.h",

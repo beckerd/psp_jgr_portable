@@ -35,14 +35,14 @@ char *portable_test_raw_getcwd(char *buffer,size_t size)
 static int installed_payload(const char *name)
 {
     const char *p=strstr(name,"/data/assets/");
-    return p && strcmp(p+13,"assets.manifest");
+    return p && strcmp(p+13,"assets-manifest.txt");
 }
 int portable_test_raw_stat(const char *name,struct stat *info)
 {if(installed_payload(name))portable_test_asset_stats++;return stat(name,info);}
 FILE *portable_test_raw_fopen(const char *name,const char *mode)
 {
     if(installed_payload(name))portable_test_asset_opens++;
-    if(strstr(name,"data/assets/assets.manifest"))portable_test_manifest_opens++;
+    if(strstr(name,"data/assets/assets-manifest.txt"))portable_test_manifest_opens++;
     if(strstr(name,"data/setup/background.jbg") || strstr(name,"data/setup/startup-warning.jbg"))portable_test_background_opens++;
     if(strpbrk(mode,"wa+"))portable_test_file_writes++;
     return fopen(name,mode);
