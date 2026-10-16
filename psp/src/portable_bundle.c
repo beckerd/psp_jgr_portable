@@ -25,8 +25,8 @@
 #define MAX_MODULE (256u*1024u)
 #define MAX_NOTICE (128u*1024u)
 #define MAX_RECIPE (4u*1024u*1024u)
-#define MAX_GAME (8u*1024u*1024u)
-#define MAX_BUNDLE (HEADER_BYTES+5u*ENTRY_BYTES+2u*MAX_MODULE+MAX_NOTICE+MAX_RECIPE+MAX_GAME)
+#define MAX_CONVERTER (8u*1024u*1024u)
+#define MAX_BUNDLE (HEADER_BYTES+5u*ENTRY_BYTES+2u*MAX_MODULE+MAX_NOTICE+MAX_RECIPE+MAX_CONVERTER)
 typedef struct { uint32_t role,offset,bytes,crc; } BundleEntry;
 typedef struct { unsigned char data[INDEX_BYTES];size_t bytes; } BundleIndex;
 typedef struct {
@@ -38,7 +38,7 @@ static BundleEntry entries[5];
 static unsigned entry_count,ready;
 static uint32_t psar_offset;
 static char executable[PORTABLE_BUNDLE_PATH_MAX],cache[PORTABLE_BUNDLE_PATH_MAX];
-static const char *const names[]={"jgr_me.prx","jgr_crash.prx","crash_handler_license.txt","install.recipe","game.prx"};
+static const char *const names[]={"jgr_me.prx","jgr_crash.prx","crash_handler_license.txt","install.recipe","setup.prx"};
 
 static uint32_t word(const unsigned char *p)
 {return (uint32_t)p[0]|((uint32_t)p[1]<<8)|((uint32_t)p[2]<<16)|((uint32_t)p[3]<<24);}
@@ -127,7 +127,7 @@ static int bundle_index(FILE *file,uint32_t *index_crc,BundleIndex *index)
        fseek(file,(long)psar_offset,SEEK_SET) || fread(header,1,sizeof header,file)!=sizeof header)
         return PORTABLE_BUNDLE_FORMAT;
     entry_count=word(header+12);*index_crc=word(header+20);
-    if(memcmp(header,"JGRBND1\0",8) || word(header+8)!=1 ||
+    if(memcmp(header,"JGRBND2\0",8) || word(header+8)!=2 ||
        entry_count!=5 || word(header+16)!=total)return PORTABLE_BUNDLE_FORMAT;
     if(fread(table,ENTRY_BYTES,entry_count,file)!=entry_count)return PORTABLE_BUNDLE_IO;
     if((crc_update(0xffffffffu,table,entry_count*ENTRY_BYTES)^0xffffffffu)!=*index_crc)
@@ -136,7 +136,7 @@ static int bundle_index(FILE *file,uint32_t *index_crc,BundleIndex *index)
     for(unsigned i=0;i<entry_count;i++) {
         const unsigned char *p=table+i*ENTRY_BYTES;BundleEntry *e=&entries[i];
         *e=(BundleEntry){word(p),word(p+4),word(p+8),word(p+12)};
-        uint32_t limit=i<2 ? MAX_MODULE:i==2 ? MAX_NOTICE:i==3 ? MAX_RECIPE:MAX_GAME;
+        uint32_t limit=i<2 ? MAX_MODULE:i==2 ? MAX_NOTICE:i==3 ? MAX_RECIPE:MAX_CONVERTER;
         if(e->role!=i+1 || e->offset!=cursor || !e->bytes || e->bytes>limit ||
            cursor>total || e->bytes>total-cursor)return PORTABLE_BUNDLE_FORMAT;
         cursor+=e->bytes;

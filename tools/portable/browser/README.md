@@ -1,7 +1,7 @@
 # Offline asset preparer
 
 This preparer runs the shared C asset converter in a browser using
-WebAssembly. The release's `Prepare 1.0.1.html` contains its own code and tools. It needs no
+WebAssembly. The release's `Prepare 1.0.2.html` contains its own code and tools. It needs no
 server, account, Python installation, or upload of the game image.
 
 The converter uses the same asset formats and checksums as the PSP setup path.
@@ -10,14 +10,14 @@ validation steps; a successful build alone does not establish compatibility.
 
 ## Preparing a release on your computer
 
-1. Extract `JGR-Portable-1.0.1.zip` to a folder on your computer. Don't run files
+1. Extract `JGR_PORTABLE-1.0.2.zip` to a folder on your computer. Don't run files
    from inside the ZIP.
 2. Add your own copy of Jet Grind Radio. A Dreamcast game copy in GDI format
    consists of several files: a small file ending in `.gdi` and track files
    usually ending in `.bin`. Copy the `.gdi` file and all its track files into
    the same folder as `EBOOT.PBP`. Don't rename them or mix files from different
    copies of the game.
-3. Open `Prepare 1.0.1.html` in Google Chrome on your computer.
+3. Open `Prepare 1.0.2.html` in Google Chrome on your computer.
 4. Click **Choose folder** and select the folder where you placed everything.
    Allow Chrome to read and save files in that folder when prompted. The page
    will tell you if anything is missing.
@@ -46,7 +46,7 @@ visits. Chrome may ask for access again when you choose **Prepare Assets**;
 **Change folder** remains available.
 
 The original GDI and track files stay in place. They are not needed on the PSP
-after preparation succeeds. `Prepare 1.0.1.html` is also only needed on the computer.
+after preparation succeeds. `Prepare 1.0.2.html` is also only needed on the computer.
 Cancellation waits for the converter to stop; keep the page open while it does.
 
 ## Licenses and source
@@ -105,7 +105,7 @@ or ROM artwork is embedded in the preparer HTML.
   button copies the page address and opens a blank Chrome page; paste the address
   into Chrome's address bar and press Enter. A separate **Copy address** button
   and selectable address remain available if automatic copying is blocked.
-  You can also drag `Prepare 1.0.1.html` into Chrome. If the launch link is unsupported,
+  You can also drag `Prepare 1.0.2.html` into Chrome. If the launch link is unsupported,
   use **Open with → Google Chrome** on the HTML file.
   See Chromium's [launch URL validation](https://raw.githubusercontent.com/chromium/chromium/main/chrome/browser/ui/startup/url_util.cc).
 - Opening an HTML file does not grant access to its neighboring files. Chrome
@@ -139,18 +139,18 @@ from this repository first. They generate the matching
 ```sh
 python3 tools/portable/browser/build.py \
   --emcc /path/to/emsdk/upstream/emscripten/emcc.py \
-  --source-url https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.1.zip \
+  --source-url https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.2.zip \
   --psp psp --out build/browser/preparer
 cp build/browser/preparer/prepare.html \
-  "build/release/JGR_PORTABLE/Prepare 1.0.1.html"
-sed 's/@VERSION@/1.0.1/g' tools/portable/RELEASE_README.md \
+  "build/release/JGR_PORTABLE/Prepare 1.0.2.html"
+sed 's/@VERSION@/1.0.2/g' tools/portable/RELEASE_README.md \
   > build/release/JGR_PORTABLE/README.md
 ```
 
 The build emits `prepare.html` linked to GitHub's existing source download for
-release tag `1.0.1`; change the URL for another release and ensure that tag contains
+release tag `1.0.2`; change the URL for another release and ensure that tag contains
 the exact source used for both converters. With `--source-url`, no additional
-source ZIP is emitted. Package only `README.md`, `Prepare 1.0.1.html`,
+source ZIP is emitted. Package only `README.md`, `Prepare 1.0.2.html`,
 `LICENSES.txt` and the matching `EBOOT.PBP` inside the game ZIP. Use a fresh
 browser output directory for each release. Generate its installation README
 from [RELEASE_README.md](../RELEASE_README.md), substituting the release

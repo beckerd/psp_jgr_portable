@@ -98,7 +98,7 @@ static size_t counted_write(const void *p,size_t size,size_t count,FILE *f)
         self.temporary = tempfile.TemporaryDirectory(prefix='jgr-bundle-case-')
         self.addCleanup(self.temporary.cleanup)
         self.root = Path(self.temporary.name)
-        self.inputs = [self.root / name for name in ('me.prx', 'crash.prx', 'notice.txt', 'recipe.bin', 'game.prx')]
+        self.inputs = [self.root / name for name in ('me.prx', 'crash.prx', 'notice.txt', 'recipe.bin', 'setup.prx')]
         self.payloads = [prx(17), prx(42), b'Synthetic project notice\n', b'recipe metadata\n' * 70000, prx(61)]
         for path, data in zip(self.inputs, self.payloads):
             path.write_bytes(data)
@@ -169,7 +169,7 @@ static size_t counted_write(const void *p,size_t size,size_t count,FILE *f)
                     entries.append(bundle.ENTRY.pack(index + 1, offset, len(payload), zlib.crc32(payload)))
                     offset += len(payload)
                 table = b''.join(entries)
-                data = (bundle.HEADER.pack(bundle.MAGIC, 1, count, offset, zlib.crc32(table)) +
+                data = (bundle.HEADER.pack(bundle.MAGIC, 2, count, offset, zlib.crc32(table)) +
                         table + b''.join(self.payloads[:count]))
                 with self.assertRaises(ValueError):
                     bundle.validate(data)
@@ -211,7 +211,7 @@ static size_t counted_write(const void *p,size_t size,size_t count,FILE *f)
             entries.append(bundle.ENTRY.pack(index + 1, offset, len(payload), zlib.crc32(payload)))
             offset += len(payload)
         table = b''.join(entries)
-        invalid = (bundle.HEADER.pack(bundle.MAGIC, 1, len(payloads), offset, zlib.crc32(table)) +
+        invalid = (bundle.HEADER.pack(bundle.MAGIC, 2, len(payloads), offset, zlib.crc32(table)) +
                    table + b''.join(payloads))
         with self.assertRaisesRegex(ValueError, 'entry'):
             bundle.validate(invalid)
@@ -220,7 +220,7 @@ static size_t counted_write(const void *p,size_t size,size_t count,FILE *f)
         self.assert_unavailable()
 
     def test_progress_covers_chunked_verification_extraction_and_warm_cache(self):
-        roles = ('jgr_me.prx', 'jgr_crash.prx', 'crash_handler_license.txt', 'install.recipe', 'game.prx')
+        roles = ('jgr_me.prx', 'jgr_crash.prx', 'crash_handler_license.txt', 'install.recipe', 'setup.prx')
         for cold in (True, False):
             status, result, events = self.prepare_progress()
             self.assertEqual(status, 0)
@@ -252,25 +252,25 @@ static size_t counted_write(const void *p,size_t size,size_t count,FILE *f)
                              for row in events))
         self.assertFalse((self.game / 'data').exists())
 
-    def test_game_executable_is_streamed_verified_and_repaired(self):
-        game=self.root/'game.prx'
+    def test_converter_module_is_streamed_verified_and_repaired(self):
+        game=self.root/'setup.prx'
         content=prx(61)+bytes(400000)
         game.write_bytes(content)
-        data,receipt=bundle.build(*self.inputs[:4],game=game)
+        data,receipt=bundle.build(*self.inputs[:4],converter=game)
         self.assertEqual(len(receipt['entries']),5)
         (self.game/'EBOOT.PBP').write_bytes(pbp(data))
         status,result=self.prepare()
         self.assertEqual((status,result.entries,result.written),(0,5,5))
         installed=self.path(5)
         self.assertEqual(installed.read_bytes(),content)
-        installed.write_bytes(b'interrupted game executable')
+        installed.write_bytes(b'interrupted converter module')
         self.assertEqual(self.prepare()[0],0)
         self.assertEqual(self.path(5).read_bytes(),content)
         game.write_bytes(b'not a project PRX')
         with self.assertRaisesRegex(ValueError,'PRX'):
-            bundle.build(*self.inputs[:4],game=game)
+            bundle.build(*self.inputs[:4],converter=game)
         with self.assertRaisesRegex(ValueError,'instructions'):
-            bundle.build(*self.inputs[:3],game=game)
+            bundle.build(*self.inputs[:3],converter=game)
 
     def test_corrupt_cached_helper_and_interrupted_temp_are_repaired(self):
         self.assertEqual(self.prepare()[0], 0)
@@ -300,7 +300,7 @@ static size_t counted_write(const void *p,size_t size,size_t count,FILE *f)
 
     def test_invalid_bundle_is_rejected_before_cache_creation(self):
         cases = [self.data[:-1], self.data + b'\0', b'BADMAGIC' + self.data[8:],
-                 self.data[:8] + struct.pack('<I', 2) + self.data[12:],
+                 self.data[:8] + struct.pack('<I', 1) + self.data[12:],
                  index_change(self.data, 12, 3), index_change(self.data, 12, 4),
                  index_change(self.data, 24, 4), index_change(self.data, 28, 0),
                  index_change(self.data, 32, 0xffffffff),
@@ -372,9 +372,9 @@ static size_t counted_write(const void *p,size_t size,size_t count,FILE *f)
             bundle.build(*self.inputs)
 
     def test_cached_launch_reads_only_index_receipt_and_preserves_files(self):
-        game = self.root / 'game.prx';game.write_bytes(prx(61) + bytes(400000))
+        game = self.root / 'setup.prx';game.write_bytes(prx(61) + bytes(400000))
         count = 5
-        data, _ = bundle.build(*self.inputs[:4], game=game)
+        data, _ = bundle.build(*self.inputs[:4], converter=game)
         (self.game / 'EBOOT.PBP').write_bytes(pbp(data))
         self.assertEqual(self.prepare()[0], 0)
         paths = [self.path(role) for role in range(1, count + 1)]
@@ -423,8 +423,8 @@ static size_t counted_write(const void *p,size_t size,size_t count,FILE *f)
         self.assertEqual(self.try_cached()[0], 0)
 
     def test_every_missing_resized_or_nonregular_entry_forces_full_repair(self):
-        game = self.root / 'game.prx';game.write_bytes(prx(61))
-        data, _ = bundle.build(*self.inputs[:4], game=game)
+        game = self.root / 'setup.prx';game.write_bytes(prx(61))
+        data, _ = bundle.build(*self.inputs[:4], converter=game)
         (self.game / 'EBOOT.PBP').write_bytes(pbp(data))
         self.assertEqual(self.prepare()[0], 0)
         for role in range(1, 6):

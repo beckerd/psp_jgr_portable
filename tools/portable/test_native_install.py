@@ -169,6 +169,10 @@ int convert_file(const char *gdi,const char *source,unsigned op,unsigned a,unsig
  jgr_disc_close(d);return status;
 }
 #include "portable_install.c"
+int test_locate_disc(const char *root,char *out) {
+ Installer s={0};if(strlen(root)>=sizeof s.root)return -1;
+ strcpy(s.root,root);return locate_disc(&s,out);
+}
 /* Exercise the actual private lookup with the same validated synthetic plan,
    without requiring a source disc or entering any converter. */
 int test_recipe_lookups(const char *plan,const char **names,unsigned count,int fallback,
@@ -203,6 +207,7 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
         cls.lib.test_fail_output.argtypes=[C.c_uint]
         cls.lib.test_read_bytes.restype=C.c_ulonglong
         cls.lib.test_write_bytes.restype=C.c_ulonglong
+        cls.lib.test_locate_disc.argtypes=[C.c_char_p,C.c_char_p]
         cls.lib.jgr_install_test_bulk_disabled.argtypes=[C.c_int]
         cls.lib.jgr_install_test_audio_disabled.argtypes=[C.c_int]
         cls.lib.jgr_install_test_small_disabled.argtypes=[C.c_int]
@@ -232,6 +237,22 @@ int test_recipe_lookups(const char *plan,const char **names,unsigned count,int f
     def cached(self,files):
         for name,data in files.items():
             p=self.root/'data/assets'/name;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes(data)
+    def test_disc_discovery_ignores_hidden_files(self):
+        cases=[
+            (['Game (USA).gdi'],0,'Game (USA).gdi'),
+            (['Game (USA).gdi','._Game (USA).gdi'],0,'Game (USA).gdi'),
+            (['._Game (USA).gdi'],1,None),
+            (['Game.GdI','.Game.gdi','._Game.gdi','.backup.GDI','.DS_Store'],0,'Game.GdI'),
+            (['.Game.GdI','._.Game.GdI','.backup.gdi'],1,None),
+            (['Game.gdi','Other.GDI','._Game.gdi','.backup.gdi'],2,None),
+        ]
+        for index,(names,status,selected) in enumerate(cases):
+            with self.subTest(names=names):
+                directory=self.root/str(index);directory.mkdir()
+                for name in names:(directory/name).touch()
+                output=C.create_string_buffer(768)
+                self.assertEqual(self.lib.test_locate_disc(os.fsencode(directory),output),status)
+                if selected:self.assertEqual(os.fsdecode(output.value),str(directory/selected))
     def test_recipe_index_and_memos_preserve_collisions_misses_and_plan_cursor(self):
         def name_hash(name):
             value=2166136261

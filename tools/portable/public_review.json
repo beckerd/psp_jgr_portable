@@ -14,13 +14,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 6994,
-      "sha256": "5f3fef18e978c30262ca9de60cf204322b505567355f51a3469bb42dab0c2643"
+      "bytes": 7208,
+      "sha256": "7a7ec2a6784c4efcd9df425184e03a561810dce5a74a9007f6f121446beae597"
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "bytes": 6155,
-      "sha256": "f86a793f59e56fff9dfcf3db7b718b4146a33a58053a9f8e8991fb573c463bcf"
+      "bytes": 6207,
+      "sha256": "e878fbde45018b1dd6c7558b4a859755ab81e13949e2772cf450b273911bbb04"
     },
     {
       "path": "decompile/chars_spec.txt",
@@ -939,8 +939,8 @@
     },
     {
       "path": "psp/Makefile",
-      "bytes": 6387,
-      "sha256": "9edde2340c65dc328493dbd88275c16ecb15c981d00d24145e4c53f6f11fa506"
+      "bytes": 6722,
+      "sha256": "a48b35abd2136d9daee42a15635c26138a5114b1ebb58c459b132b4bf1eab95d"
     },
     {
       "path": "psp/crash_handler_license.txt",
@@ -2019,8 +2019,8 @@
     },
     {
       "path": "psp/src/main.c",
-      "bytes": 520102,
-      "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08"
+      "bytes": 520583,
+      "sha256": "07704a889ecdac30d6d120bdaa77a8957b16eb16dca4af424db77abe42c03fc9"
     },
     {
       "path": "psp/src/me.c",
@@ -2419,13 +2419,13 @@
     },
     {
       "path": "psp/src/portable_bundle.c",
-      "bytes": 17658,
-      "sha256": "4361f4972e13ecea38181a1dfaf93bb433004ce7e4f7d3567df4e8b662ceed9d"
+      "bytes": 17674,
+      "sha256": "66fc98a1684d1dab5ee8d753ac48af5480f62e5da4046f92b9c0082131897d55"
     },
     {
       "path": "psp/src/portable_bundle.h",
-      "bytes": 2935,
-      "sha256": "d88f002ccb84f8b907069a647ce3617f6cc72b7ea92e24daaf89eab4c0e2b321"
+      "bytes": 2940,
+      "sha256": "72854142fcca8d466ae1e14097ca72dc5230bcb3466ec7a30379323b81f50048"
     },
     {
       "path": "psp/src/portable_convert.c",
@@ -2519,8 +2519,8 @@
     },
     {
       "path": "psp/src/portable_install.c",
-      "bytes": 70987,
-      "sha256": "8603013a4b8a0aa0833a04ce74dc593972fb898b970825760664dfdf1c315d59"
+      "bytes": 71108,
+      "sha256": "e3931e11ea3302643c51af037025e2426a362020d38256fe66b4dbd73443f07d"
     },
     {
       "path": "psp/src/portable_install.h",
@@ -2529,8 +2529,8 @@
     },
     {
       "path": "psp/src/portable_launcher.c",
-      "bytes": 5866,
-      "sha256": "a76a7fb40485d4528a8ab9be65c81e8d53d65c7b4a31ae79109d98357f74d3f6"
+      "bytes": 5004,
+      "sha256": "fc49127acc767bb7acc3b98dae3cc127d01f75b485bc0d803e36b53b904d8dc8"
     },
     {
       "path": "psp/src/portable_misc.c",
@@ -3386,6 +3386,11 @@
       "path": "psp/src/set_collision.h",
       "bytes": 1022,
       "sha256": "68962f66332fb29676c164e0de0571f3e132a3c5de1094cd2d9a1e08157c0498"
+    },
+    {
+      "path": "psp/src/setup_module.h",
+      "sha256": "7cc88fcb9ce03dacc1759990fa9fee6b4124e0cee95bb42ec0dd18461c379c15",
+      "bytes": 544
     },
     {
       "path": "psp/src/shibuya_gates.c",
@@ -5648,6 +5653,11 @@
       "sha256": "2acfe23ab659dc939719fe4b52932ebff30d93d7b50e4fe586310cdcaa8bfe72"
     },
     {
+      "path": "psp/src/startup_module.c",
+      "sha256": "9050c1ce60389e124c5dc86e927835e0a4167b8c39d841c9736277ea99ffa2f5",
+      "bytes": 8608
+    },
+    {
       "path": "psp/src/story.c",
       "bytes": 13933,
       "sha256": "eb4c5d36f2c46fca7b6a17dee82331eeb1b780d925a319fd1b9f258aa68e5bcf"
@@ -6079,13 +6089,13 @@
     },
     {
       "path": "tools/portable/README.md",
-      "bytes": 11255,
-      "sha256": "f9f2c99803fd80e2df38df1b3edc5b9466ab6710defc58d125bc43db7e916ded"
+      "bytes": 12594,
+      "sha256": "7ef11cb488eb51fed7e2df7b78d94fc79d5406688768e33800c89e21a02a10ba"
     },
     {
       "path": "tools/portable/RELEASE_README.md",
-      "bytes": 6831,
-      "sha256": "5ae5a3c5de918cbe9cb20046468fd430d36fd02df7a17f94e31332f7300107e1"
+      "bytes": 7177,
+      "sha256": "1bd65e9f0dd7b9b99464d7d01683eed2360a9e09244d2aed04f5437836f5ba01"
     },
     {
       "path": "tools/portable/asset_aliases.json",
@@ -6099,13 +6109,13 @@
     },
     {
       "path": "tools/portable/audit_build.py",
-      "bytes": 14541,
-      "sha256": "76526efcf7cfb88450482ecbde8968c9b11e6c585619843e761608b53f865c1b"
+      "bytes": 15023,
+      "sha256": "615db2222a5e8ae93046dd35f55bfc8e3006af7fd5123797b20f98dcb8dd89ca"
     },
     {
       "path": "tools/portable/browser/README.md",
       "bytes": 12396,
-      "sha256": "87802ceb279181c8eff0e4de0d2648fd935327688405f0f86c559f53944d8e20"
+      "sha256": "893b877054a100220b9924cc6d856ed3d0239e8950af841ac22800e291a0fec6"
     },
     {
       "path": "tools/portable/browser/THIRD_PARTY_NOTICES.txt",
@@ -6144,13 +6154,13 @@
     },
     {
       "path": "tools/portable/browser/notices.py",
-      "bytes": 2893,
-      "sha256": "3eb844ee738dd21fcda80c20327f9b70d7070fb3fb1d98c9b1c4004629ff3479"
+      "bytes": 2879,
+      "sha256": "b81526021f48ce90060369c49c2ce34053f063576e48b6c8716f13fc621cc473"
     },
     {
       "path": "tools/portable/browser/page.js",
-      "bytes": 22267,
-      "sha256": "d020978e151cd79762cc44828b313e7a592aa17d84904b0964907cd5781f6d64"
+      "bytes": 22292,
+      "sha256": "d8fc5e49bbb37e466ca9b91d0044462ad115c5553055be79af7466f3fd3473db"
     },
     {
       "path": "tools/portable/browser/prepare.c",
@@ -6160,7 +6170,7 @@
     {
       "path": "tools/portable/browser/prepare.html",
       "bytes": 8285,
-      "sha256": "1fbe59f84c9d901cebcc6ae2eb29384b383fa665c50edb37aaeb464ee5181df0"
+      "sha256": "e841f06491268313ec5e8b64656450ee78223a44c0be166b6c196f309bd7a60f"
     },
     {
       "path": "tools/portable/browser/provenance.py",
@@ -6229,13 +6239,13 @@
     },
     {
       "path": "tools/portable/browser/worker.js",
-      "bytes": 3084,
-      "sha256": "f974c50518370436ca9d12ec700b3482504e353d73f96b3cd427386048daf12a"
+      "bytes": 3115,
+      "sha256": "63c0a8f1175c3d37e276c097d05324508f516f2dfe09314a9462cb623013bce6"
     },
     {
       "path": "tools/portable/build_device_setup.py",
-      "bytes": 10013,
-      "sha256": "de81bb96ac4ab31d1fde2bdcd3267f8d479b44378648da51c8ce53df3f53ed01"
+      "bytes": 10515,
+      "sha256": "6a948efd63d57e2674f0e52eecc2d15fee0b4bf22b701eec0c0eaa58a9f0840c"
     },
     {
       "path": "tools/portable/build_install_probe.py",
@@ -6249,8 +6259,8 @@
     },
     {
       "path": "tools/portable/bundle.py",
-      "bytes": 5019,
-      "sha256": "5822bffcb6686aca96f275aa933c5348be549bcf82997fca7b392363dbcb3ad7"
+      "bytes": 5051,
+      "sha256": "96ad818003b7a619bac01031b2b214e0869ce1fea9cb772c5222c314566f73fc"
     },
     {
       "path": "tools/portable/capture.py",
@@ -6369,8 +6379,8 @@
     },
     {
       "path": "tools/portable/native_replay_identity.json",
-      "bytes": 61834,
-      "sha256": "71b56fd2dd4f375bcd2ba5ae93835fd4cf0f9d5b137ca19677904e446f7c28a4"
+      "bytes": 66521,
+      "sha256": "3e4cc185d86ce25591a554b7e374f4c7caf8037d58661ad99b8e5a06faec62ad"
     },
     {
       "path": "tools/portable/notices/Flycast-GPL-2.0.txt",
@@ -6424,8 +6434,8 @@
     },
     {
       "path": "tools/portable/package.py",
-      "bytes": 16117,
-      "sha256": "71c1d351316d1dde1e5703bcaa703e3ef8238931312142c8974d860bc8c94c61"
+      "bytes": 16116,
+      "sha256": "982170c00383c2494307ee3b1ac2ab07335eeadbfd6b23416a9890e605e8ec3d"
     },
     {
       "path": "tools/portable/patches/flycast-fast-forward.patch",
@@ -6709,8 +6719,8 @@
     },
     {
       "path": "tools/portable/source_data_manifest.json",
-      "bytes": 503899,
-      "sha256": "fb7fba2059ca5a06b71d6c6052f3a1157bfe13abf79035ac0fae3f611c1491f4"
+      "bytes": 504518,
+      "sha256": "6c12148eab15b7fe017358f4f2fb6d17b07a50caca61df4ee86c4598de90965a"
     },
     {
       "path": "tools/portable/source_data_mixed.json",
@@ -6819,8 +6829,8 @@
     },
     {
       "path": "tools/portable/test_audit_build.py",
-      "bytes": 10586,
-      "sha256": "2785484fd41680538faba740fc79f4a18e12f49da157644e61e0ce228191e2d7"
+      "bytes": 10731,
+      "sha256": "8ece0cf8bea8c964b8c9e3c0edafeced48f46bc92c3f484f05e4b5fc2d59ec79"
     },
     {
       "path": "tools/portable/test_baked_light_inputs.py",
@@ -6839,8 +6849,8 @@
     },
     {
       "path": "tools/portable/test_bundle.py",
-      "bytes": 27684,
-      "sha256": "38a8b9c2847e4893f0af534722d6b0bd288b9685d9db668cd5f832913860de53"
+      "bytes": 27716,
+      "sha256": "f34cde040c7b8ae6b2c104389ee82631e6470d676683f14308e80eec93edd58d"
     },
     {
       "path": "tools/portable/test_capture.py",
@@ -6954,8 +6964,8 @@
     },
     {
       "path": "tools/portable/test_native_install.py",
-      "bytes": 85990,
-      "sha256": "4c635611c318e1e94ad2994d9bd88fe9865b1ecd98bf907d0c56f394e8214677"
+      "bytes": 87173,
+      "sha256": "368e0ad8d7f57ee83f0893b62939618442be02d261c065a0fce2d7ed0c5f9d6b"
     },
     {
       "path": "tools/portable/test_native_pose.py",
@@ -7049,8 +7059,8 @@
     },
     {
       "path": "tools/portable/test_setup_launcher.py",
-      "bytes": 7455,
-      "sha256": "25da68e0a3290806fb0234a854e84fc40e832949fc7bc0dee4f115e639cf4b84"
+      "bytes": 7437,
+      "sha256": "c7740e32ea5ef90b94e8674bbafad0af97afbbf4d0988244b41bcea9dcb8e720"
     },
     {
       "path": "tools/portable/test_setup_me.py",
@@ -7121,6 +7131,11 @@
       "path": "tools/portable/test_stage_visibility_grid.py",
       "bytes": 6976,
       "sha256": "749a6efb0f6c9cc756af118c7f22010953d064c887a44266a7dd8958f9ff8c31"
+    },
+    {
+      "path": "tools/portable/test_startup_module.py",
+      "sha256": "2631ef3219bac12e18efb86037acc7794db6a9148db5a58e238669088a41ef94",
+      "bytes": 5296
     },
     {
       "path": "tools/portable/test_startup_warning.py",
@@ -7232,8 +7247,8 @@
       "status": "resolved",
       "resolution": {
         "disposition": "replaced",
-        "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08",
-        "evidence": "All seven local motion maps are validated and loaded into BSS at startup. Regeneration from the user executable and enemy banks matched all 210 entries."
+        "sha256": "07704a889ecdac30d6d120bdaa77a8957b16eb16dca4af424db77abe42c03fc9",
+        "evidence": "All seven local motion maps are validated and loaded into BSS at startup. Regeneration from the user executable and enemy banks matched all 210 entries. The temporary-converter startup change only handles its result before normal game initialization; these externalized asset bindings are unchanged."
       }
     },
     {
@@ -7274,8 +7289,8 @@
       "status": "resolved",
       "resolution": {
         "disposition": "replaced",
-        "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08",
-        "evidence": "Garage marker ordering is loaded from a validated startup blob derived from the user executable pointer table. All 24 converted entries matched the former map."
+        "sha256": "07704a889ecdac30d6d120bdaa77a8957b16eb16dca4af424db77abe42c03fc9",
+        "evidence": "Garage marker ordering is loaded from a validated startup blob derived from the user executable pointer table. All 24 converted entries matched the former map. The temporary-converter startup change only handles its result before normal game initialization; these externalized asset bindings are unchanged."
       }
     },
     {
@@ -7455,8 +7470,8 @@
       "status": "resolved",
       "resolution": {
         "disposition": "replaced",
-        "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08",
-        "evidence": "Six binding arrays are extracted from the user disc and loaded through a startup blob. The production-loader harness matched 95,104,800 actor-selection cases against the former bindings."
+        "sha256": "07704a889ecdac30d6d120bdaa77a8957b16eb16dca4af424db77abe42c03fc9",
+        "evidence": "Six binding arrays are extracted from the user disc and loaded through a startup blob. The production-loader harness matched 95,104,800 actor-selection cases against the former bindings. The temporary-converter startup change only handles its result before normal game initialization; these externalized asset bindings are unchanged."
       }
     },
     {

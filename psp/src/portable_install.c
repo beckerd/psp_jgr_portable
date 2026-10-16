@@ -511,6 +511,8 @@ static int locate_disc(Installer *s,char *out)
     if(path(s,directory_path,"",""))return -1;
     DIR *d=opendir(directory_path);if(!d)return -1;struct dirent *e;unsigned count=0;
     while((e=readdir(d))!=NULL) {
+        /* Ignore hidden entries, including macOS metadata with a .gdi suffix. */
+        if(e->d_name[0]=='.')continue;
         size_t n=strlen(e->d_name);
         if(n<5 || e->d_name[n-4]!='.' || (e->d_name[n-3]!='g'&&e->d_name[n-3]!='G') ||
            (e->d_name[n-2]!='d'&&e->d_name[n-2]!='D') || (e->d_name[n-1]!='i'&&e->d_name[n-1]!='I'))continue;

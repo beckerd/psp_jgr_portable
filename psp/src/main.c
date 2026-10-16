@@ -2522,7 +2522,17 @@ int main(int argc,char **argv)
     unsigned boot_time[8]={sceKernelGetSystemTimeLow()};
     (void)argc;(void)argv;
 #if JGR_PORTABLE_ASSETS && JGR_BUNDLED_RUNTIME
-    if(argc==3 && !strcmp(argv[1],"--jgr-root") && portable_assets_chdir_application(argv[2])<0){sceKernelExitGame();return 1;}
+    extern int startup_module_status(void);
+    int setup_status=startup_module_status();
+    if(setup_status<0){
+        if(setup_status!=PORTABLE_ASSETS_CANCELLED){
+            pspDebugScreenInit();
+            pspDebugScreenPrintf("JGR Portable\n\nCould not prepare game data: %08x\nSee data/log/setup.log and startup-module.log.\n\nPress START to return to the XMB.\n",(unsigned)setup_status);
+            SceCtrlData buttons;
+            do{sceCtrlReadBufferPositive(&buttons,1);sceKernelDelayThread(50000);}while(!(buttons.Buttons&PSP_CTRL_START));
+        }
+        sceKernelExitGame();return 1;
+    }
 #endif
     SceCtrlData pad; unsigned prev = 0;ViewerSelect viewer_select_state={0};
     int th = sceKernelCreateThread("cb", callback_thread, 0x11, 0xFA0, 0, 0); if (th >= 0) sceKernelStartThread(th, 0, 0);

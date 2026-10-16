@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""Build the setup-only EBOOT; the native gameplay PRX lives in its PSAR bundle.
+"""Build an unloadable converter PRX and package the game as EBOOT DATA.PSP.
 
-The setup executable deliberately has no game rendering/audio BSS. Executable
-replacement releases the importer before gameplay starts. This build step does
-not read an original disc or locally converted game assets.
+The converter runs before the game initializes libc, then releases its heap,
+callbacks and workers before returning to the host. No LoadExec handoff occurs.
 """
 import argparse
 import hashlib
@@ -109,13 +108,9 @@ def with_artwork(data, icon0=None, pic1=None):
     return data[:8] + struct.pack('<8I', *offsets) + b''.join(sections), artwork
 
 
-def build(psp, bundle, output, sdk, icon0=None, pic1=None):
-    if psp.is_symlink() or bundle.is_symlink() or output.is_symlink():
-        raise ValueError('Setup build inputs and output must not be linked')
-    psp=psp.resolve();bundle=bundle.resolve();output=output.resolve()
-    receipt=validate(bundle.read_bytes())
-    if len(receipt['entries'])!=5:
-        raise ValueError('Setup requires a gameplay PRX and installer recipe in its bundle')
+def build_module(psp, sdk):
+    if psp.is_symlink():raise ValueError('Setup sources must not be linked')
+    psp=psp.resolve()
     folder=psp/'.setup';folder.mkdir(exist_ok=True)
     if folder.is_symlink():raise ValueError('Setup build directory must not be linked')
     unit_names, source_names, table_sources = setup_sources(psp)
@@ -130,8 +125,6 @@ def build(psp, bundle, output, sdk, icon0=None, pic1=None):
         if destination.is_symlink():raise ValueError('Setup build input must not be linked')
         if not destination.exists() or destination.read_bytes()!=path.read_bytes():shutil.copyfile(path,destination)
         inputs.append({'path':'psp/src/'+path.name,'sha256':hashlib.sha256(path.read_bytes()).hexdigest()})
-    if (folder/'runtime.psar').is_symlink():raise ValueError('Setup bundle must not be linked')
-    shutil.copyfile(bundle,folder/'runtime.psar')
     objects=' '.join(path.stem+'.o' for path in sources)
     makefile='''TARGET = jgrsetup
 .DEFAULT_GOAL := all
@@ -142,17 +135,12 @@ CFLAGS += -ffunction-sections -fdata-sections -DJGR_DIAGNOSTICS=0
 CFLAGS += -DJGR_PORTABLE_ASSETS=1 -DJGR_DEVICE_SETUP=1 -DJGR_SETUP_ME=1 -DJGR_BUNDLED_RUNTIME=1
 CFLAGS += -DJGR_SETUP_CRASH=1
 CFLAGS += -include portable_assets.h
-LDFLAGS += -Wl,--gc-sections
-LIBS = -lm -lpsppower -lpspsystemctrl_user
+LDFLAGS += -Wl,--gc-sections,--undefined=__library_exports -nostartfiles
+LIBS = -lm -lpsppower
+PRX_EXPORTS = exports.exp
 BUILD_PRX = 1
 PSP_FW_VERSION = 660
 PSP_LARGE_MEMORY = 0
-EXTRA_TARGETS = EBOOT.PBP
-PSP_EBOOT_TITLE = JGR Portable
-SFOFLAGS = -s DISC_ID=JGRV00001
-PSP_EBOOT_PSAR = runtime.psar
-PARAM.SFO: Makefile
-EBOOT.PBP: Makefile runtime.psar
 $(OBJS): Makefile
 include $(PSPSDK)/lib/build.mak
 -include $(OBJS:.o=.d)
@@ -163,32 +151,52 @@ include $(PSPSDK)/lib/build.mak
         native_objects = ' '.join(Path(name).stem + '.o' for name in native_units)
         makefile += ('\nCFLAGS += -DJGR_NATIVE_REPLAY=1\n' + native_objects + ': CFLAGS += -DJGR_PORTABLE_ASSETS_IMPLEMENTATION=1'
                      ' -include portable_native_namespace.h\n')
+    exports=folder/'exports.exp'
+    export_text='PSP_BEGIN_EXPORTS\nPSP_EXPORT_START(syslib, 0, 0x8000)\nPSP_EXPORT_FUNC_HASH(module_start)\nPSP_EXPORT_FUNC_HASH(module_stop)\nPSP_EXPORT_VAR_HASH(module_info)\nPSP_EXPORT_END\nPSP_END_EXPORTS\n'
+    if not exports.exists() or exports.read_text()!=export_text:exports.write_text(export_text)
     target=folder/'Makefile'
     if target.is_symlink():raise ValueError('Setup Makefile must not be linked')
     if not target.exists() or target.read_text()!=makefile:target.write_text(makefile)
     env={**os.environ,'PSPDEV':str(sdk),'PSPSDK':str(sdk/'psp/sdk'),
          'PATH':str(sdk/'bin')+os.pathsep+os.environ['PATH']}
     subprocess.run(['make','-j2'],cwd=folder,env=env,check=True)
-    temporary=output.with_name(output.name+'.setup-tmp')
-    if temporary.is_symlink() or output.is_symlink():raise ValueError('Executable output must not be linked')
-    executable, artwork = with_artwork((folder/'EBOOT.PBP').read_bytes(), icon0, pic1)
-    temporary.write_bytes(executable);temporary.replace(output)
-    report={'schema':1,'scope':'Project build inputs and split executable layout; not complete conversion or hardware validation',
-            'setup_sources':inputs,'bundle':receipt,
+    report={'schema':2,'scope':'Unloadable converter inputs; hardware validation is separate',
+            'setup_sources':inputs,
             'setup_makefile_sha256':hashlib.sha256(target.read_bytes()).hexdigest(),
             'setup_elf_sha256':hashlib.sha256((folder/'jgrsetup.elf').read_bytes()).hexdigest(),
-            'eboot_sha256':hashlib.sha256(output.read_bytes()).hexdigest(),'memory_model':'PSP-1000'}
-    if artwork:
-        report['private_artwork'] = artwork
-    (folder/'build-receipt.json').write_text(json.dumps(report,indent=2)+'\n')
+            'memory_model':'PSP-1000'}
+    (folder/'module-receipt.json').write_text(json.dumps(report,indent=2)+'\n')
+    return report
+
+
+def build(psp, bundle, output, sdk, icon0=None, pic1=None):
+    if any(p.is_symlink() for p in (psp,bundle,output)):
+        raise ValueError('Build inputs must not be linked')
+    psp=psp.resolve();bundle=bundle.resolve();output=output.resolve()
+    receipt=validate(bundle.read_bytes())
+    report=json.loads((psp/'.setup/module-receipt.json').read_text())
+    temporary=output.with_name(output.name+'.setup-tmp')
+    subprocess.run([str(sdk/'bin/pack-pbp'),str(temporary),str(psp/'PARAM.SFO'),
+                    'NULL','NULL','NULL','NULL','NULL',str(psp/'jgrview.prx'),str(bundle)],check=True)
+    data,artwork=with_artwork(temporary.read_bytes(),icon0,pic1)
+    temporary.write_bytes(data);temporary.replace(output)
+    report.update(bundle=receipt,eboot_sha256=hashlib.sha256(data).hexdigest(),
+                  game_prx_sha256=hashlib.sha256((psp/'jgrview.prx').read_bytes()).hexdigest(),
+                  architecture='game-main-converter-module')
+    if artwork:report['private_artwork']=artwork
+    (psp/'.setup/build-receipt.json').write_text(json.dumps(report,indent=2)+'\n')
     return report
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--psp',type=Path,required=True);p.add_argument('--bundle',type=Path,required=True)
-    p.add_argument('--out',type=Path,required=True);p.add_argument('--pspdev',type=Path,default=Path(os.environ.get('PSPDEV',Path.home()/'pspdev')))
+    p.add_argument('--psp',type=Path,required=True);p.add_argument('--bundle',type=Path)
+    p.add_argument('--out',type=Path);p.add_argument('--pspdev',type=Path,default=Path(os.environ.get('PSPDEV',Path.home()/'pspdev')))
     p.add_argument('--icon0',type=Path,help='Explicit private 144x80 PNG for the XMB icon')
     p.add_argument('--pic1',type=Path,help='Explicit private 480x272 PNG for the XMB background')
+    p.add_argument('--module-only',action='store_true')
     a=p.parse_args()
-    try:build(a.psp,a.bundle,a.out,a.pspdev.resolve(),a.icon0,a.pic1)
+    try:
+        if a.module_only:build_module(a.psp,a.pspdev.resolve())
+        elif a.bundle and a.out:build(a.psp,a.bundle,a.out,a.pspdev.resolve(),a.icon0,a.pic1)
+        else:p.error('--bundle and --out are required for packaging')
     except (OSError,ValueError,subprocess.CalledProcessError) as error:p.exit(1,str(error)+'\n')

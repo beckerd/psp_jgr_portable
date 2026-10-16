@@ -70,9 +70,9 @@ conversion programs. GPL scope is not confined to the two `.inc` files:
 
 | Build component | Scope |
 | --- | --- |
-| PSP installer (`.setup/jgrsetup.elf`, packaged as EBOOT's `DATA.PSP`) | One combined program containing the GPL tables, converter, native replay and linked game routines. |
+| PSP converter (`.setup/jgrsetup.elf`, bundled as `setup.prx`) | Contains the GPL tables, converter, native replay and linked game routines. The game loads this module temporarily for preparation. |
 | Browser WebAssembly converter (embedded in `prepare.html`) | One combined program built from the shared installer sources and browser support code. |
-| Gameplay module (`jgrview.prx`, bundled as `game.prx`) and helper PRXs | Separate modules; the gameplay build does not directly compile the GPL tables. Packaging alone does not put these modules under the GPL. |
+| Game executable (`jgrview.prx`, EBOOT's `DATA.PSP`) and helper PRXs | The game does not directly compile the GPL tables, but loads the converter in the same process. The module boundary is not a claim of exemption from GPL requirements. |
 
 The build boundaries are defined by `psp/Makefile`,
 `tools/portable/build_device_setup.py` and `tools/portable/browser/build.py`.
