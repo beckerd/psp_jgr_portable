@@ -4,7 +4,7 @@ Experimental builds for testing. Stable versions are on the [Releases page](http
 
 ## JGR Portable 1.0.2
 
-[Download JGR_PORTABLE 1.0.2.zip](https://raw.githubusercontent.com/beckerd/psp_jgr_portable/test_builds/JGR_PORTABLE%201.0.2.zip)
+[Download JGR_PORTABLE-1.0.2.zip](https://raw.githubusercontent.com/beckerd/psp_jgr_portable/test_builds/JGR_PORTABLE-1.0.2.zip)
 
 The game is now the main executable. When assets need preparation or checking,
 it loads a temporary converter module, then unloads that module before gameplay.
