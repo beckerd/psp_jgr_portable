@@ -4,7 +4,7 @@
 # The audits also verify source/module bindings.
 TARGET = jgrview
 .DEFAULT_GOAL := all
-GAME_SOURCES = $(filter-out $(wildcard src/portable_*.c),$(wildcard src/*.c)) src/portable_assets.c src/portable_bundle.c src/portable_startup_cache.c
+GAME_SOURCES = $(filter-out $(wildcard src/portable_*.c) src/startup_module.c,$(wildcard src/*.c)) src/portable_assets.c src/portable_bundle.c src/portable_startup_cache.c
 OBJS = $(patsubst %.c,%.o,$(GAME_SOURCES))
 OBJS += src/savedata_imports.o
 DIAGNOSTICS ?= 0
@@ -33,14 +33,19 @@ EXTRA_TARGETS = EBOOT.PBP
 SFOFLAGS = -s DISC_ID=JGRV00001
 PSP_EBOOT_TITLE = JGR Portable
 ifeq ($(DEVICE_SETUP),1)
+GAME_SOURCES += src/startup_module.c
+LDFLAGS += -Wl,--wrap=__libcglue_init
 PSP_EBOOT = game-preview.PBP
 install.recipe: ../tools/portable/install_plan.py ../tools/portable/asset_catalog.json ../tools/portable/raw_assets.json ../tools/portable/mission_sets.json ../tools/portable/tables_recipes.py ../tools/portable/resource_recipes.py ../tools/portable/misc_recipes.py ../tools/portable/model_recipes.py ../tools/portable/model_jobs.json ../tools/portable/world_recipes.py ../tools/portable/scene_recipes.py ../tools/portable/graffiti_recipes.py ../tools/portable/replay_recipes.py ../tools/portable/capture_jobs.json $(wildcard src/portable_tables*.inc) .portable-config
 	python3 ../tools/portable/install_plan.py --out $@ --report install-coverage.json --replace $(REPLAY_PROFILE_ARGS) $(if $(filter 1,$(INSTALLER_DEVELOPMENT)),--development,)
 runtime-notices.txt: ../LICENSE ../THIRD_PARTY_NOTICES.md crash_handler_license.txt ../tools/portable/notices/Pillow-11.3.0.txt ../tools/portable/notices/FreeBSD-sort.txt ../tools/portable/notices/Flycast-hardware.txt ../tools/portable/notices/Flycast-GPL-2.0.txt ../tools/portable/notices/Newlib-4.5.0.txt ../tools/portable/notices/PSPSDK.txt ../tools/portable/notices/PSPSDK-savedata.txt ../tools/portable/notices/libmecore-2.0.1.txt
 	cat $^ > $@
-portable_helpers.psar: jgrview.prx jgr_me.prx jgr_crash.prx runtime-notices.txt install.recipe ../tools/portable/bundle.py
-	python3 ../tools/portable/bundle.py --me jgr_me.prx --crash jgr_crash.prx --notice runtime-notices.txt --recipe install.recipe --game jgrview.prx --out $@
-EBOOT.PBP: portable_helpers.psar ../tools/portable/build_device_setup.py $(wildcard src/portable_*.c src/portable_*.h src/portable_*.inc) src/source_fmac.h src/source_float_fast.h src/stage_texture_usage.inc .portable-config $(PSP_EBOOT_ICON) $(PSP_EBOOT_PIC1)
+portable_helpers.psar: .setup/jgrsetup.prx jgr_me.prx jgr_crash.prx runtime-notices.txt install.recipe ../tools/portable/bundle.py
+	python3 ../tools/portable/bundle.py --me jgr_me.prx --crash jgr_crash.prx --notice runtime-notices.txt --recipe install.recipe --converter .setup/jgrsetup.prx --out $@
+.PHONY: converter_module_force
+.setup/jgrsetup.prx: converter_module_force src/portable_asset_identity.h src/crash_build.inc
+	python3 ../tools/portable/build_device_setup.py --psp . --module-only
+EBOOT.PBP: jgrview.prx PARAM.SFO portable_helpers.psar ../tools/portable/build_device_setup.py $(wildcard src/portable_*.c src/portable_*.h src/portable_*.inc) src/source_fmac.h src/source_float_fast.h src/stage_texture_usage.inc .portable-config $(PSP_EBOOT_ICON) $(PSP_EBOOT_PIC1)
 	python3 ../tools/portable/build_device_setup.py --psp . --bundle portable_helpers.psar --out $@ $(if $(filter-out NULL,$(PSP_EBOOT_ICON)),--icon0 "$(PSP_EBOOT_ICON)") $(if $(filter-out NULL,$(PSP_EBOOT_PIC1)),--pic1 "$(PSP_EBOOT_PIC1)")
 endif
 # Leave XMB artwork unset until separately reviewed project artwork is added.

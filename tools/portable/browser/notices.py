@@ -38,7 +38,7 @@ def render(text, release, source_url=None):
                 url.query or url.fragment or any(c.isspace() for c in source_url)):
             raise ValueError('Source download must be an HTTPS URL without credentials, query or fragment')
         source_notice = ('<p class="source-notice">Matching source: <a href="' +
-                         html.escape(source_url, quote=True) + '">Source code (release tag)</a></p>')
+                         html.escape(source_url, quote=True) + '">Source code</a></p>')
     else:
         digest = release['archive_sha256']
         if not re.fullmatch('[0-9a-f]{64}', digest):

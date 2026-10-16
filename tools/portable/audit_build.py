@@ -154,7 +154,7 @@ def audit_split(build, nm, prxgen, expected, actual, private, game_dependencies)
     bundle = validate_bundle(packed)
     if len(bundle['entries']) != 5 or receipt.get('bundle') != bundle:
         raise ValueError('Split build requires the exact five-role runtime bundle')
-    if (receipt.get('schema') != 1 or receipt.get('memory_model') != 'PSP-1000'
+    if (receipt.get('schema') != 2 or receipt.get('architecture') != 'game-main-converter-module' or receipt.get('memory_model') != 'PSP-1000'
             or receipt.get('eboot_sha256') != digest(build / 'EBOOT.PBP')
             or receipt.get('setup_elf_sha256') != digest(setup / 'jgrsetup.elf')
             or receipt.get('setup_makefile_sha256') != digest(setup / 'Makefile')):
@@ -169,6 +169,12 @@ def audit_split(build, nm, prxgen, expected, actual, private, game_dependencies)
         if digest(setup / Path(row['path']).name) != row['sha256']:
             raise ValueError('Setup compiled source copy differs: ' + row['path'])
     setup_actual = symbols(subprocess.check_output([nm, '--defined-only', '--format=posix', str(setup / 'jgrsetup.elf')], text=True))
+    if not {'module_start', 'module_stop', '__library_exports'}.issubset(setup_actual):
+        raise ValueError('Converter must export both lifecycle functions')
+    if '__wrap___libcglue_init' not in actual:
+        raise ValueError('Game must prepare data before reserving its heap')
+    if any('LoadExecVSH' in name or name == 'sceKernelLoadExec' for name in actual | setup_actual):
+        raise ValueError('Unexpected executable replacement in the game/module build')
     forbidden_game = sorted(name for name in actual if re.match(r'jgr_(?:disc_|install_|replay_|models_|native_)', name))
     if forbidden_game:
         raise ValueError('Split executable memory boundary failed: game=' + repr(forbidden_game))
@@ -184,17 +190,17 @@ def audit_split(build, nm, prxgen, expected, actual, private, game_dependencies)
     for i in range(5):
         _, offset, size, _ = BUNDLE_ENTRY.unpack_from(packed, BUNDLE_HEADER.size + i * BUNDLE_ENTRY.size)
         entries.append(packed[offset:offset + size])
-    paths = (build / 'jgr_me.prx', build / 'jgr_crash.prx', build / 'runtime-notices.txt', build / 'install.recipe', build / 'jgrview.prx')
+    paths = (build / 'jgr_me.prx', build / 'jgr_crash.prx', build / 'runtime-notices.txt', build / 'install.recipe', setup / 'jgrsetup.prx')
     for path, data in zip(paths, entries):
         if digest(path) != hashlib.sha256(data).hexdigest():
             raise ValueError('Bundled role differs from local build artifact: ' + path.name)
-    if digest(setup / 'jgrsetup.prx') != hashlib.sha256(payload).hexdigest():
-        raise ValueError('EBOOT executable differs from the setup PRX')
-    if digest(build / 'portable_helpers.psar') != bundle['sha256'] or digest(setup / 'runtime.psar') != bundle['sha256']:
+    if digest(build / 'jgrview.prx') != hashlib.sha256(payload).hexdigest():
+        raise ValueError('EBOOT executable differs from the game PRX')
+    if digest(build / 'portable_helpers.psar') != bundle['sha256']:
         raise ValueError('Packaged PSAR differs from built runtime bundle')
     # Recreate each module to bind the audited unstripped ELF to the exact
     # executable bytes shipped in DATA.PSP or the corresponding PSAR role.
-    modules = ((setup / 'jgrsetup.elf', payload), (build / 'jgrview.elf', entries[4]),
+    modules = ((build / 'jgrview.elf', payload), (setup / 'jgrsetup.elf', entries[4]),
                (build / 'tools/meprx/jgr_me.elf', entries[0]), (build / 'tools/crashprx/jgr_crash.elf', entries[1]))
     with tempfile.TemporaryDirectory(prefix='jgr-build-audit-') as temporary:
         output = Path(temporary) / 'audit.prx'

@@ -24,7 +24,7 @@ self.onmessage = async ({data}) => {
     // normal folder UI supplies none. Files are read-only and remain on disk.
     io = new JgrBrowserIO(data.directory, data.sourceFiles || []);
     const entries = await io.list('/game');
-    const gdis = entries.filter(entry => /\.gdi$/i.test(entry.name) && (entry.mode & 0xf000) === 0x8000);
+    const gdis = entries.filter(entry => !entry.name.startsWith('.') && /\.gdi$/i.test(entry.name) && (entry.mode & 0xf000) === 0x8000);
     if (gdis.length !== 1) throw new Error('The selected folder must contain exactly one GDI file and its track files.');
     if (!entries.some(entry => entry.name === 'EBOOT.PBP' && (entry.mode & 0xf000) === 0x8000)) {
       throw new Error('Place this release’s EBOOT.PBP in the selected folder.');

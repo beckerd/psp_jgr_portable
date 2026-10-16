@@ -410,7 +410,7 @@
       "sha256": "6ea655a242fcdb5089098dc539072918e7f38eb8cdefe365bb8fba10a9c305db"
     }
   ],
-  "generator_sha256": "20a953951bd6fa256669ef5993a907e632239e7c7e75b222d714a4cff316a20c",
+  "generator_sha256": "f0f13770a0fca0bf63df3119b4549807705209822c491972ddc00130f5a0a565",
   "generator_sources": {
     "psp/src/asset_progress.h": "b19c2a5dfaeec916140df61cd173e6aa5a24c7b8857a8bd390aba6849847ba5c",
     "psp/src/canplay.c": "4e316340819989539e2abfa3b4379d5ec3e0825d974b0a4ea0e694ec3a0874db",
@@ -474,8 +474,8 @@
     "psp/src/portable_assets.h": "3c818b4bbcb0289111588b9696f1c8944bca764e5013677843b0a7f99ab88f5f",
     "psp/src/portable_bubble.c": "03357c0d2efdc0d9ce1532de085d07e943296fd11d1b86fc88f6baf45e47266f",
     "psp/src/portable_bubble.h": "ba1d1fa62410b0748e1cd77f5305058d90f390251f116f51d0a7f998b38a304e",
-    "psp/src/portable_bundle.c": "4361f4972e13ecea38181a1dfaf93bb433004ce7e4f7d3567df4e8b662ceed9d",
-    "psp/src/portable_bundle.h": "d88f002ccb84f8b907069a647ce3617f6cc72b7ea92e24daaf89eab4c0e2b321",
+    "psp/src/portable_bundle.c": "66fc98a1684d1dab5ee8d753ac48af5480f62e5da4046f92b9c0082131897d55",
+    "psp/src/portable_bundle.h": "72854142fcca8d466ae1e14097ca72dc5230bcb3466ec7a30379323b81f50048",
     "psp/src/portable_convert.c": "bc9ee16405bc93af0d0049080dca518512202ceb85b7ac1f4bbc4e31aaaf5ea4",
     "psp/src/portable_convert.h": "0284a57e4689a32c66084c4c43bd3eeb45c319c22e4b8aa4277a4c4ff8714ca3",
     "psp/src/portable_copy_worker.c": "60e382e239b5e2ddfa4d040e31a6433072da699fd42435e7b8d53b0a64fadd11",
@@ -494,9 +494,9 @@
     "psp/src/portable_indexed.c": "9e6dff49f018278bd4d2aa72925a06bfda8524d30db43a701f928750e25e04e5",
     "psp/src/portable_indexed.h": "804e24dc02a0aa410d71636d7789e4086be80d7f6ce8df0bda12fde12f8e8c7d",
     "psp/src/portable_indexed_sort.inc": "c67cdd6dec649a16f8ff61426341cb4f75a3239cfa41c7e91a2496f63248d049",
-    "psp/src/portable_install.c": "8603013a4b8a0aa0833a04ce74dc593972fb898b970825760664dfdf1c315d59",
+    "psp/src/portable_install.c": "e3931e11ea3302643c51af037025e2426a362020d38256fe66b4dbd73443f07d",
     "psp/src/portable_install.h": "5b7532be588567bd675f826778d574ae293b6b3ef688a8ab1423eecba7729076",
-    "psp/src/portable_launcher.c": "a76a7fb40485d4528a8ab9be65c81e8d53d65c7b4a31ae79109d98357f74d3f6",
+    "psp/src/portable_launcher.c": "fc49127acc767bb7acc3b98dae3cc127d01f75b485bc0d803e36b53b904d8dc8",
     "psp/src/portable_misc.c": "7028571faa9942971f88f1d915aa75082814ca8339a73f59d9a1fd2c0fc6c391",
     "psp/src/portable_misc.h": "d4231ac82b3fe443938343cde0ece0ba5eeb72cd6fd47cdf316fb427e1b7baf1",
     "psp/src/portable_misc_extra.inc": "9a317687274643435ddf807e058c572118668b5f1764bc24fb758a6cdee3d143",
@@ -632,6 +632,7 @@
     "psp/src/scene_dialogue.inc": "9468ec1fa4b9e7ac84d1e49ed09ad896dc1a2b5796f54244c652da0068230096",
     "psp/src/scene_njs_cel.inc": "24fe6349083d9ae698838d0544b2c04f1a1562b5c4e8fc1aeb8978989b3f75ea",
     "psp/src/set_collision.h": "68962f66332fb29676c164e0de0571f3e132a3c5de1094cd2d9a1e08157c0498",
+    "psp/src/setup_module.h": "7cc88fcb9ce03dacc1759990fa9fee6b4124e0cee95bb42ec0dd18461c379c15",
     "psp/src/skatefx.h": "b8f86fa3e633ecb1a84f80739bdd2f2f49de17f44a72fd8bcaa17c554fca8341",
     "psp/src/skatefx.inc": "bd9592429bd9596cbee107e20cb33a3f8ba00bf00ab334cfd8d6b47affd377b9",
     "psp/src/small_spray.h": "4807b49742fbca24b2f66aaedcd81c19b73c355f051ff7c036378b110ecc80db",
@@ -954,6 +955,74 @@
       },
       "hardware_retested": false,
       "scope": "The manifest filename and layout header change; publication errors identify the manifest and failing operation. Asset conversion, replay algorithms, input recipes and asset file identities are unchanged. Source compatibility review only; not new hardware validation."
+    },
+    {
+      "change": "Game-main executable with temporary converter module",
+      "previous_generator_sha256": "20a953951bd6fa256669ef5993a907e632239e7c7e75b222d714a4cff316a20c",
+      "generator_sha256": "d3d8598d329800c2a110c515df484590962c77b7c4643e98096037d029846102",
+      "sources": {
+        "psp/src/portable_bundle.c": {
+          "before_sha256": "4361f4972e13ecea38181a1dfaf93bb433004ce7e4f7d3567df4e8b662ceed9d",
+          "after_sha256": "66fc98a1684d1dab5ee8d753ac48af5480f62e5da4046f92b9c0082131897d55"
+        },
+        "psp/src/portable_bundle.h": {
+          "before_sha256": "d88f002ccb84f8b907069a647ce3617f6cc72b7ea92e24daaf89eab4c0e2b321",
+          "after_sha256": "72854142fcca8d466ae1e14097ca72dc5230bcb3466ec7a30379323b81f50048"
+        },
+        "psp/src/portable_launcher.c": {
+          "before_sha256": "a76a7fb40485d4528a8ab9be65c81e8d53d65c7b4a31ae79109d98357f74d3f6",
+          "after_sha256": "5bf999ab60e2c7a7a7915fc693816b2fc1a61fb55dab53d91fe9d38ba46a6978"
+        },
+        "psp/src/setup_module.h": {
+          "before_sha256": null,
+          "after_sha256": "530ad086c03fc107b7918e88eb38bfacc2de36716a6dec8f32b286c2042a3941"
+        }
+      },
+      "hardware_retested": false,
+      "scope": "Only executable layout, module lifecycle and project bundle format change. Asset conversion and replay algorithms, input recipes and expected asset identities remain unchanged. Source compatibility review only; neither full-conversion memory headroom nor new hardware validation is claimed."
+    },
+    {
+      "change": "Game-main executable with temporary converter module",
+      "previous_generator_sha256": "d3d8598d329800c2a110c515df484590962c77b7c4643e98096037d029846102",
+      "generator_sha256": "ce2232b9429555f995af14343e44322fe7fd44c1f49e0fd2981397a12a79ef1c",
+      "sources": {
+        "psp/src/portable_launcher.c": {
+          "before_sha256": "5bf999ab60e2c7a7a7915fc693816b2fc1a61fb55dab53d91fe9d38ba46a6978",
+          "after_sha256": "fc49127acc767bb7acc3b98dae3cc127d01f75b485bc0d803e36b53b904d8dc8"
+        },
+        "psp/src/setup_module.h": {
+          "before_sha256": "530ad086c03fc107b7918e88eb38bfacc2de36716a6dec8f32b286c2042a3941",
+          "after_sha256": "7cc88fcb9ce03dacc1759990fa9fee6b4124e0cee95bb42ec0dd18461c379c15"
+        }
+      },
+      "hardware_retested": false,
+      "scope": "Only executable layout, module lifecycle and project bundle format change. Asset conversion and replay algorithms, input recipes and expected asset identities remain unchanged. Source compatibility review only; neither full-conversion memory headroom nor new hardware validation is claimed."
+    },
+    {
+      "change": "Ignore macOS AppleDouble metadata during onboard GDI discovery",
+      "previous_generator_sha256": "ce2232b9429555f995af14343e44322fe7fd44c1f49e0fd2981397a12a79ef1c",
+      "generator_sha256": "fbc6ff8e21c3e06c61496f0560b88da237649afa7a7de5b9be1e7ef27e1ad148",
+      "sources": {
+        "psp/src/portable_install.c": {
+          "before_sha256": "8603013a4b8a0aa0833a04ce74dc593972fb898b970825760664dfdf1c315d59",
+          "after_sha256": "295a7b759e65056613cb06e84da802b930f783170f679b66ae4ea8a21a43fef4"
+        }
+      },
+      "hardware_retested": false,
+      "scope": "Only automatic disc discovery changes: macOS AppleDouble metadata names beginning with ._ are excluded from GDI candidates. Asset conversion and replay algorithms, input recipes and expected asset identities remain unchanged. Host regression tests cover disc selection; fresh onboard conversion remains pending hardware validation."
+    },
+    {
+      "change": "Ignore every dot-prefixed filename during GDI discovery",
+      "previous_generator_sha256": "fbc6ff8e21c3e06c61496f0560b88da237649afa7a7de5b9be1e7ef27e1ad148",
+      "generator_sha256": "f0f13770a0fca0bf63df3119b4549807705209822c491972ddc00130f5a0a565",
+      "sources": {
+        "psp/src/portable_install.c": {
+          "before_sha256": "295a7b759e65056613cb06e84da802b930f783170f679b66ae4ea8a21a43fef4",
+          "after_sha256": "e3931e11ea3302643c51af037025e2426a362020d38256fe66b4dbd73443f07d"
+        }
+      },
+      "hardware_retested": false,
+      "scope": "Only automatic disc discovery changes: all filenames beginning with a dot are excluded from GDI candidates. Browser folder checks and worker selection apply the same rule. Asset conversion and replay algorithms, input recipes and expected asset identities remain unchanged. Host regression tests cover disc selection; fresh onboard conversion remains pending hardware validation."
     }
   ],
   "validation": {

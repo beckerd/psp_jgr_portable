@@ -126,17 +126,17 @@ class SplitAudit(unittest.TestCase):
         (self.build/'runtime-notices.txt').write_text('Authored test notice\n')
         (self.build/'install.recipe').write_bytes(b'authored test metadata')
         packed, report = bundle.build(self.build/'jgr_me.prx', self.build/'jgr_crash.prx',
-            self.build/'runtime-notices.txt', self.build/'install.recipe', self.build/'jgrview.prx')
-        setup = (self.setup/'jgrsetup.prx').read_bytes()
+            self.build/'runtime-notices.txt', self.build/'install.recipe', self.setup/'jgrsetup.prx')
+        setup = (self.build/'jgrview.prx').read_bytes()
         pbp = b'\0PBP'+b'\0'*4+struct.pack('<8I',40,44,44,44,44,44,44,44+len(setup))+b'SFO!'+setup+packed
         (self.build/'EBOOT.PBP').write_bytes(pbp)
         (self.build/'portable_helpers.psar').write_bytes(packed);(self.setup/'runtime.psar').write_bytes(packed)
-        receipt=dict(schema=1,memory_model='PSP-1000',bundle=report,setup_sources=rows,
+        receipt=dict(schema=2,architecture='game-main-converter-module',memory_model='PSP-1000',bundle=report,setup_sources=rows,
             eboot_sha256=digest(self.build/'EBOOT.PBP'),setup_elf_sha256=digest(self.setup/'jgrsetup.elf'),
             setup_makefile_sha256=digest(self.setup/'Makefile'))
         (self.setup/'build-receipt.json').write_text(json.dumps(receipt))
-        self.setup_symbols='jgr_disc_open T 0 4\njgr_install_run T 4 4\njgr_replay_session_generate T 8 4\n'
-        self.actual={'jgr_data_fixture':('B',0,4)}
+        self.setup_symbols='module_start T c 4\nmodule_stop T 10 4\n__library_exports R 14 4\njgr_disc_open T 0 4\njgr_install_run T 4 4\njgr_replay_session_generate T 8 4\n'
+        self.actual={'jgr_data_fixture':('B',0,4), '__wrap___libcglue_init':('T',16,4)}
 
     def tearDown(self):self.temp.cleanup()
 

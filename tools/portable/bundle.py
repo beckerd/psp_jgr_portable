@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Package project-built modules and notices for EBOOT's DATA.PSAR section.
 
-The two helper PRXs, runtime notice, installer recipe and native gameplay PRX
+The two helper PRXs, runtime notice, installer recipe and temporary converter PRX
 are required. The recipe must be payload-free metadata produced by its reviewed
 generator; this container does not establish authorship or audit recipe content.
 No disc bytes, artwork, converted game assets, or replay captures belong here.
@@ -13,11 +13,11 @@ from pathlib import Path
 import struct
 import zlib
 
-MAGIC = b'JGRBND1\0'
+MAGIC = b'JGRBND2\0'
 HEADER = struct.Struct('<8s4I')
 ENTRY = struct.Struct('<4I')
 LIMITS = (256 * 1024, 256 * 1024, 128 * 1024, 4 * 1024 * 1024, 8 * 1024 * 1024)
-NAMES = ('jgr_me.prx', 'jgr_crash.prx', 'crash_handler_license.txt', 'install.recipe', 'game.prx')
+NAMES = ('jgr_me.prx', 'jgr_crash.prx', 'crash_handler_license.txt', 'install.recipe', 'setup.prx')
 
 
 def module(data):
@@ -31,7 +31,7 @@ def validate(data):
     if len(data) < HEADER.size:
         raise ValueError('Truncated runtime bundle')
     magic, version, count, total, crc = HEADER.unpack_from(data)
-    if magic != MAGIC or version != 1 or count != 5 or total != len(data):
+    if magic != MAGIC or version != 2 or count != 5 or total != len(data):
         raise ValueError('Invalid runtime bundle header')
     cursor = HEADER.size + count * ENTRY.size
     table = data[HEADER.size:cursor]
@@ -57,10 +57,10 @@ def validate(data):
             'scope': 'Container integrity and module format; recipe content/provenance audited separately'}
 
 
-def build(me, crash, notice, recipe=None, game=None):
-    if recipe is None or game is None:
-        raise ValueError('Runtime bundle requires installer instructions and gameplay PRX')
-    paths = [Path(me), Path(crash), Path(notice), Path(recipe), Path(game)]
+def build(me, crash, notice, recipe=None, converter=None):
+    if recipe is None or converter is None:
+        raise ValueError('Runtime bundle requires installer instructions and converter PRX')
+    paths = [Path(me), Path(crash), Path(notice), Path(recipe), Path(converter)]
     payloads = []
     for index, path in enumerate(paths):
         if not 0 < path.stat().st_size <= LIMITS[index]:
@@ -79,7 +79,7 @@ def build(me, crash, notice, recipe=None, game=None):
         entries.append(ENTRY.pack(index + 1, offset, len(payload), zlib.crc32(payload) & 0xffffffff))
         offset += len(payload)
     table = b''.join(entries)
-    data = HEADER.pack(MAGIC, 1, len(paths), offset, zlib.crc32(table) & 0xffffffff) + table + b''.join(payloads)
+    data = HEADER.pack(MAGIC, 2, len(paths), offset, zlib.crc32(table) & 0xffffffff) + table + b''.join(payloads)
     return data, validate(data)
 
 
@@ -89,12 +89,12 @@ def main():
     parser.add_argument('--crash', type=Path, required=True)
     parser.add_argument('--notice', type=Path, required=True)
     parser.add_argument('--recipe', type=Path, required=True)
-    parser.add_argument('--game', type=Path, required=True, help='Project-built gameplay PRX, never original game code')
+    parser.add_argument('--converter', type=Path, required=True, help='Project-built converter PRX, never original game code')
     parser.add_argument('--out', type=Path, required=True)
     parser.add_argument('--receipt', type=Path)
     args = parser.parse_args()
     try:
-        data, receipt = build(args.me, args.crash, args.notice, args.recipe, args.game)
+        data, receipt = build(args.me, args.crash, args.notice, args.recipe, args.converter)
         args.out.parent.mkdir(parents=True, exist_ok=True)
         temporary = args.out.with_name(args.out.name + '.tmp')
         temporary.write_bytes(data)

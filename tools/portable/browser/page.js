@@ -262,7 +262,7 @@
   async function checkSourceFiles(selected) {
     const files = new Map();
     for await (const entry of selected.values()) if (entry.kind === 'file') files.set(entry.name, entry);
-    const images = [...files.keys()].filter(name => name.toLowerCase().endsWith('.gdi'));
+    const images = [...files.keys()].filter(name => !name.startsWith('.') && name.toLowerCase().endsWith('.gdi'));
     const required = [{ name: 'EBOOT.PBP', found: files.has('EBOOT.PBP') }];
     for (const name of images) required.push({ name, found: true });
     if (!images.length) required.push({ name: 'GDI game image (.gdi)', found: false });

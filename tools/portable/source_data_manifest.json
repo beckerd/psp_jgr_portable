@@ -2523,7 +2523,7 @@
     },
     {
       "path": "psp/src/main.c",
-      "sha256": "78d49d15b4f906d66b7a621de4893e324a522e5473cc0cc8f1477cb20e1b6025",
+      "sha256": "07704a889ecdac30d6d120bdaa77a8957b16eb16dca4af424db77abe42c03fc9",
       "kind": "mixed_implementation",
       "review": "Behavior logic, format constants and test controls; the enumerated source-derived declarations are loaded from generated assets at their original scope.",
       "fragments": [
@@ -3732,15 +3732,15 @@
     },
     {
       "path": "psp/src/portable_bundle.c",
-      "sha256": "4361f4972e13ecea38181a1dfaf93bb433004ce7e4f7d3567df4e8b662ceed9d",
+      "sha256": "66fc98a1684d1dab5ee8d753ac48af5480f62e5da4046f92b9c0082131897d55",
       "kind": "portable_implementation",
-      "review": "Bounded PBP/PSAR reader with checksum verification and atomic extraction of project-built helpers/game PRX, notices and install metadata."
+      "review": "Bounded version-2 project module/notice/recipe bundle reader and cache extraction; role 5 is the temporary converter PRX."
     },
     {
       "path": "psp/src/portable_bundle.h",
-      "sha256": "d88f002ccb84f8b907069a647ce3617f6cc72b7ea92e24daaf89eab4c0e2b321",
+      "sha256": "72854142fcca8d466ae1e14097ca72dc5230bcb3466ec7a30379323b81f50048",
       "kind": "portable_implementation",
-      "review": "Five-role project-code bundle ABI with bounded paths and status/extraction/read interfaces."
+      "review": "Version-2 five-role project-code bundle ABI with bounded paths and converter-module role."
     },
     {
       "path": "psp/src/portable_convert.c",
@@ -3852,7 +3852,7 @@
     },
     {
       "path": "psp/src/portable_install.c",
-      "sha256": "8603013a4b8a0aa0833a04ce74dc593972fb898b970825760664dfdf1c315d59",
+      "sha256": "e3931e11ea3302643c51af037025e2426a362020d38256fe66b4dbd73443f07d",
       "kind": "portable_implementation",
       "review": "Bounded installer with plan records and named scratch formats. Preserves checksum failure diagnostics and reclaims converter-owned scratch after plan validation, before the capacity check; unknown files, saves, links and committed outputs are preserved. Browser-safe manifest filename and layout 2; installation publication reports its own file and operation. No game payload or conversion algorithm changed."
     },
@@ -3864,9 +3864,9 @@
     },
     {
       "path": "psp/src/portable_launcher.c",
-      "sha256": "a76a7fb40485d4528a8ab9be65c81e8d53d65c7b4a31ae79109d98357f74d3f6",
+      "sha256": "fc49127acc767bb7acc3b98dae3cc127d01f75b485bc0d803e36b53b904d8dc8",
       "kind": "portable_implementation",
-      "review": "Setup-only PSP entry point, exit/power callbacks, asset validation and verified gameplay PRX handoff; the importer process is replaced before gameplay."
+      "review": "Project-authored synchronous converter module entry and stop exports, callback retirement, helper shutdown and libc heap release; no executable replacement or game payload."
     },
     {
       "path": "psp/src/portable_misc.c",
@@ -5163,6 +5163,12 @@
       "sha256": "68962f66332fb29676c164e0de0571f3e132a3c5de1094cd2d9a1e08157c0498",
       "kind": "portable_implementation",
       "review": "Runtime behavior and file-format interfaces; generated asset payloads are inventoried separately."
+    },
+    {
+      "path": "psp/src/setup_module.h",
+      "sha256": "7cc88fcb9ce03dacc1759990fa9fee6b4124e0cee95bb42ec0dd18461c379c15",
+      "kind": "portable_implementation",
+      "review": "Project-authored plain-data ABI for synchronous converter invocation; no game payload."
     },
     {
       "path": "psp/src/shibuya_door_data.inc",
@@ -8193,6 +8199,12 @@
       "sha256": "2acfe23ab659dc939719fe4b52932ebff30d93d7b50e4fe586310cdcaa8bfe72",
       "kind": "portable_implementation",
       "review": "Runtime behavior and file-format interfaces; generated asset payloads are inventoried separately."
+    },
+    {
+      "path": "psp/src/startup_module.c",
+      "sha256": "9050c1ce60389e124c5dc86e927835e0a4167b8c39d841c9736277ea99ffa2f5",
+      "kind": "portable_implementation",
+      "review": "Project-authored pre-libc receipt check, verified PRX extraction and synchronous load/stop/unload; SDK calls and bundle metadata only."
     },
     {
       "path": "psp/src/story.c",

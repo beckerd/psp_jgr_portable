@@ -14,12 +14,12 @@
     },
     {
       "path": "README.md",
-      "sha256": "5f3fef18e978c30262ca9de60cf204322b505567355f51a3469bb42dab0c2643",
+      "sha256": "7a7ec2a6784c4efcd9df425184e03a561810dce5a74a9007f6f121446beae597",
       "review": "Project overview, installation steps, build requirements, and development links."
     },
     {
       "path": "THIRD_PARTY_NOTICES.md",
-      "sha256": "f86a793f59e56fff9dfcf3db7b718b4146a33a58053a9f8e8991fb573c463bcf",
+      "sha256": "e878fbde45018b1dd6c7558b4a859755ab81e13949e2772cf450b273911bbb04",
       "review": "Central provenance, attribution, and license information for the project."
     },
     {
@@ -934,8 +934,8 @@
     },
     {
       "path": "psp/Makefile",
-      "sha256": "9edde2340c65dc328493dbd88275c16ecb15c981d00d24145e4c53f6f11fa506",
-      "review": "PSP game, setup, and helper-module build rules; game-only weak save-hashing imports compiled without the C asset-router header."
+      "sha256": "a48b35abd2136d9daee42a15635c26138a5114b1ebb58c459b132b4bf1eab95d",
+      "review": "Game-main executable build with a separate unloadable converter; verified bundle packaging and pre-libc startup wrapper."
     },
     {
       "path": "psp/crash_handler_license.txt",
@@ -984,7 +984,7 @@
     },
     {
       "path": "psp/src/main.c",
-      "sha256": "b68bc3a19e726277b63cfbed1e559cb80c53fc1a61a0048c5dfc1277470ddb08",
+      "sha256": "07704a889ecdac30d6d120bdaa77a8957b16eb16dca4af424db77abe42c03fc9",
       "review": "Gameplay lifecycle and save hooks; preserves the authored title animation while rendering it through a title-only supersampling pass."
     },
     {
@@ -1294,12 +1294,12 @@
     },
     {
       "path": "tools/portable/README.md",
-      "sha256": "f9f2c99803fd80e2df38df1b3edc5b9466ab6710defc58d125bc43db7e916ded",
+      "sha256": "7ef11cb488eb51fed7e2df7b78d94fc79d5406688768e33800c89e21a02a10ba",
       "review": "Asset preparation, source export, build, packaging, and validation instructions."
     },
     {
       "path": "tools/portable/RELEASE_README.md",
-      "sha256": "5ae5a3c5de918cbe9cb20046468fd430d36fd02df7a17f94e31332f7300107e1",
+      "sha256": "1bd65e9f0dd7b9b99464d7d01683eed2360a9e09244d2aed04f5437836f5ba01",
       "review": "Player installation README template with release-version substitution, setup steps, build instructions and source/license links."
     },
     {
@@ -1314,12 +1314,12 @@
     },
     {
       "path": "tools/portable/audit_build.py",
-      "sha256": "76526efcf7cfb88450482ecbde8968c9b11e6c585619843e761608b53f865c1b",
-      "review": "Checks source bindings, compiled data storage, dependencies, bundled roles, and PSP module identities."
+      "sha256": "615db2222a5e8ae93046dd35f55bfc8e3006af7fd5123797b20f98dcb8dd89ca",
+      "review": "Binds game-main and converter PRXs to compiled source, checks required exports and absence of executable-replacement imports, and audits known external data boundaries."
     },
     {
       "path": "tools/portable/browser/README.md",
-      "sha256": "87802ceb279181c8eff0e4de0d2648fd935327688405f0f86c559f53944d8e20",
+      "sha256": "893b877054a100220b9924cc6d856ed3d0239e8950af841ac22800e291a0fec6",
       "review": "Offline browser preparation, supported browsers, build requirements, matching-source packaging, and validation instructions."
     },
     {
@@ -1359,12 +1359,12 @@
     },
     {
       "path": "tools/portable/browser/notices.py",
-      "sha256": "3eb844ee738dd21fcda80c20327f9b70d7070fb3fb1d98c9b1c4004629ff3479",
+      "sha256": "b81526021f48ce90060369c49c2ce34053f063576e48b6c8716f13fc621cc473",
       "review": "Aggregates exact license texts and renders escaped, visible HTML with the matching-source archive link."
     },
     {
       "path": "tools/portable/browser/page.js",
-      "sha256": "d020978e151cd79762cc44828b313e7a592aa17d84904b0964907cd5781f6d64",
+      "sha256": "d8fc5e49bbb37e466ca9b91d0044462ad115c5553055be79af7466f3fd3473db",
       "review": "Browser eligibility, folder selection, source-file validation, progress, cancellation, and result UI."
     },
     {
@@ -1374,7 +1374,7 @@
     },
     {
       "path": "tools/portable/browser/prepare.html",
-      "sha256": "1fbe59f84c9d901cebcc6ae2eb29384b383fa665c50edb37aaeb464ee5181df0",
+      "sha256": "e841f06491268313ec5e8b64656450ee78223a44c0be166b6c196f309bd7a60f",
       "review": "Offline preparer page structure, controls, decorative artwork, and static license disclosure."
     },
     {
@@ -1444,13 +1444,13 @@
     },
     {
       "path": "tools/portable/browser/worker.js",
-      "sha256": "f974c50518370436ca9d12ec700b3482504e353d73f96b3cd427386048daf12a",
+      "sha256": "63c0a8f1175c3d37e276c097d05324508f516f2dfe09314a9462cb623013bce6",
       "review": "Runs conversion in a browser worker and handles filesystem setup, progress, cancellation, and completion."
     },
     {
       "path": "tools/portable/build_device_setup.py",
-      "sha256": "de81bb96ac4ab31d1fde2bdcd3267f8d479b44378648da51c8ce53df3f53ed01",
-      "review": "Builds the PSP setup executable and helper modules from the selected source closure and writes build receipts."
+      "sha256": "6a948efd63d57e2674f0e52eecc2d15fee0b4bf22b701eec0c0eaa58a9f0840c",
+      "review": "Builds the temporary converter with explicit module exports and packages the game in DATA.PSP; no disc data."
     },
     {
       "path": "tools/portable/build_install_probe.py",
@@ -1464,7 +1464,7 @@
     },
     {
       "path": "tools/portable/bundle.py",
-      "sha256": "5822bffcb6686aca96f275aa933c5348be549bcf82997fca7b392363dbcb3ad7",
+      "sha256": "96ad818003b7a619bac01031b2b214e0869ce1fea9cb772c5222c314566f73fc",
       "review": "Packages and validates the game, helper modules, recipe, and notices in the setup bundle."
     },
     {
@@ -1584,7 +1584,7 @@
     },
     {
       "path": "tools/portable/native_replay_identity.json",
-      "sha256": "71b56fd2dd4f375bcd2ba5ae93835fd4cf0f9d5b137ca19677904e446f7c28a4",
+      "sha256": "3e4cc185d86ce25591a554b7e374f4c7caf8037d58661ad99b8e5a06faec62ad",
       "review": "Native replay output identities, generator source fingerprints, and compatibility-review records."
     },
     {
@@ -1639,7 +1639,7 @@
     },
     {
       "path": "tools/portable/package.py",
-      "sha256": "71c1d351316d1dde1e5703bcaa703e3ef8238931312142c8974d860bc8c94c61",
+      "sha256": "982170c00383c2494307ee3b1ac2ab07335eeadbfd6b23416a9890e605e8ec3d",
       "review": "Builds validated asset packs, starter EBOOT packages, and isolated PSP test installations."
     },
     {
@@ -1654,7 +1654,7 @@
     },
     {
       "path": "tools/portable/public_review.json",
-      "sha256": "8095c68b51bf623da72a907487c939d57b43cb179f3317336ba365cbcce8fe52",
+      "sha256": "3a15b0b5b3c233a047988dc5910321193be4d1a422ca66bc33e76b293f5d1797",
       "review": "Hash-bound source inventory and dispositions of content-review findings."
     },
     {
@@ -1929,7 +1929,7 @@
     },
     {
       "path": "tools/portable/source_data_manifest.json",
-      "sha256": "fb7fba2059ca5a06b71d6c6052f3a1157bfe13abf79035ac0fae3f611c1491f4",
+      "sha256": "6c12148eab15b7fe017358f4f2fb6d17b07a50caca61df4ee86c4598de90965a",
       "review": "Inventory of generated runtime data, external symbols, source dependencies, and exact output identities."
     },
     {
@@ -2039,7 +2039,7 @@
     },
     {
       "path": "tools/portable/test_audit_build.py",
-      "sha256": "2785484fd41680538faba740fc79f4a18e12f49da157644e61e0ce228191e2d7",
+      "sha256": "8ece0cf8bea8c964b8c9e3c0edafeced48f46bc92c3f484f05e4b5fc2d59ec79",
       "review": "Tests compiled-data, source, dependency, bundle, and module-substitution audit failures with synthetic objects."
     },
     {
@@ -2059,7 +2059,7 @@
     },
     {
       "path": "tools/portable/test_bundle.py",
-      "sha256": "38a8b9c2847e4893f0af534722d6b0bd288b9685d9db668cd5f832913860de53",
+      "sha256": "f34cde040c7b8ae6b2c104389ee82631e6470d676683f14308e80eec93edd58d",
       "review": "Tests bundle corruption, role validation, cache repair, and streamed reading with synthetic modules."
     },
     {
@@ -2174,7 +2174,7 @@
     },
     {
       "path": "tools/portable/test_native_install.py",
-      "sha256": "4c635611c318e1e94ad2994d9bd88fe9865b1ecd98bf907d0c56f394e8214677",
+      "sha256": "368e0ad8d7f57ee83f0893b62939618442be02d261c065a0fce2d7ed0c5f9d6b",
       "review": "Tests native installer transactions and cache-only startup, with optional source-disc conversion comparisons."
     },
     {
@@ -2269,8 +2269,8 @@
     },
     {
       "path": "tools/portable/test_setup_launcher.py",
-      "sha256": "25da68e0a3290806fb0234a854e84fc40e832949fc7bc0dee4f115e639cf4b84",
-      "review": "Tests worker shutdown before setup or game executable replacement."
+      "sha256": "c7740e32ea5ef90b94e8674bbafad0af97afbbf4d0988244b41bcea9dcb8e720",
+      "review": "Synthetic converter module lifecycle tests covering worker fences, callback cleanup, heap release, failures and cancellation."
     },
     {
       "path": "tools/portable/test_setup_me.py",
@@ -2341,6 +2341,11 @@
       "path": "tools/portable/test_stage_visibility_grid.py",
       "sha256": "749a6efb0f6c9cc756af118c7f22010953d064c887a44266a7dd8958f9ff8c31",
       "review": "Compares visibility-cache scores with an independent scan and checks cache lifetime and output integrity."
+    },
+    {
+      "path": "tools/portable/test_startup_module.py",
+      "sha256": "2631ef3219bac12e18efb86037acc7794db6a9148db5a58e238669088a41ef94",
+      "review": "Synthetic host tests for pre-libc startup selection, converter integrity and module failure cleanup; no original asset data."
     },
     {
       "path": "tools/portable/test_startup_warning.py",

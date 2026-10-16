@@ -212,7 +212,7 @@ def starter_image(build, destination, icon0=None, pic1=None, setup_background=No
     packed = data[offsets[7]:]
     bundle_report = validate(packed)
     if len(bundle_report['entries']) != 5:
-        raise ValueError('Starter needs bundled helpers, notices, recipe and native game')
+        raise ValueError('Starter needs bundled helpers, notices, recipe and converter')
     metadata = Path(__file__).resolve().parent
     plan, coverage = make_plan(json.loads((metadata / 'asset_catalog.json').read_text()),
                                json.loads((metadata / 'raw_assets.json').read_text())['files'],
@@ -225,7 +225,7 @@ def starter_image(build, destination, icon0=None, pic1=None, setup_background=No
     digest = hashlib.sha256(data).hexdigest()
     receipt = json.loads(receipt_path.read_text())
     if receipt.get('eboot_sha256') != digest or receipt.get('bundle') != bundle_report:
-        raise ValueError('Starter executable does not match its split-build receipt')
+        raise ValueError('Starter executable does not match its module-build receipt')
     from build_device_setup import with_artwork
     data, artwork = with_artwork(data, icon0, pic1)
     digest = hashlib.sha256(data).hexdigest()

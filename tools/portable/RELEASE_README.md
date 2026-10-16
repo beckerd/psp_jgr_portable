@@ -22,9 +22,16 @@ with files from another release. For source, use GitHub's **Source code (zip)** 
 on the [release page](https://github.com/beckerd/psp_jgr_portable/releases/tag/@VERSION@).
 Source is not needed to prepare assets or play.
 
+## Updating from 1.0.1 or a 1.0.2 test build
+
+Replace only `EBOOT.PBP` in `PSP/GAME/JGR_PORTABLE/`. Keep your existing
+`data` folder and saves. Prepared assets from those builds remain compatible.
+For fresh preparation, use this package's EBOOT and `Prepare @VERSION@.html`
+together. The 1.0.1 preparer cannot read the 1.0.2 application bundle.
+
 ## Recommended: prepare on your computer
 
-1. Extract `JGR-Portable-@VERSION@.zip` to a folder on your computer. Don't run files
+1. Extract `JGR_PORTABLE-@VERSION@.zip` to a folder on your computer. Don't run files
    from inside the ZIP.
 2. Add your own copy of Jet Grind Radio. A Dreamcast game copy in GDI format
    consists of several files: a small file ending in `.gdi` and track files

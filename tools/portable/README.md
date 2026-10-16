@@ -13,7 +13,7 @@ The Git repository contains source, build tools, documentation and packaging
 inputs. Build a checkout or GitHub's automatic source download using the steps
 below. Compiled packages are distributed through GitHub Releases.
 
-A game release ZIP contains only `README.md`, `Prepare 1.0.1.html`, `LICENSES.txt`
+A game release ZIP contains only `README.md`, `Prepare 1.0.2.html`, `LICENSES.txt`
 and `EBOOT.PBP`. Use GitHub's automatic source downloads for the matching release tag; do not
 upload another source archive. Users still prepare the game assets from their own supported disc
 image before playing. Keep local builds and release packages under ignored
@@ -82,6 +82,29 @@ bytes. The EBOOT includes the game, on-device installer, project helper modules,
 conversion instructions and required runtime notices. No separate PRX files
 or disc-extracted game assets belong in the public release folder.
 
+### Game executable and temporary converter
+
+The application packages the game in EBOOT's `DATA.PSP` section. When the prepared
+asset receipt is missing or mismatched, an early startup hook verifies and
+loads the bundled converter PRX before the game initializes its libc heap.
+The converter starts a separate setup thread and returns from `module_start`
+before setup loads helper modules. It checks or prepares the assets, stops its
+workers and callbacks, and frees its heap. The game waits for completion, joins
+the setup thread through `module_stop`, then unloads the module and continues its own
+startup. There is no setup-to-game `LoadExec` handoff. A matching asset receipt
+skips loading the converter entirely.
+
+The application bundle is version 2; asset layout 2 and the expected asset
+bytes are unchanged. Prepared 1.0.1 assets remain compatible. Use the matching
+`Prepare 1.0.2.html` for a fresh installation; the 1.0.1 preparer cannot read
+this application bundle.
+
+The game's static storage remains resident while the converter runs.
+`data/log/startup-module.log` records module results and free memory before
+loading and after unloading. To check an already prepared installation,
+remove only `data/cache/assets.checked`; setup will recheck its assets before
+entering the game. A subsequent launch should skip the converter.
+
 Packaging requires a new destination and refuses to overwrite an existing one.
 For another build, choose a fresh output path rather than an installed game
 folder. It does not modify saves or prepared installations.
@@ -112,15 +135,15 @@ the browser converter. Then run:
 ```sh
 python3 tools/portable/browser/build.py \
   --emcc /path/to/emsdk/upstream/emscripten/emcc.py \
-  --source-url https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.1.zip \
+  --source-url https://github.com/beckerd/psp_jgr_portable/archive/refs/tags/1.0.2.zip \
   --psp psp --out build/browser/preparer
 cp build/browser/preparer/prepare.html \
-  "build/release/JGR_PORTABLE/Prepare 1.0.1.html"
-sed 's/@VERSION@/1.0.1/g' tools/portable/RELEASE_README.md \
+  "build/release/JGR_PORTABLE/Prepare 1.0.2.html"
+sed 's/@VERSION@/1.0.2/g' tools/portable/RELEASE_README.md \
   > build/release/JGR_PORTABLE/README.md
 ```
 
-The game folder now contains `EBOOT.PBP`, `Prepare 1.0.1.html` and `README.md`.
+The game folder now contains `EBOOT.PBP`, `Prepare 1.0.2.html` and `README.md`.
 Use [RELEASE_README.md](RELEASE_README.md) as the installation README for
 every release, replacing `@VERSION@` with that release's version as shown
 above. Add the complete `LICENSES.txt`, and ZIP only those four files.
