@@ -29,11 +29,6 @@ Compiled release packages are published as release attachments. The Git reposito
 and GitHub's automatic **Source code** downloads require compilation; follow
 the [build guide](tools/portable/README.md).
 
-## Updating from 1.0.1
-
-Replace only `EBOOT.PBP` in `PSP/GAME/JGR_PORTABLE/`. Keep your existing
-`data` folder and saves. For fresh preparation, use the included
-`Prepare 1.0.2.html` with this release's EBOOT.
 
 ## Supported version
 
@@ -41,7 +36,7 @@ Jet Grind Radio for Dreamcast, USA release **MK-51058, V1.005**. Use a GDI
 descriptor with every referenced track file. Other regions, revisions, CHD and
 CDI are not currently supported. A PSP capable of running homebrew is required.
 
-The port targets PSP-1000, PSP-2000, PSP-3000 and PSP Go.
+The port targets PSP-1000, PSP-2000, PSP-3000, Street, and PSP Go.
 
 ## Prepare on your computer
 
